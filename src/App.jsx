@@ -507,7 +507,7 @@ export default function PhotographyWebsite() {
   useEffect(() => {
     const link = document.createElement("link");
     link.rel = "preload"; link.as = "image";
-    link.href = "https://images.unsplash.com/photo-1476234251651-f353f9217b8e?w=1920&q=90";
+    link.href = "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&q=85";
     document.head.appendChild(link);
     return () => { if (link.parentNode) link.parentNode.removeChild(link); };
   }, []);
@@ -554,7 +554,7 @@ export default function PhotographyWebsite() {
       "url": "https://bella-vita-photography.vercel.app",
       "telephone": "",
       "email": "rebecca.henson@yahoo.com",
-      "image": "https://images.unsplash.com/photo-1476234251651-f353f9217b8e?w=1200&q=85",
+      "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=85",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Howell",
@@ -793,10 +793,12 @@ export default function PhotographyWebsite() {
           opacity: heroLoaded ? 1 : 0, transform: heroLoaded ? "scale(1)" : "scale(0.98)",
           transition: "all 1.4s cubic-bezier(0.22,1,0.36,1) 0.5s",
           boxShadow: "0 12px 48px rgba(0,0,0,0.10)",
+          background: "#e8ddd0",
         }}>
           <img
-            src="https://images.unsplash.com/photo-1476234251651-f353f9217b8e?w=1920&q=90"
+            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&q=85"
             alt="Golden hour portrait session in Michigan"
+            onError={(e) => { e.target.onerror = null; e.target.src = "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=75"; }}
             style={{
               width: "100%", height: "110%", objectFit: "cover", objectPosition: "center 35%",
               display: "block", filter: "brightness(0.92) saturate(1.05)",
