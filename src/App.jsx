@@ -1,5 +1,90 @@
 import { useState, useEffect, useRef } from "react";
 
+/* ═══════════════════════════════════════════════════════════════════════
+   EDITABLE CONTENT — Rebecca, change any text below!
+   To edit: Go to GitHub → src/App.jsx → pencil icon → find this section
+   → change text → click "Commit changes". Site updates automatically.
+   ═══════════════════════════════════════════════════════════════════════ */
+const SITE_CONTENT = {
+  /* HERO SECTION */
+  tagline: "Photography \u00b7 Est. 2009 \u00b7 Michigan",
+  headline: "Your story is",
+  headlineAccent: "worth telling",
+  heroDescription: "I'm Rebecca \u2014 a Michigan mom, natural light photographer, and believer that the best images happen when you stop posing and start living.",
+  heroButton: "Capture Your Moment",
+
+  /* ABOUT SECTION */
+  aboutTagline: "Meet Rebecca",
+  aboutTitle: "It's All About Connection",
+  aboutBio: "I started bella vita photography back in 2009 with a camera, a marketing degree from Davenport University, and a heart full of love for freezing beautiful moments in time. Over fifteen years later, I still get butterflies before every single session.",
+  aboutBio2: "When I'm not behind the camera, I'm probably at one of my kids' games, binge-watching something on Netflix, or convincing my husband we need another dog. I shoot exclusively on location using natural light because that's where the magic is \u2014 real light, real laughter, real you.",
+  aboutStats: [
+    { number: "500+", label: "Sessions" },
+    { number: "15+", label: "Years" },
+    { number: "5.0", label: "Google" },
+  ],
+
+  /* PORTFOLIO SECTION */
+  portfolioTagline: "Recent Favorites",
+  portfolioTitle: "My Work",
+  portfolioDescription: "Every one of these sessions started with someone saying \"I'm so awkward in front of cameras.\"",
+
+  /* SERVICES SECTION */
+  servicesTagline: "What I Offer",
+  servicesTitle: "The Experience",
+
+  /* AVAILABILITY BANNER */
+  availabilityLabel: "\u2727 Now Booking",
+  availabilityTitle: "Class of 2027 Seniors, Fall Families & Weddings",
+  availabilitySlots: [
+    { label: "Senior Slots", count: "4", sub: "remaining" },
+    { label: "Family Slots", count: "6", sub: "remaining" },
+    { label: "Mini Sessions", count: "Oct 19", sub: "next date" },
+  ],
+
+  /* PRODUCTS SECTION */
+  productsTagline: "Heirloom Quality",
+  productsTitle: "Products",
+
+  /* GIFT CERTIFICATES */
+  giftTitle: "Give the Gift of",
+  giftTitleAccent: "Beautiful Memories",
+  giftDescription: "Gift certificates come in any amount, never expire, and I'll send a gorgeous digital certificate straight to their inbox.",
+
+  /* TESTIMONIALS */
+  testimonialsTagline: "Kind Words",
+  testimonialsTitle: "What Clients Say",
+
+  /* FAQ */
+  faqTagline: "Common Questions",
+  faqTitle: "Frequently Asked Questions",
+
+  /* CONTACT */
+  contactTagline: "Let's Connect",
+  contactTitle: "I Can't Wait to Meet You",
+  contactDescription: "Tell me your story. I read every message personally and reply within 24 hours.",
+
+  /* QUOTE */
+  quote: "Every session is designed around your style, your personality, your story.",
+  quoteAttribution: "\u2014 Rebecca, Est. 2009",
+
+  /* PROCESS STEPS */
+  processSteps: [
+    { step: "01", title: "Let's Chat", icon: "\u2709", desc: "Fill out the contact form or email me. I'll reply within 24 hours with availability and ideas. No pressure \u2014 just a conversation." },
+    { step: "02", title: "The Session", icon: "\u2600", desc: "We pick a gorgeous Michigan location, I bring the good music, and you just show up and be yourselves. I'll guide every pose and capture every real moment." },
+    { step: "03", title: "Your Gallery", icon: "\u2727", desc: "Within 2\u20133 weeks you'll receive a private online gallery. Download, favorite, share, and order prints \u2014 all from the comfort of your couch." },
+  ],
+
+  /* INSTAGRAM */
+  instagramHandle: "@bellavitaphotography2",
+  instagramUrl: "https://www.instagram.com/bellavitaphotography2/",
+  facebookUrl: "https://www.facebook.com/bellavitaphotography2",
+
+  /* FOOTER */
+  footerTagline: "Natural light portrait photography for seniors and families in Michigan. Est. 2009.",
+  email: "bellavitaphoto@rocketmail.com",
+};
+
 /* ─── PORTFOLIO DATA ─── */
 /* REPLACE these URLs with your real photos. For max quality, use full-resolution URLs
    from your image host (Cloudinary, SmugMug, etc.) without width/quality limits.
@@ -23,9 +108,22 @@ const TESTIMONIALS = [
 ];
 
 const SERVICES = [
-  { name: "Senior Portraits", description: "90 minutes chasing golden hour at up to two hand-picked locations. Bring up to 3 outfits. Each session is designed around YOUR style and personality. Includes 50+ edited images, your own private gallery, and social media crops.", price: "Starting at $450", icon: "\u2727" },
-  { name: "Family Sessions", description: "An hour on location at your favorite spot using nothing but gorgeous natural light. I\u2019ll get your crew laughing, playing, and just being yourselves. Includes wardrobe help, 40+ edited images, and a private gallery.", price: "Starting at $375", icon: "\u2662" },
-  { name: "Mini Sessions", description: "25-minute seasonal sessions perfect for fall photos, holiday cards, or just because your kids are cute. I pick the location, you show up looking amazing. 15+ edited images. Fair warning: these book out ridiculously fast.", price: "Starting at $195", icon: "\u25cb" },
+  { category: "Senior Sessions", icon: "\u2727", collections: [
+    { name: "Senior Full Session", desc: "The ultimate senior experience \u2014 90 minutes, up to 3 outfit changes, 2 locations, 50+ edited images and a private gallery." },
+    { name: "Senior Split Session", desc: "Same full session split across two dates \u2014 perfect for seasonal variety or a second look." },
+    { name: "Senior DUO Session", desc: "Grab your best friend! Two seniors, one epic session. Individual and duo shots included." },
+    { name: "Senior Mini Session", desc: "25 minutes, one outfit, one location. 15+ edited images \u2014 fast, fun, and affordable." },
+  ]},
+  { category: "Family Sessions", icon: "\u2662", collections: [
+    { name: "Family Full Session", desc: "An hour on location with gorgeous natural light. Wardrobe help, 40+ edited images, and a private gallery." },
+    { name: "Family Mini Session", desc: "25 minutes of seasonal magic \u2014 perfect for holiday cards or just because your kids are cute. 15+ images." },
+    { name: "Milestone Sessions", desc: "Maternity, newborn, first birthday, anniversaries \u2014 life's biggest chapters deserve beautiful photos." },
+  ]},
+  { category: "Weddings & Events", icon: "\u25cb", collections: [
+    { name: "Silver Collection", desc: "Ceremony and reception coverage, online gallery, and a dedicated second photographer." },
+    { name: "Gold Collection", desc: "Full-day coverage including getting ready and send-off, engagement session, and a premium album." },
+    { name: "Platinum Collection", desc: "The complete experience \u2014 engagement session, bridal portraits, full-day coverage, album, and canvas prints." },
+  ]},
 ];
 
 const FAQS = [
@@ -44,16 +142,15 @@ const GOOGLE_REVIEWS = [
   { name: "David & Lisa T.", stars: 5, text: "She photographed our family of 7 including a toddler who refused to sit still and a teenager who refused to smile. Amazing shots of BOTH.", date: "4 months ago" },
 ];
 
-const PRINT_PRODUCTS = [
-  { name: "Fine Art Prints", description: "Museum-quality, archival paper that won\u2019t fade.", icon: "\u25a1", price: "From $35" },
-  { name: "Canvas Wraps", description: "Rich, textured, ready to hang. Every client who orders one orders a second.", icon: "\u25c7", price: "From $175" },
-  { name: "Heirloom Albums", description: "Lay-flat, leather-bound, thick luxurious pages. I design each one by hand.", icon: "\u25cb", price: "From $450" },
-  { name: "Grad Announcements", description: "Custom-designed with your senior\u2019s best portraits. Premium cardstock.", icon: "\u2727", price: "From $125" },
+const PRODUCTS = [
+  { name: "Gallery Wraps", description: "Rich, textured canvas wraps ready to hang. Every client who orders one orders a second.", icon: "\u25c7" },
+  { name: "Albums", description: "Lay-flat, leather-bound, thick luxurious pages. I design each one by hand.", icon: "\u25cb" },
+  { name: "Other Products", description: "Prints, graduation announcements, and more \u2014 all museum-quality and made to last.", icon: "\u2727" },
 ];
 
 const DEFAULT_CLIENT_GALLERIES = [
   {
-    id: "g1", clientName: "Emma Richardson \u2013 Lakeland HS \u201926", sessionType: "Senior Portraits", date: "2025-10-15", password: "emma2026",
+    id: "g1", clientName: "Emma Richardson \u2013 Lakeland HS \u201926", sessionType: "Senior Sessions", date: "2025-10-15", password: "emma2026",
     coverImage: "https://images.unsplash.com/photo-1517677129300-07b130802f46?w=800&q=85",
     images: [
       { src: "https://images.unsplash.com/photo-1517677129300-07b130802f46?w=1200&q=90", full: "https://images.unsplash.com/photo-1517677129300-07b130802f46?w=2400&q=95", title: "Golden Hour" },
@@ -76,7 +173,7 @@ const DEFAULT_CLIENT_GALLERIES = [
     ]
   },
   {
-    id: "g3", clientName: "Jake Thompson", sessionType: "Senior Portraits", date: "2025-11-02", password: "jake2026",
+    id: "g3", clientName: "Jake Thompson", sessionType: "Senior Sessions", date: "2025-11-02", password: "jake2026",
     coverImage: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=85",
     images: [
       { src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&q=90", full: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=2400&q=95", title: "Urban Cool" },
@@ -164,7 +261,7 @@ async function downloadImage(url, filename) {
 
 async function shareImage(title, url) {
   if (navigator.share) {
-    try { await navigator.share({ title: "Bella Vita Photography \u2014 " + title, url }); } catch {}
+    try { await navigator.share({ title: "bella vita photography \u2014 " + title, url }); } catch {}
   } else {
     try { await navigator.clipboard.writeText(url); alert("Link copied to clipboard!"); }
     catch { window.open(url, "_blank"); }
@@ -357,7 +454,7 @@ function ClientGalleryPage({ galleries, onBack }) {
             className="bv-input" style={{ textAlign: "center", letterSpacing: "0.08em", borderColor: error ? "#d4685a" : undefined }} />
           {error && <div style={{ marginTop: "10px", fontSize: "0.78rem", color: "#d4685a", animation: "bvFadeIn 0.3s ease" }}>{error}</div>}
           <button onClick={handleUnlock} className="bv-btn-primary" style={{ marginTop: "20px", width: "100%" }}>View Gallery</button>
-          <p style={{ marginTop: "28px", fontSize: "0.72rem", color: "var(--muted)", lineHeight: 1.7, opacity: 0.6 }}>Your password was in your session delivery email.<br />Can't find it? Email <a href="mailto:rebecca.henson@yahoo.com" style={{ color: "var(--accent)", textDecoration: "none" }}>rebecca.henson@yahoo.com</a></p>
+          <p style={{ marginTop: "28px", fontSize: "0.72rem", color: "var(--muted)", lineHeight: 1.7, opacity: 0.6 }}>Your password was in your session delivery email.<br />Can't find it? Email <a href="mailto:bellavitaphoto@rocketmail.com" style={{ color: "var(--accent)", textDecoration: "none" }}>bellavitaphoto@rocketmail.com</a></p>
         </div>
       </div>
     );
@@ -396,7 +493,7 @@ function AdminPanel({ galleries, setGalleries, onClose }) {
   const [authed, setAuthed] = useState(false);
   const [adminPw, setAdminPw] = useState("");
   const [adminError, setAdminError] = useState("");
-  const [newGallery, setNewGallery] = useState({ clientName: "", sessionType: "Senior Portraits", date: "", password: "", images: "" });
+  const [newGallery, setNewGallery] = useState({ clientName: "", sessionType: "Senior Sessions", date: "", password: "", images: "" });
   const ADMIN_PASSWORD = "bellavita2025";
   const inputStyle = { width: "100%", padding: "11px 14px", background: "#FFFFFF", border: "1px solid #E8E2D8", borderRadius: "3px", color: "#2E2A25", fontFamily: "var(--font-body)", fontSize: "0.85rem", outline: "none", marginTop: "6px" };
   const labelStyle = { fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#9E978D", display: "block", marginTop: "14px" };
@@ -422,7 +519,7 @@ function AdminPanel({ galleries, setGalleries, onClose }) {
     const imageList = newGallery.images.split("\n").map(s => s.trim()).filter(Boolean).map((url, i) => ({ src: url, full: url, title: "Photo " + (i + 1) }));
     const gallery = { id: "g" + Date.now(), clientName: newGallery.clientName, sessionType: newGallery.sessionType, date: newGallery.date, password: newGallery.password, coverImage: imageList[0]?.src || "https://images.unsplash.com/photo-1517677129300-07b130802f46?w=800&q=85", images: imageList.length > 0 ? imageList : [{ src: "https://images.unsplash.com/photo-1517677129300-07b130802f46?w=1200&q=90", full: "https://images.unsplash.com/photo-1517677129300-07b130802f46?w=2400&q=95", title: "Sample" }] };
     setGalleries(prev => [...prev, gallery]);
-    setNewGallery({ clientName: "", sessionType: "Senior Portraits", date: "", password: "", images: "" });
+    setNewGallery({ clientName: "", sessionType: "Senior Sessions", date: "", password: "", images: "" });
   };
 
   return (
@@ -440,9 +537,9 @@ function AdminPanel({ galleries, setGalleries, onClose }) {
           <input style={inputStyle} placeholder="e.g. Emma Richardson" value={newGallery.clientName} onChange={e => setNewGallery({ ...newGallery, clientName: e.target.value })} />
           <label style={labelStyle}>Session Type</label>
           <select value={newGallery.sessionType} onChange={e => setNewGallery({ ...newGallery, sessionType: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
-            <option value="Senior Portraits">Senior Portraits</option>
-            <option value="Family Session">Family Session</option>
-            <option value="Mini Session">Mini Session</option>
+            <option value="Senior Sessions">Senior Sessions</option>
+            <option value="Family Sessions">Family Sessions</option>
+            <option value="Weddings & Events">Weddings & Events</option>
           </select>
           <label style={labelStyle}>Session Date</label>
           <input style={inputStyle} type="date" value={newGallery.date} onChange={e => setNewGallery({ ...newGallery, date: e.target.value })} />
@@ -482,13 +579,11 @@ export default function PhotographyWebsite() {
   const [lightboxImage, setLightboxImage] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [heroLoaded, setHeroLoaded] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "", type: "Senior Portraits" });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "", type: "Senior Sessions" });
   const [formSent, setFormSent] = useState(false);
   const [currentView, setCurrentView] = useState("main");
   const [clientGalleries, setClientGalleries] = useState(DEFAULT_CLIENT_GALLERIES);
   const [showStyleGuide, setShowStyleGuide] = useState(false);
-  const [styleGuideEmail, setStyleGuideEmail] = useState("");
-  const [styleGuideSent, setStyleGuideSent] = useState(false);
   const [popupDismissed, setPopupDismissed] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
   const [giftAmount, setGiftAmount] = useState("450");
@@ -500,7 +595,6 @@ export default function PhotographyWebsite() {
 
   useEffect(() => { setTimeout(() => setHeroLoaded(true), 150); }, []);
   useEffect(() => { document.body.style.overflow = (lightboxImage || menuOpen) ? "hidden" : ""; return () => { document.body.style.overflow = ""; }; }, [lightboxImage, menuOpen]);
-  useEffect(() => { if (popupDismissed || styleGuideSent) return; const t = setTimeout(() => setShowStyleGuide(true), 15000); return () => clearTimeout(t); }, [popupDismissed, styleGuideSent]);
   useEffect(() => { const h = () => { setScrollY(window.scrollY); const doc = document.documentElement; setScrollProgress((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100); }; window.addEventListener("scroll", h, { passive: true }); return () => window.removeEventListener("scroll", h); }, []);
 
   /* Preload hero image for instant render */
@@ -549,11 +643,11 @@ export default function PhotographyWebsite() {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "@id": "https://bella-vita-photography.vercel.app",
-      "name": "Bella Vita Photography",
+      "name": "bella vita photography",
       "description": "Natural light portrait photography for seniors and families in Livingston and Oakland County, Michigan. Owned by Rebecca Henson, est. 2009.",
       "url": "https://bella-vita-photography.vercel.app",
       "telephone": "",
-      "email": "rebecca.henson@yahoo.com",
+      "email": "bellavitaphoto@rocketmail.com",
       "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=85",
       "address": {
         "@type": "PostalAddress",
@@ -628,9 +722,9 @@ export default function PhotographyWebsite() {
     if (!formData.message.trim()) errors.message = "Tell me about your vision";
     setFormErrors(errors);
     if (Object.keys(errors).length > 0) return;
-    setFormSent(true); setTimeout(() => setFormSent(false), 4000); setFormData({ name: "", email: "", message: "", type: "Senior Portraits" }); setFormErrors({});
+    setFormSent(true); setTimeout(() => setFormSent(false), 4000); setFormData({ name: "", email: "", message: "", type: "Senior Sessions" }); setFormErrors({});
   };
-  const handleStyleGuideSubmit = (fromPopup) => { if (!emailRegex.test(styleGuideEmail)) return; setStyleGuideSent(true); setStyleGuideEmail(""); if (fromPopup) { setShowStyleGuide(false); setPopupDismissed(true); } };
+  const handleStyleGuideSubmit = () => {};
 
   if (currentView === "client-gallery") return <ClientGalleryPage galleries={clientGalleries} onBack={() => setCurrentView("main")} />;
   if (currentView === "admin") return <AdminPanel galleries={clientGalleries} setGalleries={setClientGalleries} onClose={() => setCurrentView("main")} />;
@@ -738,7 +832,7 @@ export default function PhotographyWebsite() {
 
       {/* NAV */}
       <nav role="navigation" aria-label="Main navigation" className="bv-nav" style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 9990, padding: "20px 48px", display: "flex", justifyContent: "space-between", alignItems: "center", background: scrollY > 50 ? "rgba(252,250,246,0.95)" : "transparent", backdropFilter: scrollY > 50 ? "blur(16px)" : "none", borderBottom: scrollY > 50 ? "1px solid var(--border-light)" : "1px solid transparent", transition: "all 0.4s ease" }}>
-        <div onClick={() => scrollTo("hero")} style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 500, letterSpacing: "0.04em", cursor: "pointer", color: "var(--text)" }}><span style={{ color: "var(--accent)" }}>B</span>ella <span style={{ color: "var(--accent)" }}>V</span>ita</div>
+        <div onClick={() => scrollTo("hero")} style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 500, letterSpacing: "0.04em", cursor: "pointer", color: "var(--text)" }}><span style={{ color: "var(--accent)" }}>b</span>ella <span style={{ color: "var(--accent)" }}>v</span>ita</div>
         <div className="bv-desktop-nav" style={{ display: "flex", gap: "32px", alignItems: "center" }}>
           {["Portfolio", "About", "Services", "Products", "FAQ", "Contact"].map(item => (
             <span key={item} className={"bv-nav-link" + (activeSection === item.toLowerCase() ? " bv-active" : "")} onClick={() => scrollTo(item.toLowerCase())} style={{ fontSize: "0.7rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--text-light)", fontWeight: 400 }}>{item}</span>
@@ -776,14 +870,14 @@ export default function PhotographyWebsite() {
             opacity: heroLoaded ? 1 : 0, transform: heroLoaded ? "translateY(0)" : "translateY(20px)",
             transition: "all 1s cubic-bezier(0.22,1,0.36,1) 0.3s",
           }}>
-            <span style={{ color: "var(--accent)" }}>B</span>ella <span style={{ color: "var(--accent)" }}>V</span>ita
+            <span style={{ color: "var(--accent)" }}>b</span>ella <span style={{ color: "var(--accent)" }}>v</span>ita
           </div>
           <div style={{
             fontFamily: "var(--font-body)", fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase",
             color: "var(--accent)", marginTop: "10px",
             opacity: heroLoaded ? 1 : 0, transform: heroLoaded ? "translateY(0)" : "translateY(12px)",
             transition: "all 1s cubic-bezier(0.22,1,0.36,1) 0.5s",
-          }}>Photography {"\u00b7"} Est. 2009 {"\u00b7"} Michigan</div>
+          }}>{ SITE_CONTENT.tagline }</div>
         </div>
 
         {/* Banner photo strip */}
@@ -817,18 +911,18 @@ export default function PhotographyWebsite() {
             lineHeight: 1.08, color: "var(--text)",
             opacity: heroLoaded ? 1 : 0, transform: heroLoaded ? "translateY(0)" : "translateY(24px)",
             transition: "all 1s cubic-bezier(0.22,1,0.36,1) 0.9s",
-          }}>Your story is<br /><em style={{ fontStyle: "italic", color: "var(--accent)" }}>worth telling</em></h1>
+          }}>{SITE_CONTENT.headline}<br /><em style={{ fontStyle: "italic", color: "var(--accent)" }}>{SITE_CONTENT.headlineAccent}</em></h1>
           <p style={{
             fontFamily: "var(--font-body)", fontSize: "0.95rem", fontWeight: 300, color: "var(--text-light)",
             maxWidth: "480px", margin: "24px auto 0", lineHeight: 1.8,
             opacity: heroLoaded ? 1 : 0, transform: heroLoaded ? "translateY(0)" : "translateY(16px)",
             transition: "all 1s cubic-bezier(0.22,1,0.36,1) 1.1s",
-          }}>I'm Rebecca {"\u2014"} a Michigan mom, natural light photographer, and believer that the best images happen when you stop posing and start living.</p>
+          }}>{SITE_CONTENT.heroDescription}</p>
           <div style={{
             marginTop: "32px",
             opacity: heroLoaded ? 1 : 0, transform: heroLoaded ? "translateY(0)" : "translateY(12px)",
             transition: "all 1s cubic-bezier(0.22,1,0.36,1) 1.3s",
-          }}><button className="bv-btn-primary" onClick={() => scrollTo("contact")}>Capture Your Moment</button></div>
+          }}><button className="bv-btn-primary" onClick={() => scrollTo("contact")}>{SITE_CONTENT.heroButton}</button></div>
         </div>
       </section>
 
@@ -836,8 +930,8 @@ export default function PhotographyWebsite() {
       <section id="portfolio" className="bv-section" style={{ padding: "100px 48px", maxWidth: "1400px", margin: "0 auto" }}>
         <AnimatedSection>
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
-            <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>Recent Favorites</div>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400 }}>My Work</h2>
+            <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.portfolioTagline }</div>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400 }}>{ SITE_CONTENT.portfolioTitle }</h2>
             <p style={{ color: "var(--muted)", fontSize: "0.85rem", fontWeight: 300, maxWidth: "440px", margin: "14px auto 0", lineHeight: 1.7 }}>Every one of these sessions started with someone saying "I'm so awkward in front of cameras."</p>
           </div>
         </AnimatedSection>
@@ -871,7 +965,7 @@ export default function PhotographyWebsite() {
               <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>Hey, I'm Rebecca</div>
               <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 400, marginBottom: "28px", lineHeight: 1.2 }}>The face behind <em style={{ fontStyle: "italic", color: "var(--accent)" }}>the camera</em></h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "18px", color: "var(--text-light)", fontSize: "0.92rem", lineHeight: 1.85, fontWeight: 300 }}>
-                <p>I started Bella Vita Photography back in 2009 with a camera, a marketing degree from Davenport University, and a heart full of love for freezing beautiful moments in time. Over fifteen years later, I still get butterflies before every single session.</p>
+                <p>I started bella vita photography back in 2009 with a camera, a marketing degree from Davenport University, and a heart full of love for freezing beautiful moments in time. Over fifteen years later, I still get butterflies before every single session.</p>
                 <p>I'm a natural light, on-location photographer. There's something magical about Michigan light {"\u2014"} the way it spills through the trees at Kensington Metropark, wraps around downtown Milford, or glows across Island Lake.</p>
                 <p>Every session is designed around YOU {"\u2014"} your style, your personality, your family's energy. I want you to look at these photos in twenty years and feel everything all over again.</p>
               </div>
@@ -887,8 +981,8 @@ export default function PhotographyWebsite() {
       <AnimatedSection>
         <div className="bv-section" style={{ padding: "80px 48px", textAlign: "center" }}>
           <div style={{ maxWidth: "640px", margin: "0 auto" }}>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 2.8vw, 2.2rem)", fontStyle: "italic", fontWeight: 400, color: "var(--text)", lineHeight: 1.6 }}>"Every session is designed around your style, your personality, your story."</div>
-            <div style={{ marginTop: "24px", fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--accent)" }}>{"\u2014"} Rebecca, Est. 2009</div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 2.8vw, 2.2rem)", fontStyle: "italic", fontWeight: 400, color: "var(--text)", lineHeight: 1.6 }}>"{SITE_CONTENT.quote}"</div>
+            <div style={{ marginTop: "24px", fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--accent)" }}>{SITE_CONTENT.quoteAttribution}</div>
           </div>
         </div>
       </AnimatedSection>
@@ -906,11 +1000,7 @@ export default function PhotographyWebsite() {
           <div className="bv-process-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "48px", position: "relative" }}>
             {/* Connecting line */}
             <div className="bv-process-line" style={{ position: "absolute", top: "32px", left: "16%", right: "16%", height: "1px", background: "var(--border)", zIndex: 0 }} />
-            {[
-              { step: "01", title: "Let's Chat", icon: "\u2709", desc: "Fill out the contact form or email me. I'll reply within 24 hours with availability, ideas, and your free style guide. No pressure \u2014 just a conversation." },
-              { step: "02", title: "The Session", icon: "\u2600", desc: "We pick a gorgeous Michigan location, I bring the good music, and you just show up and be yourselves. I'll guide every pose and capture every real moment." },
-              { step: "03", title: "Your Gallery", icon: "\u2727", desc: "Within 2\u20133 weeks you'll receive a private online gallery. Download, favorite, share, and order prints \u2014 all from the comfort of your couch." },
-            ].map((item, i) => (
+            {SITE_CONTENT.processSteps.map((item, i) => (
               <AnimatedSection key={i} delay={i * 0.15}>
                 <div style={{ textAlign: "center", position: "relative", zIndex: 1 }}>
                   <div style={{ width: "64px", height: "64px", borderRadius: "50%", background: "var(--card-bg)", border: "2px solid var(--accent-light)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", fontSize: "1.4rem", color: "var(--accent)", boxShadow: "0 4px 16px rgba(0,0,0,0.04)" }}>{item.icon}</div>
@@ -928,8 +1018,8 @@ export default function PhotographyWebsite() {
       <section id="services" className="bv-section" style={{ padding: "80px 48px", maxWidth: "1200px", margin: "0 auto" }}>
         <AnimatedSection>
           <div style={{ textAlign: "center", marginBottom: "60px" }}>
-            <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>What I Offer</div>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400 }}>The Experience</h2>
+            <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.servicesTagline }</div>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400 }}>{ SITE_CONTENT.servicesTitle }</h2>
           </div>
         </AnimatedSection>
         <div className="bv-grid-services" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
@@ -939,9 +1029,15 @@ export default function PhotographyWebsite() {
                 onMouseMove={e => { const rect = e.currentTarget.getBoundingClientRect(); const x = ((e.clientX - rect.left) / rect.width - 0.5) * 6; const y = ((e.clientY - rect.top) / rect.height - 0.5) * -6; e.currentTarget.style.transform = `translateY(-3px) rotateX(${y}deg) rotateY(${x}deg)`; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0) rotateX(0) rotateY(0)"; }}>
                 <div style={{ fontSize: "1.5rem", color: "var(--accent-light)", marginBottom: "18px" }}>{s.icon}</div>
-                <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 500, marginBottom: "16px" }}>{s.name}</h3>
-                <p style={{ color: "var(--text-light)", fontSize: "0.88rem", lineHeight: 1.8, fontWeight: 300, flex: 1 }}>{s.description}</p>
-                <div style={{ marginTop: "24px", fontFamily: "var(--font-display)", fontSize: "1.15rem", color: "var(--accent)", fontWeight: 500 }}>{s.price}</div>
+                <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 500, marginBottom: "20px" }}>{s.category}</h3>
+                <div style={{ flex: 1 }}>
+                  {s.collections.map((c, j) => (
+                    <div key={j} style={{ marginBottom: j < s.collections.length - 1 ? "16px" : 0, paddingBottom: j < s.collections.length - 1 ? "16px" : 0, borderBottom: j < s.collections.length - 1 ? "1px solid var(--border-light)" : "none" }}>
+                      <div style={{ fontFamily: "var(--font-display)", fontSize: "1.05rem", fontWeight: 500, marginBottom: "6px", color: "var(--text)" }}>{c.name}</div>
+                      <p style={{ color: "var(--text-light)", fontSize: "0.82rem", lineHeight: 1.7, fontWeight: 300 }}>{c.desc}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </AnimatedSection>
           ))}
@@ -953,11 +1049,11 @@ export default function PhotographyWebsite() {
         <div className="bv-section" style={{ padding: "36px 48px", background: "var(--bg-warm)", borderTop: "1px solid var(--border-light)", borderBottom: "1px solid var(--border-light)" }}>
           <div className="bv-avail-banner" style={{ maxWidth: "900px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "24px" }}>
             <div>
-              <div style={{ fontSize: "0.65rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "6px" }}>{"\u2727"} Now Booking</div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: "1.35rem", fontWeight: 400 }}>Class of 2027 Seniors & Fall Family Sessions</div>
+              <div style={{ fontSize: "0.65rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "6px" }}>{SITE_CONTENT.availabilityLabel}</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: "1.35rem", fontWeight: 400 }}>{SITE_CONTENT.availabilityTitle}</div>
             </div>
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-              {[{ label: "Senior Slots", count: "4", sub: "remaining" }, { label: "Family Slots", count: "6", sub: "remaining" }, { label: "Mini Sessions", count: "Oct 19", sub: "next date" }].map((slot, i) => (
+              {SITE_CONTENT.availabilitySlots.map((slot, i) => (
                 <div key={i} style={{ textAlign: "center", padding: "10px 18px", border: "1px solid var(--border)", borderRadius: "3px", background: "var(--card-bg)", minWidth: "100px" }}>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: "1.3rem", color: "var(--accent)", fontWeight: 500 }}>{slot.count}</div>
                   <div style={{ fontSize: "0.58rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--muted)", marginTop: "2px" }}>{slot.sub}</div>
@@ -973,12 +1069,12 @@ export default function PhotographyWebsite() {
       <section id="products" className="bv-section" style={{ padding: "80px 48px", maxWidth: "1200px", margin: "0 auto" }}>
         <AnimatedSection>
           <div style={{ textAlign: "center", marginBottom: "60px" }}>
-            <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>Heirloom Quality</div>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400 }}>Prints & Albums</h2>
+            <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.productsTagline }</div>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400 }}>{ SITE_CONTENT.productsTitle }</h2>
           </div>
         </AnimatedSection>
         <div className="bv-grid-products" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "20px" }}>
-          {PRINT_PRODUCTS.map((p, i) => (
+          {PRODUCTS.map((p, i) => (
             <AnimatedSection key={i} delay={i * 0.08}>
               <div style={{ padding: "36px 28px", border: "1px solid var(--border)", borderRadius: "3px", textAlign: "center", transition: "all 0.35s ease", background: "var(--card-bg)", height: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = "#D4B896"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
@@ -986,7 +1082,6 @@ export default function PhotographyWebsite() {
                 <div style={{ fontSize: "1.8rem", marginBottom: "14px", color: "var(--accent-light)" }}>{p.icon}</div>
                 <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", fontWeight: 500, marginBottom: "10px" }}>{p.name}</h3>
                 <p style={{ color: "var(--text-light)", fontSize: "0.82rem", lineHeight: 1.7, fontWeight: 300, flex: 1 }}>{p.description}</p>
-                <div style={{ marginTop: "14px", fontFamily: "var(--font-display)", fontSize: "1.05rem", color: "var(--accent)", fontWeight: 500 }}>{p.price}</div>
               </div>
             </AnimatedSection>
           ))}
@@ -1012,7 +1107,7 @@ export default function PhotographyWebsite() {
               <div style={{ background: "var(--card-bg)", border: "1px solid var(--border)", borderRadius: "3px", padding: "36px 28px", textAlign: "center", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
                 <div style={{ fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "18px" }}>Gift Certificate</div>
                 <div style={{ fontFamily: "var(--font-display)", fontSize: "2.2rem", fontWeight: 500, color: "var(--accent)", marginBottom: "6px" }}>{giftAmount === "Custom" ? "Custom" : "$" + giftAmount}</div>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", fontWeight: 400, marginBottom: "14px" }}>Bella Vita Photography</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", fontWeight: 400, marginBottom: "14px" }}>bella vita photography</div>
                 <div style={{ width: "36px", height: "1px", background: "var(--border)", margin: "0 auto 14px" }} />
                 <div style={{ fontSize: "0.72rem", color: "var(--muted)", lineHeight: 1.6 }}>Redeemable for any session or product<br />Never expires</div>
               </div>
@@ -1026,8 +1121,8 @@ export default function PhotographyWebsite() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <AnimatedSection>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
-              <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>Kind Words</div>
-              <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400 }}>What Clients Say</h2>
+              <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.testimonialsTagline }</div>
+              <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400 }}>{ SITE_CONTENT.testimonialsTitle }</h2>
             </div>
           </AnimatedSection>
           <div className="bv-grid-testimonials bv-testimonials-scroll" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }}>
@@ -1079,8 +1174,8 @@ export default function PhotographyWebsite() {
         <div style={{ maxWidth: "760px", margin: "0 auto" }}>
           <AnimatedSection>
             <div style={{ textAlign: "center", marginBottom: "56px" }}>
-              <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>Common Questions</div>
-              <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400 }}>Good Questions</h2>
+              <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.faqTagline }</div>
+              <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400 }}>{ SITE_CONTENT.faqTitle }</h2>
             </div>
           </AnimatedSection>
           {FAQS.map((faq, i) => (
@@ -1096,7 +1191,7 @@ export default function PhotographyWebsite() {
               </div>
             </AnimatedSection>
           ))}
-          <AnimatedSection delay={0.3}><div style={{ textAlign: "center", marginTop: "40px" }}><p style={{ color: "var(--muted)", fontSize: "0.82rem", fontWeight: 300 }}>Something else? <a href="mailto:rebecca.henson@yahoo.com" style={{ color: "var(--accent)", textDecoration: "none", borderBottom: "1px solid var(--accent-light)" }}>Email me</a></p></div></AnimatedSection>
+          <AnimatedSection delay={0.3}><div style={{ textAlign: "center", marginTop: "40px" }}><p style={{ color: "var(--muted)", fontSize: "0.82rem", fontWeight: 300 }}>Something else? <a href="mailto:bellavitaphoto@rocketmail.com" style={{ color: "var(--accent)", textDecoration: "none", borderBottom: "1px solid var(--accent-light)" }}>Email me</a></p></div></AnimatedSection>
         </div>
       </section>
 
@@ -1105,10 +1200,10 @@ export default function PhotographyWebsite() {
         <div style={{ maxWidth: "760px", margin: "0 auto" }}>
           <AnimatedSection>
             <div style={{ textAlign: "center", marginBottom: "56px" }}>
-              <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>Let's Connect</div>
-              <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400, marginBottom: "16px" }}>I Can't Wait to Meet You</h2>
-              <p style={{ color: "var(--text-light)", fontSize: "0.9rem", lineHeight: 1.8, fontWeight: 300, maxWidth: "500px", margin: "0 auto" }}>Tell me your story. I read every message personally and reply within 24 hours.</p>
-              <p style={{ marginTop: "10px" }}><a href="mailto:rebecca.henson@yahoo.com" style={{ color: "var(--accent)", textDecoration: "none", fontSize: "0.9rem", borderBottom: "1px solid var(--accent-light)" }}>rebecca.henson@yahoo.com</a></p>
+              <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.contactTagline }</div>
+              <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400, marginBottom: "16px" }}>{ SITE_CONTENT.contactTitle }</h2>
+              <p style={{ color: "var(--text-light)", fontSize: "0.9rem", lineHeight: 1.8, fontWeight: 300, maxWidth: "500px", margin: "0 auto" }}>{SITE_CONTENT.contactDescription}</p>
+              <p style={{ marginTop: "10px" }}><a href="mailto:bellavitaphoto@rocketmail.com" style={{ color: "var(--accent)", textDecoration: "none", fontSize: "0.9rem", borderBottom: "1px solid var(--accent-light)" }}>bellavitaphoto@rocketmail.com</a></p>
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
@@ -1127,7 +1222,7 @@ export default function PhotographyWebsite() {
             <div style={{ marginTop: "20px" }}>
               <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "8px" }}>Session Type</label>
               <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-                {["Senior Portraits", "Family Session", "Mini Session", "Gift Certificate", "Other"].map(type => (
+                {["Senior Sessions", "Family Sessions", "Weddings & Events", "Gift Certificate", "Other"].map(type => (
                   <button key={type} onClick={() => setFormData({ ...formData, type })} style={{ padding: "7px 18px", borderRadius: "3px", cursor: "pointer", background: formData.type === type ? "var(--accent)" : "var(--card-bg)", color: formData.type === type ? "#fff" : "var(--text-light)", border: "1px solid " + (formData.type === type ? "var(--accent)" : "var(--border)"), fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "var(--font-body)", transition: "all 0.3s ease" }}>{type}</button>
                 ))}
               </div>
@@ -1145,36 +1240,6 @@ export default function PhotographyWebsite() {
         </div>
       </section>
 
-      {/* STYLE GUIDE BANNER */}
-      <AnimatedSection>
-        <div className="bv-section" style={{ padding: "48px", textAlign: "center", background: "var(--card-bg)", borderTop: "1px solid var(--border-light)" }}>
-          <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "10px" }}>Free Download</div>
-          <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.6rem", fontWeight: 400, marginBottom: "10px" }}>Senior Portrait Style Guide</h3>
-          <p style={{ color: "var(--muted)", fontSize: "0.82rem", fontWeight: 300, maxWidth: "440px", margin: "0 auto 20px", lineHeight: 1.7 }}>What to wear, how to prep, and insider tips from 500+ sessions.</p>
-          <div style={{ display: "flex", gap: "10px", justifyContent: "center", flexWrap: "wrap", maxWidth: "420px", margin: "0 auto" }}>
-            <input type="email" placeholder="your@email.com" value={styleGuideEmail} onChange={e => setStyleGuideEmail(e.target.value)} className="bv-input" style={{ flex: 1, minWidth: "190px" }} />
-            <button onClick={() => handleStyleGuideSubmit(false)} className="bv-btn-primary" style={{ background: styleGuideSent ? "#5a9e6f" : undefined, whiteSpace: "nowrap" }}>{styleGuideSent ? "\u2713 Check Your Inbox!" : "Send Me the Guide"}</button>
-          </div>
-          <p style={{ fontSize: "0.6rem", color: "var(--muted)", marginTop: "10px", opacity: 0.5 }}>No spam ever.</p>
-        </div>
-      </AnimatedSection>
-
-      {/* POPUP */}
-      {showStyleGuide && !styleGuideSent && !popupDismissed && (
-        <div style={{ position: "fixed", inset: 0, zIndex: 9998, background: "rgba(0,0,0,0.3)", display: "flex", alignItems: "center", justifyContent: "center", animation: "bvFadeIn 0.35s ease", padding: "24px", backdropFilter: "blur(4px)" }} onClick={() => { setShowStyleGuide(false); setPopupDismissed(true); }}>
-          <div onClick={e => e.stopPropagation()} style={{ background: "var(--card-bg)", border: "1px solid var(--border)", borderRadius: "6px", padding: "44px 36px", maxWidth: "420px", width: "100%", textAlign: "center", position: "relative", animation: "bvScaleIn 0.4s cubic-bezier(0.22,1,0.36,1)", boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}>
-            <button onClick={() => { setShowStyleGuide(false); setPopupDismissed(true); }} style={{ position: "absolute", top: "14px", right: "18px", background: "none", border: "none", color: "var(--muted)", fontSize: "1.2rem", cursor: "pointer" }} aria-label="Close popup">{"\u2715"}</button>
-            <div style={{ fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "12px" }}>Free Download</div>
-            <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 400, marginBottom: "10px", lineHeight: 1.3 }}>Senior Portrait <em style={{ color: "var(--accent)", fontStyle: "italic" }}>Style Guide</em></h3>
-            <p style={{ color: "var(--text-light)", fontSize: "0.82rem", lineHeight: 1.7, fontWeight: 300, marginBottom: "22px" }}>Outfit ideas, Michigan locations, and pro tips in a gorgeous PDF.</p>
-            <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-              <input type="email" placeholder="your@email.com" value={styleGuideEmail} onChange={e => setStyleGuideEmail(e.target.value)} className="bv-input" style={{ flex: 1, minWidth: "170px" }} />
-              <button onClick={() => handleStyleGuideSubmit(true)} className="bv-btn-primary" style={{ whiteSpace: "nowrap" }}>Get It Free</button>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* INSTAGRAM CTA */}
       <AnimatedSection>
         <div className="bv-section" style={{ padding: "52px 48px", textAlign: "center" }}>
@@ -1190,8 +1255,8 @@ export default function PhotographyWebsite() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "48px", marginBottom: "40px" }} className="bv-footer-grid">
             <div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", fontWeight: 500, letterSpacing: "0.04em", marginBottom: "12px" }}><span style={{ color: "var(--accent)" }}>B</span>ella <span style={{ color: "var(--accent)" }}>V</span>ita</div>
-              <p style={{ fontSize: "0.82rem", color: "var(--text-light)", lineHeight: 1.8, fontWeight: 300, maxWidth: "280px" }}>Natural light portrait photography for seniors and families in Michigan. Est. 2009.</p>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", fontWeight: 500, letterSpacing: "0.04em", marginBottom: "12px" }}><span style={{ color: "var(--accent)" }}>b</span>ella <span style={{ color: "var(--accent)" }}>v</span>ita</div>
+              <p style={{ fontSize: "0.82rem", color: "var(--text-light)", lineHeight: 1.8, fontWeight: 300, maxWidth: "280px" }}>{SITE_CONTENT.footerTagline}</p>
             </div>
             <div>
               <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "16px", fontWeight: 400 }}>Navigate</div>
@@ -1202,7 +1267,7 @@ export default function PhotographyWebsite() {
             </div>
             <div>
               <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "16px", fontWeight: 400 }}>Sessions</div>
-              {["Senior Portraits", "Family Sessions", "Mini Sessions", "Gift Certificates"].map(item => (
+              {["Senior Sessions", "Family Sessions", "Weddings & Events", "Gift Certificates"].map(item => (
                 <div key={item} style={{ fontSize: "0.82rem", color: "var(--text-light)", padding: "4px 0", fontWeight: 300 }}>{item}</div>
               ))}
             </div>
@@ -1210,12 +1275,12 @@ export default function PhotographyWebsite() {
               <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "16px", fontWeight: 400 }}>Connect</div>
               <a href="https://www.instagram.com/bellavitaphotography2/" target="_blank" rel="noopener noreferrer" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>Instagram</a>
               <a href="https://www.facebook.com/bellavitaphotography2" target="_blank" rel="noopener noreferrer" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>Facebook</a>
-              <a href="mailto:rebecca.henson@yahoo.com" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>rebecca.henson@yahoo.com</a>
+              <a href="mailto:bellavitaphoto@rocketmail.com" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>bellavitaphoto@rocketmail.com</a>
               <div onClick={() => setCurrentView("client-gallery")} style={{ fontSize: "0.82rem", color: "var(--accent)", cursor: "pointer", padding: "4px 0", fontWeight: 300, marginTop: "6px" }}>Client Gallery {"\u2192"}</div>
             </div>
           </div>
           <div style={{ borderTop: "1px solid var(--border-light)", paddingTop: "20px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "10px" }}>
-            <div style={{ fontSize: "0.6rem", color: "var(--muted)", letterSpacing: "0.08em", opacity: 0.6 }}>{"\u00a9"} {new Date().getFullYear()} Bella Vita Photography. All rights reserved.</div>
+            <div style={{ fontSize: "0.6rem", color: "var(--muted)", letterSpacing: "0.08em", opacity: 0.6 }}>{"\u00a9"} {new Date().getFullYear()} bella vita photography. All rights reserved.</div>
             <span className="bv-nav-link" onClick={() => setCurrentView("admin")} style={{ fontSize: "0.58rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--border)", cursor: "pointer" }}>Admin</span>
           </div>
         </div>
