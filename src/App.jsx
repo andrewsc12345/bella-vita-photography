@@ -10,7 +10,7 @@ const SITE_CONTENT = {
   tagline: "Photography \u00b7 Est. 2009 \u00b7 Michigan",
   headline: "Your story is",
   headlineAccent: "worth telling",
-  heroDescription: "I'm Rebecca \u2014 a Michigan mom, natural light photographer, and believer that the best images happen when you stop posing and start living.",
+  heroDescription: "I'm Rebecca, a Michigan mom and natural light photographer, specializing in family and high school senior sessions. I am passionate about photography and absolutely love capturing special moments for my clients.",
   heroButton: "Capture Your Moment",
 
   /* ABOUT SECTION */
@@ -25,17 +25,17 @@ const SITE_CONTENT = {
   ],
 
   /* PORTFOLIO SECTION */
-  portfolioTagline: "Recent Favorites",
-  portfolioTitle: "My Work",
-  portfolioDescription: "Every one of these sessions started with someone saying \"I'm so awkward in front of cameras.\"",
+  portfolioTagline: "",
+  portfolioTitle: "My Portfolio",
+  portfolioDescription: "Most sessions start with someone saying, \"I hate myself in pictures\" and ending with \"OMG...I love these.\"",
 
   /* SERVICES SECTION */
   servicesTagline: "What I Offer",
-  servicesTitle: "The Experience",
+  servicesTitle: "Collections",
 
   /* AVAILABILITY BANNER */
   availabilityLabel: "\u2727 Now Booking",
-  availabilityTitle: "Class of 2027 Seniors, Fall Families & Weddings",
+  availabilityTitle: "Class of 2027 Seniors",
   availabilitySlots: [
     { label: "Senior Slots", count: "4", sub: "remaining" },
     { label: "Family Slots", count: "6", sub: "remaining" },
@@ -43,13 +43,13 @@ const SITE_CONTENT = {
   ],
 
   /* PRODUCTS SECTION */
-  productsTagline: "Heirloom Quality",
+  productsTagline: "Beyond the Gallery",
   productsTitle: "Products",
 
   /* GIFT CERTIFICATES */
   giftTitle: "Give the Gift of",
-  giftTitleAccent: "Beautiful Memories",
-  giftDescription: "Gift certificates come in any amount, never expire, and I'll send a gorgeous digital certificate straight to their inbox.",
+  giftTitleAccent: "bella",
+  giftDescription: "Your recipient(s) will receive a personalized bella digital gift certificate straight to their inbox.",
 
   /* TESTIMONIALS */
   testimonialsTagline: "Kind Words",
@@ -71,8 +71,8 @@ const SITE_CONTENT = {
   /* PROCESS STEPS */
   processSteps: [
     { step: "01", title: "Let's Chat", icon: "\u2709", desc: "Fill out the contact form or email me. I'll reply within 24 hours with availability and ideas. No pressure \u2014 just a conversation." },
-    { step: "02", title: "The Session", icon: "\u2600", desc: "We pick a gorgeous Michigan location, I bring the good music, and you just show up and be yourselves. I'll guide every pose and capture every real moment." },
-    { step: "03", title: "Your Gallery", icon: "\u2727", desc: "Within 2\u20133 weeks you'll receive a private online gallery. Download, favorite, share, and order prints \u2014 all from the comfort of your couch." },
+    { step: "02", title: "The Session", icon: "\u2600", desc: "We'll choose a beautiful location, you show up and be yourselves. I'll guide you through it and capture every real moment." },
+    { step: "03", title: "Your Gallery", icon: "\u2727", desc: "Within 2\u20133 weeks you'll receive a private online gallery and print release. You can download and share - all from the comfort of your own home. (Products such as canvas gallery wraps, acrylic and metals, even prints are also available...just reach out)." },
   ],
 
   /* INSTAGRAM */
@@ -83,6 +83,13 @@ const SITE_CONTENT = {
   /* FOOTER */
   footerTagline: "Natural light portrait photography for seniors and families in Michigan. Est. 2009.",
   email: "bellavitaphoto@rocketmail.com",
+
+  /* PAYMENT METHODS — Rebecca, update these with your own links/handles! */
+  payments: {
+    venmo: { handle: "@Rebecca-BellaVita", url: "https://venmo.com/Rebecca-BellaVita" },
+    paypal: { handle: "bellavitaphoto@rocketmail.com", url: "https://paypal.me/bellavitaphoto" },
+    zelle: { handle: "bellavitaphoto@rocketmail.com" },
+  },
 };
 
 /* ─── PORTFOLIO DATA ─── */
@@ -109,30 +116,29 @@ const TESTIMONIALS = [
 
 const SERVICES = [
   { category: "Senior Sessions", icon: "\u2727", collections: [
-    { name: "Senior Full Session", desc: "The ultimate senior experience \u2014 90 minutes, up to 3 outfit changes, 2 locations, 50+ edited images and a private gallery." },
-    { name: "Senior Split Session", desc: "Same full session split across two dates \u2014 perfect for seasonal variety or a second look." },
-    { name: "Senior DUO Session", desc: "Grab your best friend! Two seniors, one epic session. Individual and duo shots included." },
-    { name: "Senior Mini Session", desc: "25 minutes, one outfit, one location. 15+ edited images \u2014 fast, fun, and affordable." },
+    { name: "Senior Mini Session", price: "$350", desc: "45 minutes. 1 location. 15 digital images \u2014 fast, fun, and affordable." },
+    { name: "Senior Full Session", price: "$600", desc: "The ultimate senior experience \u2014 2 hours. 1 location. 25+ digital images. $20 product credit." },
+    { name: "Senior Split Session", price: "$700", desc: "Same full session split across two dates \u2014 perfect for seasonal variety or a second look.\n2 sessions. 2 dates. 50+ digital images. $30 product credit." },
+    { name: "Senior DUO Session", price: "$700", desc: "Grab your best friend! Two seniors, one epic session. Individual and duo shots included.\n2 hours. 1 location. 25+ digital images each. $20 product credit each." },
   ]},
-  { category: "Family Sessions", icon: "\u2662", collections: [
-    { name: "Family Full Session", desc: "An hour on location with gorgeous natural light. Wardrobe help, 40+ edited images, and a private gallery." },
-    { name: "Family Mini Session", desc: "25 minutes of seasonal magic \u2014 perfect for holiday cards or just because your kids are cute. 15+ images." },
-    { name: "Milestone Sessions", desc: "Maternity, newborn, first birthday, anniversaries \u2014 life's biggest chapters deserve beautiful photos." },
+  { category: "Family Sessions", icon: "\u2727", collections: [
+    { name: "Family Mini Session", price: "$175", desc: "Perfect for holiday cards, announcements or just because your kiddos are growing too fast!\n30 minutes. 1 location. 10 digital images." },
+    { name: "Family Full Session", price: "$300", desc: "Bring the family and let's have some fun!\n1 hour. 1 location. 25+ digital images. $20 product credit." },
+    { name: "Milestone Sessions", price: "$300", desc: "Maternity, engagements, birthdays - life's biggest chapters.\n1 hour. 1 location. 25+ digital images. $20 product credit." },
   ]},
-  { category: "Weddings & Events", icon: "\u25cb", collections: [
-    { name: "Silver Collection", desc: "Ceremony and reception coverage, online gallery, and a dedicated second photographer." },
-    { name: "Gold Collection", desc: "Full-day coverage including getting ready and send-off, engagement session, and a premium album." },
-    { name: "Platinum Collection", desc: "The complete experience \u2014 engagement session, bridal portraits, full-day coverage, album, and canvas prints." },
+  { category: "Weddings", icon: "\u2727", collections: [
+    { name: "Silver", price: "$1200", desc: "6 hours of coverage on your wedding day." },
+    { name: "Gold", price: "$2500", desc: "engagement session. 8 hours of coverage on your wedding day. $50 product credit." },
+    { name: "Platinum", price: "$3500", desc: "engagement session. full day coverage on your wedding day. second photographer. $100 product credit." },
   ]},
 ];
 
 const FAQS = [
-  { q: "How far in advance should I book?", a: "For senior portraits, 3\u20136 months ahead is ideal. Family sessions usually book 1\u20133 months out. Mini sessions sell out within DAYS. Get on my email list for first dibs." },
-  { q: "How many outfit changes can I bring?", a: "Seniors get up to 3 outfit changes! I send a detailed style guide with tips on colors and textures. I\u2019m also happy to FaceTime and help you pick. For families, one coordinated look usually works best." },
+  { q: "How far in advance should I book?", a: "As soon as you know what season you would like, please reach out to get on the schedule. For senior portraits, 3\u20136 months ahead is ideal. Family sessions usually book 1\u20133 months out. Mini sessions sell out within DAYS of advertising a special (due to limited spots). Follow on Facebook and Instagram @bellavitaphotography2 or join my email list for first dibs!" },
+  { q: "How many outfit changes can I bring?", a: "Depending on the session you choose...Senior's should bring up to 3 outfit changes. For families, one coordination look usually works. If you are booking a family full, a backup for the kiddos is always a good idea. Feel free to send me option choices if you are looking for some input. You will receive a detailed style guide with tips once you have booked your session!" },
   { q: "What happens if it rains?", a: "Welcome to Michigan! I\u2019ll text you 24 hours before and we\u2019ll reschedule \u2014 no extra charge. A little overcast? Chef\u2019s kiss for photos." },
-  { q: "Where do sessions take place?", a: "Kensington Metropark, Island Lake, downtown Brighton and Milford, Maybury State Park. But some of my favorites have been in backyards and living rooms." },
-  { q: "When will I receive my photos?", a: "Your private gallery will be ready within 2\u20133 weeks. You can view, download, and mark favorites. Print orders ship within 7\u201310 business days." },
-  { q: "I\u2019m awkward in front of cameras. Help?", a: "You and 90% of my clients! I crack jokes, play music, and tell you to just hang out with your people. By the end, clients always say \u2018wait, that was actually fun?\u2019" },
+  { q: "Where do sessions take place?", a: "Depending on the season and your vibe...I've got lots of ideas for locations. I have shot at dozens of locations in Southeast Michigan and beyond and I am always up for new places if you have a specific location in mind!" },
+  { q: "When will I receive my photos?", a: "I will send you a link to your private gallery, along with a print release within 2\u20133 weeks. You can view, download and share the link with family and friends. This will allow parents, grandparents and family members to download their favorites as well and even order products if they chose." },
 ];
 
 const GOOGLE_REVIEWS = [
@@ -143,9 +149,12 @@ const GOOGLE_REVIEWS = [
 ];
 
 const PRODUCTS = [
-  { name: "Gallery Wraps", description: "Rich, textured canvas wraps ready to hang. Every client who orders one orders a second.", icon: "\u25c7" },
-  { name: "Albums", description: "Lay-flat, leather-bound, thick luxurious pages. I design each one by hand.", icon: "\u25cb" },
-  { name: "Other Products", description: "Prints, graduation announcements, and more \u2014 all museum-quality and made to last.", icon: "\u2727" },
+  { name: "Gallery Wraps", description: "High quality, rich, textured canvas products that are fade resistant and ready to hang.", icon: "\u2727" },
+  { name: "Acrylics", description: "Crafted premium plexiglass showcasing vivid and modern design.", icon: "\u2727" },
+  { name: "Metals", description: "Sleek and modern aluminum products that are fade and scratch resistant.", icon: "\u2727" },
+  { name: "Albums", description: "Personalized photobooks to luxurious Heirloom albums.", icon: "\u2727" },
+  { name: "Grad Gear", description: "Announcements, Invites, Banners and Thank you cards featuring your senior's favorite images.", icon: "\u2727" },
+  { name: "Other Awesome Goods", description: "", icon: "\u2727" },
 ];
 
 const DEFAULT_CLIENT_GALLERIES = [
@@ -346,7 +355,7 @@ function Lightbox({ image, onClose, onDownload, onShare, onPrev, onNext, hasPrev
 }
 
 /* ─── CLIENT GALLERY ─── */
-function ClientGalleryPage({ galleries, onBack }) {
+function ClientGalleryPage({ galleries, onBack, onGift }) {
   const [passwordInput, setPasswordInput] = useState("");
   const [selectedGallery, setSelectedGallery] = useState(null);
   const [unlockedGallery, setUnlockedGallery] = useState(null);
@@ -392,7 +401,7 @@ function ClientGalleryPage({ galleries, onBack }) {
           currentIndex={unlockedGallery.images.indexOf(lightboxImg)}
           totalCount={unlockedGallery.images.length}
         />
-        <div style={{ position: "sticky", top: 0, zIndex: 100, padding: "18px 48px", background: "rgba(252,250,246,0.92)", backdropFilter: "blur(16px)", borderBottom: "1px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div className="bv-gallery-header" style={{ position: "sticky", top: 0, zIndex: 100, padding: "18px 48px", background: "rgba(252,250,246,0.92)", backdropFilter: "blur(16px)", borderBottom: "1px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <button onClick={() => { setUnlockedGallery(null); setSelectedGallery(null); setFavorited({}); }} style={{ background: "none", border: "none", color: "var(--accent)", cursor: "pointer", fontFamily: "var(--font-body)", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase" }}>{"\u2190"} Back</button>
           <div style={{ textAlign: "center" }}>
             <div style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", fontWeight: 400 }}>{unlockedGallery.clientName}</div>
@@ -400,12 +409,18 @@ function ClientGalleryPage({ galleries, onBack }) {
           </div>
           <div style={{ fontSize: "0.7rem", color: "var(--accent)", letterSpacing: "0.1em" }}>{favCount > 0 ? "\u2665 " + favCount + " favorited" : unlockedGallery.images.length + " photos"}</div>
         </div>
-        <div style={{ padding: "20px 48px 0", maxWidth: "960px", margin: "0 auto", textAlign: "center" }}>
+        <div className="bv-gallery-intro" style={{ padding: "20px 48px 0", maxWidth: "960px", margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontSize: "0.82rem", color: "var(--muted)", lineHeight: 1.7, fontWeight: 300 }}>Click any photo to view full size. Use the download button to save individual photos, or favorite your picks and download them all at once.</p>
           <button onClick={async () => { for (const img of unlockedGallery.images) { await downloadImage(img.full || img.src, "bella-vita-" + img.title.toLowerCase().replace(/\s+/g, "-") + ".jpg"); await new Promise(r => setTimeout(r, 500)); } }} className="bv-btn-outline" style={{ marginTop: "14px", padding: "9px 24px", fontSize: "0.65rem" }}>{"\u2193"} Download All Photos</button>
+          <div className="bv-love-callout" style={{ marginTop: "20px", padding: "16px 24px", background: "var(--card-bg)", border: "1px solid var(--border-light)", borderRadius: "3px", maxWidth: "520px", margin: "20px auto 0" }}>
+            <div style={{ fontSize: "0.78rem", color: "var(--text-light)", lineHeight: 1.7, fontWeight: 300 }}>
+              <span style={{ color: "var(--accent)", fontWeight: 400 }}>{"\u2727"} Love your photos?</span> Want a canvas for your wall or an album for the coffee table? Know someone who'd love a session of their own? Share a direct link with friends and family {"\u2014"} they can gift you products, book their own session, or just see your gorgeous photos.
+            </div>
+            <button onClick={() => onGift()} className="bv-btn-outline" style={{ marginTop: "12px", padding: "8px 20px", fontSize: "0.6rem" }}>Gift Certificates & Products {"\u2192"}</button>
+          </div>
         </div>
-        <div style={{ padding: "32px 48px 120px", maxWidth: "1400px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "20px" }}>
+        <div className="bv-gallery-grid-wrap" style={{ padding: "32px 48px 120px", maxWidth: "1400px", margin: "0 auto" }}>
+          <div className="bv-gallery-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "20px" }}>
             {unlockedGallery.images.map((img, i) => (
               <div key={i} style={{ position: "relative", borderRadius: "3px", overflow: "hidden", aspectRatio: "4/5", background: "#f0ece4", boxShadow: "0 2px 20px rgba(0,0,0,0.06)" }}>
                 <ProgressiveImage src={img.src} alt={img.title} onClick={() => setLightboxImg(img)}
@@ -421,18 +436,33 @@ function ClientGalleryPage({ galleries, onBack }) {
                     style={{ background: "rgba(255,255,255,0.9)", border: "none", borderRadius: "50%", width: "36px", height: "36px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.75rem", color: "#2E2A25", backdropFilter: "blur(8px)", transition: "all 0.3s ease", opacity: 0.8 }}
                     onMouseEnter={e => e.currentTarget.style.opacity = "1"} onMouseLeave={e => e.currentTarget.style.opacity = "0.8"}>{"\u2197"}</button>
                   <button onClick={(e) => { e.stopPropagation(); toggleFavorite(i); }}
-                    style={{ background: favorited[i] ? "#B8926A" : "rgba(255,255,255,0.9)", border: "none", borderRadius: "50%", width: "36px", height: "36px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", color: favorited[i] ? "#fff" : "#B8926A", fontSize: "1rem", backdropFilter: "blur(8px)", transition: "all 0.3s ease" }}>{favorited[i] ? "\u2665" : "\u2661"}</button>
+                    style={{ background: favorited[i] ? "#C4567A" : "rgba(255,255,255,0.9)", border: "none", borderRadius: "50%", width: "36px", height: "36px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", color: favorited[i] ? "#fff" : "#C4567A", fontSize: "1rem", backdropFilter: "blur(8px)", transition: "all 0.3s ease" }}>{favorited[i] ? "\u2665" : "\u2661"}</button>
                 </div>
               </div>
             ))}
           </div>
+          {/* Share & Gift Banner */}
+          <div className="bv-share-banner" style={{ marginTop: "48px", border: "1px solid var(--border)", borderRadius: "3px", padding: "28px 32px", background: "var(--bg-warm)", textAlign: "center" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: "1.15rem", fontWeight: 400, marginBottom: "8px" }}>Share the love {"\u2727"}</div>
+            <p style={{ fontSize: "0.82rem", color: "var(--text-light)", lineHeight: 1.7, fontWeight: 300, maxWidth: "500px", margin: "0 auto" }}>
+              Want these photos on your wall? Send this link to family {"\u2014"} they can gift you a canvas, album, or prints. Or share the gift of a bella vita session with someone you love!
+            </p>
+            <div style={{ display: "flex", gap: "10px", justifyContent: "center", marginTop: "16px", flexWrap: "wrap" }}>
+              <button onClick={() => {
+                const shareText = "Check out my photos from bella vita photography! You can gift me a canvas, album, or prints \u2014 or grab a gift certificate for a session of your own: https://bella-vita-photography.vercel.app/#products";
+                if (navigator.share) { navigator.share({ title: "bella vita photography", text: shareText, url: "https://bella-vita-photography.vercel.app/#products" }).catch(() => {}); }
+                else { navigator.clipboard.writeText(shareText).then(() => alert("Copied! Paste this into a text or message to share with family and friends.")).catch(() => window.open("https://bella-vita-photography.vercel.app/#products", "_blank")); }
+              }} className="bv-btn-outline" style={{ padding: "10px 22px", fontSize: "0.62rem" }}>Copy Share Message</button>
+              <button onClick={() => onGift()} className="bv-btn-primary" style={{ padding: "10px 22px", fontSize: "0.62rem" }}>Browse Gifts & Products</button>
+            </div>
+          </div>
         </div>
         {favCount > 0 && (
-          <div style={{ position: "fixed", bottom: 0, left: 0, right: 0, padding: "16px 48px", background: "rgba(252,250,246,0.95)", backdropFilter: "blur(16px)", borderTop: "1px solid #E8E2D8", display: "flex", justifyContent: "space-between", alignItems: "center", animation: "bvFadeIn 0.3s ease", zIndex: 100 }}>
-            <div style={{ fontSize: "0.82rem", color: "#9E978D" }}><span style={{ color: "#B8926A", fontWeight: 500 }}>{favCount}</span> favorite{favCount !== 1 ? "s" : ""} selected</div>
-            <div style={{ display: "flex", gap: "12px" }}>
+          <div className="bv-gallery-favbar" style={{ position: "fixed", bottom: 0, left: 0, right: 0, padding: "16px 48px", background: "rgba(252,250,246,0.95)", backdropFilter: "blur(16px)", borderTop: "1px solid #E8E2D8", display: "flex", justifyContent: "space-between", alignItems: "center", animation: "bvFadeIn 0.3s ease", zIndex: 100 }}>
+            <div style={{ fontSize: "0.82rem", color: "#9E978D" }}><span style={{ color: "#C4567A", fontWeight: 500 }}>{favCount}</span> favorite{favCount !== 1 ? "s" : ""} selected</div>
+            <div className="bv-favbar-actions" style={{ display: "flex", gap: "12px" }}>
               <button onClick={handleDownloadFavorites} className="bv-btn-outline" style={{ padding: "10px 24px" }}>{"\u2193"} Download Favorites</button>
-              <button onClick={() => { const fl = unlockedGallery.images.filter((_, i) => favorited[i]).map(img => img.title).join(", "); alert("Your favorites have been saved!\n\nSelected: " + fl + "\n\nRebecca will receive your selections and reach out about your album."); }} className="bv-btn-primary" style={{ padding: "10px 24px" }}>Submit Favorites</button>
+              <button onClick={() => { const fl = unlockedGallery.images.filter((_, i) => favorited[i]).map(img => img.title).join(", "); alert("Your favorites have been saved!\n\nSelected: " + fl + "\n\nRebecca will receive your selections and reach out about your album.\n\nTip: Friends and family can purchase a canvas, album, or prints of your photos as a gift right from our website! Scroll down to the \"Share the Love\" section to copy a ready-to-send message for them."); }} className="bv-btn-primary" style={{ padding: "10px 24px" }}>Submit Favorites</button>
             </div>
           </div>
         )}
@@ -443,7 +473,7 @@ function ClientGalleryPage({ galleries, onBack }) {
   /* Password entry */
   if (selectedGallery) {
     return (
-      <div style={{ minHeight: "100vh", background: "var(--bg)", color: "var(--text)", fontFamily: "var(--font-body)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "48px" }}>
+      <div className="bv-gallery-password" style={{ minHeight: "100vh", background: "var(--bg)", color: "var(--text)", fontFamily: "var(--font-body)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "48px" }}>
         <button onClick={() => { setSelectedGallery(null); setPasswordInput(""); setError(""); }} style={{ position: "absolute", top: "32px", left: "48px", background: "none", border: "none", color: "var(--accent)", cursor: "pointer", fontFamily: "var(--font-body)", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase" }}>{"\u2190"} Back</button>
         <div style={{ textAlign: "center", maxWidth: "400px" }}>
           <div style={{ width: "90px", height: "90px", borderRadius: "50%", margin: "0 auto 28px", background: "url(" + selectedGallery.coverImage + ") center/cover", border: "3px solid var(--bg)", boxShadow: "0 4px 24px rgba(0,0,0,0.1)" }} />
@@ -463,17 +493,17 @@ function ClientGalleryPage({ galleries, onBack }) {
   /* Gallery listing */
   return (
     <div style={{ minHeight: "100vh", background: "var(--bg)", color: "var(--text)", fontFamily: "var(--font-body)" }}>
-      <div style={{ padding: "32px 48px" }}><button onClick={onBack} style={{ background: "none", border: "none", color: "var(--accent)", cursor: "pointer", fontFamily: "var(--font-body)", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase" }}>{"\u2190"} Back to Site</button></div>
-      <div style={{ textAlign: "center", padding: "40px 48px 64px" }}>
+      <div className="bv-gallery-listing-wrap" style={{ padding: "32px 48px" }}><button onClick={onBack} style={{ background: "none", border: "none", color: "var(--accent)", cursor: "pointer", fontFamily: "var(--font-body)", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase" }}>{"\u2190"} Back to Site</button></div>
+      <div className="bv-gallery-listing-wrap" style={{ textAlign: "center", padding: "40px 48px 64px" }}>
         <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "16px" }}>Password Protected</div>
         <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 400, marginBottom: "16px" }}>Client Galleries</h1>
         <p style={{ color: "var(--muted)", fontSize: "0.88rem", fontWeight: 300, maxWidth: "460px", margin: "0 auto", lineHeight: 1.8 }}>Find your session below and enter the password from your delivery email to view, download, and favorite your photos.</p>
       </div>
-      <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 48px 100px", display: "grid", gap: "16px" }}>
+      <div className="bv-gallery-listing-wrap" style={{ maxWidth: "860px", margin: "0 auto", padding: "0 48px 100px", display: "grid", gap: "16px" }}>
         {galleries.map(gallery => (
           <div key={gallery.id} onClick={() => setSelectedGallery(gallery)} className="bv-gallery-card"
             style={{ display: "grid", gridTemplateColumns: "110px 1fr auto", gap: "24px", alignItems: "center", padding: "20px", background: "var(--card-bg)", border: "1px solid var(--border)", borderRadius: "3px", cursor: "pointer", transition: "all 0.35s ease", boxShadow: "0 1px 8px rgba(0,0,0,0.03)" }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = "#B8926A"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = "#C4567A"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
             onMouseLeave={e => { e.currentTarget.style.borderColor = "#E8E2D8"; e.currentTarget.style.boxShadow = "0 1px 8px rgba(0,0,0,0.03)"; }}>
             <div style={{ width: "110px", height: "80px", borderRadius: "2px", overflow: "hidden", backgroundImage: "url(" + gallery.coverImage + ")", backgroundSize: "cover", backgroundPosition: "center" }} />
             <div>
@@ -539,7 +569,7 @@ function AdminPanel({ galleries, setGalleries, onClose }) {
           <select value={newGallery.sessionType} onChange={e => setNewGallery({ ...newGallery, sessionType: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
             <option value="Senior Sessions">Senior Sessions</option>
             <option value="Family Sessions">Family Sessions</option>
-            <option value="Weddings & Events">Weddings & Events</option>
+            <option value="Weddings">Weddings</option>
           </select>
           <label style={labelStyle}>Session Date</label>
           <input style={inputStyle} type="date" value={newGallery.date} onChange={e => setNewGallery({ ...newGallery, date: e.target.value })} />
@@ -556,7 +586,7 @@ function AdminPanel({ galleries, setGalleries, onClose }) {
               <div key={g.id} style={{ padding: "14px 18px", border: "1px solid #E8E2D8", borderRadius: "3px", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#FFFFFF" }}>
                 <div>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: "1.05rem" }}>{g.clientName}</div>
-                  <div style={{ fontSize: "0.65rem", color: "#9E978D", marginTop: "2px" }}>{g.sessionType} {"\u00b7"} {g.images.length} photos {"\u00b7"} pw: <span style={{ color: "#B8926A" }}>{g.password}</span></div>
+                  <div style={{ fontSize: "0.65rem", color: "#9E978D", marginTop: "2px" }}>{g.sessionType} {"\u00b7"} {g.images.length} photos {"\u00b7"} pw: <span style={{ color: "#C4567A" }}>{g.password}</span></div>
                 </div>
                 <button onClick={() => setGalleries(prev => prev.filter(x => x.id !== g.id))} style={{ background: "none", border: "1px solid #d4685a44", color: "#d4685a", padding: "5px 14px", borderRadius: "2px", cursor: "pointer", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "var(--font-body)", transition: "all 0.3s ease" }}
                   onMouseEnter={e => { e.target.style.background = "#d4685a"; e.target.style.color = "#fff"; }}
@@ -579,14 +609,21 @@ export default function PhotographyWebsite() {
   const [lightboxImage, setLightboxImage] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [heroLoaded, setHeroLoaded] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "", type: "Senior Sessions" });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "", type: "Senior Session" });
   const [formSent, setFormSent] = useState(false);
   const [currentView, setCurrentView] = useState("main");
   const [clientGalleries, setClientGalleries] = useState(DEFAULT_CLIENT_GALLERIES);
   const [showStyleGuide, setShowStyleGuide] = useState(false);
   const [popupDismissed, setPopupDismissed] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
-  const [giftAmount, setGiftAmount] = useState("450");
+  const [giftAmount, setGiftAmount] = useState("375");
+  const [showGiftModal, setShowGiftModal] = useState(false);
+  const [showHintModal, setShowHintModal] = useState(false);
+  const [hintForm, setHintForm] = useState({ recipientName: "", recipientEmail: "", senderName: "", scenario: "", occasion: "", forWho: "" });
+  const [hintSent, setHintSent] = useState(false);
+  const [giftForm, setGiftForm] = useState({ recipientName: "", recipientEmail: "", senderName: "", senderEmail: "", message: "", paymentMethod: "", giftCertAmount: "" });
+  const [giftSent, setGiftSent] = useState(false);
+  const [giftStep, setGiftStep] = useState(1);
   const [scrollY, setScrollY] = useState(0);
   const [activeSection, setActiveSection] = useState("hero");
   const [formErrors, setFormErrors] = useState({});
@@ -594,7 +631,7 @@ export default function PhotographyWebsite() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => { setTimeout(() => setHeroLoaded(true), 150); }, []);
-  useEffect(() => { document.body.style.overflow = (lightboxImage || menuOpen) ? "hidden" : ""; return () => { document.body.style.overflow = ""; }; }, [lightboxImage, menuOpen]);
+  useEffect(() => { document.body.style.overflow = (lightboxImage || menuOpen || showGiftModal || showHintModal) ? "hidden" : ""; return () => { document.body.style.overflow = ""; }; }, [lightboxImage, menuOpen, showGiftModal, showHintModal]);
   useEffect(() => { const h = () => { setScrollY(window.scrollY); const doc = document.documentElement; setScrollProgress((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100); }; window.addEventListener("scroll", h, { passive: true }); return () => window.removeEventListener("scroll", h); }, []);
 
   /* Preload hero image for instant render */
@@ -710,7 +747,7 @@ export default function PhotographyWebsite() {
     }
   }, []);
 
-  const categories = ["All", "Seniors", "Families"];
+  const categories = ["All", "Seniors", "Families", "Milestones & Minis", "Weddings"];
   const filtered = activeFilter === "All" ? PORTFOLIO : PORTFOLIO.filter(p => p.category === activeFilter);
   const scrollTo = (id) => { setMenuOpen(false); const el = document.getElementById(id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: "smooth" }); };
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -722,11 +759,113 @@ export default function PhotographyWebsite() {
     if (!formData.message.trim()) errors.message = "Tell me about your vision";
     setFormErrors(errors);
     if (Object.keys(errors).length > 0) return;
-    setFormSent(true); setTimeout(() => setFormSent(false), 4000); setFormData({ name: "", email: "", message: "", type: "Senior Sessions" }); setFormErrors({});
+    setFormSent(true); setTimeout(() => setFormSent(false), 4000); setFormData({ name: "", email: "", message: "", type: "Senior Session" }); setFormErrors({});
   };
-  const handleStyleGuideSubmit = () => {};
+  const handleSendHint = () => {
+    if (!hintForm.recipientEmail || !hintForm.senderName || !hintForm.scenario || !hintForm.occasion) return;
+    const who = hintForm.forWho || "";
+    const occasionLabel = { "Senior Portraits": "senior portraits", "Family Photos": "family photos", "Wedding": "the wedding", "Products / Gift": "a gift certificate", "General": "a photo session" };
+    let subject, body;
 
-  if (currentView === "client-gallery") return <ClientGalleryPage galleries={clientGalleries} onBack={() => setCurrentView("main")} />;
+    if (hintForm.scenario === "hint") {
+      const hintMessages = {
+        "Senior Portraits": "I've been looking into senior portrait photographers and I found someone AMAZING. Her name is Rebecca with bella vita photography \u2014 she's a natural light photographer here in Michigan and her work is absolutely stunning. I would love love love a session with her as a gift!",
+        "Family Photos": "I've been wanting to get family photos done SO badly and I just found the perfect photographer! Her name is Rebecca with bella vita photography \u2014 natural light, on location, and her work is gorgeous. A session with her would be the best gift!",
+        "Wedding": "So we've been looking at wedding photographers and we found THE one. Her name is Rebecca with bella vita photography and her work is breathtaking. We would be absolutely over the moon if someone helped us out with our wedding photography!",
+        "Products / Gift": "I recently had photos taken by the most amazing photographer \u2014 Rebecca with bella vita photography \u2014 and I've been DYING to get a gallery wrap or album of the images. A gift certificate toward products would seriously make my year! She has beautiful canvas wraps, acrylics, metals, albums, and prints.",
+        "General": "I found this amazing photographer named Rebecca with bella vita photography and I can't stop looking at her work. A gift certificate for a session or products would seriously make my entire year!",
+      };
+      subject = encodeURIComponent("Okay so... I have a little hint for you \u2727");
+      body = encodeURIComponent(
+        "Hey" + (hintForm.recipientName ? " " + hintForm.recipientName : "") + "!\n\n" +
+        "So... this is me not-so-subtly dropping a hint. \u{1F60A}\n\n" +
+        (hintMessages[hintForm.occasion] || hintMessages["General"]) + "\n\n" +
+        "You can see her work here: bella-vita-photography.vercel.app\n" +
+        "Gift certificates come in any amount, work for sessions AND products (gallery wraps, albums, prints!), and never expire!\n" +
+        "Her email: bellavitaphoto@rocketmail.com\n\n" +
+        "Just putting that out there... \u{1F60D}\n\n" +
+        "Love,\n" + hintForm.senderName
+      );
+    } else {
+      const subjectWho = who || (hintForm.occasion === "General" ? "" : occasionLabel[hintForm.occasion] || "");
+      const recMessages = {
+        "Senior Portraits": "I HAD to tell you about this photographer I found" + (who ? " \u2014 I immediately thought of " + who + "'s senior photos" : " for senior portraits") + "! Her name is Rebecca with bella vita photography. She does natural light senior portraits here in Michigan and her photos are unreal." + (who ? " " + who + " would look absolutely amazing." : ""),
+        "Family Photos": "I found the most wonderful family photographer and I immediately thought of you! Her name is Rebecca with bella vita photography \u2014 natural light, on location, and she makes everyone feel so relaxed. Your family photos would turn out incredible.",
+        "Wedding": "I found the most beautiful wedding photographer" + (who ? " and immediately thought of " + who + "'s big day" : "") + "! Her name is Rebecca with bella vita photography. She does natural light photography and her wedding work is stunning.",
+        "Products / Gift": "I know someone who just had a session with the most amazing photographer \u2014 Rebecca with bella vita photography. She has the most gorgeous products (canvas gallery wraps, acrylics, metals, albums, prints) and a gift certificate toward any of them would be such a thoughtful gift! They never expire and come in any amount.",
+        "General": "I came across this incredible photographer and immediately thought of you! Her name is Rebecca with bella vita photography. She does seniors, families, weddings \u2014 all natural light, on location in Michigan. Gift certificates work for sessions AND products like gallery wraps and albums.",
+      };
+      subject = encodeURIComponent(subjectWho ? "I found the perfect photographer for " + subjectWho + "! \u2727" : "You HAVE to see this photographer! \u2727");
+      body = encodeURIComponent(
+        "Hey" + (hintForm.recipientName ? " " + hintForm.recipientName : "") + "!\n\n" +
+        (recMessages[hintForm.occasion] || recMessages["General"]) + "\n\n" +
+        "Check out her work: bella-vita-photography.vercel.app\n" +
+        "Her email: bellavitaphoto@rocketmail.com" + (hintForm.senderName ? " \u2014 tell her " + hintForm.senderName + " sent you!" : "") + "\n\n" +
+        "Trust me on this one. \u{1F60A}\n\n" +
+        hintForm.senderName
+      );
+    }
+
+    window.open("mailto:" + hintForm.recipientEmail + "?subject=" + subject + "&body=" + body + "&bcc=bellavitaphoto@rocketmail.com", "_blank");
+    setFormData({
+      name: hintForm.senderName,
+      email: "",
+      type: "Gift Certificate",
+      message: (hintForm.scenario === "hint" ? "GIFT HINT SENT" : "REFERRAL SENT") + "\n\nFrom: " + hintForm.senderName + "\nSent to: " + (hintForm.recipientName || "Not specified") + " (" + hintForm.recipientEmail + ")" + (who ? "\nSession for: " + who : "") + "\nType: " + hintForm.occasion
+    });
+    setHintSent(true);
+    setTimeout(() => {
+      setHintSent(false); setShowHintModal(false);
+      setHintForm({ recipientName: "", recipientEmail: "", senderName: "", scenario: "", occasion: "", forWho: "" });
+      scrollTo("contact");
+    }, 2500);
+  };
+
+  const handleSendGift = () => {
+    if (!giftForm.recipientEmail || !giftForm.senderName || !giftForm.senderEmail || !giftForm.paymentMethod) return;
+    const amount = giftAmount === "Custom" ? "a custom amount" : "$" + giftAmount;
+    const amountNum = giftAmount === "Custom" ? "Custom amount" : "$" + giftAmount;
+    const personalMsg = giftForm.message ? "\n\n" + giftForm.message : "";
+    const subject = encodeURIComponent("You've Been Gifted a bella vita photography Experience!");
+    const body = encodeURIComponent(
+      "Hi" + (giftForm.recipientName ? " " + giftForm.recipientName : "") + "!\n\n" +
+      "Someone special wants to give you the gift of beautiful memories! " +
+      giftForm.senderName + " has gifted you a bella vita photography gift certificate for " + amount + ".\n\n" +
+      "This certificate can be used for any photography session (seniors, families, weddings), products (gallery wraps, albums, acrylics, prints), or any combination \u2014 and it never expires!" +
+      personalMsg + "\n\n" +
+      "To book your session or browse products, contact Rebecca at bellavitaphoto@rocketmail.com or visit bella-vita-photography.vercel.app\n\n" +
+      "With love,\n" + giftForm.senderName + "\n\n\u2014 bella vita photography \u2727 Est. 2009"
+    );
+    window.open("mailto:" + giftForm.recipientEmail + "?subject=" + subject + "&body=" + body + "&bcc=bellavitaphoto@rocketmail.com", "_blank");
+
+    const payLabel = { venmo: "Venmo", paypal: "PayPal", zelle: "Zelle", later: "Pay Later (contact form)" }[giftForm.paymentMethod] || giftForm.paymentMethod;
+    setFormData({
+      name: giftForm.senderName,
+      email: giftForm.senderEmail,
+      type: "Gift Certificate",
+      message: "GIFT CERTIFICATE PURCHASE REQUEST\n\nAmount: " + amountNum + "\nPayment Method: " + payLabel + "\nFrom: " + giftForm.senderName + " (" + giftForm.senderEmail + ")\nRecipient: " + (giftForm.recipientName || "Not specified") + "\nRecipient Email: " + giftForm.recipientEmail + (giftForm.message ? "\nPersonal Message: " + giftForm.message : "") + "\n\nRecipient has been notified via email."
+    });
+
+    /* Open payment link based on method */
+    const pay = SITE_CONTENT.payments;
+    if (giftForm.paymentMethod === "venmo" && pay.venmo?.url) {
+      const venmoUrl = pay.venmo.url + "?txn=pay&amount=" + (giftAmount !== "Custom" ? giftAmount : "") + "&note=" + encodeURIComponent("bella vita photography gift certificate for " + (giftForm.recipientName || "recipient"));
+      setTimeout(() => window.open(venmoUrl, "_blank"), 600);
+    } else if (giftForm.paymentMethod === "paypal" && pay.paypal?.url) {
+      const paypalUrl = pay.paypal.url + "/" + (giftAmount !== "Custom" ? giftAmount : "");
+      setTimeout(() => window.open(paypalUrl, "_blank"), 600);
+    }
+    /* Zelle and Pay Later just go to the contact form */
+
+    setGiftSent(true);
+    setTimeout(() => {
+      setGiftSent(false); setShowGiftModal(false); setGiftStep(1);
+      setGiftForm({ recipientName: "", recipientEmail: "", senderName: "", senderEmail: "", message: "", paymentMethod: "" });
+      scrollTo("contact");
+    }, 3000);
+  };
+
+  if (currentView === "client-gallery") return <ClientGalleryPage galleries={clientGalleries} onBack={() => setCurrentView("main")} onGift={() => { setCurrentView("main"); setTimeout(() => { const el = document.getElementById("products"); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: "smooth" }); }, 100); }} />;
   if (currentView === "admin") return <AdminPanel galleries={clientGalleries} setGalleries={setClientGalleries} onClose={() => setCurrentView("main")} />;
 
   return (
@@ -736,8 +875,8 @@ export default function PhotographyWebsite() {
       {/* Skip to content (a11y) */}
       <a href="#portfolio" className="bv-skip-link">Skip to content</a>
       <style>{`
-        :root { --bg:#FCFAF6;--bg-warm:#F7F3ED;--card-bg:#FFFFFF;--text:#2E2A25;--text-light:#5A554E;--muted:#9E978D;--accent:#B8926A;--accent-light:#D4B896;--accent-hover:#A07D56;--border:#E8E2D8;--border-light:#F0ECE4;--font-display:'Playfair Display',Georgia,serif;--font-body:'Outfit',system-ui,sans-serif; }
-        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}::selection{background:#B8926A33;color:var(--text)}
+        :root { --bg:#FCFAF6;--bg-warm:#F7F3ED;--card-bg:#FFFFFF;--text:#2E2A25;--text-light:#5A554E;--muted:#9E978D;--accent:#C4567A;--accent-light:#D988A4;--accent-hover:#A8445F;--border:#E8E2D8;--border-light:#F0ECE4;--font-display:'Playfair Display',Georgia,serif;--font-body:'Outfit',system-ui,sans-serif; }
+        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}::selection{background:#C4567A33;color:var(--text)}
         @keyframes bvFadeIn{from{opacity:0}to{opacity:1}}
         @keyframes bvScaleIn{from{opacity:0;transform:scale(0.95)}to{opacity:1;transform:scale(1)}}
         @keyframes bvSlideIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
@@ -755,7 +894,7 @@ export default function PhotographyWebsite() {
         /* Focus visible ring */
         *:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
         button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-        input:focus-visible,textarea:focus-visible,select:focus-visible{outline:none;border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(184,146,106,0.15)}
+        input:focus-visible,textarea:focus-visible,select:focus-visible{outline:none;border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(196,86,122,0.15)}
 
         /* Filter transition */
         .bv-filter-grid{transition:opacity 0.4s ease}.bv-filter-grid.bv-filtering{opacity:0.3;transform:scale(0.99)}
@@ -776,7 +915,7 @@ export default function PhotographyWebsite() {
 
         .bv-filter-btn{background:none;border:none;color:var(--muted);font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;padding:8px 18px;transition:all 0.35s ease;position:relative;font-weight:400}.bv-filter-btn.active,.bv-filter-btn:hover{color:var(--accent)}.bv-filter-btn.active::after{content:'';position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:18px;height:1.5px;background:var(--accent);border-radius:1px}
         .bv-input{background:var(--card-bg);border:1px solid var(--border);color:var(--text);font-family:var(--font-body);font-size:16px;padding:13px 16px;width:100%;outline:none;transition:border-color 0.3s ease;font-weight:300;border-radius:3px}.bv-input:focus{border-color:var(--accent)}.bv-input::placeholder{color:var(--muted);opacity:0.6}
-        .bv-btn-primary{display:inline-block;padding:14px 40px;background:var(--accent);color:#fff;font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;border:none;border-radius:3px;transition:all 0.35s ease;font-weight:400;-webkit-tap-highlight-color:transparent}.bv-btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px);box-shadow:0 4px 16px rgba(184,146,106,0.25)}.bv-btn-primary:active{transform:scale(0.97)}
+        .bv-btn-primary{display:inline-block;padding:14px 40px;background:var(--accent);color:#fff;font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;border:none;border-radius:3px;transition:all 0.35s ease;font-weight:400;-webkit-tap-highlight-color:transparent}.bv-btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px);box-shadow:0 4px 16px rgba(196,86,122,0.25)}.bv-btn-primary:active{transform:scale(0.97)}
         .bv-btn-outline{display:inline-block;padding:14px 40px;border:1px solid var(--accent);color:var(--accent);background:transparent;font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;border-radius:3px;transition:all 0.35s ease;font-weight:400;-webkit-tap-highlight-color:transparent}.bv-btn-outline:hover{background:var(--accent);color:#fff}.bv-btn-outline:active{transform:scale(0.97)}
         .bv-service-card{border:1px solid var(--border);padding:40px 36px;border-radius:3px;transition:all 0.4s ease;background:var(--card-bg)}.bv-service-card:hover{border-color:var(--accent-light);box-shadow:0 4px 20px rgba(0,0,0,0.06);transform:translateY(-3px)}
 
@@ -821,6 +960,17 @@ export default function PhotographyWebsite() {
           .bv-sticky-cta{display:flex!important}
           .bv-back-to-top{bottom:76px!important}
           .bv-lightbox-arrows{display:none!important}
+          .bv-gallery-header{padding-left:16px!important;padding-right:16px!important}
+          .bv-gallery-intro{padding-left:16px!important;padding-right:16px!important}
+          .bv-gallery-grid-wrap{padding-left:16px!important;padding-right:16px!important}
+          .bv-gallery-grid{grid-template-columns:1fr!important}
+          .bv-gallery-favbar{padding-left:16px!important;padding-right:16px!important;flex-direction:column!important;gap:10px!important;text-align:center}
+          .bv-gallery-favbar .bv-favbar-actions{justify-content:center!important}
+          .bv-gallery-listing-wrap{padding-left:16px!important;padding-right:16px!important}
+          .bv-gallery-password{padding:20px!important}
+          .bv-share-banner{padding:20px 18px!important}
+          .bv-share-banner-btns{flex-direction:column!important;align-items:stretch!important}
+          .bv-love-callout{max-width:100%!important}
         }
         @media(max-width:480px){
           .bv-grid-reviews{grid-template-columns:1fr!important}
@@ -828,6 +978,7 @@ export default function PhotographyWebsite() {
           .bv-footer-grid{grid-template-columns:1fr!important}
         }
         @media(min-width:769px){.bv-mobile-btn{display:none!important}}
+        @media(max-width:479px){.bv-gallery-header{flex-wrap:wrap!important;gap:6px!important;justify-content:center!important;padding-top:12px!important;padding-bottom:12px!important}.bv-gallery-grid-wrap{padding-bottom:80px!important}.bv-favbar-actions{flex-direction:column!important;gap:8px!important;width:100%}.bv-favbar-actions button{width:100%}}
       `}</style>
 
       {/* NAV */}
@@ -932,7 +1083,7 @@ export default function PhotographyWebsite() {
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
             <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.portfolioTagline }</div>
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400 }}>{ SITE_CONTENT.portfolioTitle }</h2>
-            <p style={{ color: "var(--muted)", fontSize: "0.85rem", fontWeight: 300, maxWidth: "440px", margin: "14px auto 0", lineHeight: 1.7 }}>Every one of these sessions started with someone saying "I'm so awkward in front of cameras."</p>
+            <p style={{ color: "var(--muted)", fontSize: "0.85rem", fontWeight: 300, maxWidth: "440px", margin: "14px auto 0", lineHeight: 1.7 }}>{ SITE_CONTENT.portfolioDescription }</p>
           </div>
         </AnimatedSection>
         <AnimatedSection delay={0.1}>
@@ -959,14 +1110,14 @@ export default function PhotographyWebsite() {
       {/* ABOUT */}
       <section id="about" className="bv-section" style={{ padding: "80px 48px", background: "var(--bg-warm)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "72px", alignItems: "center" }} className="bv-about-grid">
-          <AnimatedSection><ProgressiveImage src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&q=90" alt="Rebecca Henson, natural light photographer Michigan" style={{ width: "100%", maxWidth: "440px", aspectRatio: "3/4", borderRadius: "3px", boxShadow: "0 12px 40px rgba(0,0,0,0.08)" }} /></AnimatedSection>
+          <AnimatedSection><ProgressiveImage src="/rebecca-profile.jpg" alt="Rebecca Henson, natural light photographer Michigan" style={{ width: "100%", maxWidth: "440px", aspectRatio: "3/4", borderRadius: "3px", boxShadow: "0 12px 40px rgba(0,0,0,0.08)" }} /></AnimatedSection>
           <AnimatedSection delay={0.15}>
             <div>
               <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>Hey, I'm Rebecca</div>
               <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 400, marginBottom: "28px", lineHeight: 1.2 }}>The face behind <em style={{ fontStyle: "italic", color: "var(--accent)" }}>the camera</em></h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "18px", color: "var(--text-light)", fontSize: "0.92rem", lineHeight: 1.85, fontWeight: 300 }}>
-                <p>I started bella vita photography back in 2009 with a camera, a marketing degree from Davenport University, and a heart full of love for freezing beautiful moments in time. Over fifteen years later, I still get butterflies before every single session.</p>
-                <p>I'm a natural light, on-location photographer. There's something magical about Michigan light {"\u2014"} the way it spills through the trees at Kensington Metropark, wraps around downtown Milford, or glows across Island Lake.</p>
+                <p>bella vita was born in 2009 with a camera, a marketing degree and a passion for photography. Over fifteen years later, I still get butterflies before every single session.</p>
+                <p>I'm a natural light, on location photographer. There's something magical about Michigan seasons {"\u2014"} the way the flowers bloom in the spring and the trees change colors in the fall. I'm not a fan of winter (like at all), but I even get excited about those outdoor sessions in the snow!</p>
                 <p>Every session is designed around YOU {"\u2014"} your style, your personality, your family's energy. I want you to look at these photos in twenty years and feel everything all over again.</p>
               </div>
               <div style={{ marginTop: "32px", display: "flex", gap: "24px", fontSize: "0.65rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent)" }}>
@@ -1029,12 +1180,14 @@ export default function PhotographyWebsite() {
                 onMouseMove={e => { const rect = e.currentTarget.getBoundingClientRect(); const x = ((e.clientX - rect.left) / rect.width - 0.5) * 6; const y = ((e.clientY - rect.top) / rect.height - 0.5) * -6; e.currentTarget.style.transform = `translateY(-3px) rotateX(${y}deg) rotateY(${x}deg)`; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0) rotateX(0) rotateY(0)"; }}>
                 <div style={{ fontSize: "1.5rem", color: "var(--accent-light)", marginBottom: "18px" }}>{s.icon}</div>
-                <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 500, marginBottom: "20px" }}>{s.category}</h3>
+                <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 500, marginBottom: "8px" }}>{s.category}</h3>
+                {s.category === "Senior Sessions" && <p style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 300, fontStyle: "italic", marginBottom: "20px", lineHeight: 1.6 }}>(all senior collections include a private online gallery for sharing and download and print release)</p>}
+                {s.category === "Family Sessions" && <p style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 300, fontStyle: "italic", marginBottom: "20px", lineHeight: 1.6 }}>(all family collections include a private online gallery for sharing and download and print release)</p>}
                 <div style={{ flex: 1 }}>
                   {s.collections.map((c, j) => (
                     <div key={j} style={{ marginBottom: j < s.collections.length - 1 ? "16px" : 0, paddingBottom: j < s.collections.length - 1 ? "16px" : 0, borderBottom: j < s.collections.length - 1 ? "1px solid var(--border-light)" : "none" }}>
-                      <div style={{ fontFamily: "var(--font-display)", fontSize: "1.05rem", fontWeight: 500, marginBottom: "6px", color: "var(--text)" }}>{c.name}</div>
-                      <p style={{ color: "var(--text-light)", fontSize: "0.82rem", lineHeight: 1.7, fontWeight: 300 }}>{c.desc}</p>
+                      <div style={{ fontFamily: "var(--font-display)", fontSize: "1.05rem", fontWeight: 500, marginBottom: "6px", color: "var(--text)", display: "flex", justifyContent: "space-between", alignItems: "baseline" }}><span>{c.name}</span>{c.price && <span style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "0.95rem", fontWeight: 400, color: "var(--accent)" }}>{c.price}</span>}</div>
+                      <p style={{ color: "var(--text-light)", fontSize: "0.82rem", lineHeight: 1.7, fontWeight: 300, whiteSpace: "pre-line" }}>{c.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -1051,15 +1204,7 @@ export default function PhotographyWebsite() {
             <div>
               <div style={{ fontSize: "0.65rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "6px" }}>{SITE_CONTENT.availabilityLabel}</div>
               <div style={{ fontFamily: "var(--font-display)", fontSize: "1.35rem", fontWeight: 400 }}>{SITE_CONTENT.availabilityTitle}</div>
-            </div>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-              {SITE_CONTENT.availabilitySlots.map((slot, i) => (
-                <div key={i} style={{ textAlign: "center", padding: "10px 18px", border: "1px solid var(--border)", borderRadius: "3px", background: "var(--card-bg)", minWidth: "100px" }}>
-                  <div style={{ fontFamily: "var(--font-display)", fontSize: "1.3rem", color: "var(--accent)", fontWeight: 500 }}>{slot.count}</div>
-                  <div style={{ fontSize: "0.58rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--muted)", marginTop: "2px" }}>{slot.sub}</div>
-                  <div style={{ fontSize: "0.55rem", color: "var(--border)", marginTop: "3px" }}>{slot.label}</div>
-                </div>
-              ))}
+              <div onClick={() => scrollTo("contact")} style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "1.05rem", fontWeight: 400, color: "var(--accent)", marginTop: "8px", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: "4px" }}>Inquire about our Senior Rep Program</div>
             </div>
           </div>
         </div>
@@ -1068,41 +1213,61 @@ export default function PhotographyWebsite() {
       {/* PRODUCTS */}
       <section id="products" className="bv-section" style={{ padding: "80px 48px", maxWidth: "1200px", margin: "0 auto" }}>
         <AnimatedSection>
-          <div style={{ textAlign: "center", marginBottom: "60px" }}>
+          <div style={{ textAlign: "center", marginBottom: "56px" }}>
             <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.productsTagline }</div>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400 }}>{ SITE_CONTENT.productsTitle }</h2>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400, marginBottom: "14px" }}>{ SITE_CONTENT.productsTitle }</h2>
+            <p style={{ color: "var(--muted)", fontSize: "0.85rem", fontWeight: 300, maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>Your images deserve to be showcased.</p>
+            <p style={{ color: "var(--accent)", fontSize: "0.82rem", fontWeight: 400, maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>LINKS TO ORDER...COMING SOON!! Until then, please contact me to place all orders.</p>
           </div>
         </AnimatedSection>
-        <div className="bv-grid-products" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "20px" }}>
+        <div className="bv-grid-products" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "16px" }}>
           {PRODUCTS.map((p, i) => (
-            <AnimatedSection key={i} delay={i * 0.08}>
-              <div style={{ padding: "36px 28px", border: "1px solid var(--border)", borderRadius: "3px", textAlign: "center", transition: "all 0.35s ease", background: "var(--card-bg)", height: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = "#D4B896"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
+            <AnimatedSection key={i} delay={i * 0.06}>
+              <div style={{ padding: "28px 22px", border: "1px solid var(--border)", borderRadius: "3px", textAlign: "center", transition: "all 0.35s ease", background: "var(--card-bg)", height: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = "#D988A4"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = "#E8E2D8"; e.currentTarget.style.boxShadow = "none"; }}>
-                <div style={{ fontSize: "1.8rem", marginBottom: "14px", color: "var(--accent-light)" }}>{p.icon}</div>
-                <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", fontWeight: 500, marginBottom: "10px" }}>{p.name}</h3>
-                <p style={{ color: "var(--text-light)", fontSize: "0.82rem", lineHeight: 1.7, fontWeight: 300, flex: 1 }}>{p.description}</p>
+                <div style={{ fontSize: "1.4rem", marginBottom: "12px", color: "var(--accent-light)" }}>{p.icon}</div>
+                <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.05rem", fontWeight: 500, marginBottom: "8px" }}>{p.name}</h3>
+                <p style={{ color: "var(--text-light)", fontSize: "0.78rem", lineHeight: 1.7, fontWeight: 300, flex: 1 }}>{p.description}</p>
               </div>
             </AnimatedSection>
           ))}
         </div>
+        <AnimatedSection delay={0.3}>
+          <div style={{ textAlign: "center", marginTop: "40px" }}>
+            <p style={{ color: "var(--muted)", fontSize: "0.78rem", fontWeight: 300, marginBottom: "18px" }}>Have questions about specific products, sizes or pricing? Feel free to contact me...I would love to help with your designs!</p>
+            <button className="bv-btn-outline" onClick={() => { setFormData(prev => ({ ...prev, type: "Other", message: "I'm interested in ordering products! (gallery wraps, acrylics, metals, albums, prints, etc.)" })); scrollTo("contact"); }}>Inquire About Products</button>
+          </div>
+        </AnimatedSection>
       </section>
 
       {/* GIFT CERTIFICATES */}
       <section className="bv-section" style={{ padding: "60px 48px", background: "var(--bg-warm)" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "840px", margin: "0 auto" }}>
           <AnimatedSection>
             <div className="bv-gift-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "56px", alignItems: "center" }}>
               <div>
                 <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>The Perfect Gift</div>
-                <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.6rem, 2.8vw, 2.2rem)", fontWeight: 400, marginBottom: "18px", lineHeight: 1.3 }}>Give the Gift of <em style={{ fontStyle: "italic", color: "var(--accent)" }}>Beautiful Memories</em></h2>
-                <p style={{ color: "var(--text-light)", fontSize: "0.88rem", lineHeight: 1.8, fontWeight: 300, marginBottom: "20px" }}>Gift certificates come in any amount, never expire, and I'll send a gorgeous digital certificate straight to their inbox.</p>
-                <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "18px" }}>
-                  {["195", "375", "450", "Custom"].map(amt => (
-                    <button key={amt} onClick={() => setGiftAmount(amt)} style={{ padding: "7px 18px", borderRadius: "3px", cursor: "pointer", background: giftAmount === amt ? "var(--accent)" : "var(--card-bg)", color: giftAmount === amt ? "#fff" : "var(--text-light)", border: "1px solid " + (giftAmount === amt ? "var(--accent)" : "var(--border)"), fontSize: "0.72rem", letterSpacing: "0.1em", fontFamily: "var(--font-body)", transition: "all 0.3s ease" }}>{amt === "Custom" ? "Custom" : "$" + amt}</button>
+                <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.6rem, 2.8vw, 2.2rem)", fontWeight: 400, marginBottom: "18px", lineHeight: 1.3 }}>Give the Gift of <em style={{ fontStyle: "italic", color: "var(--accent)" }}>bella</em></h2>
+                <p style={{ color: "var(--text-light)", fontSize: "0.88rem", lineHeight: 1.8, fontWeight: 300, marginBottom: "8px" }}>Gift certificates can be used for any session, product, or combination of both {"\u2014"} from a full senior experience to a gorgeous piece of artwork for your home.</p>
+                <p style={{ color: "var(--muted)", fontSize: "0.78rem", lineHeight: 1.7, fontWeight: 300, marginBottom: "20px" }}>Available in any amount. Never expires. Your recipient(s) will receive a personalized bella digital gift certificate straight to their inbox.</p>
+                <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "18px" }}>
+                  {["175", "375", "500", "Custom"].map(amt => (
+                    <button key={amt} onClick={() => setGiftAmount(amt)} style={{ padding: "6px 14px", borderRadius: "3px", cursor: "pointer", background: giftAmount === amt ? "var(--accent)" : "var(--card-bg)", color: giftAmount === amt ? "#fff" : "var(--text-light)", border: "1px solid " + (giftAmount === amt ? "var(--accent)" : "var(--border)"), fontSize: "0.7rem", letterSpacing: "0.1em", fontFamily: "var(--font-body)", transition: "all 0.3s ease" }}>{amt === "Custom" ? "Custom" : "$" + amt}</button>
                   ))}
                 </div>
-                <button onClick={() => { setFormData(prev => ({ ...prev, type: "Gift Certificate", message: "Gift certificate: $" + (giftAmount === "Custom" ? "Custom amount" : giftAmount) })); scrollTo("contact"); }} className="bv-btn-outline">Inquire</button>
+                <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "flex-start" }}>
+                  <button onClick={() => { setFormData(prev => ({ ...prev, type: "Gift Certificate", message: "I'm interested in a gift certificate" + (giftAmount === "Custom" ? " (custom amount)" : " ($" + giftAmount + ")") + " for a session or product. Can you send me more details?" })); scrollTo("contact"); }} className="bv-btn-outline">Inquire</button>
+                  <button onClick={() => setShowGiftModal(true)} className="bv-btn-primary">Gift a Session or Product</button>
+                  <button onClick={() => setShowHintModal(true)} className="bv-btn-outline" style={{ textAlign: "left", lineHeight: 1.6 }}>
+                    Drop a Hint
+                    <span style={{ display: "block", fontSize: "0.58rem", letterSpacing: "0.05em", textTransform: "none", opacity: 0.65, marginTop: "4px", fontWeight: 300 }}>
+                      {"\u2727"} Tell Mom you'd love senior photos<br />
+                      {"\u2727"} Remind Grandma her granddaughter's photos would look amazing on her wall<br />
+                      {"\u2727"} Help your sister capture her baby's first year or a milestone anniversary
+                    </span>
+                  </button>
+                </div>
               </div>
               <div style={{ background: "var(--card-bg)", border: "1px solid var(--border)", borderRadius: "3px", padding: "36px 28px", textAlign: "center", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
                 <div style={{ fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "18px" }}>Gift Certificate</div>
@@ -1110,11 +1275,273 @@ export default function PhotographyWebsite() {
                 <div style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", fontWeight: 400, marginBottom: "14px" }}>bella vita photography</div>
                 <div style={{ width: "36px", height: "1px", background: "var(--border)", margin: "0 auto 14px" }} />
                 <div style={{ fontSize: "0.72rem", color: "var(--muted)", lineHeight: 1.6 }}>Redeemable for any session or product<br />Never expires</div>
+                <div style={{ marginTop: "14px", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "6px" }}>
+                  {["Sessions", "Gallery Wraps", "Albums", "Prints", "Acrylics"].map(tag => (
+                    <span key={tag} style={{ fontSize: "0.55rem", letterSpacing: "0.1em", textTransform: "uppercase", padding: "3px 10px", borderRadius: "2px", border: "1px solid var(--border-light)", color: "var(--muted)", background: "var(--bg)" }}>{tag}</span>
+                  ))}
+                </div>
               </div>
             </div>
           </AnimatedSection>
         </div>
       </section>
+
+      {/* GIFT MESSAGE MODAL */}
+      {showGiftModal && (
+        <div onClick={() => { setShowGiftModal(false); setGiftStep(1); }} style={{
+          position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.45)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          animation: "bvFadeIn 0.3s ease", padding: "20px",
+        }}>
+          <div onClick={e => e.stopPropagation()} style={{
+            background: "var(--bg)", borderRadius: "4px", padding: "40px 36px", maxWidth: "480px", width: "100%",
+            boxShadow: "0 20px 60px rgba(0,0,0,0.15)", animation: "bvScaleIn 0.35s cubic-bezier(0.22,1,0.36,1)",
+            position: "relative", maxHeight: "90vh", overflowY: "auto",
+          }}>
+            <button onClick={() => { setShowGiftModal(false); setGiftStep(1); }} style={{ position: "absolute", top: "14px", right: "18px", background: "none", border: "none", color: "var(--text)", fontSize: "1.3rem", cursor: "pointer", opacity: 0.35, fontWeight: 300 }}>{"\u2715"}</button>
+
+            {giftSent ? (
+              <div style={{ textAlign: "center", padding: "40px 0" }}>
+                <div style={{ fontSize: "2.5rem", marginBottom: "16px" }}>{"\u2727"}</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", color: "var(--accent)", marginBottom: "10px" }}>Gift Certificate Started!</div>
+                <p style={{ color: "var(--muted)", fontSize: "0.85rem", fontWeight: 300, lineHeight: 1.7 }}>
+                  A surprise email is on its way to {giftForm.recipientName || "your recipient"}!
+                  {giftForm.paymentMethod === "venmo" && <><br /><br />Opening Venmo so you can send payment...</>}
+                  {giftForm.paymentMethod === "paypal" && <><br /><br />Opening PayPal so you can send payment...</>}
+                  {giftForm.paymentMethod === "zelle" && <><br /><br />Send your Zelle payment to: <strong style={{ color: "var(--accent)" }}>{SITE_CONTENT.payments.zelle?.handle}</strong></>}
+                  {giftForm.paymentMethod === "later" && <><br /><br />Taking you to the contact form so Rebecca can send payment details...</>}
+                </p>
+              </div>
+            ) : giftStep === 1 ? (
+              /* ── STEP 1: Gift Details ── */
+              <>
+                <div style={{ textAlign: "center", marginBottom: "28px" }}>
+                  <div style={{ fontSize: "0.62rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "10px" }}>Step 1 of 2</div>
+                  <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.6rem", fontWeight: 400, marginBottom: "6px" }}>Gift a Session or Product</h3>
+                  <p style={{ color: "var(--muted)", fontSize: "0.82rem", fontWeight: 300, lineHeight: 1.7 }}>Purchase a bella vita gift certificate for someone special. Redeemable for any session, gallery wrap, album, prints, or combination {"\u2014"} they choose!</p>
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+                  <div>
+                    <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "6px" }}>Your Name</label>
+                    <input className="bv-input" placeholder="Your name" value={giftForm.senderName} onChange={e => setGiftForm({ ...giftForm, senderName: e.target.value })} />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "6px" }}>Your Email <span style={{ opacity: 0.5 }}>(for confirmation)</span></label>
+                    <input className="bv-input" type="email" placeholder="your@email.com" value={giftForm.senderEmail} onChange={e => setGiftForm({ ...giftForm, senderEmail: e.target.value })} />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "6px" }}>Recipient's Name</label>
+                    <input className="bv-input" placeholder="Who is this gift for?" value={giftForm.recipientName} onChange={e => setGiftForm({ ...giftForm, recipientName: e.target.value })} />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "6px" }}>Recipient's Email</label>
+                    <input className="bv-input" type="email" placeholder="their@email.com" value={giftForm.recipientEmail} onChange={e => setGiftForm({ ...giftForm, recipientEmail: e.target.value })} />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "6px" }}>Gift Certificate Amount</label>
+                    <input className="bv-input" type="text" placeholder="e.g. $175, $375, $500" value={giftForm.giftCertAmount} onChange={e => setGiftForm({ ...giftForm, giftCertAmount: e.target.value })} />
+                  </div>
+                  <div>
+                    <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "6px" }}>Personal Message <span style={{ opacity: 0.5 }}>(optional)</span></label>
+                    <textarea className="bv-input" placeholder="Add a personal note... e.g. 'Happy birthday! You deserve to feel beautiful!'" rows={3} value={giftForm.message} onChange={e => setGiftForm({ ...giftForm, message: e.target.value })} style={{ resize: "vertical", minHeight: "80px" }} />
+                  </div>
+                </div>
+                <button onClick={() => setGiftStep(2)} className="bv-btn-primary" style={{ width: "100%", marginTop: "24px", opacity: (!giftForm.recipientEmail || !giftForm.senderName || !giftForm.senderEmail) ? 0.4 : 1 }} disabled={!giftForm.recipientEmail || !giftForm.senderName || !giftForm.senderEmail}>Next: Choose Payment {"\u2192"}</button>
+              </>
+            ) : (
+              /* ── STEP 2: Payment Method ── */
+              <>
+                <div style={{ textAlign: "center", marginBottom: "24px" }}>
+                  <div style={{ fontSize: "0.62rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "10px" }}>Step 2 of 2</div>
+                  <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.6rem", fontWeight: 400, marginBottom: "6px" }}>Choose Payment Method</h3>
+                  <p style={{ color: "var(--muted)", fontSize: "0.82rem", fontWeight: 300, lineHeight: 1.7 }}>Gift certificate for {giftForm.recipientName || "recipient"} {"\u00b7"} {giftAmount === "Custom" ? "Custom amount" : "$" + giftAmount}</p>
+                </div>
+
+                {/* Order summary */}
+                <div style={{ background: "var(--bg-warm)", border: "1px solid var(--border-light)", borderRadius: "3px", padding: "16px 20px", marginBottom: "24px" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                    <span style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 300 }}>Gift certificate</span>
+                    <span style={{ fontFamily: "var(--font-display)", fontSize: "1.1rem", color: "var(--accent)", fontWeight: 500 }}>{giftAmount === "Custom" ? "Custom" : "$" + giftAmount}</span>
+                  </div>
+                  <div style={{ fontSize: "0.68rem", color: "var(--muted)", fontWeight: 300, lineHeight: 1.6 }}>
+                    From: {giftForm.senderName} {"\u2192"} To: {giftForm.recipientName || "recipient"}
+                  </div>
+                </div>
+
+                {/* Payment options */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "20px" }}>
+                  {[
+                    { id: "venmo", label: "Venmo", desc: SITE_CONTENT.payments.venmo?.handle || "", icon: "\u24CB" },
+                    { id: "paypal", label: "PayPal", desc: SITE_CONTENT.payments.paypal?.handle || "", icon: "\u24C5" },
+                    { id: "zelle", label: "Zelle", desc: SITE_CONTENT.payments.zelle?.handle || "", icon: "\u24CF" },
+                    { id: "later", label: "Pay Later", desc: "Rebecca will send payment details via email", icon: "\u2709" },
+                  ].map(method => (
+                    <button key={method.id} onClick={() => setGiftForm({ ...giftForm, paymentMethod: method.id })}
+                      style={{
+                        display: "flex", alignItems: "center", gap: "14px", width: "100%",
+                        padding: "14px 18px", borderRadius: "3px", cursor: "pointer", textAlign: "left",
+                        background: giftForm.paymentMethod === method.id ? "var(--accent)" : "var(--card-bg)",
+                        color: giftForm.paymentMethod === method.id ? "#fff" : "var(--text)",
+                        border: "1px solid " + (giftForm.paymentMethod === method.id ? "var(--accent)" : "var(--border)"),
+                        transition: "all 0.3s ease", fontFamily: "var(--font-body)",
+                      }}
+                      onMouseEnter={e => { if (giftForm.paymentMethod !== method.id) { e.currentTarget.style.borderColor = "var(--accent-light)"; e.currentTarget.style.boxShadow = "0 2px 12px rgba(0,0,0,0.04)"; } }}
+                      onMouseLeave={e => { if (giftForm.paymentMethod !== method.id) { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.boxShadow = "none"; } }}
+                    >
+                      <span style={{ fontSize: "1.2rem", opacity: giftForm.paymentMethod === method.id ? 1 : 0.5, flexShrink: 0 }}>{method.icon}</span>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ fontSize: "0.85rem", fontWeight: 400, letterSpacing: "0.04em" }}>{method.label}</div>
+                        <div style={{ fontSize: "0.65rem", opacity: giftForm.paymentMethod === method.id ? 0.8 : 0.5, marginTop: "2px", fontWeight: 300 }}>{method.desc}</div>
+                      </div>
+                      {giftForm.paymentMethod === method.id && <span style={{ fontSize: "0.9rem" }}>{"\u2713"}</span>}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Zelle instructions when selected */}
+                {giftForm.paymentMethod === "zelle" && (
+                  <div style={{ background: "var(--bg-warm)", border: "1px solid var(--border-light)", borderRadius: "3px", padding: "14px 18px", marginBottom: "16px", animation: "bvSlideIn 0.3s ease" }}>
+                    <div style={{ fontSize: "0.68rem", color: "var(--text-light)", lineHeight: 1.7, fontWeight: 300 }}>
+                      <strong style={{ fontWeight: 500, color: "var(--text)" }}>Zelle Instructions:</strong> Open your banking app, select Zelle, and send {giftAmount !== "Custom" ? "$" + giftAmount : "your amount"} to <strong style={{ color: "var(--accent)" }}>{SITE_CONTENT.payments.zelle?.handle}</strong>. Include "{giftForm.recipientName || "gift certificate"}" in the memo.
+                    </div>
+                  </div>
+                )}
+
+                <div style={{ display: "flex", gap: "12px" }}>
+                  <button onClick={() => setGiftStep(1)} className="bv-btn-outline" style={{ flex: "0 0 auto", padding: "14px 20px" }}>{"\u2190"} Back</button>
+                  <button onClick={handleSendGift} className="bv-btn-primary" style={{ flex: 1, opacity: !giftForm.paymentMethod ? 0.4 : 1 }} disabled={!giftForm.paymentMethod}>
+                    {giftForm.paymentMethod === "venmo" ? "Send & Open Venmo" : giftForm.paymentMethod === "paypal" ? "Send & Open PayPal" : giftForm.paymentMethod === "zelle" ? "Send Gift Notification" : giftForm.paymentMethod === "later" ? "Send & Pay Later" : "Complete Purchase"} {"\u2727"}
+                  </button>
+                </div>
+                <p style={{ textAlign: "center", marginTop: "14px", fontSize: "0.68rem", color: "var(--muted)", fontWeight: 300, lineHeight: 1.6 }}>
+                  {giftForm.paymentMethod === "later" ? "A surprise email will be sent to your recipient. Rebecca will follow up with payment details." : "A surprise email will be sent to your recipient and Rebecca will be notified of your purchase."}
+                </p>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* SEND TO SOMEONE SPECIAL MODAL */}
+      {showHintModal && (
+        <div onClick={() => setShowHintModal(false)} style={{
+          position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.45)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          animation: "bvFadeIn 0.3s ease", padding: "20px",
+        }}>
+          <div onClick={e => e.stopPropagation()} style={{
+            background: "var(--bg)", borderRadius: "4px", padding: "36px 32px", maxWidth: "480px", width: "100%",
+            boxShadow: "0 20px 60px rgba(0,0,0,0.15)", animation: "bvScaleIn 0.35s cubic-bezier(0.22,1,0.36,1)",
+            position: "relative", maxHeight: "90vh", overflowY: "auto",
+          }}>
+            <button onClick={() => setShowHintModal(false)} style={{ position: "absolute", top: "14px", right: "18px", background: "none", border: "none", color: "var(--text)", fontSize: "1.3rem", cursor: "pointer", opacity: 0.35, fontWeight: 300 }}>{"\u2715"}</button>
+            {hintSent ? (
+              <div style={{ textAlign: "center", padding: "40px 0" }}>
+                <div style={{ fontSize: "2.5rem", marginBottom: "16px" }}>{"\u2661"}</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", color: "var(--accent)", marginBottom: "10px" }}>{hintForm.scenario === "hint" ? "Hint Dropped!" : "Recommendation Sent!"}</div>
+                <p style={{ color: "var(--muted)", fontSize: "0.85rem", fontWeight: 300, lineHeight: 1.7 }}>Your email app will open with the message ready to review and send. Rebecca will be notified too!</p>
+              </div>
+            ) : (
+              <>
+                <div style={{ textAlign: "center", marginBottom: "22px" }}>
+                  <div style={{ fontSize: "0.62rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "10px" }}>Drop a Hint or Recommend Us</div>
+                  <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", fontWeight: 400, lineHeight: 1.3 }}>We'll write the email {"\u2014"}<br />you just hit send</h3>
+                </div>
+
+                {/* Step 1: Pick scenario */}
+                <div style={{ marginBottom: "16px" }}>
+                  <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "8px" }}>I want to...</label>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                    <button onClick={() => setHintForm({ ...hintForm, scenario: "hint", occasion: "", forWho: "" })} style={{
+                      padding: "12px 16px", borderRadius: "3px", cursor: "pointer", textAlign: "left",
+                      background: hintForm.scenario === "hint" ? "var(--accent)" : "var(--card-bg)",
+                      color: hintForm.scenario === "hint" ? "#fff" : "var(--text-light)",
+                      border: "1px solid " + (hintForm.scenario === "hint" ? "var(--accent)" : "var(--border)"),
+                      fontFamily: "var(--font-body)", transition: "all 0.3s ease",
+                    }}>
+                      <div style={{ fontSize: "0.82rem", fontWeight: 400 }}>Drop a hint that I'd love a session {"\u2727"}</div>
+                      <div style={{ fontSize: "0.66rem", opacity: 0.7, marginTop: "2px", fontStyle: "italic" }}>{"\"Mom... just saying, I'd love this for my birthday\""}</div>
+                    </button>
+                    <button onClick={() => setHintForm({ ...hintForm, scenario: "recommend", occasion: "", forWho: "" })} style={{
+                      padding: "12px 16px", borderRadius: "3px", cursor: "pointer", textAlign: "left",
+                      background: hintForm.scenario === "recommend" ? "var(--accent)" : "var(--card-bg)",
+                      color: hintForm.scenario === "recommend" ? "#fff" : "var(--text-light)",
+                      border: "1px solid " + (hintForm.scenario === "recommend" ? "var(--accent)" : "var(--border)"),
+                      fontFamily: "var(--font-body)", transition: "all 0.3s ease",
+                    }}>
+                      <div style={{ fontSize: "0.82rem", fontWeight: 400 }}>Suggest bella vita for someone else {"\u2661"}</div>
+                      <div style={{ fontSize: "0.66rem", opacity: 0.7, marginTop: "2px", fontStyle: "italic" }}>{"\"Mom, you should book Emma's senior photos with her!\""}</div>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Step 2: Occasion */}
+                {hintForm.scenario && (
+                  <div style={{ animation: "bvSlideIn 0.3s ease" }}>
+                    <div style={{ marginBottom: "14px" }}>
+                      <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "8px" }}>What kind of session?</label>
+                      <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                        {["Senior Portraits", "Family Photos", "Wedding", "Products / Gift", "General"].map(occ => (
+                          <button key={occ} onClick={() => setHintForm({ ...hintForm, occasion: occ })} style={{ padding: "7px 14px", borderRadius: "3px", cursor: "pointer", background: hintForm.occasion === occ ? "var(--accent)" : "var(--card-bg)", color: hintForm.occasion === occ ? "#fff" : "var(--text-light)", border: "1px solid " + (hintForm.occasion === occ ? "var(--accent)" : "var(--border)"), fontSize: "0.66rem", letterSpacing: "0.1em", fontFamily: "var(--font-body)", transition: "all 0.3s ease" }}>{occ === "General" ? "Other" : occ}</button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Step 3: Contact info */}
+                    {hintForm.occasion && (
+                      <div style={{ display: "flex", flexDirection: "column", gap: "10px", animation: "bvSlideIn 0.3s ease" }}>
+                        <div>
+                          <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "5px" }}>Your Name</label>
+                          <input className="bv-input" style={{ padding: "11px 14px" }} placeholder="Your name" value={hintForm.senderName} onChange={e => setHintForm({ ...hintForm, senderName: e.target.value })} />
+                        </div>
+                        <div>
+                          <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "5px" }}>
+                            {hintForm.scenario === "hint" ? "Who are you sending this to?" : "Who are you emailing?"}
+                          </label>
+                          <input className="bv-input" style={{ padding: "11px 14px" }} placeholder={hintForm.scenario === "hint" ? "e.g. Mom, Grandma, Dad" : "e.g. Mom, a friend, your sister"} value={hintForm.recipientName} onChange={e => setHintForm({ ...hintForm, recipientName: e.target.value })} />
+                        </div>
+                        {hintForm.scenario === "recommend" && hintForm.occasion !== "General" && hintForm.occasion !== "Products / Gift" && (
+                          <div>
+                            <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "5px" }}>
+                              {hintForm.occasion === "Senior Portraits" ? "Who's the senior?" : hintForm.occasion === "Wedding" ? "Who's getting married?" : "Who's in the photos?"}
+                              {" "}<span style={{ opacity: 0.45, textTransform: "none", letterSpacing: "0.05em" }}>(optional)</span>
+                            </label>
+                            <input className="bv-input" style={{ padding: "11px 14px" }} placeholder={hintForm.occasion === "Senior Portraits" ? "e.g. Emma (their granddaughter)" : hintForm.occasion === "Wedding" ? "e.g. Sarah & Jake" : "e.g. their family"} value={hintForm.forWho} onChange={e => setHintForm({ ...hintForm, forWho: e.target.value })} />
+                          </div>
+                        )}
+                        <div>
+                          <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "5px" }}>Their Email Address</label>
+                          <input className="bv-input" style={{ padding: "11px 14px" }} type="email" placeholder="their@email.com" value={hintForm.recipientEmail} onChange={e => setHintForm({ ...hintForm, recipientEmail: e.target.value })} />
+                        </div>
+
+                        {/* Message preview */}
+                        {hintForm.senderName && hintForm.recipientName && (
+                          <div style={{ background: "var(--bg-warm)", border: "1px solid var(--border-light)", borderRadius: "3px", padding: "12px 14px", animation: "bvFadeIn 0.3s ease" }}>
+                            <div style={{ fontSize: "0.56rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "6px" }}>{"\u2709"} Email Preview</div>
+                            <p style={{ fontSize: "0.75rem", color: "var(--text-light)", lineHeight: 1.65, fontStyle: "italic", fontWeight: 300, margin: 0 }}>
+                              {hintForm.scenario === "hint" ? (
+                                <>Hey {hintForm.recipientName}! So... this is me not-so-subtly dropping a hint. {hintForm.occasion === "Senior Portraits" ? "I've been looking into senior portrait photographers and I found someone AMAZING..." : hintForm.occasion === "Wedding" ? "We've been looking at wedding photographers and we found THE one..." : hintForm.occasion === "Family Photos" ? "I've been wanting family photos SO badly and I found the perfect photographer..." : hintForm.occasion === "Products / Gift" ? "I found this photographer with the most beautiful gallery wraps and albums..." : "I found this amazing photographer and a session would make my year..."}</>
+                              ) : (
+                                <>Hey {hintForm.recipientName}! {hintForm.occasion === "Senior Portraits" ? ("I HAD to tell you about this photographer" + (hintForm.forWho ? " for " + hintForm.forWho + "'s senior photos" : " for senior portraits") + ". Her work is unreal...") : hintForm.occasion === "Wedding" ? ("I found the most beautiful wedding photographer" + (hintForm.forWho ? " for " + hintForm.forWho + "'s big day" : "") + "! Her work is stunning...") : hintForm.occasion === "Family Photos" ? "I found the most wonderful family photographer and immediately thought of you..." : hintForm.occasion === "Products / Gift" ? "I know someone who'd love a beautiful gallery wrap or album of their photos..." : "I came across this incredible photographer and thought of you..."}</>
+                              )}
+                            </p>
+                            <div style={{ fontSize: "0.6rem", color: "var(--muted)", marginTop: "6px", opacity: 0.5 }}>+ link to website, contact info & sign-off from {hintForm.senderName}</div>
+                          </div>
+                        )}
+
+                        <button onClick={handleSendHint} className="bv-btn-primary" style={{ width: "100%", marginTop: "4px", opacity: (!hintForm.recipientEmail || !hintForm.senderName) ? 0.4 : 1 }}>
+                          {hintForm.scenario === "hint" ? "Drop My Hint" : "Send Recommendation"} {"\u2661"}
+                        </button>
+                        <p style={{ textAlign: "center", fontSize: "0.65rem", color: "var(--muted)", fontWeight: 300, lineHeight: 1.5, margin: 0 }}>Opens your email app with the full message ready to review & send.</p>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* TESTIMONIALS */}
       <section className="bv-section" style={{ padding: "80px 48px" }}>
@@ -1222,14 +1649,14 @@ export default function PhotographyWebsite() {
             <div style={{ marginTop: "20px" }}>
               <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "8px" }}>Session Type</label>
               <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-                {["Senior Sessions", "Family Sessions", "Weddings & Events", "Gift Certificate", "Other"].map(type => (
+                {["Senior Session", "Family Session", "Milestone Session", "Wedding", "Gift Certificate", "Other"].map(type => (
                   <button key={type} onClick={() => setFormData({ ...formData, type })} style={{ padding: "7px 18px", borderRadius: "3px", cursor: "pointer", background: formData.type === type ? "var(--accent)" : "var(--card-bg)", color: formData.type === type ? "#fff" : "var(--text-light)", border: "1px solid " + (formData.type === type ? "var(--accent)" : "var(--border)"), fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "var(--font-body)", transition: "all 0.3s ease" }}>{type}</button>
                 ))}
               </div>
             </div>
             <div style={{ marginTop: "20px" }}>
               <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: formErrors.message ? "#c9544d" : "var(--muted)", display: "block", marginBottom: "6px", transition: "color 0.3s ease" }}>Your Story</label>
-              <textarea className="bv-input" placeholder="Tell me about you! Who's getting photographed?" rows={5} value={formData.message} onChange={e => { setFormData({ ...formData, message: e.target.value }); if (formErrors.message) setFormErrors(prev => ({ ...prev, message: undefined })); }} style={{ resize: "vertical", minHeight: "110px", borderColor: formErrors.message ? "#c9544d" : undefined }} />
+              <textarea className="bv-input" placeholder="Tell me about you..." rows={5} value={formData.message} onChange={e => { setFormData({ ...formData, message: e.target.value }); if (formErrors.message) setFormErrors(prev => ({ ...prev, message: undefined })); }} style={{ resize: "vertical", minHeight: "110px", borderColor: formErrors.message ? "#c9544d" : undefined }} />
               {formErrors.message && <div style={{ fontSize: "0.68rem", color: "#c9544d", marginTop: "5px", animation: "bvSlideIn 0.3s ease" }}>{formErrors.message}</div>}
             </div>
             <div style={{ marginTop: "36px", textAlign: "center" }}>
@@ -1245,7 +1672,7 @@ export default function PhotographyWebsite() {
         <div className="bv-section" style={{ padding: "52px 48px", textAlign: "center" }}>
           <div style={{ fontSize: "0.62rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "10px" }}>Follow Along</div>
           <h3 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 2.6vw, 2rem)", fontWeight: 400, marginBottom: "12px" }}>See the <em style={{ fontStyle: "italic", color: "var(--accent)" }}>behind the scenes</em></h3>
-          <p style={{ color: "var(--muted)", fontSize: "0.82rem", fontWeight: 300, maxWidth: "380px", margin: "0 auto 22px", lineHeight: 1.7 }}>Session sneak peeks, Michigan golden hour, and the occasional dog cameo.</p>
+          <p style={{ color: "var(--muted)", fontSize: "0.82rem", fontWeight: 300, maxWidth: "380px", margin: "0 auto 22px", lineHeight: 1.7 }}>Session sneak peeks, bloopers, and the occasional bella pet cameo.</p>
           <a href="https://www.instagram.com/bellavitaphotography2/" target="_blank" rel="noopener noreferrer" className="bv-btn-outline" style={{ textDecoration: "none" }}>@bellavitaphotography2</a>
         </div>
       </AnimatedSection>
@@ -1262,12 +1689,12 @@ export default function PhotographyWebsite() {
               <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "16px", fontWeight: 400 }}>Navigate</div>
               {["Portfolio", "About", "Services", "FAQ", "Contact"].map(item => (
                 <div key={item} onClick={() => scrollTo(item.toLowerCase())} style={{ fontSize: "0.82rem", color: "var(--text-light)", cursor: "pointer", padding: "4px 0", fontWeight: 300, transition: "color 0.3s ease" }}
-                  onMouseEnter={e => e.currentTarget.style.color = "#B8926A"} onMouseLeave={e => e.currentTarget.style.color = "#5A554E"}>{item}</div>
+                  onMouseEnter={e => e.currentTarget.style.color = "#C4567A"} onMouseLeave={e => e.currentTarget.style.color = "#5A554E"}>{item}</div>
               ))}
             </div>
             <div>
               <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "16px", fontWeight: 400 }}>Sessions</div>
-              {["Senior Sessions", "Family Sessions", "Weddings & Events", "Gift Certificates"].map(item => (
+              {["Senior Sessions", "Family Sessions", "Milestones & Minis", "Weddings"].map(item => (
                 <div key={item} style={{ fontSize: "0.82rem", color: "var(--text-light)", padding: "4px 0", fontWeight: 300 }}>{item}</div>
               ))}
             </div>
@@ -1276,7 +1703,7 @@ export default function PhotographyWebsite() {
               <a href="https://www.instagram.com/bellavitaphotography2/" target="_blank" rel="noopener noreferrer" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>Instagram</a>
               <a href="https://www.facebook.com/bellavitaphotography2" target="_blank" rel="noopener noreferrer" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>Facebook</a>
               <a href="mailto:bellavitaphoto@rocketmail.com" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>bellavitaphoto@rocketmail.com</a>
-              <div onClick={() => setCurrentView("client-gallery")} style={{ fontSize: "0.82rem", color: "var(--accent)", cursor: "pointer", padding: "4px 0", fontWeight: 300, marginTop: "6px" }}>Client Gallery {"\u2192"}</div>
+              <button onClick={() => setCurrentView("client-gallery")} className="bv-btn-outline" style={{ marginTop: "12px", padding: "10px 20px", fontSize: "0.62rem" }}>Client Gallery {"\u2192"}</button>
             </div>
           </div>
           <div style={{ borderTop: "1px solid var(--border-light)", paddingTop: "20px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "10px" }}>
@@ -1297,7 +1724,6 @@ export default function PhotographyWebsite() {
         }}>
           <div>
             <div style={{ fontFamily: "var(--font-display)", fontSize: "0.95rem", fontWeight: 500 }}>Ready to book?</div>
-            <div style={{ fontSize: "0.6rem", color: "var(--muted)", letterSpacing: "0.08em" }}>Limited fall spots available</div>
           </div>
           <button className="bv-btn-primary" onClick={() => scrollTo("contact")} style={{ padding: "10px 24px", fontSize: "0.65rem", margin: 0 }}>Book Now</button>
         </div>
@@ -1311,11 +1737,11 @@ export default function PhotographyWebsite() {
             width: "44px", height: "44px", borderRadius: "50%",
             background: "var(--accent)", color: "#fff", border: "none",
             cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: "1.1rem", boxShadow: "0 4px 16px rgba(184,146,106,0.3)",
+            fontSize: "1.1rem", boxShadow: "0 4px 16px rgba(196,86,122,0.3)",
             animation: "bvFadeIn 0.35s ease", transition: "all 0.3s ease",
           }}
-          onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 6px 24px rgba(184,146,106,0.4)"; }}
-          onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 16px rgba(184,146,106,0.3)"; }}
+          onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 6px 24px rgba(196,86,122,0.4)"; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 16px rgba(196,86,122,0.3)"; }}
         >{"\u2191"}</button>
       )}
     </div>
