@@ -97,15 +97,12 @@ const SITE_CONTENT = {
    from your image host (Cloudinary, SmugMug, etc.) without width/quality limits.
    "src" = display size, "full" = download/lightbox size */
 const PORTFOLIO = [
-  { id: 1, src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=90", full: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=2400&q=95", title: "Sunday Afternoon", category: "Families", aspect: "landscape" },
-  { id: 2, src: "https://images.unsplash.com/photo-1517677129300-07b130802f46?w=1200&q=90", full: "https://images.unsplash.com/photo-1517677129300-07b130802f46?w=2400&q=95", title: "Chapter One", category: "Seniors", aspect: "portrait" },
-  { id: 3, src: "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1200&q=90", full: "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=2400&q=95", title: "Golden Together", category: "Families", aspect: "landscape" },
-  { id: 4, src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1200&q=90", full: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=2400&q=95", title: "Unwritten", category: "Seniors", aspect: "portrait" },
-  { id: 5, src: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&q=90", full: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=2400&q=95", title: "Our Whole World", category: "Families", aspect: "landscape" },
-  { id: 6, src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=90", full: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=2400&q=95", title: "Fearless", category: "Seniors", aspect: "portrait" },
-  { id: 7, src: "https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?w=1200&q=90", full: "https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?w=2400&q=95", title: "Little Hands", category: "Families", aspect: "portrait" },
-  { id: 8, src: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=1200&q=90", full: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=2400&q=95", title: "Main Character", category: "Seniors", aspect: "portrait" },
-  { id: 9, src: "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=1200&q=90", full: "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=2400&q=95", title: "Rooted", category: "Families", aspect: "landscape" },
+  { id: 1, src: "/Senior1.JPG", full: "/Senior1.JPG", title: "Senior Portrait", category: "Seniors", aspect: "landscape" },
+  { id: 2, src: "/Family1.JPG", full: "/Family1.JPG", title: "Family Session", category: "Families", aspect: "landscape" },
+  { id: 3, src: "/Maternity1.JPG", full: "/Maternity1.JPG", title: "Gender Reveal", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 4, src: "/Newborn1.JPG", full: "/Newborn1.JPG", title: "Newborn", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 5, src: "/Engagement1.JPG", full: "/Engagement1.JPG", title: "The Proposal", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 6, src: "/Wedding1.JPG", full: "/Wedding1.JPG", title: "Wedding Day", category: "Weddings", aspect: "landscape" },
 ];
 
 const TESTIMONIALS = [
@@ -634,14 +631,6 @@ export default function PhotographyWebsite() {
   useEffect(() => { document.body.style.overflow = (lightboxImage || menuOpen || showGiftModal || showHintModal) ? "hidden" : ""; return () => { document.body.style.overflow = ""; }; }, [lightboxImage, menuOpen, showGiftModal, showHintModal]);
   useEffect(() => { const h = () => { setScrollY(window.scrollY); const doc = document.documentElement; setScrollProgress((doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100); }; window.addEventListener("scroll", h, { passive: true }); return () => window.removeEventListener("scroll", h); }, []);
 
-  /* Preload hero image for instant render */
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.rel = "preload"; link.as = "image";
-    link.href = "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&q=85";
-    document.head.appendChild(link);
-    return () => { if (link.parentNode) link.parentNode.removeChild(link); };
-  }, []);
 
   /* URL hash tracking - updates browser URL as user scrolls to sections */
   useEffect(() => {
@@ -685,7 +674,7 @@ export default function PhotographyWebsite() {
       "url": "https://bellavitabyrebecca.com",
       "telephone": "",
       "email": "bellavitaphoto@rocketmail.com",
-      "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=85",
+      "image": "https://bellavitabyrebecca.com/og-image.jpg",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Howell",
@@ -1038,29 +1027,6 @@ export default function PhotographyWebsite() {
           }}>{ SITE_CONTENT.tagline }</div>
         </div>
 
-        {/* Banner photo strip */}
-        <div className="bv-hero-banner" style={{
-          margin: "0 32px", overflow: "hidden", borderRadius: "4px", position: "relative",
-          height: "clamp(260px, 42vh, 520px)",
-          opacity: heroLoaded ? 1 : 0, transform: heroLoaded ? "scale(1)" : "scale(0.98)",
-          transition: "all 1.4s cubic-bezier(0.22,1,0.36,1) 0.5s",
-          boxShadow: "0 12px 48px rgba(0,0,0,0.10)",
-          background: "#e8ddd0",
-        }}>
-          <img
-            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&q=85"
-            alt="Golden hour portrait session in Michigan"
-            onError={(e) => { e.target.onerror = null; e.target.src = "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=75"; }}
-            style={{
-              width: "100%", height: "110%", objectFit: "cover", objectPosition: "center 35%",
-              display: "block", filter: "brightness(0.92) saturate(1.05)",
-              transform: heroLoaded ? `scale(1) translateY(${Math.min(scrollY * 0.12, 60)}px)` : "scale(1.06)",
-              transition: heroLoaded ? "none" : "transform 2.5s cubic-bezier(0.22,1,0.36,1) 0.6s",
-              willChange: "transform",
-            }}
-          />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(252,250,246,0.06) 0%, rgba(252,250,246,0.12) 70%, rgba(252,250,246,0.35) 100%)", pointerEvents: "none" }} />
-        </div>
 
         {/* Below banner: headline + description */}
         <div className="bv-hero-bottom" style={{ textAlign: "center", padding: "44px 24px 60px", position: "relative", zIndex: 2, flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
