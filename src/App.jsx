@@ -17,7 +17,7 @@ const SITE_CONTENT = {
   aboutTagline: "Meet Rebecca",
   aboutTitle: "It's All About Connection",
   aboutBio: "I started bella vita photography back in 2009 with a camera, a marketing degree from Davenport University, and a heart full of love for freezing beautiful moments in time. Over fifteen years later, I still get butterflies before every single session.",
-  aboutBio2: "When I'm not behind the camera, I'm probably at one of my kids' games, binge-watching something on Netflix, or convincing my husband we need another dog. I shoot exclusively on location using natural light because that's where the magic is \u2014 real light, real laughter, real you.",
+  aboutBio2: "I'm a natural light, on location photographer. There's something magical about Michigan seasons \u2014 the way the flowers bloom in the spring and the trees change colors in the fall. I'm not a fan of winter (like at all), but I even get excited about those outdoor sessions in the snow!",
   aboutStats: [
     { number: "500+", label: "Sessions" },
     { number: "15+", label: "Years" },
@@ -701,7 +701,7 @@ export default function PhotographyWebsite() {
         { "@type": "County", "name": "Livingston County, Michigan" },
         { "@type": "County", "name": "Oakland County, Michigan" }
       ],
-      "priceRange": "$195 - $450+",
+      "priceRange": "$175 - $600+",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
@@ -728,9 +728,9 @@ export default function PhotographyWebsite() {
         "@type": "OfferCatalog",
         "name": "Photography Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Senior Portraits", "description": "90-minute on-location senior portrait session with 50+ edited images" }, "price": "450", "priceCurrency": "USD" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family Sessions", "description": "60-minute natural light family session with 40+ edited images" }, "price": "375", "priceCurrency": "USD" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mini Sessions", "description": "25-minute seasonal mini session with 15+ edited images" }, "price": "195", "priceCurrency": "USD" }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Senior Portraits", "description": "On-location senior portrait session with up to 3 outfit changes and 25+ digital images" }, "price": "600", "priceCurrency": "USD" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family Sessions", "description": "Natural light family session on location with 25+ digital images" }, "price": "300", "priceCurrency": "USD" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mini Sessions", "description": "Seasonal mini session with 10-15 digital images" }, "price": "175", "priceCurrency": "USD" }
         ]
       }
     });
