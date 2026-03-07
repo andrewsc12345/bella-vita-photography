@@ -449,9 +449,9 @@ function ClientGalleryPage({ galleries, onBack, onGift }) {
             </p>
             <div style={{ display: "flex", gap: "10px", justifyContent: "center", marginTop: "16px", flexWrap: "wrap" }}>
               <button onClick={() => {
-                const shareText = "Check out my photos from bella vita photography! You can gift me a canvas, album, or prints \u2014 or grab a gift certificate for a session of your own: https://bella-vita-photography.vercel.app/#products";
-                if (navigator.share) { navigator.share({ title: "bella vita photography", text: shareText, url: "https://bella-vita-photography.vercel.app/#products" }).catch(() => {}); }
-                else { navigator.clipboard.writeText(shareText).then(() => alert("Copied! Paste this into a text or message to share with family and friends.")).catch(() => window.open("https://bella-vita-photography.vercel.app/#products", "_blank")); }
+                const shareText = "Check out my photos from bella vita photography! You can gift me a canvas, album, or prints \u2014 or grab a gift certificate for a session of your own: https://bellavitabyrebecca.com/#products";
+                if (navigator.share) { navigator.share({ title: "bella vita photography", text: shareText, url: "https://bellavitabyrebecca.com/#products" }).catch(() => {}); }
+                else { navigator.clipboard.writeText(shareText).then(() => alert("Copied! Paste this into a text or message to share with family and friends.")).catch(() => window.open("https://bellavitabyrebecca.com/#products", "_blank")); }
               }} className="bv-btn-outline" style={{ padding: "10px 22px", fontSize: "0.62rem" }}>Copy Share Message</button>
               <button onClick={() => onGift()} className="bv-btn-primary" style={{ padding: "10px 22px", fontSize: "0.62rem" }}>Browse Gifts & Products</button>
             </div>
@@ -679,10 +679,10 @@ export default function PhotographyWebsite() {
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "@id": "https://bella-vita-photography.vercel.app",
+      "@id": "https://bellavitabyrebecca.com",
       "name": "bella vita photography",
       "description": "Natural light portrait photography for seniors and families in Livingston and Oakland County, Michigan. Owned by Rebecca Henson, est. 2009.",
-      "url": "https://bella-vita-photography.vercel.app",
+      "url": "https://bellavitabyrebecca.com",
       "telephone": "",
       "email": "bellavitaphoto@rocketmail.com",
       "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=85",
@@ -787,7 +787,7 @@ export default function PhotographyWebsite() {
         "Hey" + (hintForm.recipientName ? " " + hintForm.recipientName : "") + "!\n\n" +
         "So... this is me not-so-subtly dropping a hint. \u{1F60A}\n\n" +
         (hintMessages[hintForm.occasion] || hintMessages["General"]) + "\n\n" +
-        "You can see her work here: bella-vita-photography.vercel.app\n" +
+        "You can see her work here: bellavitabyrebecca.com\n" +
         "Gift certificates come in any amount, work for sessions AND products (gallery wraps, albums, prints!), and never expire!\n" +
         "Her email: bellavitaphoto@rocketmail.com\n\n" +
         "Just putting that out there... \u{1F60D}\n\n" +
@@ -806,7 +806,7 @@ export default function PhotographyWebsite() {
       body = encodeURIComponent(
         "Hey" + (hintForm.recipientName ? " " + hintForm.recipientName : "") + "!\n\n" +
         (recMessages[hintForm.occasion] || recMessages["General"]) + "\n\n" +
-        "Check out her work: bella-vita-photography.vercel.app\n" +
+        "Check out her work: bellavitabyrebecca.com\n" +
         "Her email: bellavitaphoto@rocketmail.com" + (hintForm.senderName ? " \u2014 tell her " + hintForm.senderName + " sent you!" : "") + "\n\n" +
         "Trust me on this one. \u{1F60A}\n\n" +
         hintForm.senderName
@@ -840,7 +840,7 @@ export default function PhotographyWebsite() {
       giftForm.senderName + " has gifted you a bella vita photography gift certificate for " + amount + ".\n\n" +
       "This certificate can be used for any photography session (seniors, families, weddings), products (gallery wraps, albums, acrylics, prints), or any combination \u2014 and it never expires!" +
       personalMsg + "\n\n" +
-      "To book your session or browse products, contact Rebecca at bellavitaphoto@rocketmail.com or visit bella-vita-photography.vercel.app\n\n" +
+      "To book your session or browse products, contact Rebecca at bellavitaphoto@rocketmail.com or visit bellavitabyrebecca.com\n\n" +
       "With love,\n" + giftForm.senderName + "\n\n\u2014 bella vita photography \u2727 Est. 2009"
     );
     window.open("mailto:" + giftForm.recipientEmail + "?subject=" + subject + "&body=" + body + "&bcc=bellavitaphoto@rocketmail.com", "_blank");
