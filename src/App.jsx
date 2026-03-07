@@ -752,13 +752,20 @@ export default function PhotographyWebsite() {
   const scrollTo = (id) => { setMenuOpen(false); const el = document.getElementById(id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: "smooth" }); };
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const switchFilter = (cat) => { if (cat === activeFilter) return; setFilterAnimating(true); setTimeout(() => { setActiveFilter(cat); setFilterAnimating(false); }, 300); };
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const errors = {};
     if (!formData.name.trim()) errors.name = "Please enter your name";
     if (!emailRegex.test(formData.email)) errors.email = "Please enter a valid email";
     if (!formData.message.trim()) errors.message = "Tell me about your vision";
     setFormErrors(errors);
     if (Object.keys(errors).length > 0) return;
+    try {
+      await fetch("https://formspree.io/f/xzdjbyra", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: formData.name, email: formData.email, "session type": formData.type, message: formData.message }),
+      });
+    } catch {}
     setFormSent(true); setTimeout(() => setFormSent(false), 4000); setFormData({ name: "", email: "", message: "", type: "Senior Session" }); setFormErrors({});
   };
   const handleSendHint = () => {
