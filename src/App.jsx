@@ -1148,7 +1148,9 @@ export default function PhotographyWebsite() {
           {filtered.map((img, i) => (
             <AnimatedSection key={img.id} delay={i * 0.06}>
               <div className="bv-gallery-card-wrap" style={{ aspectRatio: img.aspect === "portrait" ? "3/4" : "4/3" }}>
-                <ProgressiveImage className="bv-gallery-img" src={img.src} alt={img.title + " \u2013 bella vita photography Michigan"} onClick={() => setLightboxImage(img)} style={{ width: "100%", height: "100%", cursor: "zoom-in" }} tabIndex={0} role="button" aria-label={"View " + img.title} onKeyDown={e => e.key === "Enter" && setLightboxImage(img)} />
+                <div className="bv-gallery-img" onClick={() => setLightboxImage(img)} style={{ width: "100%", height: "100%", cursor: "zoom-in" }} tabIndex={0} role="button" aria-label={"View " + img.title} onKeyDown={e => e.key === "Enter" && setLightboxImage(img)}>
+                  <img src={img.src} alt={img.title + " \u2013 bella vita photography Michigan"} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                </div>
                 <div className="bv-overlay" />
                 <div className="bv-img-actions">
                   <button onClick={(e) => { e.stopPropagation(); downloadImage(img.full || img.src, "bella-vita-" + img.title.toLowerCase().replace(/\s+/g, "-") + ".jpg"); }} style={{ width: "34px", height: "34px", borderRadius: "50%", background: "rgba(255,255,255,0.92)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.82rem", color: "#2E2A25", backdropFilter: "blur(8px)" }}>{"\u2193"}</button>
