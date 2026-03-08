@@ -1046,7 +1046,7 @@ export default function PhotographyWebsite() {
 
 
         {/* Below banner: headline + description */}
-        <div className="bv-hero-bottom" style={{ textAlign: "center", padding: "32px 24px 40px", position: "relative", zIndex: 2, flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+        <div className="bv-hero-bottom" style={{ textAlign: "center", padding: "32px 24px 20px", position: "relative", zIndex: 2, flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <h1 style={{
             fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 4.5vw, 3.6rem)", fontWeight: 400,
             lineHeight: 1.08, color: "var(--text)",
@@ -1068,7 +1068,7 @@ export default function PhotographyWebsite() {
       </section>
 
       {/* PORTFOLIO */}
-      <section id="portfolio" className="bv-section bv-portfolio-section" style={{ padding: "64px 48px", maxWidth: "1400px", margin: "0 auto" }}>
+      <section id="portfolio" className="bv-section bv-portfolio-section" style={{ padding: "36px 48px 64px", maxWidth: "1400px", margin: "0 auto" }}>
         <AnimatedSection>
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
             <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.portfolioTagline }</div>
