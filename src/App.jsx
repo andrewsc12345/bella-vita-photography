@@ -1025,7 +1025,7 @@ export default function PhotographyWebsite() {
       />
 
       {/* HERO */}
-      <section id="hero" className="bv-hero-section" style={{ minHeight: "100vh", display: "flex", flexDirection: "column", position: "relative", overflow: "hidden", background: "var(--bg)" }}>
+      <section id="hero" className="bv-hero-section" style={{ minHeight: "85vh", display: "flex", flexDirection: "column", position: "relative", overflow: "hidden", background: "var(--bg)" }}>
         {/* Top: Brand name + tagline */}
         <div className="bv-hero-top" style={{ textAlign: "center", paddingTop: "120px", paddingBottom: "36px", position: "relative", zIndex: 2 }}>
           <div style={{
@@ -1046,9 +1046,9 @@ export default function PhotographyWebsite() {
 
 
         {/* Below banner: headline + description */}
-        <div className="bv-hero-bottom" style={{ textAlign: "center", padding: "44px 24px 60px", position: "relative", zIndex: 2, flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+        <div className="bv-hero-bottom" style={{ textAlign: "center", padding: "32px 24px 40px", position: "relative", zIndex: 2, flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <h1 style={{
-            fontFamily: "var(--font-display)", fontSize: "clamp(2.4rem, 5vw, 4.2rem)", fontWeight: 400,
+            fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 4.5vw, 3.6rem)", fontWeight: 400,
             lineHeight: 1.08, color: "var(--text)",
             opacity: heroLoaded ? 1 : 0, transform: heroLoaded ? "translateY(0)" : "translateY(24px)",
             transition: "all 1s cubic-bezier(0.22,1,0.36,1) 0.9s",
@@ -1068,7 +1068,7 @@ export default function PhotographyWebsite() {
       </section>
 
       {/* PORTFOLIO */}
-      <section id="portfolio" className="bv-section bv-portfolio-section" style={{ padding: "100px 48px", maxWidth: "1400px", margin: "0 auto" }}>
+      <section id="portfolio" className="bv-section bv-portfolio-section" style={{ padding: "64px 48px", maxWidth: "1400px", margin: "0 auto" }}>
         <AnimatedSection>
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
             <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.portfolioTagline }</div>
@@ -1098,7 +1098,7 @@ export default function PhotographyWebsite() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="bv-section" style={{ padding: "80px 48px", background: "var(--bg-warm)" }}>
+      <section id="about" className="bv-section" style={{ padding: "56px 48px", background: "var(--bg-warm)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "72px", alignItems: "center" }} className="bv-about-grid">
           <AnimatedSection><ProgressiveImage className="bv-profile-photo" src="/rebecca-profile.jpg" alt="Rebecca Henson, natural light photographer Michigan" style={{ width: "100%", maxWidth: "440px", aspectRatio: "3/4", borderRadius: "3px", boxShadow: "0 12px 40px rgba(0,0,0,0.08)" }} /></AnimatedSection>
           <AnimatedSection delay={0.15}>
@@ -1120,7 +1120,7 @@ export default function PhotographyWebsite() {
 
       {/* QUOTE */}
       <AnimatedSection>
-        <div className="bv-section bv-quote-section" style={{ padding: "80px 48px", textAlign: "center" }}>
+        <div className="bv-section bv-quote-section" style={{ padding: "48px 48px", textAlign: "center" }}>
           <div style={{ maxWidth: "640px", margin: "0 auto" }}>
             <div style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 2.8vw, 2.2rem)", fontStyle: "italic", fontWeight: 400, color: "var(--text)", lineHeight: 1.6 }}>"{SITE_CONTENT.quote}"</div>
             <div style={{ marginTop: "24px", fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--accent)" }}>{SITE_CONTENT.quoteAttribution}</div>
@@ -1129,7 +1129,7 @@ export default function PhotographyWebsite() {
       </AnimatedSection>
 
       {/* THE PROCESS */}
-      <section className="bv-section" style={{ padding: "80px 48px", background: "var(--bg-warm)" }}>
+      <section className="bv-section" style={{ padding: "56px 48px", background: "var(--bg-warm)" }}>
         <div style={{ maxWidth: "960px", margin: "0 auto" }}>
           <AnimatedSection>
             <div style={{ textAlign: "center", marginBottom: "64px" }}>
@@ -1156,7 +1156,7 @@ export default function PhotographyWebsite() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="bv-section" style={{ padding: "80px 48px", maxWidth: "1200px", margin: "0 auto" }}>
+      <section id="services" className="bv-section" style={{ padding: "56px 48px", maxWidth: "1200px", margin: "0 auto" }}>
         <AnimatedSection>
           <div style={{ textAlign: "center", marginBottom: "60px" }}>
             <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.servicesTagline }</div>
@@ -1189,7 +1189,7 @@ export default function PhotographyWebsite() {
 
       {/* AVAILABILITY */}
       <AnimatedSection>
-        <div className="bv-section" style={{ padding: "36px 48px", background: "var(--bg-warm)", borderTop: "1px solid var(--border-light)", borderBottom: "1px solid var(--border-light)" }}>
+        <div className="bv-section" style={{ padding: "28px 48px", background: "var(--bg-warm)", borderTop: "1px solid var(--border-light)", borderBottom: "1px solid var(--border-light)" }}>
           <div className="bv-avail-banner" style={{ maxWidth: "900px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "24px" }}>
             <div>
               <div style={{ fontSize: "0.65rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "6px" }}>{SITE_CONTENT.availabilityLabel}</div>
@@ -1201,7 +1201,7 @@ export default function PhotographyWebsite() {
       </AnimatedSection>
 
       {/* PRODUCTS */}
-      <section id="products" className="bv-section" style={{ padding: "80px 48px", maxWidth: "1200px", margin: "0 auto" }}>
+      <section id="products" className="bv-section" style={{ padding: "56px 48px", maxWidth: "1200px", margin: "0 auto" }}>
         <AnimatedSection>
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
             <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.productsTagline }</div>
@@ -1232,7 +1232,7 @@ export default function PhotographyWebsite() {
       </section>
 
       {/* GIFT CERTIFICATES */}
-      <section className="bv-section" style={{ padding: "60px 48px", background: "var(--bg-warm)" }}>
+      <section className="bv-section" style={{ padding: "44px 48px", background: "var(--bg-warm)" }}>
         <div style={{ maxWidth: "840px", margin: "0 auto" }}>
           <AnimatedSection>
             <div className="bv-gift-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "56px", alignItems: "center" }}>
@@ -1534,7 +1534,7 @@ export default function PhotographyWebsite() {
       )}
 
       {/* TESTIMONIALS */}
-      <section className="bv-section" style={{ padding: "80px 48px" }}>
+      <section className="bv-section" style={{ padding: "56px 48px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <AnimatedSection>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
@@ -1558,7 +1558,7 @@ export default function PhotographyWebsite() {
       </section>
 
       {/* GOOGLE REVIEWS */}
-      <section className="bv-section" style={{ padding: "60px 48px", background: "var(--bg-warm)" }}>
+      <section className="bv-section" style={{ padding: "44px 48px", background: "var(--bg-warm)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <AnimatedSection>
             <div style={{ textAlign: "center", marginBottom: "48px" }}>
@@ -1587,7 +1587,7 @@ export default function PhotographyWebsite() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="bv-section" style={{ padding: "80px 48px" }}>
+      <section id="faq" className="bv-section" style={{ padding: "56px 48px" }}>
         <div style={{ maxWidth: "760px", margin: "0 auto" }}>
           <AnimatedSection>
             <div style={{ textAlign: "center", marginBottom: "56px" }}>
@@ -1613,7 +1613,7 @@ export default function PhotographyWebsite() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="bv-section" style={{ padding: "80px 48px", background: "var(--bg-warm)" }}>
+      <section id="contact" className="bv-section" style={{ padding: "56px 48px", background: "var(--bg-warm)" }}>
         <div style={{ maxWidth: "760px", margin: "0 auto" }}>
           <AnimatedSection>
             <div style={{ textAlign: "center", marginBottom: "56px" }}>
@@ -1659,7 +1659,7 @@ export default function PhotographyWebsite() {
 
       {/* INSTAGRAM CTA */}
       <AnimatedSection>
-        <div className="bv-section" style={{ padding: "52px 48px", textAlign: "center" }}>
+        <div className="bv-section" style={{ padding: "36px 48px", textAlign: "center" }}>
           <div style={{ fontSize: "0.62rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "10px" }}>Follow Along</div>
           <h3 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 2.6vw, 2rem)", fontWeight: 400, marginBottom: "12px" }}>See the <em style={{ fontStyle: "italic", color: "var(--accent)" }}>behind the scenes</em></h3>
           <p style={{ color: "var(--muted)", fontSize: "0.82rem", fontWeight: 300, maxWidth: "380px", margin: "0 auto 22px", lineHeight: 1.7 }}>Session sneak peeks, bloopers, and the occasional bella pet cameo.</p>
@@ -1668,7 +1668,7 @@ export default function PhotographyWebsite() {
       </AnimatedSection>
 
       {/* FOOTER */}
-      <footer style={{ padding: "52px 48px 28px", borderTop: "1px solid var(--border-light)", background: "var(--bg-warm)" }}>
+      <footer style={{ padding: "40px 48px 24px", borderTop: "1px solid var(--border-light)", background: "var(--bg-warm)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "48px", marginBottom: "40px" }} className="bv-footer-grid">
             <div>
