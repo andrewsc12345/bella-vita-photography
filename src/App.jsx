@@ -264,30 +264,31 @@ function ProgressiveImage({ src, alt, style = {}, className = "", onClick, onMou
   const [loaded, setLoaded] = useState(false);
   const [inView, setInView] = useState(false);
   const containerRef = useRef(null);
-  const tinyUrl = src.replace(/w=\d+/, "w=20").replace(/q=\d+/, "q=10");
+  const isLocal = src.startsWith("/") && !src.includes("unsplash");
+  const tinyUrl = isLocal ? src : src.replace(/w=\d+/, "w=20").replace(/q=\d+/, "q=10");
 
   useEffect(() => {
+    if (isLocal) { setInView(true); return; }
     if (typeof IntersectionObserver === "undefined") { setInView(true); return; }
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) { setInView(true); observer.unobserve(entry.target); }
     }, { rootMargin: "200px" });
     if (containerRef.current) observer.observe(containerRef.current);
-    // Fallback: if observer hasn't fired in 1.5s, load anyway (iframe/preview environments)
     const fallback = setTimeout(() => setInView(true), 1500);
     return () => { observer.disconnect(); clearTimeout(fallback); };
-  }, []);
+  }, [isLocal]);
 
   return (
     <div ref={containerRef} style={{ position: "relative", overflow: "hidden", ...style }} className={className}
       onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
       tabIndex={tabIndex} role={role} onKeyDown={onKeyDown} aria-label={ariaLabel}>
-      {/* Blurred tiny placeholder - always visible */}
-      <img src={tinyUrl} alt="" aria-hidden="true" style={{
-        position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
-        filter: "blur(20px)", transform: "scale(1.1)",
-        opacity: loaded ? 0 : 1, transition: "opacity 0.6s ease",
-      }} />
-      {/* Full image - loads when in viewport */}
+      {!isLocal && (
+        <img src={tinyUrl} alt="" aria-hidden="true" style={{
+          position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
+          filter: "blur(20px)", transform: "scale(1.1)",
+          opacity: loaded ? 0 : 1, transition: "opacity 0.6s ease",
+        }} />
+      )}
       {inView && (
         <img src={src} alt={alt} loading="lazy" onLoad={() => setLoaded(true)} style={{
           width: "100%", height: "100%", objectFit: "cover", display: "block",
