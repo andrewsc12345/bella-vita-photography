@@ -157,19 +157,6 @@ const PORTFOLIO = [
   { id: 305, src: "/M5.JPG", full: "/M5.JPG", title: "Little Boy", category: "Milestones & Minis", aspect: "landscape" },
   { id: 306, src: "/M6.JPG", full: "/M6.JPG", title: "Winter Maternity", category: "Milestones & Minis", aspect: "portrait" },
   { id: 307, src: "/M7.JPG", full: "/M7.JPG", title: "Holiday Mini", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 308, src: "/M8.JPG", full: "/M8.JPG", title: "Nose to Nose", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 309, src: "/M9.JPG", full: "/M9.JPG", title: "Back to School", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 310, src: "/M10.JPG", full: "/M10.JPG", title: "Sisters", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 311, src: "/M11.JPG", full: "/M11.JPG", title: "Engagement Pup", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 312, src: "/M12.JPG", full: "/M12.JPG", title: "In Love", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 313, src: "/M13.JPG", full: "/M13.JPG", title: "Breaking News", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 314, src: "/M14.jpg", full: "/M14.jpg", title: "Baby Aviator", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 315, src: "/M15.JPG", full: "/M15.JPG", title: "Merry Christmas", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 316, src: "/M16.JPG", full: "/M16.JPG", title: "Holiday Trio", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 317, src: "/M17.jpg", full: "/M17.jpg", title: "Little Adventurers", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 318, src: "/M18.JPG", full: "/M18.JPG", title: "Fall Kiss", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 319, src: "/M19.JPG", full: "/M19.JPG", title: "Little Diva", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 320, src: "/M20.JPG", full: "/M20.JPG", title: "Lilac Love", category: "Milestones & Minis", aspect: "landscape" },
 ];
 
 const TESTIMONIALS = [
@@ -812,7 +799,7 @@ export default function PhotographyWebsite() {
     }
   }, []);
 
-  const categories = ["All", "Seniors", "Families", "Milestones & Minis"];
+  const categories = ["All", "Seniors", "Families"];
   const filtered = activeFilter === "All" ? PORTFOLIO.filter(p => !p.category) : PORTFOLIO.filter(p => p.category === activeFilter);
   const scrollTo = (id) => { setMenuOpen(false); const el = document.getElementById(id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: "smooth" }); };
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -825,11 +812,12 @@ export default function PhotographyWebsite() {
     setFormErrors(errors);
     if (Object.keys(errors).length > 0) return;
     try {
-      await fetch("https://formspree.io/f/xzdjbyra", {
+      const response = await fetch("https://formspree.io/f/xzdjbyra", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: formData.name, email: formData.email, "session type": formData.type, message: formData.message }),
       });
+      if (response.ok) { window.location.href = "/thanks.html"; return; }
     } catch {}
     setFormSent(true); setTimeout(() => setFormSent(false), 4000); setFormData({ name: "", email: "", message: "", type: "Senior Session" }); setFormErrors({});
   };
