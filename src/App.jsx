@@ -97,12 +97,58 @@ const SITE_CONTENT = {
    from your image host (Cloudinary, SmugMug, etc.) without width/quality limits.
    "src" = display size, "full" = download/lightbox size */
 const PORTFOLIO = [
-  { id: 1, src: "/Senior1.JPG", full: "/Senior1.JPG", title: "Senior Portrait", category: "Seniors", aspect: "landscape" },
-  { id: 2, src: "/Family1.JPG", full: "/Family1.JPG", title: "Family Session", category: "Families", aspect: "landscape" },
-  { id: 3, src: "/Maternity1.JPG", full: "/Maternity1.JPG", title: "Gender Reveal", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 4, src: "/Newborn1.JPG", full: "/Newborn1.JPG", title: "Newborn", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 5, src: "/Engagement1.JPG", full: "/Engagement1.JPG", title: "The Proposal", category: "Milestones & Minis", aspect: "landscape" },
-  { id: 6, src: "/Wedding1.JPG", full: "/Wedding1.JPG", title: "Wedding Day", category: "Weddings", aspect: "landscape" },
+  { id: 1, src: "/Senior1.JPG", full: "/Senior1.JPG", title: "Senior Portrait", aspect: "landscape" },
+  { id: 2, src: "/Family1.JPG", full: "/Family1.JPG", title: "Family Session", aspect: "landscape" },
+  { id: 3, src: "/Maternity1.JPG", full: "/Maternity1.JPG", title: "Gender Reveal", aspect: "landscape" },
+  { id: 4, src: "/Newborn1.JPG", full: "/Newborn1.JPG", title: "Newborn", aspect: "landscape" },
+  { id: 5, src: "/Engagement1.JPG", full: "/Engagement1.JPG", title: "The Proposal", aspect: "landscape" },
+  { id: 6, src: "/Wedding1.JPG", full: "/Wedding1.JPG", title: "Wedding Day", aspect: "landscape" },
+  { id: 7, src: "/Mini.jpg", full: "/Mini.jpg", title: "Mommy & Me", aspect: "landscape" },
+  { id: 100, src: "/0.JPG", full: "/0.JPG", title: "Autumn Creek", category: "Seniors", aspect: "portrait" },
+  { id: 101, src: "/1.JPG", full: "/1.JPG", title: "Colorful", category: "Seniors", aspect: "landscape" },
+  { id: 102, src: "/2.JPG", full: "/2.JPG", title: "Natural Beauty", category: "Seniors", aspect: "landscape" },
+  { id: 103, src: "/3.JPG", full: "/3.JPG", title: "Game Day", category: "Seniors", aspect: "landscape" },
+  { id: 104, src: "/4.JPG", full: "/4.JPG", title: "Snow Day", category: "Seniors", aspect: "portrait" },
+  { id: 105, src: "/5.JPG", full: "/5.JPG", title: "Guitar Girl", category: "Seniors", aspect: "landscape" },
+  { id: 106, src: "/6.JPG", full: "/6.JPG", title: "Fall Walk", category: "Seniors", aspect: "landscape" },
+  { id: 107, src: "/7.JPG", full: "/7.JPG", title: "Rainy Day Duo", category: "Seniors", aspect: "landscape" },
+  { id: 108, src: "/8.jpg", full: "/8.jpg", title: "Close Up", category: "Seniors", aspect: "landscape" },
+  { id: 109, src: "/9.JPG", full: "/9.JPG", title: "Downtown", category: "Seniors", aspect: "portrait" },
+  { id: 110, src: "/10.JPG", full: "/10.JPG", title: "Red Barn", category: "Seniors", aspect: "landscape" },
+  { id: 111, src: "/11.JPG", full: "/11.JPG", title: "Skater", category: "Seniors", aspect: "landscape" },
+  { id: 112, src: "/12.JPG", full: "/12.JPG", title: "Summer Vibes", category: "Seniors", aspect: "portrait" },
+  { id: 113, src: "/13.jpg", full: "/13.jpg", title: "By the Fountain", category: "Seniors", aspect: "landscape" },
+  { id: 114, src: "/14.JPG", full: "/14.JPG", title: "On the Steps", category: "Seniors", aspect: "portrait" },
+  { id: 115, src: "/15.JPG", full: "/15.JPG", title: "Blue Sky", category: "Seniors", aspect: "landscape" },
+  { id: 116, src: "/16.JPG", full: "/16.JPG", title: "En Pointe", category: "Seniors", aspect: "portrait" },
+  { id: 117, src: "/17.JPG", full: "/17.JPG", title: "Varsity", category: "Seniors", aspect: "landscape" },
+  { id: 118, src: "/18.jpg", full: "/18.jpg", title: "Letterman", category: "Seniors", aspect: "landscape" },
+  { id: 119, src: "/19.JPG", full: "/19.JPG", title: "Fall Leaves", category: "Seniors", aspect: "landscape" },
+  { id: 120, src: "/20.JPG", full: "/20.JPG", title: "Storefront", category: "Seniors", aspect: "portrait" },
+  { id: 121, src: "/21.JPG", full: "/21.JPG", title: "SRT", category: "Seniors", aspect: "landscape" },
+  { id: 122, src: "/22.jpg", full: "/22.jpg", title: "Sunflower", category: "Seniors", aspect: "portrait" },
+  { id: 123, src: "/23.JPG", full: "/23.JPG", title: "Volleyball", category: "Seniors", aspect: "landscape" },
+  { id: 124, src: "/24.JPG", full: "/24.JPG", title: "Reflection", category: "Seniors", aspect: "portrait" },
+  { id: 200, src: "/f1.JPG", full: "/f1.JPG", title: "Barn Family", category: "Families", aspect: "landscape" },
+  { id: 201, src: "/f2.JPG", full: "/f2.JPG", title: "Sisters", category: "Families", aspect: "landscape" },
+  { id: 202, src: "/f3.JPG", full: "/f3.JPG", title: "Stripes & Smiles", category: "Families", aspect: "landscape" },
+  { id: 203, src: "/f4.JPG", full: "/f4.JPG", title: "Tall Grass", category: "Families", aspect: "landscape" },
+  { id: 204, src: "/f5.JPG", full: "/f5.JPG", title: "Hand in Hand", category: "Families", aspect: "landscape" },
+  { id: 205, src: "/f6.JPG", full: "/f6.JPG", title: "Siblings", category: "Families", aspect: "landscape" },
+  { id: 206, src: "/f7.JPG", full: "/f7.JPG", title: "Pine Trees", category: "Families", aspect: "landscape" },
+  { id: 207, src: "/f8.JPG", full: "/f8.JPG", title: "Mommy & Son", category: "Families", aspect: "portrait" },
+  { id: 208, src: "/f9.JPG", full: "/f9.JPG", title: "Little Ones", category: "Families", aspect: "landscape" },
+  { id: 209, src: "/f10.JPG", full: "/f10.JPG", title: "Walking Together", category: "Families", aspect: "landscape" },
+  { id: 210, src: "/f11.JPG", full: "/f11.JPG", title: "Autumn Family", category: "Families", aspect: "landscape" },
+  { id: 211, src: "/f12.JPG", full: "/f12.JPG", title: "Fall Laughs", category: "Families", aspect: "landscape" },
+  { id: 212, src: "/f13.JPG", full: "/f13.JPG", title: "Front Porch", category: "Families", aspect: "landscape" },
+  { id: 213, src: "/f14.JPG", full: "/f14.JPG", title: "Upside Down", category: "Families", aspect: "landscape" },
+  { id: 214, src: "/f15.JPG", full: "/f15.JPG", title: "Holiday Cuties", category: "Families", aspect: "landscape" },
+  { id: 215, src: "/f16.JPG", full: "/f16.JPG", title: "First Steps", category: "Families", aspect: "landscape" },
+  { id: 216, src: "/f17.JPG", full: "/f17.JPG", title: "Daddy's Girl", category: "Families", aspect: "landscape" },
+  { id: 217, src: "/f18.JPG", full: "/f18.JPG", title: "Summer Family", category: "Families", aspect: "landscape" },
+  { id: 218, src: "/f19.JPG", full: "/f19.JPG", title: "Looking Up", category: "Families", aspect: "landscape" },
+  { id: 219, src: "/f20.JPG", full: "/f20.JPG", title: "The Whole Crew", category: "Families", aspect: "landscape" },
 ];
 
 const TESTIMONIALS = [
@@ -736,7 +782,7 @@ export default function PhotographyWebsite() {
     }
   }, []);
 
-  const categories = ["All", "Seniors", "Families", "Milestones & Minis", "Weddings"];
+  const categories = ["All", "Seniors", "Families"];
   const filtered = activeFilter === "All" ? PORTFOLIO : PORTFOLIO.filter(p => p.category === activeFilter);
   const scrollTo = (id) => { setMenuOpen(false); const el = document.getElementById(id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: "smooth" }); };
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -1077,7 +1123,7 @@ export default function PhotographyWebsite() {
           </div>
         </AnimatedSection>
         <AnimatedSection delay={0.1}>
-          <div className="bv-filter-row" style={{ display: "flex", justifyContent: "center", gap: "4px", marginBottom: "48px", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: "4px", marginBottom: "48px", flexWrap: "wrap" }}>
             {categories.map(cat => (<button key={cat} className={"bv-filter-btn " + (activeFilter === cat ? "active" : "")} onClick={() => switchFilter(cat)}>{cat}</button>))}
           </div>
         </AnimatedSection>
@@ -1085,7 +1131,7 @@ export default function PhotographyWebsite() {
           {filtered.map((img, i) => (
             <AnimatedSection key={img.id} delay={i * 0.06}>
               <div className="bv-gallery-card-wrap" style={{ aspectRatio: img.aspect === "portrait" ? "3/4" : "4/3" }}>
-                <ProgressiveImage className="bv-gallery-img" src={img.src} alt={img.title + " \u2013 " + img.category + " photography Michigan"} onClick={() => setLightboxImage(img)} style={{ width: "100%", height: "100%", cursor: "zoom-in" }} tabIndex={0} role="button" aria-label={"View " + img.title} onKeyDown={e => e.key === "Enter" && setLightboxImage(img)} />
+                <ProgressiveImage className="bv-gallery-img" src={img.src} alt={img.title + " \u2013 bella vita photography Michigan"} onClick={() => setLightboxImage(img)} style={{ width: "100%", height: "100%", cursor: "zoom-in" }} tabIndex={0} role="button" aria-label={"View " + img.title} onKeyDown={e => e.key === "Enter" && setLightboxImage(img)} />
                 <div className="bv-overlay" />
                 <div className="bv-img-actions">
                   <button onClick={(e) => { e.stopPropagation(); downloadImage(img.full || img.src, "bella-vita-" + img.title.toLowerCase().replace(/\s+/g, "-") + ".jpg"); }} style={{ width: "34px", height: "34px", borderRadius: "50%", background: "rgba(255,255,255,0.92)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.82rem", color: "#2E2A25", backdropFilter: "blur(8px)" }}>{"\u2193"}</button>
