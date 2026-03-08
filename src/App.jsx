@@ -149,6 +149,14 @@ const PORTFOLIO = [
   { id: 217, src: "/f18.JPG", full: "/f18.JPG", title: "Summer Family", category: "Families", aspect: "landscape" },
   { id: 218, src: "/f19.JPG", full: "/f19.JPG", title: "Looking Up", category: "Families", aspect: "landscape" },
   { id: 219, src: "/f20.JPG", full: "/f20.JPG", title: "The Whole Crew", category: "Families", aspect: "landscape" },
+  { id: 300, src: "/M0.jpg", full: "/M0.jpg", title: "Mommy & Me", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 301, src: "/M1.JPG", full: "/M1.JPG", title: "Cake Smash", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 302, src: "/M2.JPG", full: "/M2.JPG", title: "Gender Reveal", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 303, src: "/M3.JPG", full: "/M3.JPG", title: "Fall Mini", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 304, src: "/M4.JPG", full: "/M4.JPG", title: "Newborn", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 305, src: "/M5.JPG", full: "/M5.JPG", title: "Little Boy", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 306, src: "/M6.JPG", full: "/M6.JPG", title: "Winter Maternity", category: "Milestones & Minis", aspect: "portrait" },
+  { id: 307, src: "/M7.JPG", full: "/M7.JPG", title: "Holiday Mini", category: "Milestones & Minis", aspect: "landscape" },
 ];
 
 const TESTIMONIALS = [
@@ -261,14 +269,13 @@ function AnimatedSection({ children, className = "", delay = 0 }) {
 
 /* ─── PROGRESSIVE IMAGE (blur-up) ─── */
 function ProgressiveImage({ src, alt, style = {}, className = "", onClick, onMouseEnter, onMouseLeave, tabIndex, role, onKeyDown, "aria-label": ariaLabel }) {
-  const [loaded, setLoaded] = useState(false);
-  const [inView, setInView] = useState(false);
+  const isLocal = !src.includes("unsplash.com");
+  const [loaded, setLoaded] = useState(isLocal);
+  const [inView, setInView] = useState(isLocal);
   const containerRef = useRef(null);
-  const isLocal = src.startsWith("/") && !src.includes("unsplash");
-  const tinyUrl = isLocal ? src : src.replace(/w=\d+/, "w=20").replace(/q=\d+/, "q=10");
 
   useEffect(() => {
-    if (isLocal) { setInView(true); return; }
+    if (isLocal) return;
     if (typeof IntersectionObserver === "undefined") { setInView(true); return; }
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) { setInView(true); observer.unobserve(entry.target); }
@@ -278,17 +285,26 @@ function ProgressiveImage({ src, alt, style = {}, className = "", onClick, onMou
     return () => { observer.disconnect(); clearTimeout(fallback); };
   }, [isLocal]);
 
+  if (isLocal) {
+    return (
+      <div style={{ position: "relative", overflow: "hidden", ...style }} className={className}
+        onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
+        tabIndex={tabIndex} role={role} onKeyDown={onKeyDown} aria-label={ariaLabel}>
+        <img src={src} alt={alt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+      </div>
+    );
+  }
+
+  const tinyUrl = src.replace(/w=\d+/, "w=20").replace(/q=\d+/, "q=10");
   return (
     <div ref={containerRef} style={{ position: "relative", overflow: "hidden", ...style }} className={className}
       onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
       tabIndex={tabIndex} role={role} onKeyDown={onKeyDown} aria-label={ariaLabel}>
-      {!isLocal && (
-        <img src={tinyUrl} alt="" aria-hidden="true" style={{
-          position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
-          filter: "blur(20px)", transform: "scale(1.1)",
-          opacity: loaded ? 0 : 1, transition: "opacity 0.6s ease",
-        }} />
-      )}
+      <img src={tinyUrl} alt="" aria-hidden="true" style={{
+        position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
+        filter: "blur(20px)", transform: "scale(1.1)",
+        opacity: loaded ? 0 : 1, transition: "opacity 0.6s ease",
+      }} />
       {inView && (
         <img src={src} alt={alt} loading="lazy" onLoad={() => setLoaded(true)} style={{
           width: "100%", height: "100%", objectFit: "cover", display: "block",
@@ -784,7 +800,7 @@ export default function PhotographyWebsite() {
   }, []);
 
   const categories = ["All", "Seniors", "Families"];
-  const filtered = activeFilter === "All" ? PORTFOLIO : PORTFOLIO.filter(p => p.category === activeFilter);
+  const filtered = activeFilter === "All" ? PORTFOLIO.filter(p => !p.category) : PORTFOLIO.filter(p => p.category === activeFilter);
   const scrollTo = (id) => { setMenuOpen(false); const el = document.getElementById(id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: "smooth" }); };
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const switchFilter = (cat) => { if (cat === activeFilter) return; setFilterAnimating(true); setTimeout(() => { setActiveFilter(cat); setFilterAnimating(false); }, 300); };
