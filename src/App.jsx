@@ -1210,7 +1210,7 @@ export default function PhotographyWebsite() {
             <p style={{ color: "var(--accent)", fontSize: "0.82rem", fontWeight: 400, maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>LINKS TO ORDER...COMING SOON!! Until then, please contact me to place all orders.</p>
           </div>
         </AnimatedSection>
-        <div className="bv-grid-products" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "16px" }}>
+        <div className="bv-grid-products" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
           {PRODUCTS.map((p, i) => (
             <AnimatedSection key={i} delay={i * 0.06}>
               <div style={{ padding: "28px 22px", border: "1px solid var(--border)", borderRadius: "3px", textAlign: "center", transition: "all 0.35s ease", background: "var(--card-bg)", height: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}
