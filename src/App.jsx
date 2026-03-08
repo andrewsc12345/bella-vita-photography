@@ -933,26 +933,26 @@ export default function PhotographyWebsite() {
           .bv-mobile-btn{display:block!important}
           .bv-about-grid{grid-template-columns:1fr!important;gap:40px!important}
           .bv-contact-grid{grid-template-columns:1fr!important}
-          .bv-gift-grid{grid-template-columns:1fr!important;gap:32px!important}
+          .bv-gift-grid{grid-template-columns:1fr!important;gap:24px!important}
           .bv-avail-banner{flex-direction:column!important;text-align:center}
           .bv-gallery-card{grid-template-columns:80px 1fr!important}
           .bv-gallery-card .bv-gallery-arrow{display:none!important}
           .bv-admin-grid{grid-template-columns:1fr!important}
-          .bv-hero-banner{margin-left:12px!important;margin-right:12px!important}
-          .bv-section{padding-left:20px!important;padding-right:20px!important}
-          .bv-nav{padding-left:20px!important;padding-right:20px!important}
-          .bv-grid-portfolio{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))!important}
+          .bv-section{padding-left:16px!important;padding-right:16px!important}
+          .bv-nav{padding-left:16px!important;padding-right:16px!important}
+          .bv-grid-portfolio{grid-template-columns:1fr!important}
           .bv-grid-services{grid-template-columns:1fr!important}
-          .bv-grid-products{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))!important}
+          .bv-grid-products{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))!important;gap:10px!important}
           .bv-grid-reviews{grid-template-columns:1fr 1fr!important}
-          .bv-grid-testimonials{grid-template-columns:1fr!important}
-          .bv-testimonials-scroll{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding-bottom:16px;-webkit-overflow-scrolling:touch}.bv-testimonials-scroll>div{min-width:85vw;scroll-snap-align:start;flex-shrink:0}
-          .bv-process-grid{grid-template-columns:1fr!important;gap:32px!important}
+          .bv-grid-testimonials{grid-template-columns:1fr!important;gap:16px!important}
+          .bv-testimonials-scroll{display:grid!important;overflow-x:visible!important}.bv-testimonials-scroll>div{min-width:auto!important;scroll-snap-align:none!important;flex-shrink:initial!important}
+          .bv-process-grid{grid-template-columns:1fr!important;gap:28px!important}
           .bv-process-line{display:none!important}
-          .bv-footer-grid{grid-template-columns:1fr 1fr!important;gap:32px!important}
-          .bv-service-card{padding:28px 22px!important}
-          .bv-hero-top{padding-top:100px!important;padding-bottom:24px!important}
-          .bv-hero-bottom{padding:28px 20px 40px!important}
+          .bv-footer-grid{grid-template-columns:1fr 1fr!important;gap:24px!important}
+          .bv-service-card{padding:24px 18px!important}
+          .bv-hero-section{min-height:auto!important}
+          .bv-hero-top{padding-top:100px!important;padding-bottom:16px!important}
+          .bv-hero-bottom{padding:20px 16px 36px!important}
           .bv-sticky-cta{display:flex!important}
           .bv-back-to-top{bottom:76px!important}
           .bv-lightbox-arrows{display:none!important}
@@ -967,11 +967,28 @@ export default function PhotographyWebsite() {
           .bv-share-banner{padding:20px 18px!important}
           .bv-share-banner-btns{flex-direction:column!important;align-items:stretch!important}
           .bv-love-callout{max-width:100%!important}
+          .bv-gift-buttons{flex-direction:column!important;width:100%!important}
+          .bv-gift-buttons button{width:100%!important}
+          .bv-gift-amounts{justify-content:center!important}
+          .bv-filter-row{gap:2px!important}
+          .bv-filter-btn{padding:6px 10px!important;font-size:0.6rem!important;letter-spacing:0.12em!important}
+          .bv-portfolio-section{padding-top:60px!important;padding-bottom:60px!important}
+          .bv-section-spacing{padding-top:48px!important;padding-bottom:48px!important}
+          .bv-quote-section{padding-top:48px!important;padding-bottom:48px!important}
+          .bv-modal-inner{padding:28px 20px!important}
+          .bv-btn-primary{padding:12px 28px!important;font-size:0.68rem!important}
+          .bv-btn-outline{padding:12px 28px!important;font-size:0.68rem!important}
+          .bv-profile-photo{max-width:260px!important;margin:0 auto!important;aspect-ratio:1/1!important}
+          .bv-about-text h2{font-size:1.6rem!important}
         }
         @media(max-width:480px){
           .bv-grid-reviews{grid-template-columns:1fr!important}
-          .bv-hero-top{padding-top:88px!important}
+          .bv-hero-top{padding-top:88px!important;padding-bottom:12px!important}
           .bv-footer-grid{grid-template-columns:1fr!important}
+          .bv-grid-products{grid-template-columns:1fr 1fr!important}
+          .bv-contact-session-btns{gap:6px!important}
+          .bv-contact-session-btns button{padding:6px 12px!important;font-size:0.6rem!important}
+          .bv-profile-photo{max-width:220px!important}
         }
         @media(min-width:769px){.bv-mobile-btn{display:none!important}}
         @media(max-width:479px){.bv-gallery-header{flex-wrap:wrap!important;gap:6px!important;justify-content:center!important;padding-top:12px!important;padding-bottom:12px!important}.bv-gallery-grid-wrap{padding-bottom:80px!important}.bv-favbar-actions{flex-direction:column!important;gap:8px!important;width:100%}.bv-favbar-actions button{width:100%}}
@@ -1008,11 +1025,11 @@ export default function PhotographyWebsite() {
       />
 
       {/* HERO */}
-      <section id="hero" style={{ minHeight: "100vh", display: "flex", flexDirection: "column", position: "relative", overflow: "hidden", background: "var(--bg)" }}>
+      <section id="hero" className="bv-hero-section" style={{ minHeight: "100vh", display: "flex", flexDirection: "column", position: "relative", overflow: "hidden", background: "var(--bg)" }}>
         {/* Top: Brand name + tagline */}
         <div className="bv-hero-top" style={{ textAlign: "center", paddingTop: "120px", paddingBottom: "36px", position: "relative", zIndex: 2 }}>
           <div style={{
-            fontFamily: "var(--font-display)", fontSize: "clamp(2.4rem, 5vw, 4.2rem)", fontWeight: 400,
+            fontFamily: "var(--font-display)", fontSize: "clamp(2.4rem, 6vw, 5rem)", fontWeight: 400,
             letterSpacing: "0.06em", color: "var(--text)",
             opacity: heroLoaded ? 1 : 0, transform: heroLoaded ? "translateY(0)" : "translateY(20px)",
             transition: "all 1s cubic-bezier(0.22,1,0.36,1) 0.3s",
@@ -1031,7 +1048,7 @@ export default function PhotographyWebsite() {
         {/* Below banner: headline + description */}
         <div className="bv-hero-bottom" style={{ textAlign: "center", padding: "44px 24px 60px", position: "relative", zIndex: 2, flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <h1 style={{
-            fontFamily: "var(--font-display)", fontSize: "clamp(2.4rem, 6vw, 5rem)", fontWeight: 400,
+            fontFamily: "var(--font-display)", fontSize: "clamp(2.4rem, 5vw, 4.2rem)", fontWeight: 400,
             lineHeight: 1.08, color: "var(--text)",
             opacity: heroLoaded ? 1 : 0, transform: heroLoaded ? "translateY(0)" : "translateY(24px)",
             transition: "all 1s cubic-bezier(0.22,1,0.36,1) 0.9s",
@@ -1051,7 +1068,7 @@ export default function PhotographyWebsite() {
       </section>
 
       {/* PORTFOLIO */}
-      <section id="portfolio" className="bv-section" style={{ padding: "100px 48px", maxWidth: "1400px", margin: "0 auto" }}>
+      <section id="portfolio" className="bv-section bv-portfolio-section" style={{ padding: "100px 48px", maxWidth: "1400px", margin: "0 auto" }}>
         <AnimatedSection>
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
             <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.portfolioTagline }</div>
@@ -1060,7 +1077,7 @@ export default function PhotographyWebsite() {
           </div>
         </AnimatedSection>
         <AnimatedSection delay={0.1}>
-          <div style={{ display: "flex", justifyContent: "center", gap: "4px", marginBottom: "48px", flexWrap: "wrap" }}>
+          <div className="bv-filter-row" style={{ display: "flex", justifyContent: "center", gap: "4px", marginBottom: "48px", flexWrap: "wrap" }}>
             {categories.map(cat => (<button key={cat} className={"bv-filter-btn " + (activeFilter === cat ? "active" : "")} onClick={() => switchFilter(cat)}>{cat}</button>))}
           </div>
         </AnimatedSection>
@@ -1083,7 +1100,7 @@ export default function PhotographyWebsite() {
       {/* ABOUT */}
       <section id="about" className="bv-section" style={{ padding: "80px 48px", background: "var(--bg-warm)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "72px", alignItems: "center" }} className="bv-about-grid">
-          <AnimatedSection><ProgressiveImage src="/rebecca-profile.jpg" alt="Rebecca Henson, natural light photographer Michigan" style={{ width: "100%", maxWidth: "440px", aspectRatio: "3/4", borderRadius: "3px", boxShadow: "0 12px 40px rgba(0,0,0,0.08)" }} /></AnimatedSection>
+          <AnimatedSection><ProgressiveImage className="bv-profile-photo" src="/rebecca-profile.jpg" alt="Rebecca Henson, natural light photographer Michigan" style={{ width: "100%", maxWidth: "440px", aspectRatio: "3/4", borderRadius: "3px", boxShadow: "0 12px 40px rgba(0,0,0,0.08)" }} /></AnimatedSection>
           <AnimatedSection delay={0.15}>
             <div>
               <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>Hey, I'm Rebecca</div>
@@ -1103,7 +1120,7 @@ export default function PhotographyWebsite() {
 
       {/* QUOTE */}
       <AnimatedSection>
-        <div className="bv-section" style={{ padding: "80px 48px", textAlign: "center" }}>
+        <div className="bv-section bv-quote-section" style={{ padding: "80px 48px", textAlign: "center" }}>
           <div style={{ maxWidth: "640px", margin: "0 auto" }}>
             <div style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 2.8vw, 2.2rem)", fontStyle: "italic", fontWeight: 400, color: "var(--text)", lineHeight: 1.6 }}>"{SITE_CONTENT.quote}"</div>
             <div style={{ marginTop: "24px", fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--accent)" }}>{SITE_CONTENT.quoteAttribution}</div>
@@ -1224,12 +1241,12 @@ export default function PhotographyWebsite() {
                 <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.6rem, 2.8vw, 2.2rem)", fontWeight: 400, marginBottom: "18px", lineHeight: 1.3 }}>Give the Gift of <em style={{ fontStyle: "italic", color: "var(--accent)" }}>bella</em></h2>
                 <p style={{ color: "var(--text-light)", fontSize: "0.88rem", lineHeight: 1.8, fontWeight: 300, marginBottom: "8px" }}>Gift certificates can be used for any session, product, or combination of both {"\u2014"} from a full senior experience to a gorgeous piece of artwork for your home.</p>
                 <p style={{ color: "var(--muted)", fontSize: "0.78rem", lineHeight: 1.7, fontWeight: 300, marginBottom: "20px" }}>Available in any amount. Never expires. Your recipient(s) will receive a personalized bella digital gift certificate straight to their inbox.</p>
-                <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "18px" }}>
+                <div className="bv-gift-amounts" style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "18px" }}>
                   {["175", "375", "500", "Custom"].map(amt => (
                     <button key={amt} onClick={() => setGiftAmount(amt)} style={{ padding: "6px 14px", borderRadius: "3px", cursor: "pointer", background: giftAmount === amt ? "var(--accent)" : "var(--card-bg)", color: giftAmount === amt ? "#fff" : "var(--text-light)", border: "1px solid " + (giftAmount === amt ? "var(--accent)" : "var(--border)"), fontSize: "0.7rem", letterSpacing: "0.1em", fontFamily: "var(--font-body)", transition: "all 0.3s ease" }}>{amt === "Custom" ? "Custom" : "$" + amt}</button>
                   ))}
                 </div>
-                <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "flex-start" }}>
+                <div className="bv-gift-buttons" style={{ display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "flex-start" }}>
                   <button onClick={() => { setFormData(prev => ({ ...prev, type: "Gift Certificate", message: "I'm interested in a gift certificate" + (giftAmount === "Custom" ? " (custom amount)" : " ($" + giftAmount + ")") + " for a session or product. Can you send me more details?" })); scrollTo("contact"); }} className="bv-btn-outline">Inquire</button>
                   <button onClick={() => setShowGiftModal(true)} className="bv-btn-primary">Gift a Session or Product</button>
                   <button onClick={() => setShowHintModal(true)} className="bv-btn-outline" style={{ textAlign: "left", lineHeight: 1.6 }}>
@@ -1266,7 +1283,7 @@ export default function PhotographyWebsite() {
           display: "flex", alignItems: "center", justifyContent: "center",
           animation: "bvFadeIn 0.3s ease", padding: "20px",
         }}>
-          <div onClick={e => e.stopPropagation()} style={{
+          <div className="bv-modal-inner" onClick={e => e.stopPropagation()} style={{
             background: "var(--bg)", borderRadius: "4px", padding: "40px 36px", maxWidth: "480px", width: "100%",
             boxShadow: "0 20px 60px rgba(0,0,0,0.15)", animation: "bvScaleIn 0.35s cubic-bezier(0.22,1,0.36,1)",
             position: "relative", maxHeight: "90vh", overflowY: "auto",
@@ -1402,7 +1419,7 @@ export default function PhotographyWebsite() {
           display: "flex", alignItems: "center", justifyContent: "center",
           animation: "bvFadeIn 0.3s ease", padding: "20px",
         }}>
-          <div onClick={e => e.stopPropagation()} style={{
+          <div className="bv-modal-inner" onClick={e => e.stopPropagation()} style={{
             background: "var(--bg)", borderRadius: "4px", padding: "36px 32px", maxWidth: "480px", width: "100%",
             boxShadow: "0 20px 60px rgba(0,0,0,0.15)", animation: "bvScaleIn 0.35s cubic-bezier(0.22,1,0.36,1)",
             position: "relative", maxHeight: "90vh", overflowY: "auto",
@@ -1621,7 +1638,7 @@ export default function PhotographyWebsite() {
             </div>
             <div style={{ marginTop: "20px" }}>
               <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "8px" }}>Session Type</label>
-              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+              <div className="bv-contact-session-btns" style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
                 {["Senior Session", "Family Session", "Milestone Session", "Wedding", "Gift Certificate", "Other"].map(type => (
                   <button key={type} onClick={() => setFormData({ ...formData, type })} style={{ padding: "7px 18px", borderRadius: "3px", cursor: "pointer", background: formData.type === type ? "var(--accent)" : "var(--card-bg)", color: formData.type === type ? "#fff" : "var(--text-light)", border: "1px solid " + (formData.type === type ? "var(--accent)" : "var(--border)"), fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "var(--font-body)", transition: "all 0.3s ease" }}>{type}</button>
                 ))}
