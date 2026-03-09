@@ -104,6 +104,8 @@ const PORTFOLIO = [
   { id: 5, src: "/Engagement1.JPG", full: "/Engagement1.JPG", title: "The Proposal", aspect: "landscape" },
   { id: 6, src: "/Wedding1.JPG", full: "/Wedding1.JPG", title: "Wedding Day", aspect: "landscape" },
   { id: 7, src: "/Mini.jpg", full: "/Mini.jpg", title: "Mommy & Me", aspect: "landscape" },
+  { id: 8, src: "/F21.JPG", full: "/F21.JPG", title: "Beach Family", aspect: "landscape" },
+  { id: 9, src: "/M00.JPG", full: "/M00.JPG", title: "Maternity Glow", aspect: "landscape" },
   { id: 100, src: "/0.JPG", full: "/0.JPG", title: "Autumn Creek", category: "Seniors", aspect: "portrait" },
   { id: 101, src: "/1.JPG", full: "/1.JPG", title: "Colorful", category: "Seniors", aspect: "landscape" },
   { id: 102, src: "/2.JPG", full: "/2.JPG", title: "Natural Beauty", category: "Seniors", aspect: "landscape" },
@@ -149,6 +151,11 @@ const PORTFOLIO = [
   { id: 217, src: "/f18.JPG", full: "/f18.JPG", title: "Summer Family", category: "Families", aspect: "landscape" },
   { id: 218, src: "/f19.JPG", full: "/f19.JPG", title: "Looking Up", category: "Families", aspect: "landscape" },
   { id: 219, src: "/f20.JPG", full: "/f20.JPG", title: "The Whole Crew", category: "Families", aspect: "landscape" },
+  { id: 220, src: "/F21.JPG", full: "/F21.JPG", title: "Beach Family", category: "Families", aspect: "landscape" },
+  { id: 298, src: "/M00.JPG", full: "/M00.JPG", title: "Maternity Glow", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 299, src: "/M0.jpg", full: "/M0.jpg", title: "Mommy & Me", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 300, src: "/M1.JPG", full: "/M1.JPG", title: "Cake Smash", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 301, src: "/M2.JPG", full: "/M2.JPG", title: "Gender Reveal", category: "Milestones & Minis", aspect: "landscape" },
   { id: 303, src: "/M3.JPG", full: "/M3.JPG", title: "Fall Mini", category: "Milestones & Minis", aspect: "landscape" },
   { id: 304, src: "/M4.JPG", full: "/M4.JPG", title: "Newborn", category: "Milestones & Minis", aspect: "landscape" },
   { id: 305, src: "/M5.JPG", full: "/M5.JPG", title: "Little Boy", category: "Milestones & Minis", aspect: "landscape" },
@@ -1157,7 +1164,7 @@ export default function PhotographyWebsite() {
         <div className={"bv-grid-portfolio bv-filter-grid" + (filterAnimating ? " bv-filtering" : "")} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "20px" }}>
           {filtered.map((img, i) => (
             <AnimatedSection key={img.id} delay={i * 0.06}>
-              <div className="bv-gallery-card-wrap" style={{ aspectRatio: img.aspect === "portrait" ? "3/4" : "4/3" }}>
+              <div className="bv-gallery-card-wrap" style={{ aspectRatio: "4/5" }}>
                 <div className="bv-gallery-img" onClick={() => setLightboxImage(img)} style={{ width: "100%", height: "100%", cursor: "zoom-in" }} tabIndex={0} role="button" aria-label={"View " + img.title} onKeyDown={e => e.key === "Enter" && setLightboxImage(img)}>
                   <img src={img.src} alt={img.title + " \u2013 bella vita photography Michigan"} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                 </div>
