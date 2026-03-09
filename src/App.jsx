@@ -327,7 +327,7 @@ function ProgressiveImage({ src, alt, style = {}, className = "", onClick, onMou
       <div style={{ position: "relative", overflow: "hidden", ...style }} className={className}
         onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
         tabIndex={tabIndex} role={role} onKeyDown={onKeyDown} aria-label={ariaLabel}>
-        <img src={src} alt={alt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+        <img src={src} alt={alt} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
       </div>
     );
   }
@@ -759,74 +759,6 @@ export default function PhotographyWebsite() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* Inject JSON-LD structured data for SEO */
-  useEffect(() => {
-    if (document.querySelector('script[data-bv-jsonld]')) return;
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.setAttribute("data-bv-jsonld", "true");
-    script.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://bellavitabyrebecca.com",
-      "name": "bella vita photography",
-      "description": "Natural light portrait photography for seniors and families in Livingston and Oakland County, Michigan. Owned by Rebecca Henson, est. 2009.",
-      "url": "https://bellavitabyrebecca.com",
-      "telephone": "",
-      "email": "bellavitaphoto@rocketmail.com",
-      "image": "https://bellavitabyrebecca.com/og-preview.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Howell",
-        "addressRegion": "MI",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 42.6073,
-        "longitude": -83.9294
-      },
-      "areaServed": [
-        { "@type": "County", "name": "Livingston County, Michigan" },
-        { "@type": "County", "name": "Oakland County, Michigan" }
-      ],
-      "priceRange": "$175 - $600+",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-        "opens": "09:00",
-        "closes": "19:00"
-      },
-      "founder": {
-        "@type": "Person",
-        "name": "Rebecca Henson",
-        "jobTitle": "Photographer & Owner"
-      },
-      "foundingDate": "2009",
-      "sameAs": [
-        "https://www.instagram.com/bellavitaphotography2/",
-        "https://www.facebook.com/bellavitaphotography2"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "47",
-        "bestRating": "5"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Photography Services",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Senior Portraits", "description": "On-location senior portrait session with up to 3 outfit changes and 25+ digital images" }, "price": "600", "priceCurrency": "USD" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family Sessions", "description": "Natural light family session on location with 25+ digital images" }, "price": "300", "priceCurrency": "USD" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mini Sessions", "description": "Seasonal mini session with 10-15 digital images" }, "price": "175", "priceCurrency": "USD" }
-        ]
-      }
-    });
-    document.head.appendChild(script);
-    return () => { if (script.parentNode) script.parentNode.removeChild(script); };
-  }, []);
-
 
   const categories = ["All", "Seniors", "Families", "Milestones & Minis", "Weddings"];
   const filtered = activeFilter === "All" ? PORTFOLIO.filter(p => !p.category) : PORTFOLIO.filter(p => p.category === activeFilter);
@@ -1174,11 +1106,11 @@ export default function PhotographyWebsite() {
           </div>
         </AnimatedSection>
         <div className={"bv-grid-portfolio bv-filter-grid" + (filterAnimating ? " bv-filtering" : "")} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "20px" }}>
-          {filtered.map((img, i) => (
-            <AnimatedSection key={img.id} delay={i * 0.06}>
+          {filtered.map((img, i) => {
+            const card = (
               <div className="bv-gallery-card-wrap" style={{ aspectRatio: img.category ? "4/5" : "3/2" }}>
                 <div className="bv-gallery-img" onClick={() => setLightboxImage(img)} style={{ width: "100%", height: "100%", cursor: "zoom-in" }} tabIndex={0} role="button" aria-label={"View " + img.title} onKeyDown={e => e.key === "Enter" && setLightboxImage(img)}>
-                  <img src={img.src} alt={img.title + " \u2013 bella vita photography Michigan"} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  <img src={img.src} alt={img.title + " \u2013 bella vita photography Michigan"} loading={i === 0 ? "eager" : "lazy"} decoding="async" fetchpriority={i === 0 ? "high" : undefined} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                 </div>
                 <div className="bv-overlay" />
                 <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "40px 16px 14px", background: "linear-gradient(to top, rgba(0,0,0,0.4), transparent)", pointerEvents: "none" }}>
@@ -1189,8 +1121,9 @@ export default function PhotographyWebsite() {
                   <button onClick={(e) => { e.stopPropagation(); shareImage(img.title, img.full || img.src); }} style={{ width: "34px", height: "34px", borderRadius: "50%", background: "rgba(255,255,255,0.92)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.72rem", color: "#2E2A25", backdropFilter: "blur(8px)" }}>{"\u2197"}</button>
                 </div>
               </div>
-            </AnimatedSection>
-          ))}
+            );
+            return i < 3 ? <div key={img.id}>{card}</div> : <AnimatedSection key={img.id} delay={(i - 3) * 0.06}>{card}</AnimatedSection>;
+          })}
         </div>
       </section>
 
