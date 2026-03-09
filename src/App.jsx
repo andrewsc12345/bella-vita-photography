@@ -533,7 +533,7 @@ function ClientGalleryPage({ galleries, onBack, onGift }) {
                     style={{ background: "rgba(255,255,255,0.9)", border: "none", borderRadius: "50%", width: "36px", height: "36px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.75rem", color: "#2E2A25", backdropFilter: "blur(8px)", transition: "all 0.3s ease", opacity: 0.8 }}
                     onMouseEnter={e => e.currentTarget.style.opacity = "1"} onMouseLeave={e => e.currentTarget.style.opacity = "0.8"}>{"\u2197"}</button>
                   <button onClick={(e) => { e.stopPropagation(); toggleFavorite(i); }}
-                    style={{ background: favorited[i] ? "#C4567A" : "rgba(255,255,255,0.9)", border: "none", borderRadius: "50%", width: "36px", height: "36px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", color: favorited[i] ? "#fff" : "#C4567A", fontSize: "1rem", backdropFilter: "blur(8px)", transition: "all 0.3s ease" }}>{favorited[i] ? "\u2665" : "\u2661"}</button>
+                    style={{ background: favorited[i] ? "var(--accent)" : "rgba(255,255,255,0.9)", border: "none", borderRadius: "50%", width: "36px", height: "36px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", color: favorited[i] ? "#fff" : "var(--accent)", fontSize: "1rem", backdropFilter: "blur(8px)", transition: "all 0.3s ease" }}>{favorited[i] ? "\u2665" : "\u2661"}</button>
                 </div>
               </div>
             ))}
@@ -556,7 +556,7 @@ function ClientGalleryPage({ galleries, onBack, onGift }) {
         </div>
         {favCount > 0 && (
           <div className="bv-gallery-favbar" style={{ position: "fixed", bottom: 0, left: 0, right: 0, padding: "16px 48px", background: "rgba(252,250,246,0.95)", backdropFilter: "blur(16px)", borderTop: "1px solid #E8E2D8", display: "flex", justifyContent: "space-between", alignItems: "center", animation: "bvFadeIn 0.3s ease", zIndex: 100 }}>
-            <div style={{ fontSize: "0.82rem", color: "#9E978D" }}><span style={{ color: "#C4567A", fontWeight: 500 }}>{favCount}</span> favorite{favCount !== 1 ? "s" : ""} selected</div>
+            <div style={{ fontSize: "0.82rem", color: "#736D65" }}><span style={{ color: "var(--accent)", fontWeight: 500 }}>{favCount}</span> favorite{favCount !== 1 ? "s" : ""} selected</div>
             <div className="bv-favbar-actions" style={{ display: "flex", gap: "12px" }}>
               <button onClick={handleDownloadFavorites} className="bv-btn-outline" style={{ padding: "10px 24px" }}>{"\u2193"} Download Favorites</button>
               <button onClick={() => { const fl = unlockedGallery.images.filter((_, i) => favorited[i]).map(img => img.title).join(", "); alert("Your favorites have been saved!\n\nSelected: " + fl + "\n\nRebecca will receive your selections and reach out about your album.\n\nTip: Friends and family can purchase a canvas, album, or prints of your photos as a gift right from our website! Scroll down to the \"Share the Love\" section to copy a ready-to-send message for them."); }} className="bv-btn-primary" style={{ padding: "10px 24px" }}>Submit Favorites</button>
@@ -577,7 +577,7 @@ function ClientGalleryPage({ galleries, onBack, onGift }) {
           <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "12px" }}>Private Gallery</div>
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", fontWeight: 400, marginBottom: "8px" }}>{selectedGallery.clientName}</h2>
           <p style={{ fontSize: "0.78rem", color: "var(--muted)", marginBottom: "36px" }}>{selectedGallery.sessionType} {"\u00b7"} {selectedGallery.images.length} photos</p>
-          <input type="password" placeholder="Enter your gallery password" value={passwordInput} onChange={e => setPasswordInput(e.target.value)} onKeyDown={e => e.key === "Enter" && handleUnlock()}
+          <input type="password" placeholder="Enter your gallery password" aria-label="Gallery password" value={passwordInput} onChange={e => setPasswordInput(e.target.value)} onKeyDown={e => e.key === "Enter" && handleUnlock()}
             className="bv-input" style={{ textAlign: "center", letterSpacing: "0.08em", borderColor: error ? "#d4685a" : undefined }} />
           {error && <div style={{ marginTop: "10px", fontSize: "0.78rem", color: "#d4685a", animation: "bvFadeIn 0.3s ease" }}>{error}</div>}
           <button onClick={handleUnlock} className="bv-btn-primary" style={{ marginTop: "20px", width: "100%" }}>View Gallery</button>
@@ -600,7 +600,7 @@ function ClientGalleryPage({ galleries, onBack, onGift }) {
         {galleries.map(gallery => (
           <div key={gallery.id} onClick={() => setSelectedGallery(gallery)} className="bv-gallery-card"
             style={{ display: "grid", gridTemplateColumns: "110px 1fr auto", gap: "24px", alignItems: "center", padding: "20px", background: "var(--card-bg)", border: "1px solid var(--border)", borderRadius: "3px", cursor: "pointer", transition: "all 0.35s ease", boxShadow: "0 1px 8px rgba(0,0,0,0.03)" }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = "#C4567A"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
             onMouseLeave={e => { e.currentTarget.style.borderColor = "#E8E2D8"; e.currentTarget.style.boxShadow = "0 1px 8px rgba(0,0,0,0.03)"; }}>
             <div style={{ width: "110px", height: "80px", borderRadius: "2px", overflow: "hidden", backgroundImage: "url(" + gallery.coverImage + ")", backgroundSize: "cover", backgroundPosition: "center" }} />
             <div>
@@ -623,7 +623,7 @@ function AdminPanel({ galleries, setGalleries, onClose }) {
   const [newGallery, setNewGallery] = useState({ clientName: "", sessionType: "Senior Sessions", date: "", password: "", images: "" });
   const ADMIN_PASSWORD = "bellavita2025";
   const inputStyle = { width: "100%", padding: "11px 14px", background: "#FFFFFF", border: "1px solid #E8E2D8", borderRadius: "3px", color: "#2E2A25", fontFamily: "var(--font-body)", fontSize: "0.85rem", outline: "none", marginTop: "6px" };
-  const labelStyle = { fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#9E978D", display: "block", marginTop: "14px" };
+  const labelStyle = { fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#736D65", display: "block", marginTop: "14px" };
 
   if (!authed) {
     return (
@@ -659,7 +659,7 @@ function AdminPanel({ galleries, setGalleries, onClose }) {
       <div style={{ maxWidth: "900px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px" }} className="bv-admin-grid">
         <div style={{ padding: "28px", border: "1px solid #E8E2D8", borderRadius: "3px", background: "#FFFFFF" }}>
           <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.3rem", fontWeight: 400, marginBottom: "6px" }}>Create New Gallery</h3>
-          <p style={{ fontSize: "0.72rem", color: "#9E978D", marginBottom: "4px" }}>Upload URLs to your full-resolution images for maximum download quality.</p>
+          <p style={{ fontSize: "0.72rem", color: "#736D65", marginBottom: "4px" }}>Upload URLs to your full-resolution images for maximum download quality.</p>
           <label style={labelStyle}>Client Name</label>
           <input style={inputStyle} placeholder="e.g. Emma Richardson" value={newGallery.clientName} onChange={e => setNewGallery({ ...newGallery, clientName: e.target.value })} />
           <label style={labelStyle}>Session Type</label>
@@ -683,14 +683,14 @@ function AdminPanel({ galleries, setGalleries, onClose }) {
               <div key={g.id} style={{ padding: "14px 18px", border: "1px solid #E8E2D8", borderRadius: "3px", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#FFFFFF" }}>
                 <div>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: "1.05rem" }}>{g.clientName}</div>
-                  <div style={{ fontSize: "0.65rem", color: "#9E978D", marginTop: "2px" }}>{g.sessionType} {"\u00b7"} {g.images.length} photos {"\u00b7"} pw: <span style={{ color: "#C4567A" }}>{g.password}</span></div>
+                  <div style={{ fontSize: "0.65rem", color: "#736D65", marginTop: "2px" }}>{g.sessionType} {"\u00b7"} {g.images.length} photos {"\u00b7"} pw: <span style={{ color: "var(--accent)" }}>{g.password}</span></div>
                 </div>
                 <button onClick={() => setGalleries(prev => prev.filter(x => x.id !== g.id))} style={{ background: "none", border: "1px solid #d4685a44", color: "#d4685a", padding: "5px 14px", borderRadius: "2px", cursor: "pointer", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "var(--font-body)", transition: "all 0.3s ease" }}
                   onMouseEnter={e => { e.target.style.background = "#d4685a"; e.target.style.color = "#fff"; }}
                   onMouseLeave={e => { e.target.style.background = "transparent"; e.target.style.color = "#d4685a"; }}>Delete</button>
               </div>
             ))}
-            {galleries.length === 0 && <div style={{ padding: "28px", textAlign: "center", color: "#9E978D", fontSize: "0.82rem" }}>No galleries yet.</div>}
+            {galleries.length === 0 && <div style={{ padding: "28px", textAlign: "center", color: "#736D65", fontSize: "0.82rem" }}>No galleries yet.</div>}
           </div>
         </div>
       </div>
@@ -895,8 +895,8 @@ export default function PhotographyWebsite() {
       {/* Skip to content (a11y) */}
       <a href="#portfolio" className="bv-skip-link">Skip to content</a>
       <style>{`
-        :root { --bg:#FCFAF6;--bg-warm:#F7F3ED;--card-bg:#FFFFFF;--text:#2E2A25;--text-light:#5A554E;--muted:#9E978D;--accent:#C4567A;--accent-light:#D988A4;--accent-hover:#A8445F;--border:#E8E2D8;--border-light:#F0ECE4;--font-display:'Playfair Display',Georgia,serif;--font-body:'Outfit',system-ui,sans-serif; }
-        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}::selection{background:#C4567A33;color:var(--text)}
+        :root { --bg:#FCFAF6;--bg-warm:#F7F3ED;--card-bg:#FFFFFF;--text:#2E2A25;--text-light:#5A554E;--muted:#736D65;--accent:#AC415F;--accent-light:#C4567A;--accent-hover:#8C3049;--border:#E8E2D8;--border-light:#F0ECE4;--font-display:'Playfair Display',Georgia,serif;--font-body:'Outfit',system-ui,sans-serif; }
+        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}::selection{background:#AC415F33;color:var(--text)}
         @keyframes bvFadeIn{from{opacity:0}to{opacity:1}}
         @keyframes bvScaleIn{from{opacity:0;transform:scale(0.95)}to{opacity:1;transform:scale(1)}}
         @keyframes bvSlideIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
@@ -914,7 +914,7 @@ export default function PhotographyWebsite() {
         /* Focus visible ring */
         *:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
         button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-        input:focus-visible,textarea:focus-visible,select:focus-visible{outline:none;border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(196,86,122,0.15)}
+        input:focus-visible,textarea:focus-visible,select:focus-visible{outline:none;border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(172,65,95,0.15)}
 
         /* Filter transition */
         .bv-filter-grid{transition:opacity 0.4s ease}.bv-filter-grid.bv-filtering{opacity:0.3;transform:scale(0.99)}
@@ -935,7 +935,7 @@ export default function PhotographyWebsite() {
 
         .bv-filter-btn{background:none;border:none;color:var(--muted);font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;padding:8px 18px;transition:all 0.35s ease;position:relative;font-weight:400}.bv-filter-btn.active,.bv-filter-btn:hover{color:var(--accent)}.bv-filter-btn.active::after{content:'';position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:18px;height:1.5px;background:var(--accent);border-radius:1px}
         .bv-input{background:var(--card-bg);border:1px solid var(--border);color:var(--text);font-family:var(--font-body);font-size:16px;padding:13px 16px;width:100%;outline:none;transition:border-color 0.3s ease;font-weight:300;border-radius:3px}.bv-input:focus{border-color:var(--accent)}.bv-input::placeholder{color:var(--muted);opacity:0.6}
-        .bv-btn-primary{display:inline-block;padding:14px 40px;background:var(--accent);color:#fff;font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;border:none;border-radius:3px;transition:all 0.35s ease;font-weight:400;-webkit-tap-highlight-color:transparent}.bv-btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px);box-shadow:0 4px 16px rgba(196,86,122,0.25)}.bv-btn-primary:active{transform:scale(0.97)}
+        .bv-btn-primary{display:inline-block;padding:14px 40px;background:var(--accent);color:#fff;font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;border:none;border-radius:3px;transition:all 0.35s ease;font-weight:400;-webkit-tap-highlight-color:transparent}.bv-btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px);box-shadow:0 4px 16px rgba(172,65,95,0.25)}.bv-btn-primary:active{transform:scale(0.97)}
         .bv-btn-outline{display:inline-block;padding:14px 40px;border:1px solid var(--accent);color:var(--accent);background:transparent;font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;border-radius:3px;transition:all 0.35s ease;font-weight:400;-webkit-tap-highlight-color:transparent}.bv-btn-outline:hover{background:var(--accent);color:#fff}.bv-btn-outline:active{transform:scale(0.97)}
         .bv-service-card{border:1px solid var(--border);padding:40px 36px;border-radius:3px;transition:all 0.4s ease;background:var(--card-bg)}.bv-service-card:hover{border-color:var(--accent-light);box-shadow:0 4px 20px rgba(0,0,0,0.06);transform:translateY(-3px)}
 
@@ -1027,7 +1027,7 @@ export default function PhotographyWebsite() {
           ))}
           <span className="bv-nav-link" onClick={() => setCurrentView("client-gallery")} style={{ fontSize: "0.7rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--accent)", fontWeight: 400 }}>Client Gallery</span>
         </div>
-        <button className="bv-mobile-btn" onClick={() => setMenuOpen(!menuOpen)} style={{ background: "none", border: "none", color: "var(--text)", fontSize: "1.4rem", cursor: "pointer", display: "none" }}>{menuOpen ? "\u2715" : "\u2630"}</button>
+        <button className="bv-mobile-btn" aria-label={menuOpen ? "Close menu" : "Open menu"} onClick={() => setMenuOpen(!menuOpen)} style={{ background: "none", border: "none", color: "var(--text)", fontSize: "1.4rem", cursor: "pointer", display: "none" }}>{menuOpen ? "\u2715" : "\u2630"}</button>
       </nav>
 
       {menuOpen && <div className="mobile-menu">
@@ -1049,6 +1049,7 @@ export default function PhotographyWebsite() {
       />
 
       {/* HERO */}
+      <main>
       <section id="hero" className="bv-hero-section" style={{ minHeight: "85vh", display: "flex", flexDirection: "column", position: "relative", overflow: "hidden", background: "var(--bg)" }}>
         {/* Top: Brand name + tagline */}
         <div className="bv-hero-top" style={{ textAlign: "center", paddingTop: "120px", paddingBottom: "36px", position: "relative", zIndex: 2 }}>
@@ -1656,27 +1657,27 @@ export default function PhotographyWebsite() {
           <AnimatedSection delay={0.1}>
             <div className="bv-contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
               <div>
-                <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: formErrors.name ? "#c9544d" : "var(--muted)", display: "block", marginBottom: "6px", transition: "color 0.3s ease" }}>Name</label>
-                <input className="bv-input" placeholder="Your full name" value={formData.name} onChange={e => { setFormData({ ...formData, name: e.target.value }); if (formErrors.name) setFormErrors(prev => ({ ...prev, name: undefined })); }} style={{ borderColor: formErrors.name ? "#c9544d" : undefined }} />
+                <label htmlFor="contact-name" style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: formErrors.name ? "#c9544d" : "var(--muted)", display: "block", marginBottom: "6px", transition: "color 0.3s ease" }}>Name</label>
+                <input id="contact-name" className="bv-input" placeholder="Your full name" value={formData.name} onChange={e => { setFormData({ ...formData, name: e.target.value }); if (formErrors.name) setFormErrors(prev => ({ ...prev, name: undefined })); }} style={{ borderColor: formErrors.name ? "#c9544d" : undefined }} />
                 {formErrors.name && <div style={{ fontSize: "0.68rem", color: "#c9544d", marginTop: "5px", animation: "bvSlideIn 0.3s ease" }}>{formErrors.name}</div>}
               </div>
               <div>
-                <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: formErrors.email ? "#c9544d" : "var(--muted)", display: "block", marginBottom: "6px", transition: "color 0.3s ease" }}>Email</label>
-                <input className="bv-input" type="email" placeholder="your@email.com" value={formData.email} onChange={e => { setFormData({ ...formData, email: e.target.value }); if (formErrors.email) setFormErrors(prev => ({ ...prev, email: undefined })); }} style={{ borderColor: formErrors.email ? "#c9544d" : undefined }} />
+                <label htmlFor="contact-email" style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: formErrors.email ? "#c9544d" : "var(--muted)", display: "block", marginBottom: "6px", transition: "color 0.3s ease" }}>Email</label>
+                <input id="contact-email" className="bv-input" type="email" placeholder="your@email.com" value={formData.email} onChange={e => { setFormData({ ...formData, email: e.target.value }); if (formErrors.email) setFormErrors(prev => ({ ...prev, email: undefined })); }} style={{ borderColor: formErrors.email ? "#c9544d" : undefined }} />
                 {formErrors.email && <div style={{ fontSize: "0.68rem", color: "#c9544d", marginTop: "5px", animation: "bvSlideIn 0.3s ease" }}>{formErrors.email}</div>}
               </div>
             </div>
             <div style={{ marginTop: "20px" }}>
-              <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "8px" }}>Session Type</label>
-              <div className="bv-contact-session-btns" style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+              <label id="session-type-label" style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "8px" }}>Session Type</label>
+              <div className="bv-contact-session-btns" role="group" aria-labelledby="session-type-label" style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
                 {["Senior Session", "Family Session", "Milestone Session", "Wedding", "Gift Certificate", "Other"].map(type => (
-                  <button key={type} onClick={() => setFormData({ ...formData, type })} style={{ padding: "7px 18px", borderRadius: "3px", cursor: "pointer", background: formData.type === type ? "var(--accent)" : "var(--card-bg)", color: formData.type === type ? "#fff" : "var(--text-light)", border: "1px solid " + (formData.type === type ? "var(--accent)" : "var(--border)"), fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "var(--font-body)", transition: "all 0.3s ease" }}>{type}</button>
+                  <button key={type} aria-pressed={formData.type === type} onClick={() => setFormData({ ...formData, type })} style={{ padding: "7px 18px", borderRadius: "3px", cursor: "pointer", background: formData.type === type ? "var(--accent)" : "var(--card-bg)", color: formData.type === type ? "#fff" : "var(--text-light)", border: "1px solid " + (formData.type === type ? "var(--accent)" : "var(--border)"), fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "var(--font-body)", transition: "all 0.3s ease" }}>{type}</button>
                 ))}
               </div>
             </div>
             <div style={{ marginTop: "20px" }}>
-              <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: formErrors.message ? "#c9544d" : "var(--muted)", display: "block", marginBottom: "6px", transition: "color 0.3s ease" }}>Your Story</label>
-              <textarea className="bv-input" placeholder="Tell me about you..." rows={5} value={formData.message} onChange={e => { setFormData({ ...formData, message: e.target.value }); if (formErrors.message) setFormErrors(prev => ({ ...prev, message: undefined })); }} style={{ resize: "vertical", minHeight: "110px", borderColor: formErrors.message ? "#c9544d" : undefined }} />
+              <label htmlFor="contact-message" style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: formErrors.message ? "#c9544d" : "var(--muted)", display: "block", marginBottom: "6px", transition: "color 0.3s ease" }}>Your Story</label>
+              <textarea id="contact-message" className="bv-input" placeholder="Tell me about you..." rows={5} value={formData.message} onChange={e => { setFormData({ ...formData, message: e.target.value }); if (formErrors.message) setFormErrors(prev => ({ ...prev, message: undefined })); }} style={{ resize: "vertical", minHeight: "110px", borderColor: formErrors.message ? "#c9544d" : undefined }} />
               {formErrors.message && <div style={{ fontSize: "0.68rem", color: "#c9544d", marginTop: "5px", animation: "bvSlideIn 0.3s ease" }}>{formErrors.message}</div>}
             </div>
             <div style={{ marginTop: "36px", textAlign: "center" }}>
@@ -1697,6 +1698,8 @@ export default function PhotographyWebsite() {
         </div>
       </AnimatedSection>
 
+      </main>
+
       {/* FOOTER */}
       <footer style={{ padding: "40px 48px 24px", borderTop: "1px solid var(--border-light)", background: "var(--bg-warm)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
@@ -1709,7 +1712,7 @@ export default function PhotographyWebsite() {
               <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "16px", fontWeight: 400 }}>Navigate</div>
               {["Portfolio", "About", "Services", "FAQ", "Contact"].map(item => (
                 <div key={item} onClick={() => scrollTo(item.toLowerCase())} style={{ fontSize: "0.82rem", color: "var(--text-light)", cursor: "pointer", padding: "4px 0", fontWeight: 300, transition: "color 0.3s ease" }}
-                  onMouseEnter={e => e.currentTarget.style.color = "#C4567A"} onMouseLeave={e => e.currentTarget.style.color = "#5A554E"}>{item}</div>
+                  onMouseEnter={e => e.currentTarget.style.color = "var(--accent)"} onMouseLeave={e => e.currentTarget.style.color = "#5A554E"}>{item}</div>
               ))}
             </div>
             <div>
@@ -1757,11 +1760,11 @@ export default function PhotographyWebsite() {
             width: "44px", height: "44px", borderRadius: "50%",
             background: "var(--accent)", color: "#fff", border: "none",
             cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: "1.1rem", boxShadow: "0 4px 16px rgba(196,86,122,0.3)",
+            fontSize: "1.1rem", boxShadow: "0 4px 16px rgba(172,65,95,0.3)",
             animation: "bvFadeIn 0.35s ease", transition: "all 0.3s ease",
           }}
-          onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 6px 24px rgba(196,86,122,0.4)"; }}
-          onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 16px rgba(196,86,122,0.3)"; }}
+          onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 6px 24px rgba(172,65,95,0.4)"; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 16px rgba(172,65,95,0.3)"; }}
         >{"\u2191"}</button>
       )}
     </div>
