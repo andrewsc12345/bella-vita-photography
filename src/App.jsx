@@ -99,13 +99,13 @@ const SITE_CONTENT = {
 const PORTFOLIO = [
   { id: 1, src: "/Senior1.JPG", full: "/Senior1.JPG", title: "Senior Portrait", aspect: "landscape" },
   { id: 2, src: "/Family1.JPG", full: "/Family1.JPG", title: "Family Session", aspect: "landscape" },
-  { id: 3, src: "/Maternity1.JPG", full: "/Maternity1.JPG", title: "Gender Reveal", aspect: "landscape" },
+  { id: 6, src: "/Wedding1.JPG", full: "/Wedding1.JPG", title: "Wedding Day", aspect: "landscape" },
+  { id: 9, src: "/M00.JPG", full: "/M00.JPG", title: "Maternity Glow", aspect: "landscape" },
+  { id: 8, src: "/F21.JPG", full: "/F21.JPG", title: "Beach Family", aspect: "landscape" },
   { id: 4, src: "/Newborn1.JPG", full: "/Newborn1.JPG", title: "Newborn", aspect: "landscape" },
   { id: 5, src: "/Engagement1.JPG", full: "/Engagement1.JPG", title: "The Proposal", aspect: "landscape" },
-  { id: 6, src: "/Wedding1.JPG", full: "/Wedding1.JPG", title: "Wedding Day", aspect: "landscape" },
   { id: 7, src: "/Mini.jpg", full: "/Mini.jpg", title: "Mommy & Me", aspect: "landscape" },
-  { id: 8, src: "/F21.JPG", full: "/F21.JPG", title: "Beach Family", aspect: "landscape" },
-  { id: 9, src: "/M00.JPG", full: "/M00.JPG", title: "Maternity Glow", aspect: "landscape" },
+  { id: 3, src: "/Maternity1.JPG", full: "/Maternity1.JPG", title: "Gender Reveal", aspect: "landscape" },
   { id: 100, src: "/0.JPG", full: "/0.JPG", title: "Autumn Creek", category: "Seniors", aspect: "portrait" },
   { id: 101, src: "/1.JPG", full: "/1.JPG", title: "Colorful", category: "Seniors", aspect: "landscape" },
   { id: 102, src: "/2.JPG", full: "/2.JPG", title: "Natural Beauty", category: "Seniors", aspect: "landscape" },
@@ -174,6 +174,26 @@ const PORTFOLIO = [
   { id: 318, src: "/M18.JPG", full: "/M18.JPG", title: "Fall Kiss", category: "Milestones & Minis", aspect: "landscape" },
   { id: 319, src: "/M19.JPG", full: "/M19.JPG", title: "Little Diva", category: "Milestones & Minis", aspect: "landscape" },
   { id: 320, src: "/M20.JPG", full: "/M20.JPG", title: "Lilac Love", category: "Milestones & Minis", aspect: "landscape" },
+  { id: 400, src: "/W0.JPG", full: "/W0.JPG", title: "Classic Getaway", category: "Weddings", aspect: "landscape" },
+  { id: 401, src: "/W1.JPG", full: "/W1.JPG", title: "First Look", category: "Weddings", aspect: "landscape" },
+  { id: 402, src: "/W2.JPG", full: "/W2.JPG", title: "Wedding Party", category: "Weddings", aspect: "landscape" },
+  { id: 403, src: "/W3.JPG", full: "/W3.JPG", title: "Full Crew", category: "Weddings", aspect: "landscape" },
+  { id: 404, src: "/W4.JPG", full: "/W4.JPG", title: "The Dress", category: "Weddings", aspect: "landscape" },
+  { id: 405, src: "/W5.JPG", full: "/W5.JPG", title: "Down the Aisle", category: "Weddings", aspect: "landscape" },
+  { id: 406, src: "/W6.jpg", full: "/W6.jpg", title: "Golden Couple", category: "Weddings", aspect: "landscape" },
+  { id: 407, src: "/W7.JPG", full: "/W7.JPG", title: "Bride & Bouquet", category: "Weddings", aspect: "landscape" },
+  { id: 408, src: "/W8.JPG", full: "/W8.JPG", title: "Getting Ready", category: "Weddings", aspect: "landscape" },
+  { id: 409, src: "/W9.JPG", full: "/W9.JPG", title: "On the Dock", category: "Weddings", aspect: "landscape" },
+  { id: 410, src: "/W10.JPG", full: "/W10.JPG", title: "Golf Cart Exit", category: "Weddings", aspect: "landscape" },
+  { id: 411, src: "/W11.JPG", full: "/W11.JPG", title: "The Rings", category: "Weddings", aspect: "landscape" },
+  { id: 412, src: "/W12.JPG", full: "/W12.JPG", title: "Fire Truck", category: "Weddings", aspect: "landscape" },
+  { id: 413, src: "/W13.JPG", full: "/W13.JPG", title: "Firefighter Bride", category: "Weddings", aspect: "landscape" },
+  { id: 414, src: "/W14.JPG", full: "/W14.JPG", title: "Boots & Dresses", category: "Weddings", aspect: "landscape" },
+  { id: 415, src: "/W15.JPG", full: "/W15.JPG", title: "In His Hands", category: "Weddings", aspect: "landscape" },
+  { id: 416, src: "/W16.JPG", full: "/W16.JPG", title: "Red Barn First Look", category: "Weddings", aspect: "landscape" },
+  { id: 417, src: "/W17.JPG", full: "/W17.JPG", title: "String Lights", category: "Weddings", aspect: "landscape" },
+  { id: 418, src: "/W18.JPG", full: "/W18.JPG", title: "The Ceremony", category: "Weddings", aspect: "landscape" },
+  { id: 419, src: "/W19.JPG", full: "/W19.JPG", title: "Under the Veil", category: "Weddings", aspect: "landscape" },
 ];
 
 const TESTIMONIALS = [
@@ -807,16 +827,8 @@ export default function PhotographyWebsite() {
     return () => { if (script.parentNode) script.parentNode.removeChild(script); };
   }, []);
 
-  useEffect(() => {
-    if (!document.querySelector('link[href*="Playfair+Display"]')) {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap";
-      document.head.appendChild(link);
-    }
-  }, []);
 
-  const categories = ["All", "Seniors", "Families", "Milestones & Minis"];
+  const categories = ["All", "Seniors", "Families", "Milestones & Minis", "Weddings"];
   const filtered = activeFilter === "All" ? PORTFOLIO.filter(p => !p.category) : PORTFOLIO.filter(p => p.category === activeFilter);
   const scrollTo = (id) => { setMenuOpen(false); const el = document.getElementById(id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: "smooth" }); };
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -1164,11 +1176,14 @@ export default function PhotographyWebsite() {
         <div className={"bv-grid-portfolio bv-filter-grid" + (filterAnimating ? " bv-filtering" : "")} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "20px" }}>
           {filtered.map((img, i) => (
             <AnimatedSection key={img.id} delay={i * 0.06}>
-              <div className="bv-gallery-card-wrap" style={{ aspectRatio: "4/5" }}>
+              <div className="bv-gallery-card-wrap" style={{ aspectRatio: img.category ? "4/5" : "3/2" }}>
                 <div className="bv-gallery-img" onClick={() => setLightboxImage(img)} style={{ width: "100%", height: "100%", cursor: "zoom-in" }} tabIndex={0} role="button" aria-label={"View " + img.title} onKeyDown={e => e.key === "Enter" && setLightboxImage(img)}>
                   <img src={img.src} alt={img.title + " \u2013 bella vita photography Michigan"} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                 </div>
                 <div className="bv-overlay" />
+                <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "40px 16px 14px", background: "linear-gradient(to top, rgba(0,0,0,0.4), transparent)", pointerEvents: "none" }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: "0.95rem", color: "#fff", fontWeight: 400 }}>{img.title}</div>
+                </div>
                 <div className="bv-img-actions">
                   <button onClick={(e) => { e.stopPropagation(); downloadImage(img.full || img.src, "bella-vita-" + img.title.toLowerCase().replace(/\s+/g, "-") + ".jpg"); }} style={{ width: "34px", height: "34px", borderRadius: "50%", background: "rgba(255,255,255,0.92)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.82rem", color: "#2E2A25", backdropFilter: "blur(8px)" }}>{"\u2193"}</button>
                   <button onClick={(e) => { e.stopPropagation(); shareImage(img.title, img.full || img.src); }} style={{ width: "34px", height: "34px", borderRadius: "50%", background: "rgba(255,255,255,0.92)", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.72rem", color: "#2E2A25", backdropFilter: "blur(8px)" }}>{"\u2197"}</button>
