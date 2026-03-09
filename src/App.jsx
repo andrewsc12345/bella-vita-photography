@@ -747,7 +747,7 @@ export default function PhotographyWebsite() {
       "url": "https://bellavitabyrebecca.com",
       "telephone": "",
       "email": "bellavitaphoto@rocketmail.com",
-      "image": "https://bellavitabyrebecca.com/og-image.jpg",
+      "image": "https://bellavitabyrebecca.com/og-preview.png",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Howell",
