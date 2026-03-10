@@ -1025,6 +1025,7 @@ export default function PhotographyWebsite() {
           {["Portfolio", "About", "Services", "Products", "FAQ", "Contact"].map(item => (
             <span key={item} className={"bv-nav-link" + (activeSection === item.toLowerCase() ? " bv-active" : "")} onClick={() => scrollTo(item.toLowerCase())} style={{ fontSize: "0.7rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--text-light)", fontWeight: 400 }}>{item}</span>
           ))}
+          <a href="/blog.html" className="bv-nav-link" style={{ fontSize: "0.7rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--text-light)", fontWeight: 400, textDecoration: "none" }}>Blog</a>
           <span className="bv-nav-link" onClick={() => setCurrentView("client-gallery")} style={{ fontSize: "0.7rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--accent)", fontWeight: 400 }}>Client Gallery</span>
         </div>
         <button className="bv-mobile-btn" aria-label={menuOpen ? "Close menu" : "Open menu"} onClick={() => setMenuOpen(!menuOpen)} style={{ background: "none", border: "none", color: "var(--text)", fontSize: "1.4rem", cursor: "pointer", display: "none" }}>{menuOpen ? "\u2715" : "\u2630"}</button>
@@ -1034,6 +1035,7 @@ export default function PhotographyWebsite() {
         {["Portfolio", "About", "Services", "Products", "FAQ", "Contact"].map(item => (
           <span key={item} onClick={() => scrollTo(item.toLowerCase())} style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", color: "var(--text)", cursor: "pointer" }}>{item}</span>
         ))}
+        <a href="/blog.html" onClick={() => setMenuOpen(false)} style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", color: "var(--text)", cursor: "pointer", textDecoration: "none" }}>Blog</a>
         <span onClick={() => { setMenuOpen(false); setCurrentView("client-gallery"); }} style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", color: "var(--accent)", cursor: "pointer" }}>Client Gallery</span>
       </div>}
 
@@ -1714,6 +1716,8 @@ export default function PhotographyWebsite() {
                 <div key={item} onClick={() => scrollTo(item.toLowerCase())} style={{ fontSize: "0.82rem", color: "var(--text-light)", cursor: "pointer", padding: "4px 0", fontWeight: 300, transition: "color 0.3s ease" }}
                   onMouseEnter={e => e.currentTarget.style.color = "var(--accent)"} onMouseLeave={e => e.currentTarget.style.color = "#5A554E"}>{item}</div>
               ))}
+              <a href="/blog.html" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300, transition: "color 0.3s ease" }}
+                onMouseEnter={e => e.currentTarget.style.color = "var(--accent)"} onMouseLeave={e => e.currentTarget.style.color = "#5A554E"}>Blog</a>
             </div>
             <div>
               <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "16px", fontWeight: 400 }}>Sessions</div>
