@@ -76,19 +76,19 @@ const SITE_CONTENT = {
   ],
 
   /* INSTAGRAM */
-  instagramHandle: "@bellavitaphotography2",
-  instagramUrl: "https://www.instagram.com/bellavitaphotography2/",
+  instagramHandle: "@bellavitabyrebecca",
+  instagramUrl: "https://www.instagram.com/bellavitabyrebecca/",
   facebookUrl: "https://www.facebook.com/bellavitaphotography2",
 
   /* FOOTER */
   footerTagline: "Natural light portrait photography for seniors and families in Michigan. Est. 2009.",
-  email: "bellavitaphoto@rocketmail.com",
+  email: "bellavitabyrebecca@gmail.com",
 
   /* PAYMENT METHODS — Rebecca, update these with your own links/handles! */
   payments: {
     venmo: { handle: "@Rebecca-BellaVita", url: "https://venmo.com/Rebecca-BellaVita" },
-    paypal: { handle: "bellavitaphoto@rocketmail.com", url: "https://paypal.me/bellavitaphoto" },
-    zelle: { handle: "bellavitaphoto@rocketmail.com" },
+    paypal: { handle: "bellavitabyrebecca@gmail.com", url: "https://paypal.me/bellavitabyrebecca" },
+    zelle: { handle: "bellavitabyrebecca@gmail.com" },
   },
 };
 
@@ -222,7 +222,7 @@ const SERVICES = [
 ];
 
 const FAQS = [
-  { q: "How far in advance should I book?", a: "As soon as you know what season you would like, please reach out to get on the schedule. For senior portraits, 3\u20136 months ahead is ideal. Family sessions usually book 1\u20133 months out. Mini sessions sell out within DAYS of advertising a special (due to limited spots). Follow on Facebook and Instagram @bellavitaphotography2 or join my email list for first dibs!" },
+  { q: "How far in advance should I book?", a: "As soon as you know what season you would like, please reach out to get on the schedule. For senior portraits, 3\u20136 months ahead is ideal. Family sessions usually book 1\u20133 months out. Mini sessions sell out within DAYS of advertising a special (due to limited spots). Follow on Facebook and Instagram @bellavitabyrebecca or join my email list for first dibs!" },
   { q: "How many outfit changes can I bring?", a: "Depending on the session you choose...Senior's should bring up to 3 outfit changes. For families, one coordination look usually works. If you are booking a family full, a backup for the kiddos is always a good idea. Feel free to send me option choices if you are looking for some input. You will receive a detailed style guide with tips once you have booked your session!" },
   { q: "What happens if it rains?", a: "Welcome to Michigan! I\u2019ll text you 24 hours before and we\u2019ll reschedule \u2014 no extra charge. A little overcast? Chef\u2019s kiss for photos." },
   { q: "Where do sessions take place?", a: "Depending on the season and your vibe...I've got lots of ideas for locations. I have shot at dozens of locations in Southeast Michigan and beyond and I am always up for new places if you have a specific location in mind!" },
@@ -581,7 +581,7 @@ function ClientGalleryPage({ galleries, onBack, onGift }) {
             className="bv-input" style={{ textAlign: "center", letterSpacing: "0.08em", borderColor: error ? "#d4685a" : undefined }} />
           {error && <div style={{ marginTop: "10px", fontSize: "0.78rem", color: "#d4685a", animation: "bvFadeIn 0.3s ease" }}>{error}</div>}
           <button onClick={handleUnlock} className="bv-btn-primary" style={{ marginTop: "20px", width: "100%" }}>View Gallery</button>
-          <p style={{ marginTop: "28px", fontSize: "0.72rem", color: "var(--muted)", lineHeight: 1.7, opacity: 0.6 }}>Your password was in your session delivery email.<br />Can't find it? Email <a href="mailto:bellavitaphoto@rocketmail.com" style={{ color: "var(--accent)", textDecoration: "none" }}>bellavitaphoto@rocketmail.com</a></p>
+          <p style={{ marginTop: "28px", fontSize: "0.72rem", color: "var(--muted)", lineHeight: 1.7, opacity: 0.6 }}>Your password was in your session delivery email.<br />Can't find it? Email <a href="mailto:bellavitabyrebecca@gmail.com" style={{ color: "var(--accent)", textDecoration: "none" }}>bellavitabyrebecca@gmail.com</a></p>
         </div>
       </div>
     );
@@ -802,7 +802,7 @@ export default function PhotographyWebsite() {
         (hintMessages[hintForm.occasion] || hintMessages["General"]) + "\n\n" +
         "You can see her work here: bellavitabyrebecca.com\n" +
         "Gift certificates come in any amount, work for sessions AND products (gallery wraps, albums, prints!), and never expire!\n" +
-        "Her email: bellavitaphoto@rocketmail.com\n\n" +
+        "Her email: bellavitabyrebecca@gmail.com\n\n" +
         "Just putting that out there... \u{1F60D}\n\n" +
         "Love,\n" + hintForm.senderName
       );
@@ -820,13 +820,13 @@ export default function PhotographyWebsite() {
         "Hey" + (hintForm.recipientName ? " " + hintForm.recipientName : "") + "!\n\n" +
         (recMessages[hintForm.occasion] || recMessages["General"]) + "\n\n" +
         "Check out her work: bellavitabyrebecca.com\n" +
-        "Her email: bellavitaphoto@rocketmail.com" + (hintForm.senderName ? " \u2014 tell her " + hintForm.senderName + " sent you!" : "") + "\n\n" +
+        "Her email: bellavitabyrebecca@gmail.com" + (hintForm.senderName ? " \u2014 tell her " + hintForm.senderName + " sent you!" : "") + "\n\n" +
         "Trust me on this one. \u{1F60A}\n\n" +
         hintForm.senderName
       );
     }
 
-    window.open("mailto:" + hintForm.recipientEmail + "?subject=" + subject + "&body=" + body + "&bcc=bellavitaphoto@rocketmail.com", "_blank");
+    window.open("mailto:" + hintForm.recipientEmail + "?subject=" + subject + "&body=" + body + "&bcc=bellavitabyrebecca@gmail.com", "_blank");
     setFormData({
       name: hintForm.senderName,
       email: "",
@@ -853,10 +853,10 @@ export default function PhotographyWebsite() {
       giftForm.senderName + " has gifted you a bella vita photography gift certificate for " + amount + ".\n\n" +
       "This certificate can be used for any photography session (seniors, families, weddings), products (gallery wraps, albums, acrylics, prints), or any combination \u2014 and it never expires!" +
       personalMsg + "\n\n" +
-      "To book your session or browse products, contact Rebecca at bellavitaphoto@rocketmail.com or visit bellavitabyrebecca.com\n\n" +
+      "To book your session or browse products, contact Rebecca at bellavitabyrebecca@gmail.com or visit bellavitabyrebecca.com\n\n" +
       "With love,\n" + giftForm.senderName + "\n\n\u2014 bella vita photography \u2727 Est. 2009"
     );
-    window.open("mailto:" + giftForm.recipientEmail + "?subject=" + subject + "&body=" + body + "&bcc=bellavitaphoto@rocketmail.com", "_blank");
+    window.open("mailto:" + giftForm.recipientEmail + "?subject=" + subject + "&body=" + body + "&bcc=bellavitabyrebecca@gmail.com", "_blank");
 
     const payLabel = { venmo: "Venmo", paypal: "PayPal", zelle: "Zelle", later: "Pay Later (contact form)" }[giftForm.paymentMethod] || giftForm.paymentMethod;
     setFormData({
@@ -1641,7 +1641,7 @@ export default function PhotographyWebsite() {
               </div>
             </AnimatedSection>
           ))}
-          <AnimatedSection delay={0.3}><div style={{ textAlign: "center", marginTop: "40px" }}><p style={{ color: "var(--muted)", fontSize: "0.82rem", fontWeight: 300 }}>Something else? <a href="mailto:bellavitaphoto@rocketmail.com" style={{ color: "var(--accent)", textDecoration: "none", borderBottom: "1px solid var(--accent-light)" }}>Email me</a></p></div></AnimatedSection>
+          <AnimatedSection delay={0.3}><div style={{ textAlign: "center", marginTop: "40px" }}><p style={{ color: "var(--muted)", fontSize: "0.82rem", fontWeight: 300 }}>Something else? <a href="mailto:bellavitabyrebecca@gmail.com" style={{ color: "var(--accent)", textDecoration: "none", borderBottom: "1px solid var(--accent-light)" }}>Email me</a></p></div></AnimatedSection>
         </div>
       </section>
 
@@ -1653,7 +1653,7 @@ export default function PhotographyWebsite() {
               <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "14px" }}>{ SITE_CONTENT.contactTagline }</div>
               <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400, marginBottom: "16px" }}>{ SITE_CONTENT.contactTitle }</h2>
               <p style={{ color: "var(--text-light)", fontSize: "0.9rem", lineHeight: 1.8, fontWeight: 300, maxWidth: "500px", margin: "0 auto" }}>{SITE_CONTENT.contactDescription}</p>
-              <p style={{ marginTop: "10px" }}><a href="mailto:bellavitaphoto@rocketmail.com" style={{ color: "var(--accent)", textDecoration: "none", fontSize: "0.9rem", borderBottom: "1px solid var(--accent-light)" }}>bellavitaphoto@rocketmail.com</a></p>
+              <p style={{ marginTop: "10px" }}><a href="mailto:bellavitabyrebecca@gmail.com" style={{ color: "var(--accent)", textDecoration: "none", fontSize: "0.9rem", borderBottom: "1px solid var(--accent-light)" }}>bellavitabyrebecca@gmail.com</a></p>
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
@@ -1696,7 +1696,7 @@ export default function PhotographyWebsite() {
           <div style={{ fontSize: "0.62rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "10px" }}>Follow Along</div>
           <h3 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 2.6vw, 2rem)", fontWeight: 400, marginBottom: "12px" }}>See the <em style={{ fontStyle: "italic", color: "var(--accent)" }}>behind the scenes</em></h3>
           <p style={{ color: "var(--muted)", fontSize: "0.82rem", fontWeight: 300, maxWidth: "380px", margin: "0 auto 22px", lineHeight: 1.7 }}>Session sneak peeks, bloopers, and the occasional bella pet cameo.</p>
-          <a href="https://www.instagram.com/bellavitaphotography2/" target="_blank" rel="noopener noreferrer" className="bv-btn-outline" style={{ textDecoration: "none" }}>@bellavitaphotography2</a>
+          <a href="https://www.instagram.com/bellavitabyrebecca/" target="_blank" rel="noopener noreferrer" className="bv-btn-outline" style={{ textDecoration: "none" }}>@bellavitabyrebecca</a>
         </div>
       </AnimatedSection>
 
@@ -1727,9 +1727,9 @@ export default function PhotographyWebsite() {
             </div>
             <div>
               <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "16px", fontWeight: 400 }}>Connect</div>
-              <a href="https://www.instagram.com/bellavitaphotography2/" target="_blank" rel="noopener noreferrer" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>Instagram</a>
+              <a href="https://www.instagram.com/bellavitabyrebecca/" target="_blank" rel="noopener noreferrer" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>Instagram</a>
               <a href="https://www.facebook.com/bellavitaphotography2" target="_blank" rel="noopener noreferrer" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>Facebook</a>
-              <a href="mailto:bellavitaphoto@rocketmail.com" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>bellavitaphoto@rocketmail.com</a>
+              <a href="mailto:bellavitabyrebecca@gmail.com" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>bellavitabyrebecca@gmail.com</a>
               <button onClick={() => setCurrentView("client-gallery")} className="bv-btn-outline" style={{ marginTop: "12px", padding: "10px 20px", fontSize: "0.62rem" }}>Client Gallery {"\u2192"}</button>
             </div>
           </div>
