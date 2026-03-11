@@ -9,7 +9,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "craco build"
   },
-  "browserslist": [">0.2%", "not dead"]
+  "browserslist": [
+    ">0.2%",
+    "not dead"
+  ],
+  "devDependencies": {
+    "@craco/craco": "^7.1.0"
+  }
 }
