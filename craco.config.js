@@ -1,1 +1,14 @@
-module.exports={webpack:{configure(config){const HtmlPlugin=config.plugins.find(p=>p.constructor.name==="HtmlWebpackPlugin");if(HtmlPlugin)HtmlPlugin.userOptions.minify=false;return config}}};
+module.exports = {
+  webpack: {
+    configure: (config) => {
+      config.optimization.minimize = false;
+      config.plugins.forEach(plugin => {
+        if (plugin.constructor.name === 'HtmlWebpackPlugin') {
+          plugin.userOptions.minify = false;
+          if (plugin.options) plugin.options.minify = false;
+        }
+      });
+      return config;
+    }
+  }
+};
