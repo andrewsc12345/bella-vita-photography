@@ -197,7 +197,7 @@ export const PORTFOLIO = [
 
 export const TESTIMONIALS = [
   { name: "The Martinez Family", text: "Rebecca is the kind of person who remembers your kids\u2019 names, asks about your dog, and somehow captures your family in a way that makes you think \u2018oh wow, we actually look like THAT.\u2019 Our Kensington session last fall is framed all over our house now. Obsessed.", event: "Annual Family Session \u00b7 Brighton" },
-  { name: "Jennifer, Mom of Emma (\u201925)", text: "My daughter told me she\u2019d hate the whole thing. She ended up not wanting to leave. Rebecca played her favorite music, hyped her up the whole time, and made her feel like a literal supermodel. Every single photo from Island Lake is a keeper.", event: "Senior Portrait Session \u00b7 Lakeland HS" },
+  { name: "Jennifer, Mom of Emma", text: "My daughter told me she\u2019d hate the whole thing. She ended up not wanting to leave. Rebecca played her favorite music, hyped her up the whole time, and made her feel like a literal supermodel. Every single photo from Island Lake is a keeper.", event: "Senior Portrait Session \u00b7 White Lake" },
   { name: "The Thompsons", text: "We\u2019ve been going back to Rebecca every year since 2017. She\u2019s basically part of our family at this point. Her natural light style makes every session feel effortless, and the photos somehow keep getting better every single year.", event: "Family Sessions \u00b7 Howell" },
 ];
 
