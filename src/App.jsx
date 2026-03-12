@@ -15,7 +15,7 @@ export default function PhotographyWebsite() {
   const [showStyleGuide, setShowStyleGuide] = useState(false);
   const [popupDismissed, setPopupDismissed] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
-  const [giftAmount, setGiftAmount] = useState("375");
+  const [giftAmount, setGiftAmount] = useState("50");
   const [showGiftModal, setShowGiftModal] = useState(false);
   const [showHintModal, setShowHintModal] = useState(false);
   const [hintForm, setHintForm] = useState({ recipientName: "", recipientEmail: "", senderName: "", scenario: "", occasion: "", forWho: "" });
@@ -455,7 +455,7 @@ export default function PhotographyWebsite() {
                 <p style={{ color: "var(--text-light)", fontSize: "0.88rem", lineHeight: 1.8, fontWeight: 300, marginBottom: "8px" }}>Gift certificates can be used for any session, product, or combination of both {"\u2014"} from a full senior experience to a gorgeous piece of artwork for your home.</p>
                 <p style={{ color: "var(--muted)", fontSize: "0.78rem", lineHeight: 1.7, fontWeight: 300, marginBottom: "20px" }}>Available in any amount. Never expires. Your recipient(s) will receive a personalized bella digital gift certificate straight to their inbox.</p>
                 <div className="bv-gift-amounts" style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "18px" }}>
-                  {["175", "375", "500", "Custom"].map(amt => (
+                  {["50", "100", "150", "Custom"].map(amt => (
                     <button key={amt} onClick={() => setGiftAmount(amt)} style={{ padding: "6px 14px", borderRadius: "3px", cursor: "pointer", background: giftAmount === amt ? "var(--accent)" : "var(--card-bg)", color: giftAmount === amt ? "#fff" : "var(--text-light)", border: "1px solid " + (giftAmount === amt ? "var(--accent)" : "var(--border)"), fontSize: "0.7rem", letterSpacing: "0.1em", fontFamily: "var(--font-body)", transition: "all 0.3s ease" }}>{amt === "Custom" ? "Custom" : "$" + amt}</button>
                   ))}
                 </div>
@@ -542,7 +542,7 @@ export default function PhotographyWebsite() {
                   </div>
                   <div>
                     <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "6px" }}>Gift Certificate Amount</label>
-                    <input className="bv-input" type="text" placeholder="e.g. $175, $375, $500" value={giftForm.giftCertAmount} onChange={e => setGiftForm({ ...giftForm, giftCertAmount: e.target.value })} />
+                    <input className="bv-input" type="text" placeholder="e.g. $50, $100, $150" value={giftForm.giftCertAmount} onChange={e => setGiftForm({ ...giftForm, giftCertAmount: e.target.value })} />
                   </div>
                   <div>
                     <label style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: "6px" }}>Personal Message <span style={{ opacity: 0.5 }}>(optional)</span></label>
