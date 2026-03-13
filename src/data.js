@@ -244,38 +244,39 @@ export const PRODUCTS = [
   { name: "Other Awesome Goods", description: "", icon: "\u2727" },
 ];
 
-export const DEFAULT_CLIENT_GALLERIES = [
-  {
-    id: "g1", clientName: "Emma Richardson \u2013 Lakeland HS \u201926", sessionType: "Senior Sessions", date: "2025-10-15", password: "emma2026",
-    coverImage: "https://images.unsplash.com/photo-1517677129300-07b130802f46?w=800&q=85",
-    images: [
-      { src: "https://images.unsplash.com/photo-1517677129300-07b130802f46?w=1200&q=90", full: "https://images.unsplash.com/photo-1517677129300-07b130802f46?w=2400&q=95", title: "Golden Hour" },
-      { src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1200&q=90", full: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=2400&q=95", title: "Sunlit" },
-      { src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=90", full: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=2400&q=95", title: "Confident" },
-      { src: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=1200&q=90", full: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=2400&q=95", title: "Dreamer" },
-      { src: "https://images.unsplash.com/photo-1504703395950-b89145a5425b?w=1200&q=90", full: "https://images.unsplash.com/photo-1504703395950-b89145a5425b?w=2400&q=95", title: "Wildflower" },
-      { src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&q=90", full: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=2400&q=95", title: "Downtown" },
-    ]
-  },
-  {
-    id: "g2", clientName: "The Martinez Family", sessionType: "Family Session", date: "2025-09-28", password: "martinez2025",
-    coverImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=85",
-    images: [
-      { src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=90", full: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=2400&q=95", title: "All Together" },
-      { src: "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1200&q=90", full: "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=2400&q=95", title: "Golden Light" },
-      { src: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&q=90", full: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=2400&q=95", title: "Our World" },
-      { src: "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=1200&q=90", full: "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=2400&q=95", title: "Rooted" },
-      { src: "https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?w=1200&q=90", full: "https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?w=2400&q=95", title: "Tiny Hands" },
-    ]
-  },
-  {
-    id: "g3", clientName: "Jake Thompson", sessionType: "Senior Sessions", date: "2025-11-02", password: "jake2026",
-    coverImage: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=85",
-    images: [
-      { src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&q=90", full: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=2400&q=95", title: "Urban Cool" },
-      { src: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=1200&q=90", full: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=2400&q=95", title: "Natural" },
-      { src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=90", full: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=2400&q=95", title: "Light Study" },
-    ]
-  }
-];
+export const DEFAULT_CLIENT_GALLERIES = [];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

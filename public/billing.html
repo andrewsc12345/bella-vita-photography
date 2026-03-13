@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Billing &amp; Invoices | bella vita photography</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#FCFAF6;--bg-warm:#F7F3ED;--card:#FFFFFF;--text:#2E2A25;--text-light:#5A554E;--muted:#736D65;--accent:#AC415F;--accent-hover:#8C3049;--accent-light:#C4567A;--border:#E8E2D8;--success:#4A8C6F;--warning:#C4883A;--danger:#C4503A;--font-display:'Playfair Display',Georgia,serif;--font-body:'Outfit',system-ui,sans-serif}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.6;font-weight:300}
+    ::selection{background:rgba(172,65,95,0.15)}
+    input,select,textarea{font-family:inherit;font-size:0.9rem}
+    input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(172,65,95,0.1)}
+    button{cursor:pointer;font-family:inherit}
+    ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .fade-in{animation:fadeIn 0.35s ease both}
+    @media(max-width:900px){
+      .bv-layout{flex-direction:column!important}
+      .bv-sidebar{width:100%!important;height:auto!important;position:relative!important;flex-direction:row!important;padding:12px 16px!important;overflow-x:auto}
+      .bv-sidebar-logo{display:none!important}
+      .bv-sidebar-fees{display:none!important}
+      .bv-sidebar button{padding:8px 14px!important;font-size:0.72rem!important;white-space:nowrap}
+      .bv-main{padding:20px 16px!important}
+      .bv-stats-grid{grid-template-columns:1fr 1fr!important}
+      .bv-inv-row{grid-template-columns:1fr 1fr!important;gap:8px!important;font-size:0.78rem!important}
+      .bv-inv-row .bv-hide-mobile{display:none!important}
+      .bv-form-grid{grid-template-columns:1fr!important}
+      .bv-detail-grid{grid-template-columns:1fr!important}
+      .bv-pay-record-grid{grid-template-columns:1fr 1fr!important}
+      .bv-msg-buttons{flex-direction:column!important}
+    }
+    @media print{
+      .bv-sidebar,.bv-no-print{display:none!important}
+      .bv-main{padding:0!important;max-width:100%!important}
+      .bv-print-only{display:block!important}
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/javascript">
+    const { useState, useEffect, useRef, useCallback } = React;
+
+    /* ─── CONSTANTS ─── */
+    const ADMIN_PW = "bellavita2026billing";
+
+    const PAYMENTS = {
+      zelle: { handle: "bellavitabyrebecca@gmail.com", label: "Zelle", icon: "\u26A1", fee: "Free" },
+      venmo: { handle: "@BellaVitaByRebecca", label: "Venmo", icon: "\uD83D\uDCF1", fee: "1.9% + $0.10" },
+      stripe: { label: "Stripe (Card)", icon: "\uD83D\uDCB3", fee: "2.9% + $0.30" },
+    };
+
+    const SESSION_TYPES = [
+      { name: "Family Session", deposit: 150, total: 350 },
+      { name: "Senior Session", deposit: 100, total: 300 },
+      { name: "Senior Split Session", deposit: 150, total: 700 },
+      { name: "Senior DUO Session", deposit: 150, total: 700 },
+      { name: "Mini Session", deposit: 175, total: 175 },
+      { name: "Milestone Session", deposit: 150, total: 350 },
+      { name: "Wedding \u2014 Gold", deposit: 500, total: 2500 },
+      { name: "Wedding \u2014 Platinum", deposit: 500, total: 3500 },
+      { name: "Gift Certificate", deposit: 0, total: 0 },
+      { name: "Custom", deposit: 0, total: 0 },
+    ];
+
+    const STATUS_CONFIG = {
+      draft: { label: "Draft", color: "#736D65", bg: "#F0ECE4" },
+      sent: { label: "Sent", color: "#5B7BB4", bg: "#EBF0F7" },
+      deposit_paid: { label: "Deposit Paid", color: "#C4883A", bg: "#FDF3E7" },
+      paid: { label: "Paid in Full", color: "#4A8C6F", bg: "#E8F5EE" },
+      overdue: { label: "Overdue", color: "#C4503A", bg: "#FCEEE8" },
+      cancelled: { label: "Cancelled", color: "#736D65", bg: "#F0ECE4" },
+    };
+
+    const genId = () => "INV-" + Date.now().toString(36).toUpperCase();
+    const fmtDate = (d) => d ? new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "\u2014";
+    const fmtMoney = (n) => "$" + Number(n || 0).toFixed(2).replace(/\\.00$/, "");
+
+    /* ─── MESSAGE TEMPLATES ─── */
+    function getMessages(inv) {
+      const dep = fmtMoney(inv.deposit);
+      const bal = fmtMoney((inv.total || 0) - (inv.deposit || 0));
+      const tot = fmtMoney(inv.total);
+      const totalPaid = (inv.payments || []).reduce((s, p) => s + Number(p.amount), 0);
+      const actualRemaining = fmtMoney((inv.total || 0) - totalPaid);
+      const name = inv.clientName ? inv.clientName.split(" ")[0] : "there";
+      const sessionDate = inv.sessionDate ? new Date(inv.sessionDate + "T12:00:00").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" }) : "your session date";
+
+      return {
+        deposit_request: {
+          label: "Request Deposit",
+          subject: "bella vita photography \u2014 Booking Deposit for " + inv.sessionType,
+          text: "Hi " + name + "! \uD83D\uDE0A I'm so excited to work with you! To lock in your " + inv.sessionType + " on " + sessionDate + ", I just need a " + dep + " deposit.\n\nThe easiest way to pay is through Zelle \u2014 it's free for both of us and takes about 30 seconds. Just open your banking app, find Zelle, and send to " + PAYMENTS.zelle.handle + ". Include your name and \"session deposit\" in the memo.\n\nIf you don't have Zelle, Venmo works great too! Just search for " + PAYMENTS.venmo.handle + " in the Venmo app.\n\nIf you'd prefer to pay by card, just let me know and I'll send you a secure link.\n\nOnce I receive the deposit, I'll send over your style guide and we can start planning! Can't wait! \uD83D\uDC95\n\n\u2014 Rebecca\nbella vita photography",
+          sms: "Hi " + name + "! \uD83D\uDE0A So excited for your session! To lock in " + sessionDate + ", I just need a " + dep + " deposit. Easiest way: open your banking app \u2192 Zelle \u2192 send to " + PAYMENTS.zelle.handle + " with your name in the memo. Don't have Zelle? Venmo to " + PAYMENTS.venmo.handle + " works too! Let me know when it's sent! \uD83D\uDC95 \u2014 Rebecca",
+        },
+        booking_confirmation: {
+          label: "Booking Confirmed",
+          subject: "You're booked! " + inv.sessionType + " with bella vita photography",
+          text: "Hi " + name + "! \uD83C\uDF89 Your deposit has been received and your session is officially BOOKED!\n\nHere's what's confirmed:\n\uD83D\uDCF8 " + inv.sessionType + "\n\uD83D\uDCC5 " + sessionDate + "\n\uD83D\uDCCD " + (inv.location || "Location TBD") + "\n\uD83D\uDCB0 Deposit received: " + dep + "\n\uD83D\uDCB0 Remaining balance: " + bal + " (due 1 week before your session)\n\nWhat's next:\n\u2022 I'll be sending you a detailed style guide with outfit tips and color recommendations\n\u2022 About a week before your session, I'll reach out about your remaining balance\n\u2022 If you have any questions before then, don't hesitate to reach out!\n\nI'm so excited to create something beautiful for you! \uD83D\uDC95\n\n\u2014 Rebecca\nbella vita photography",
+          sms: "Hi " + name + "! \uD83C\uDF89 Your deposit is received and you're officially BOOKED for " + sessionDate + "! Remaining balance of " + bal + " is due 1 week before. I'll send your style guide soon. So excited! \uD83D\uDC95 \u2014 Rebecca",
+        },
+        balance_due: {
+          label: "Balance Due",
+          subject: "bella vita photography \u2014 Balance Due for Your Upcoming Session",
+          text: "Hi " + name + "! Your session is coming up on " + sessionDate + " and I can't wait! \uD83D\uDE0A\n\nJust a quick reminder that the remaining balance of " + actualRemaining + " is due before your session.\n\n\u26A1 Zelle (free & instant): Open your banking app \u2192 Zelle \u2192 send to " + PAYMENTS.zelle.handle + "\n\uD83D\uDCF1 Venmo: Send to " + PAYMENTS.venmo.handle + "\n\uD83D\uDCB3 Credit card: Just let me know and I'll send a secure link\n\nPlease include your name in the memo. Once received, you're all set!\n\nSee you soon! \uD83D\uDC95\n\n\u2014 Rebecca\nbella vita photography",
+          sms: "Hi " + name + "! \uD83D\uDE0A Quick reminder \u2014 your remaining balance of " + actualRemaining + " is due before your session on " + sessionDate + ". Easiest: Zelle to " + PAYMENTS.zelle.handle + ". Or Venmo to " + PAYMENTS.venmo.handle + ". Let me know when sent! See you soon! \uD83D\uDC95",
+        },
+        payment_received: {
+          label: "Payment Received",
+          subject: "Payment received \u2014 You're all set! \u2728",
+          text: "Hi " + name + "! Just confirming I received your payment \u2014 you're all set! \u2728\n\nI'll see you on " + sessionDate + ". Here are a few last reminders:\n\u2022 Arrive about 10 minutes early so we can chat and look at outfits\n\u2022 Bring all outfit options on hangers\n\u2022 Bring snacks and water (especially for the little ones!)\n\u2022 Most importantly \u2014 come ready to have fun!\n\nCan't wait to capture something beautiful for you! \uD83D\uDC95\n\n\u2014 Rebecca\nbella vita photography",
+          sms: "Hi " + name + "! \u2728 Payment received \u2014 you're all set for " + sessionDate + "! Arrive ~10 min early with outfits on hangers. Come ready to have fun! Can't wait! \uD83D\uDC95 \u2014 Rebecca",
+        },
+        gentle_reminder: {
+          label: "Gentle Reminder",
+          subject: "Friendly reminder \u2014 Balance due for your bella vita session",
+          text: "Hi " + name + "! Hope you're doing well! \uD83D\uDE0A\n\nI wanted to send a friendly reminder that the remaining balance of " + actualRemaining + " for your " + inv.sessionType + " on " + sessionDate + " is still outstanding.\n\nNo rush \u2014 just want to make sure we're all set before your session! You can send via:\n\n\u26A1 Zelle: " + PAYMENTS.zelle.handle + "\n\uD83D\uDCF1 Venmo: " + PAYMENTS.venmo.handle + "\n\uD83D\uDCB3 Card: Just let me know!\n\nThanks so much! \uD83D\uDC95\n\n\u2014 Rebecca",
+          sms: "Hi " + name + "! \uD83D\uDE0A Friendly reminder that the remaining " + actualRemaining + " for your session on " + sessionDate + " is still due. Zelle to " + PAYMENTS.zelle.handle + " is the easiest way. Let me know if you have questions! \uD83D\uDC95",
+        },
+        gallery_ready: {
+          label: "Gallery Ready",
+          subject: "Your gallery is READY! \uD83C\uDF89 \u2014 bella vita photography",
+          text: "Hi " + name + "! \uD83C\uDF89 YOUR GALLERY IS READY and I am SO excited for you to see it!\n\nI poured my heart into editing every single image and I truly love how they turned out. Here's your private gallery link:\n\n\uD83D\uDD17 [Gallery Link]\n\uD83D\uDD11 Password: [password]\n\nFrom your gallery you can:\n\u2022 View all your images at full size\n\u2022 Mark your favorites with a \u2764\uFE0F\n\u2022 Download individual photos or the entire collection\n\u2022 Share with family and friends\n\u2022 Order prints, canvas wraps, and albums\n\nYour gallery will be active for 60 days. Take your time browsing!\n\nThank you for trusting me with these memories! \uD83D\uDC95\n\n\u2014 Rebecca\nbella vita photography",
+          sms: "Hi " + name + "! \uD83C\uDF89 YOUR GALLERY IS READY!! I'm so excited for you to see it! Check your email for the link and password. So excited for you to see these! \uD83D\uDC95 \u2014 Rebecca",
+        },
+        sneak_peek: {
+          label: "Sneak Peek",
+          subject: "A little sneak peek from your session! \u2728 \u2014 bella vita photography",
+          text: "Hi " + name + "! \u2728\n\nI could NOT wait to share these with you \u2014 here are a few of my favorites from your session today!\n\n[Attach 2\u20133 photos]\n\nI am SO happy with how these turned out. Your full gallery will be ready in 2\u20133 weeks, but I just had to give you a preview because I'm that excited.\n\nFeel free to share these on social media! If you tag @bellavitabyrebecca I would absolutely love that \uD83D\uDC95\n\nMore coming soon!\n\n\u2014 Rebecca\nbella vita photography",
+          sms: "Hi " + name + "! \u2728 I could NOT wait \u2014 here's a sneak peek from today! [attach 2\u20133 photos] I'm SO happy with these. Full gallery coming in 2\u20133 weeks! Feel free to share and tag @bellavitabyrebecca if you post! \uD83D\uDC95 \u2014 Rebecca",
+        },
+        review_request: {
+          label: "Review Request",
+          subject: "A quick favor? \uD83D\uDE4F \u2014 bella vita photography",
+          text: "Hi " + name + "! \uD83D\uDE0A\n\nI hope you're loving your photos! I had such an amazing time at your session and I'm so proud of how your gallery turned out.\n\nI have a small favor to ask \u2014 if you have 60 seconds, would you mind leaving me a quick Google review? It's the single biggest thing that helps other families find me, and it means the world to a small business.\n\n\uD83D\uDD17 [Google Review Link]\n\nEven just a sentence or two about your experience makes a huge difference. And if you're comfortable sharing a favorite photo from your gallery in the review, that's the cherry on top!\n\nThank you SO much for trusting me with your memories. I'm truly grateful. \uD83D\uDC95\n\n\u2014 Rebecca\nbella vita photography",
+          sms: "Hi " + name + "! \uD83D\uDE0A Hope you're loving your photos! Quick favor \u2014 if you have 60 seconds, a Google review would mean the world to me. It's the #1 way other families find me! \uD83D\uDD17 [Google Review Link] Even a sentence or two helps so much. Thank you!! \uD83D\uDC95 \u2014 Rebecca",
+        },
+        share_with_friends: {
+          label: "Share With Friends",
+          subject: "Share the love! \uD83D\uDC95 \u2014 bella vita photography",
+          text: "Hi " + name + "! \uD83D\uDE0A\n\nI just wanted to say thank you again for an incredible session. It was such a joy working with you!\n\nIf you have any friends or family who've been thinking about getting photos done \u2014 seniors, families, milestones, anything \u2014 I would be so honored if you'd pass my name along. Word of mouth from amazing clients like you is how I've built this business over the past 15+ years.\n\nHere's my website they can check out: bellavitabyrebecca.com\nOr they can follow me on Instagram: @bellavitabyrebecca\n\nAnd as a thank you \u2014 if someone books a session and mentions your name, I'll send you a $25 print credit you can use on canvas wraps, prints, or albums from your gallery! \uD83C\uDF81\n\nThank you for being part of the bella vita family! \uD83D\uDC95\n\n\u2014 Rebecca\nbella vita photography",
+          sms: "Hi " + name + "! \uD83D\uDE0A Thank you again for an amazing session! If you know anyone who needs photos \u2014 seniors, families, milestones \u2014 I'd be so honored if you'd pass my name along! bellavitabyrebecca.com \uD83C\uDF81 Bonus: if they book and mention you, I'll send you a $25 print credit! \uD83D\uDC95 \u2014 Rebecca",
+        },
+        six_month_followup: {
+          label: "6-Month Follow-Up",
+          subject: "It's been a minute! \uD83D\uDC4B \u2014 bella vita photography",
+          text: "Hi " + name + "! \uD83D\uDC4B\n\nCan you believe it's been about six months since your session? Time flies! I hope those photos are still making you smile every time you see them on the wall.\n\nI wanted to reach out because I'm booking sessions for the upcoming season and I'd love to work with you again! Whether it's an updated family session, a milestone, or just because \u2014 I always love seeing how families grow and change between sessions.\n\nAs a returning client, you'll always get priority booking on my calendar. Just reply to this message or reach out anytime and we'll find the perfect date.\n\nHope you and the family are doing great! \uD83D\uDC95\n\n\u2014 Rebecca\nbella vita photography\nbellavitabyrebecca.com",
+          sms: "Hi " + name + "! \uD83D\uDC4B Can you believe it's been 6 months since your session?! I'm booking for the upcoming season and would LOVE to work with you again. As a returning client you get priority booking! Just reply or reach out anytime. Hope you're all doing great! \uD83D\uDC95 \u2014 Rebecca",
+        },
+      };
+    }
+
+    /* ─── UI COMPONENTS ─── */
+    function Badge({ status }) {
+      const c = STATUS_CONFIG[status] || STATUS_CONFIG.draft;
+      return React.createElement("span", { style: { display:"inline-block", padding:"3px 10px", borderRadius:"12px", fontSize:"0.62rem", fontWeight:500, letterSpacing:"0.06em", textTransform:"uppercase", background:c.bg, color:c.color } }, c.label);
+    }
+
+    function Btn({ children, primary, danger, small, style, ...props }) {
+      const base = { display:"inline-flex", alignItems:"center", gap:"6px", padding: small ? "7px 16px" : "11px 28px", fontSize: small ? "0.68rem" : "0.72rem", fontWeight:500, letterSpacing:"0.08em", textTransform:"uppercase", border:"none", borderRadius:"3px", transition:"all 0.25s ease", whiteSpace:"nowrap" };
+      const variant = primary ? { background:"var(--accent)", color:"#fff" } : danger ? { background:"transparent", border:"1px solid rgba(196,80,58,0.25)", color:"var(--danger)" } : { background:"transparent", border:"1px solid var(--border)", color:"var(--text-light)" };
+      return React.createElement("button", {
+        style: { ...base, ...variant, ...style },
+        onMouseEnter: (e) => { if(primary) e.currentTarget.style.background="var(--accent-hover)"; },
+        onMouseLeave: (e) => { if(primary) e.currentTarget.style.background="var(--accent)"; },
+        ...props
+      }, children);
+    }
+
+    function Input({ label, style: extraStyle, ...props }) {
+      return React.createElement("div", { style: { marginBottom:"14px" } },
+        label && React.createElement("label", { style: { display:"block", fontSize:"0.6rem", letterSpacing:"0.18em", textTransform:"uppercase", color:"var(--muted)", marginBottom:"5px", fontWeight:400 } }, label),
+        React.createElement("input", { style: { width:"100%", padding:"10px 14px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px", color:"var(--text)", fontWeight:300, fontSize:"0.88rem", ...extraStyle }, ...props })
+      );
+    }
+
+    function Select({ label, children, ...props }) {
+      return React.createElement("div", { style: { marginBottom:"14px" } },
+        label && React.createElement("label", { style: { display:"block", fontSize:"0.6rem", letterSpacing:"0.18em", textTransform:"uppercase", color:"var(--muted)", marginBottom:"5px", fontWeight:400 } }, label),
+        React.createElement("select", { style: { width:"100%", padding:"10px 14px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px", color:"var(--text)", fontWeight:300, fontSize:"0.88rem", cursor:"pointer" }, ...props }, children)
+      );
+    }
+
+    function TextArea({ label, ...props }) {
+      return React.createElement("div", { style: { marginBottom:"14px" } },
+        label && React.createElement("label", { style: { display:"block", fontSize:"0.6rem", letterSpacing:"0.18em", textTransform:"uppercase", color:"var(--muted)", marginBottom:"5px", fontWeight:400 } }, label),
+        React.createElement("textarea", { style: { width:"100%", padding:"10px 14px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px", color:"var(--text)", fontWeight:300, fontSize:"0.88rem", resize:"vertical", minHeight:"90px", lineHeight:1.7, fontFamily:"var(--font-body)" }, ...props })
+      );
+    }
+
+    /* ─── RECORD PAYMENT ─── */
+    function RecordPayment({ inv, onAdd }) {
+      const [open, setOpen] = useState(false);
+      const [method, setMethod] = useState("zelle");
+      const [amount, setAmount] = useState("");
+
+      if (!open) return React.createElement(Btn, { onClick: () => setOpen(true), style: { width:"100%" } }, "+ Record a Payment");
+
+      const totalPaid = (inv.payments || []).reduce((s, p) => s + Number(p.amount), 0);
+      const remaining = (inv.total || 0) - totalPaid;
+
+      return React.createElement("div", { className:"fade-in", style: { padding:"24px", background:"var(--card)", border:"1px solid rgba(172,65,95,0.25)", borderRadius:"3px" } },
+        React.createElement("div", { style: { fontSize:"0.6rem", letterSpacing:"0.25em", textTransform:"uppercase", color:"var(--accent)", marginBottom:"14px" } }, "Record Payment"),
+        React.createElement("div", { className:"bv-pay-record-grid", style: { display:"grid", gridTemplateColumns:"1fr 1fr auto auto", gap:"12px", alignItems:"end" } },
+          React.createElement(Select, { label: "Method", value: method, onChange: e => setMethod(e.target.value) },
+            React.createElement("option", { value:"zelle" }, "\u26A1 Zelle (Free)"),
+            React.createElement("option", { value:"venmo" }, "\uD83D\uDCF1 Venmo (1.9%)"),
+            React.createElement("option", { value:"stripe" }, "\uD83D\uDCB3 Stripe (2.9%)")
+          ),
+          React.createElement(Input, { label: "Amount", type: "number", placeholder: "0.00", value: amount, onChange: e => setAmount(e.target.value) }),
+          React.createElement(Btn, { primary: true, small: true, style: { marginBottom:"14px" }, onClick: () => { if(!amount) return; onAdd({ method, amount: Number(amount) }); setAmount(""); setOpen(false); } }, "Save"),
+          React.createElement(Btn, { small: true, style: { marginBottom:"14px" }, onClick: () => setOpen(false) }, "Cancel")
+        ),
+        React.createElement("div", { style: { display:"flex", gap:"8px", marginTop:"8px", flexWrap:"wrap" } },
+          React.createElement("button", { onClick: () => setAmount(inv.deposit), style: { background:"var(--bg-warm)", border:"1px solid var(--border)", borderRadius:"3px", padding:"5px 12px", fontSize:"0.68rem", color:"var(--text-light)", cursor:"pointer" } }, "Deposit (" + fmtMoney(inv.deposit) + ")"),
+          React.createElement("button", { onClick: () => setAmount(remaining > 0 ? remaining : 0), style: { background:"var(--bg-warm)", border:"1px solid var(--border)", borderRadius:"3px", padding:"5px 12px", fontSize:"0.68rem", color:"var(--text-light)", cursor:"pointer" } }, "Remaining (" + fmtMoney(remaining) + ")"),
+          React.createElement("button", { onClick: () => setAmount(inv.total), style: { background:"var(--bg-warm)", border:"1px solid var(--border)", borderRadius:"3px", padding:"5px 12px", fontSize:"0.68rem", color:"var(--text-light)", cursor:"pointer" } }, "Full (" + fmtMoney(inv.total) + ")")
+        )
+      );
+    }
+
+    /* ─── MESSAGE PANEL ─── */
+    function MessagePanel({ msg, onToast }) {
+      const [mode, setMode] = useState("sms");
+      const content = mode === "sms" ? msg.sms : msg.text;
+
+      const copy = async () => {
+        try { await navigator.clipboard.writeText(content); onToast("Copied to clipboard!"); }
+        catch { onToast("Select text and copy manually"); }
+      };
+
+      return React.createElement("div", { style: { marginTop:"16px" }, className:"fade-in" },
+        React.createElement("div", { style: { display:"flex", gap:"8px", marginBottom:"12px" } },
+          React.createElement("button", { onClick: () => setMode("sms"), style: { padding:"6px 16px", borderRadius:"3px", border: mode==="sms" ? "1px solid var(--accent)" : "1px solid var(--border)", background: mode==="sms" ? "var(--accent)" : "transparent", color: mode==="sms" ? "#fff" : "var(--text-light)", fontSize:"0.7rem", letterSpacing:"0.08em", textTransform:"uppercase", cursor:"pointer", transition:"all 0.2s ease" } }, "\uD83D\uDCF1 Text"),
+          React.createElement("button", { onClick: () => setMode("email"), style: { padding:"6px 16px", borderRadius:"3px", border: mode==="email" ? "1px solid var(--accent)" : "1px solid var(--border)", background: mode==="email" ? "var(--accent)" : "transparent", color: mode==="email" ? "#fff" : "var(--text-light)", fontSize:"0.7rem", letterSpacing:"0.08em", textTransform:"uppercase", cursor:"pointer", transition:"all 0.2s ease" } }, "\u2709 Email")
+        ),
+        mode === "email" && React.createElement("div", { style: { padding:"10px 14px", background:"var(--bg-warm)", borderRadius:"3px", marginBottom:"10px", fontSize:"0.8rem" } },
+          React.createElement("strong", { style: { color:"var(--accent)", fontWeight:500 } }, "Subject: "),
+          React.createElement("span", { style: { color:"var(--text-light)" } }, msg.subject)
+        ),
+        React.createElement("pre", { style: { padding:"18px", background:"var(--bg-warm)", borderRadius:"3px", fontSize:"0.8rem", lineHeight:1.8, color:"var(--text-light)", fontFamily:"var(--font-body)", whiteSpace:"pre-wrap", wordBreak:"break-word", maxHeight:"340px", overflow:"auto", fontWeight:300 } }, content),
+        React.createElement("div", { style: { display:"flex", gap:"8px", marginTop:"12px", flexWrap:"wrap" } },
+          React.createElement(Btn, { primary: true, small: true, onClick: copy }, "Copy to Clipboard"),
+          mode === "sms" && React.createElement(Btn, { small: true, onClick: () => window.open("sms:?&body=" + encodeURIComponent(content)) }, "Open in Messages"),
+          mode === "email" && React.createElement(Btn, { small: true, onClick: () => window.open("mailto:" + (msg.toEmail || "") + "?subject=" + encodeURIComponent(msg.subject) + "&body=" + encodeURIComponent(content)) }, "Open in Mail")
+        )
+      );
+    }
+
+    /* ─── MAIN APP ─── */
+    function App() {
+      const [authed, setAuthed] = useState(false);
+      const [pw, setPw] = useState("");
+      const [pwError, setPwError] = useState("");
+      const [view, setView] = useState("dashboard");
+      const [invoices, setInvoices] = useState([]);
+      const [editInv, setEditInv] = useState(null);
+      const [viewInv, setViewInv] = useState(null);
+      const [msgPanel, setMsgPanel] = useState(null);
+      const [toast, setToast] = useState(null);
+      const [confirmDelete, setConfirmDelete] = useState(null);
+      const [searchTerm, setSearchTerm] = useState("");
+
+      const showToast = (msg) => { setToast(msg); setTimeout(() => setToast(null), 2500); };
+
+      /* Load from localStorage */
+      useEffect(() => {
+        try {
+          const stored = localStorage.getItem("bv-invoices");
+          if (stored) setInvoices(JSON.parse(stored));
+        } catch(e) { console.error("Load error:", e); }
+      }, []);
+
+      /* Save to localStorage */
+      useEffect(() => {
+        try { localStorage.setItem("bv-invoices", JSON.stringify(invoices)); }
+        catch(e) { console.error("Save error:", e); }
+      }, [invoices]);
+
+      const saveInvoice = (inv) => {
+        setInvoices(prev => {
+          const exists = prev.find(i => i.id === inv.id);
+          if (exists) return prev.map(i => i.id === inv.id ? { ...inv, updatedAt: new Date().toISOString() } : i);
+          return [{ ...inv, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() }, ...prev];
+        });
+        showToast("Invoice saved");
+        setEditInv(null);
+        setView("invoices");
+      };
+
+      const deleteInvoice = (id) => {
+        setInvoices(prev => prev.filter(i => i.id !== id));
+        showToast("Invoice deleted");
+        setConfirmDelete(null);
+        setViewInv(null);
+        setView("invoices");
+      };
+
+      const updateStatus = (id, status) => {
+        setInvoices(prev => prev.map(i => i.id === id ? { ...i, status, updatedAt: new Date().toISOString() } : i));
+        if (viewInv && viewInv.id === id) setViewInv(prev => ({...prev, status}));
+        showToast("Status updated");
+      };
+
+      const addPayment = (id, payment) => {
+        setInvoices(prev => prev.map(i => {
+          if (i.id !== id) return i;
+          const payments = [...(i.payments || []), { ...payment, date: new Date().toISOString() }];
+          const totalPaid = payments.reduce((s, p) => s + Number(p.amount), 0);
+          let status = i.status;
+          if (totalPaid >= i.total) status = "paid";
+          else if (totalPaid >= i.deposit) status = "deposit_paid";
+          return { ...i, payments, status, updatedAt: new Date().toISOString() };
+        }));
+        showToast("Payment recorded");
+      };
+
+      const newInvoice = () => {
+        setEditInv({ id: genId(), status:"draft", sessionType:"", clientName:"", clientEmail:"", clientPhone:"", location:"", sessionDate:"", deposit:0, total:0, notes:"", payments:[] });
+        setView("new");
+        setViewInv(null);
+        setMsgPanel(null);
+      };
+
+      /* Stats */
+      const stats = {
+        total: invoices.length,
+        revenue: invoices.filter(i => i.status === "paid").reduce((s, i) => s + (i.total || 0), 0),
+        outstanding: invoices.filter(i => ["sent","deposit_paid","overdue"].includes(i.status)).reduce((s, i) => {
+          const paid = (i.payments || []).reduce((a, p) => a + Number(p.amount), 0);
+          return s + (i.total || 0) - paid;
+        }, 0),
+        thisMonth: invoices.filter(i => {
+          const d = new Date(i.createdAt);
+          const now = new Date();
+          return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+        }).length,
+      };
+
+      const filteredInvoices = searchTerm ? invoices.filter(i =>
+        (i.clientName || "").toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (i.id || "").toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (i.sessionType || "").toLowerCase().includes(searchTerm.toLowerCase())
+      ) : invoices;
+
+      /* ─── PASSWORD SCREEN ─── */
+      if (!authed) {
+        return React.createElement("div", { style: { minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", background:"var(--bg)", padding:"24px" } },
+          React.createElement("div", { style: { textAlign:"center", maxWidth:"380px", width:"100%" } },
+            React.createElement("img", { src:"/logo.png", alt:"bella vita photography", style: { width:"180px", marginBottom:"24px", opacity:0.9 } }),
+            React.createElement("div", { style: { fontSize:"0.6rem", letterSpacing:"0.35em", textTransform:"uppercase", color:"var(--accent)", marginBottom:"36px" } }, "Billing & Invoices"),
+            React.createElement("input", {
+              type: "password", placeholder: "Enter password", value: pw,
+              onChange: e => setPw(e.target.value),
+              onKeyDown: e => { if (e.key === "Enter") { if (pw === ADMIN_PW) setAuthed(true); else { setPwError("Incorrect password"); setTimeout(() => setPwError(""), 2500); } } },
+              style: { width:"100%", padding:"13px 16px", background:"var(--card)", border:"1px solid " + (pwError ? "var(--danger)" : "var(--border)"), borderRadius:"3px", textAlign:"center", fontSize:"1rem", letterSpacing:"0.08em", fontFamily:"var(--font-body)", color:"var(--text)" }
+            }),
+            pwError && React.createElement("div", { style: { marginTop:"10px", fontSize:"0.8rem", color:"var(--danger)", animation:"fadeIn 0.3s ease" } }, pwError),
+            React.createElement("button", {
+              onClick: () => { if (pw === ADMIN_PW) setAuthed(true); else { setPwError("Incorrect password"); setTimeout(() => setPwError(""), 2500); } },
+              style: { marginTop:"16px", width:"100%", padding:"13px", background:"var(--accent)", color:"#fff", border:"none", borderRadius:"3px", fontSize:"0.72rem", letterSpacing:"0.2em", textTransform:"uppercase", cursor:"pointer", fontFamily:"var(--font-body)", transition:"background 0.3s ease" },
+              onMouseEnter: e => e.currentTarget.style.background = "var(--accent-hover)",
+              onMouseLeave: e => e.currentTarget.style.background = "var(--accent)",
+            }, "Access Billing")
+          )
+        );
+      }
+
+      /* ─── MAIN LAYOUT ─── */
+      return React.createElement("div", { className:"bv-layout", style: { display:"flex", minHeight:"100vh" } },
+        /* Toast */
+        toast && React.createElement("div", { style: { position:"fixed", top:"20px", right:"20px", zIndex:9999, padding:"12px 24px", background:"var(--accent)", color:"#fff", borderRadius:"3px", fontSize:"0.78rem", fontWeight:400, letterSpacing:"0.04em", animation:"fadeIn 0.3s ease", boxShadow:"0 4px 20px rgba(172,65,95,0.25)" } }, toast),
+
+        /* Sidebar */
+        React.createElement("nav", { className:"bv-sidebar", style: { width:"210px", background:"var(--bg-warm)", borderRight:"1px solid var(--border)", padding:"28px 0", display:"flex", flexDirection:"column", position:"sticky", top:0, height:"100vh", flexShrink:0 } },
+          React.createElement("div", { className:"bv-sidebar-logo", style: { padding:"0 20px 24px", borderBottom:"1px solid var(--border)", textAlign:"center" } },
+            React.createElement("img", { src:"/logo.png", alt:"bella vita photography", style: { width:"120px", marginBottom:"8px", opacity:0.9 } }),
+            React.createElement("div", { style: { fontSize:"0.55rem", letterSpacing:"0.25em", textTransform:"uppercase", color:"var(--muted)", marginTop:"3px" } }, "Billing & Invoices")
+          ),
+          [
+            { id:"dashboard", label:"Dashboard", icon:"\u25C8" },
+            { id:"invoices", label:"Invoices", icon:"\u25FB" },
+            { id:"new", label:"New Invoice", icon:"+" },
+          ].map(item =>
+            React.createElement("button", {
+              key: item.id,
+              onClick: () => { if(item.id==="new") newInvoice(); else { setView(item.id); setViewInv(null); setEditInv(null); setMsgPanel(null); } },
+              style: { display:"flex", alignItems:"center", gap:"10px", padding:"11px 20px", background: view===item.id ? "var(--card)" : "transparent", border:"none", borderRight: view===item.id ? "2px solid var(--accent)" : "2px solid transparent", color: view===item.id ? "var(--accent)" : "var(--text-light)", fontSize:"0.8rem", fontWeight: view===item.id ? 500 : 300, textAlign:"left", transition:"all 0.2s ease", cursor:"pointer", fontFamily:"var(--font-body)" }
+            }, React.createElement("span", { style: { fontSize:"0.85rem", opacity:0.7 } }, item.icon), " ", item.label)
+          ),
+          React.createElement("div", { style: { flex:1 } }),
+          React.createElement("div", { className:"bv-sidebar-fees", style: { padding:"14px 20px", borderTop:"1px solid var(--border)", fontSize:"0.6rem", color:"var(--muted)", lineHeight:1.8 } },
+            "\u26A1 Zelle: Free", React.createElement("br"), "\uD83D\uDCF1 Venmo: 1.9%", React.createElement("br"), "\uD83D\uDCB3 Stripe: 2.9%"
+          ),
+          React.createElement("div", { style: { padding:"8px 20px" } },
+            React.createElement("a", { href:"/", style: { fontSize:"0.65rem", color:"var(--accent)", textDecoration:"none", letterSpacing:"0.1em", textTransform:"uppercase" } }, "\u2190 Back to Site")
+          )
+        ),
+
+        /* Main content */
+        React.createElement("main", { className:"bv-main", style: { flex:1, padding:"32px 40px", maxWidth:"1100px", overflow:"auto" } },
+
+          /* ═══ DASHBOARD ═══ */
+          view === "dashboard" && React.createElement("div", { className:"fade-in" },
+            React.createElement("h1", { style: { fontFamily:"var(--font-display)", fontSize:"1.7rem", fontWeight:400, marginBottom:"6px" } }, "Dashboard"),
+            React.createElement("p", { style: { color:"var(--muted)", fontSize:"0.8rem", fontWeight:300, marginBottom:"28px" } }, "Overview of billing and invoices"),
+            React.createElement("div", { className:"bv-stats-grid", style: { display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:"14px", marginBottom:"36px" } },
+              [
+                { label:"Total Invoices", value:stats.total, icon:"\u25FB" },
+                { label:"Revenue (Paid)", value:fmtMoney(stats.revenue), icon:"\u2726" },
+                { label:"Outstanding", value:fmtMoney(stats.outstanding), icon:"\u25F7" },
+                { label:"This Month", value:stats.thisMonth, icon:"\u25A3" },
+              ].map((s,i) =>
+                React.createElement("div", { key:i, style: { padding:"20px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px" } },
+                  React.createElement("div", { style: { fontSize:"0.55rem", letterSpacing:"0.2em", textTransform:"uppercase", color:"var(--muted)", marginBottom:"8px" } }, s.icon + " " + s.label),
+                  React.createElement("div", { style: { fontFamily:"var(--font-display)", fontSize:"1.5rem", fontWeight:400 } }, s.value)
+                )
+              )
+            ),
+            React.createElement("div", { style: { display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:"16px" } },
+              React.createElement("h2", { style: { fontFamily:"var(--font-display)", fontSize:"1.15rem", fontWeight:400 } }, "Recent Invoices"),
+              React.createElement(Btn, { primary: true, small: true, onClick: newInvoice }, "+ New Invoice")
+            ),
+            invoices.length === 0
+              ? React.createElement("div", { style: { padding:"48px", textAlign:"center", color:"var(--muted)", border:"1px dashed var(--border)", borderRadius:"3px" } },
+                  React.createElement("p", { style: { fontSize:"0.88rem", marginBottom:"16px" } }, "No invoices yet"),
+                  React.createElement(Btn, { primary: true, onClick: newInvoice }, "Create First Invoice")
+                )
+              : invoices.slice(0,8).map(inv =>
+                  React.createElement("div", {
+                    key: inv.id, className:"bv-inv-row",
+                    onClick: () => { setViewInv(inv); setView("detail"); setMsgPanel(null); },
+                    style: { display:"grid", gridTemplateColumns:"90px 1.5fr 1fr 1fr 100px 80px", gap:"14px", alignItems:"center", padding:"12px 16px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px", cursor:"pointer", transition:"all 0.2s ease", fontSize:"0.8rem", marginBottom:"6px" },
+                    onMouseEnter: e => e.currentTarget.style.borderColor = "var(--accent-light)",
+                    onMouseLeave: e => e.currentTarget.style.borderColor = "var(--border)",
+                  },
+                    React.createElement("span", { className:"bv-hide-mobile", style: { fontSize:"0.7rem", color:"var(--muted)" } }, inv.id),
+                    React.createElement("span", { style: { fontWeight:400 } }, inv.clientName || "\u2014"),
+                    React.createElement("span", { className:"bv-hide-mobile", style: { color:"var(--text-light)", fontWeight:300 } }, inv.sessionType || "\u2014"),
+                    React.createElement("span", { style: { fontFamily:"var(--font-display)" } }, fmtMoney(inv.total)),
+                    React.createElement(Badge, { status: inv.status }),
+                    React.createElement("span", { className:"bv-hide-mobile", style: { color:"var(--muted)", fontSize:"0.7rem", textAlign:"right" } }, fmtDate(inv.createdAt))
+                  )
+                )
+          ),
+
+          /* ═══ INVOICES LIST ═══ */
+          view === "invoices" && !viewInv && React.createElement("div", { className:"fade-in" },
+            React.createElement("div", { style: { display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:"24px", flexWrap:"wrap", gap:"12px" } },
+              React.createElement("div", null,
+                React.createElement("h1", { style: { fontFamily:"var(--font-display)", fontSize:"1.7rem", fontWeight:400 } }, "Invoices"),
+                React.createElement("p", { style: { color:"var(--muted)", fontSize:"0.8rem", fontWeight:300, marginTop:"3px" } }, invoices.length + " total")
+              ),
+              React.createElement("div", { style: { display:"flex", gap:"10px", alignItems:"center" } },
+                React.createElement("input", { placeholder:"Search clients...", value:searchTerm, onChange:e=>setSearchTerm(e.target.value), style: { padding:"8px 14px", border:"1px solid var(--border)", borderRadius:"3px", fontSize:"0.82rem", fontFamily:"var(--font-body)", color:"var(--text)", background:"var(--card)", width:"200px" } }),
+                React.createElement(Btn, { primary: true, small: true, onClick: newInvoice }, "+ New")
+              )
+            ),
+            filteredInvoices.length === 0
+              ? React.createElement("div", { style: { padding:"48px", textAlign:"center", color:"var(--muted)", border:"1px dashed var(--border)", borderRadius:"3px" } }, searchTerm ? "No matching invoices" : "No invoices yet")
+              : filteredInvoices.map(inv =>
+                  React.createElement("div", {
+                    key: inv.id, className:"bv-inv-row",
+                    onClick: () => { setViewInv(inv); setView("detail"); setMsgPanel(null); },
+                    style: { display:"grid", gridTemplateColumns:"90px 1.5fr 1fr 1fr 100px 80px", gap:"14px", alignItems:"center", padding:"12px 16px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px", cursor:"pointer", transition:"all 0.2s ease", fontSize:"0.8rem", marginBottom:"6px" },
+                    onMouseEnter: e => e.currentTarget.style.borderColor = "var(--accent-light)",
+                    onMouseLeave: e => e.currentTarget.style.borderColor = "var(--border)",
+                  },
+                    React.createElement("span", { className:"bv-hide-mobile", style: { fontSize:"0.7rem", color:"var(--muted)" } }, inv.id),
+                    React.createElement("span", { style: { fontWeight:400 } }, inv.clientName || "\u2014"),
+                    React.createElement("span", { className:"bv-hide-mobile", style: { color:"var(--text-light)", fontWeight:300 } }, inv.sessionType || "\u2014"),
+                    React.createElement("span", { style: { fontFamily:"var(--font-display)" } }, fmtMoney(inv.total)),
+                    React.createElement(Badge, { status: inv.status }),
+                    React.createElement("span", { className:"bv-hide-mobile", style: { color:"var(--muted)", fontSize:"0.7rem", textAlign:"right" } }, fmtDate(inv.createdAt))
+                  )
+                )
+          ),
+
+          /* ═══ NEW / EDIT ═══ */
+          (view === "new" || view === "edit") && editInv && React.createElement("div", { className:"fade-in" },
+            React.createElement("button", { onClick: () => { setView("invoices"); setEditInv(null); }, style: { background:"none", border:"none", color:"var(--accent)", fontSize:"0.7rem", letterSpacing:"0.12em", textTransform:"uppercase", marginBottom:"18px", cursor:"pointer", fontFamily:"var(--font-body)" } }, "\u2190 Back"),
+            React.createElement("h1", { style: { fontFamily:"var(--font-display)", fontSize:"1.7rem", fontWeight:400, marginBottom:"24px" } }, view === "edit" ? "Edit Invoice" : "New Invoice"),
+            React.createElement("div", { className:"bv-form-grid", style: { display:"grid", gridTemplateColumns:"1fr 1fr", gap:"24px" } },
+              React.createElement("div", { style: { padding:"24px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px" } },
+                React.createElement("div", { style: { fontSize:"0.6rem", letterSpacing:"0.25em", textTransform:"uppercase", color:"var(--accent)", marginBottom:"16px" } }, "Client Information"),
+                React.createElement(Input, { label:"Client Name", placeholder:"Full name", value:editInv.clientName, onChange:e=>setEditInv({...editInv, clientName:e.target.value}) }),
+                React.createElement(Input, { label:"Email", type:"email", placeholder:"email@example.com", value:editInv.clientEmail, onChange:e=>setEditInv({...editInv, clientEmail:e.target.value}) }),
+                React.createElement(Input, { label:"Phone", type:"tel", placeholder:"(555) 555-5555", value:editInv.clientPhone, onChange:e=>setEditInv({...editInv, clientPhone:e.target.value}) })
+              ),
+              React.createElement("div", { style: { padding:"24px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px" } },
+                React.createElement("div", { style: { fontSize:"0.6rem", letterSpacing:"0.25em", textTransform:"uppercase", color:"var(--accent)", marginBottom:"16px" } }, "Session Details"),
+                React.createElement(Select, { label:"Session Type", value:editInv.sessionType, onChange:e => {
+                  const st = SESSION_TYPES.find(s => s.name === e.target.value);
+                  setEditInv({...editInv, sessionType:e.target.value, deposit: st ? st.deposit : editInv.deposit, total: st ? st.total : editInv.total });
+                } },
+                  React.createElement("option", { value:"" }, "Select session type"),
+                  SESSION_TYPES.map(s => React.createElement("option", { key:s.name, value:s.name }, s.name))
+                ),
+                React.createElement(Input, { label:"Session Date", type:"date", value:editInv.sessionDate, onChange:e=>setEditInv({...editInv, sessionDate:e.target.value}) }),
+                React.createElement(Input, { label:"Location", placeholder:"e.g. Kensington Metropark", value:editInv.location, onChange:e=>setEditInv({...editInv, location:e.target.value}) }),
+                React.createElement("div", { style: { display:"grid", gridTemplateColumns:"1fr 1fr", gap:"12px" } },
+                  React.createElement(Input, { label:"Deposit", type:"number", value:editInv.deposit, onChange:e=>setEditInv({...editInv, deposit:Number(e.target.value)}) }),
+                  React.createElement(Input, { label:"Total", type:"number", value:editInv.total, onChange:e=>setEditInv({...editInv, total:Number(e.target.value)}) })
+                )
+              )
+            ),
+            React.createElement("div", { style: { marginTop:"18px", padding:"24px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px" } },
+              React.createElement(TextArea, { label:"Notes", placeholder:"Additional notes about this booking...", value:editInv.notes, onChange:e=>setEditInv({...editInv, notes:e.target.value}) })
+            ),
+            React.createElement("div", { style: { marginTop:"20px", display:"flex", gap:"12px" } },
+              React.createElement(Btn, { primary:true, onClick:()=>saveInvoice(editInv) }, "Save Invoice"),
+              React.createElement(Btn, { onClick:()=>{ setView("invoices"); setEditInv(null); } }, "Cancel")
+            )
+          ),
+
+          /* ═══ INVOICE DETAIL ═══ */
+          view === "detail" && viewInv && (() => {
+            const inv = invoices.find(i => i.id === viewInv.id) || viewInv;
+            const totalPaid = (inv.payments || []).reduce((s, p) => s + Number(p.amount), 0);
+            const remaining = (inv.total || 0) - totalPaid;
+            const messages = getMessages(inv);
+
+            return React.createElement("div", { className:"fade-in" },
+              React.createElement("button", { onClick:()=>{ setViewInv(null); setView("invoices"); setMsgPanel(null); }, style: { background:"none", border:"none", color:"var(--accent)", fontSize:"0.7rem", letterSpacing:"0.12em", textTransform:"uppercase", marginBottom:"18px", cursor:"pointer", fontFamily:"var(--font-body)" } }, "\u2190 Back to Invoices"),
+
+              /* Print header with logo */
+              React.createElement("div", { className:"bv-print-only", style: { display:"none", textAlign:"center", marginBottom:"28px", paddingBottom:"20px", borderBottom:"1px solid var(--border)" } },
+                React.createElement("img", { src:"/logo.png", alt:"bella vita photography", style: { width:"160px", marginBottom:"8px" } }),
+                React.createElement("div", { style: { fontSize:"0.6rem", letterSpacing:"0.2em", textTransform:"uppercase", color:"var(--muted)" } }, "Invoice")
+              ),
+
+              /* Header */
+              React.createElement("div", { style: { display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:"24px", flexWrap:"wrap", gap:"12px" } },
+                React.createElement("div", null,
+                  React.createElement("div", { style: { display:"flex", alignItems:"center", gap:"12px", marginBottom:"4px" } },
+                    React.createElement("h1", { style: { fontFamily:"var(--font-display)", fontSize:"1.5rem", fontWeight:400 } }, inv.clientName || "Unnamed"),
+                    React.createElement(Badge, { status:inv.status })
+                  ),
+                  React.createElement("div", { style: { fontSize:"0.75rem", color:"var(--muted)", fontWeight:300 } }, inv.id + " \u00b7 " + inv.sessionType + " \u00b7 " + fmtDate(inv.sessionDate))
+                ),
+                React.createElement("div", { className:"bv-no-print", style: { display:"flex", gap:"8px" } },
+                  React.createElement(Btn, { small:true, onClick:()=>window.print() }, "Print"),
+                  React.createElement(Btn, { small:true, onClick:()=>{ setEditInv({...inv}); setView("edit"); } }, "Edit"),
+                  React.createElement(Btn, { small:true, danger:true, onClick:()=>setConfirmDelete(inv.id) }, "Delete")
+                )
+              ),
+
+              confirmDelete === inv.id && React.createElement("div", { style: { padding:"14px 18px", background:"#FDF0ED", border:"1px solid rgba(196,80,58,0.2)", borderRadius:"3px", marginBottom:"18px", display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:"10px" } },
+                React.createElement("span", { style: { fontSize:"0.82rem", color:"var(--danger)" } }, "Delete this invoice permanently?"),
+                React.createElement("div", { style: { display:"flex", gap:"8px" } },
+                  React.createElement(Btn, { small:true, danger:true, onClick:()=>deleteInvoice(inv.id) }, "Yes, Delete"),
+                  React.createElement(Btn, { small:true, onClick:()=>setConfirmDelete(null) }, "Cancel")
+                )
+              ),
+
+              React.createElement("div", { className:"bv-detail-grid", style: { display:"grid", gridTemplateColumns:"1fr 1fr", gap:"20px", marginBottom:"20px" } },
+                /* Financial summary */
+                React.createElement("div", { style: { padding:"22px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px" } },
+                  React.createElement("div", { style: { fontSize:"0.6rem", letterSpacing:"0.25em", textTransform:"uppercase", color:"var(--accent)", marginBottom:"14px" } }, "Financial Summary"),
+                  [
+                    ["Session Total", fmtMoney(inv.total)],
+                    ["Deposit Required", fmtMoney(inv.deposit)],
+                    ["Total Paid", fmtMoney(totalPaid)],
+                    ["Remaining", fmtMoney(remaining)],
+                  ].map(function(row, i) {
+                    return React.createElement("div", { key:i, style: { display:"flex", justifyContent:"space-between", padding:"7px 0", borderBottom: i<3 ? "1px solid var(--border)" : "none", fontSize:"0.82rem" } },
+                      React.createElement("span", { style: { color:"var(--text-light)", fontWeight:300 } }, row[0]),
+                      React.createElement("span", { style: { fontFamily:"var(--font-display)", fontWeight: i===3 ? 500 : 400, color: i===3 && remaining > 0 ? "var(--warning)" : "var(--text)" } }, row[1])
+                    );
+                  })
+                ),
+                /* Details & status */
+                React.createElement("div", { style: { padding:"22px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px" } },
+                  React.createElement("div", { style: { fontSize:"0.6rem", letterSpacing:"0.25em", textTransform:"uppercase", color:"var(--accent)", marginBottom:"14px" } }, "Details"),
+                  React.createElement("div", { style: { fontSize:"0.82rem", lineHeight:2, color:"var(--text-light)", fontWeight:300 } },
+                    inv.clientEmail && React.createElement("div", null, "\u2709 " + inv.clientEmail),
+                    inv.clientPhone && React.createElement("div", null, "\u260E " + inv.clientPhone),
+                    inv.location && React.createElement("div", null, "\u25CE " + inv.location),
+                    inv.notes && React.createElement("div", { style: { marginTop:"8px", padding:"10px 12px", background:"var(--bg-warm)", borderRadius:"3px", fontSize:"0.8rem", lineHeight:1.7 } }, inv.notes)
+                  ),
+                  React.createElement("div", { className:"bv-no-print", style: { marginTop:"14px" } },
+                    React.createElement(Select, { label:"Update Status", value:inv.status, onChange:e=>updateStatus(inv.id, e.target.value) },
+                      Object.entries(STATUS_CONFIG).map(function(entry) { return React.createElement("option", { key:entry[0], value:entry[0] }, entry[1].label); })
+                    )
+                  )
+                )
+              ),
+
+              /* Record payment */
+              React.createElement("div", { className:"bv-no-print" },
+                React.createElement(RecordPayment, { inv:inv, onAdd:function(p){ addPayment(inv.id, p); setViewInv({...inv}); } })
+              ),
+
+              /* Payment history */
+              (inv.payments || []).length > 0 && React.createElement("div", { style: { marginTop:"18px", padding:"22px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px" } },
+                React.createElement("div", { style: { fontSize:"0.6rem", letterSpacing:"0.25em", textTransform:"uppercase", color:"var(--accent)", marginBottom:"12px" } }, "Payment History"),
+                (inv.payments || []).map(function(p, i) {
+                  return React.createElement("div", { key:i, style: { display:"flex", justifyContent:"space-between", alignItems:"center", padding:"9px 0", borderBottom: i < inv.payments.length-1 ? "1px solid var(--border)" : "none", fontSize:"0.8rem" } },
+                    React.createElement("div", { style: { display:"flex", alignItems:"center", gap:"10px" } },
+                      React.createElement("span", null, PAYMENTS[p.method] ? PAYMENTS[p.method].icon : "\uD83D\uDCB0"),
+                      React.createElement("span", { style: { fontWeight:400 } }, PAYMENTS[p.method] ? PAYMENTS[p.method].label : p.method),
+                      React.createElement("span", { style: { color:"var(--muted)", fontWeight:300 } }, fmtDate(p.date))
+                    ),
+                    React.createElement("span", { style: { fontFamily:"var(--font-display)", color:"var(--success)" } }, fmtMoney(p.amount))
+                  );
+                })
+              ),
+
+              /* Message center */
+              React.createElement("div", { className:"bv-no-print", style: { marginTop:"18px", padding:"22px", background:"var(--card)", border:"1px solid var(--border)", borderRadius:"3px" } },
+                React.createElement("div", { style: { fontSize:"0.6rem", letterSpacing:"0.25em", textTransform:"uppercase", color:"var(--accent)", marginBottom:"14px" } }, "Message Center"),
+                React.createElement("p", { style: { fontSize:"0.78rem", color:"var(--muted)", fontWeight:300, marginBottom:"14px" } }, "Pre-written messages to send via text or email. Tap to preview, copy, and send."),
+                React.createElement("div", { className:"bv-msg-buttons", style: { display:"flex", gap:"8px", flexWrap:"wrap" } },
+                  Object.entries(messages).map(function(entry) {
+                    var key = entry[0]; var msg = entry[1];
+                    return React.createElement(Btn, { small:true, key:key, primary: msgPanel === key, onClick:function(){ setMsgPanel(msgPanel === key ? null : key); } }, msg.label);
+                  })
+                ),
+                msgPanel && messages[msgPanel] && React.createElement(MessagePanel, { msg: Object.assign({}, messages[msgPanel], { toEmail: inv.clientEmail }), onToast: showToast })
+              )
+            );
+          })()
+        )
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+  </script>
+</body>
+</html>
