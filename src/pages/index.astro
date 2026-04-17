@@ -1,0 +1,322 @@
+---
+/**
+ * Main page — bellavitabyrebecca.com
+ * 
+ * ARCHITECTURE:
+ * 1. Astro renders full SEO content as static HTML (readable by Google on first crawl)
+ * 2. React app loads client-only and provides full interactivity
+ * 3. Once React mounts, the static SEO content is hidden
+ * 
+ * This solves the "You need to enable JavaScript" problem while preserving
+ * 100% of the existing site functionality.
+ */
+import BellaVitaApp from '../components/app/BellaVitaApp.jsx';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KB931CMST"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6KB931CMST');
+  </script>
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="tnZcRvKnVNDFIVnIKMFWpzCGTw9RnsDFe2a00GHLT5M" />
+
+  <title>bella vita photography | Senior Portraits and Family Sessions | Michigan</title>
+  <meta name="description" content="Natural light portrait photography for seniors and families in Livingston and Oakland County, Michigan. Capturing life's beautiful moments since 2009. Book your session with Rebecca today." />
+  <meta name="keywords" content="senior portraits Michigan, family photographer Howell MI, natural light photography, Livingston County photographer, Oakland County photographer, Brighton Michigan photographer, senior pictures, family photos Michigan, bella vita photography" />
+  <meta name="author" content="Rebecca Henson, bella vita photography" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bellavitabyrebecca.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="bella vita photography" />
+  <meta property="og:title" content="bella vita photography | Senior Portraits and Family Sessions" />
+  <meta property="og:description" content="Natural light portrait photography for seniors and families in Michigan. Capturing life's beautiful moments since 2009." />
+  <meta property="og:url" content="https://bellavitabyrebecca.com/" />
+  <meta property="og:image" content="https://bellavitabyrebecca.com/og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="bella vita photography | Michigan" />
+  <meta name="twitter:description" content="Natural light senior portraits and family sessions in Livingston and Oakland County. Est. 2009." />
+  <meta name="twitter:image" content="https://bellavitabyrebecca.com/og-preview.png" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Bella Vita" />
+  <meta name="theme-color" content="#FCFAF6" />
+
+  <meta name="geo.region" content="US-MI" />
+  <meta name="geo.placename" content="Howell, Michigan" />
+  <meta name="geo.position" content="42.6073;-83.9294" />
+  <meta name="ICBM" content="42.6073, -83.9294" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap" />
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "Photographer"],
+    "@id": "https://bellavitabyrebecca.com",
+    "name": "bella vita photography",
+    "description": "Natural light portrait photography for seniors and families in Livingston and Oakland County, Michigan. Owned by Rebecca Henson, est. 2009.",
+    "url": "https://bellavitabyrebecca.com",
+    "email": "bellavitabyrebecca@gmail.com",
+    "image": "https://bellavitabyrebecca.com/og-preview.png",
+    "logo": "https://bellavitabyrebecca.com/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Howell",
+      "addressRegion": "MI",
+      "postalCode": "48843",
+      "addressCountry": "US"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 42.6073, "longitude": -83.9294 },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Livingston County, Michigan" },
+      { "@type": "AdministrativeArea", "name": "Oakland County, Michigan" },
+      { "@type": "City", "name": "Howell, Michigan" },
+      { "@type": "City", "name": "Brighton, Michigan" },
+      { "@type": "City", "name": "Hartland, Michigan" },
+      { "@type": "City", "name": "Fenton, Michigan" },
+      { "@type": "City", "name": "Milford, Michigan" },
+      { "@type": "City", "name": "Highland, Michigan" },
+      { "@type": "City", "name": "Pinckney, Michigan" },
+      { "@type": "City", "name": "Fowlerville, Michigan" }
+    ],
+    "priceRange": "$175 - $3500",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00", "closes": "19:00"
+    },
+    "founder": { "@type": "Person", "name": "Rebecca Henson", "jobTitle": "Photographer and Owner" },
+    "foundingDate": "2009",
+    "sameAs": [
+      "https://www.instagram.com/bellavitabyrebecca/",
+      "https://www.facebook.com/bellavitaphotography2"
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "27", "bestRating": "5" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Photography Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Senior Portraits", "description": "On-location senior portrait session with up to 3 outfit changes and 25+ digital images" }, "price": "600", "priceCurrency": "USD" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family Sessions", "description": "Natural light family session on location with 25+ digital images" }, "price": "300", "priceCurrency": "USD" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Senior Mini Session", "description": "45-minute mini session with 15 digital images" }, "price": "350", "priceCurrency": "USD" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family Mini Session", "description": "30-minute mini session with 10 digital images" }, "price": "175", "priceCurrency": "USD" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wedding Photography - Silver", "description": "6 hours of wedding day coverage" }, "price": "1200", "priceCurrency": "USD" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wedding Photography - Gold", "description": "Engagement session plus 8 hours of wedding day coverage" }, "price": "2500", "priceCurrency": "USD" }
+      ]
+    }
+  })} />
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How far in advance should I book?", "acceptedAnswer": { "@type": "Answer", "text": "For senior portraits, 3-6 months ahead is ideal. Family sessions usually book 1-3 months out. Mini sessions sell out within days due to limited spots. Follow on Facebook and Instagram @bellavitabyrebecca for first dibs." }},
+      { "@type": "Question", "name": "How many outfit changes can I bring?", "acceptedAnswer": { "@type": "Answer", "text": "Seniors should bring up to 3 outfit changes. For families, one coordinated look usually works. You will receive a detailed style guide with tips once you have booked your session." }},
+      { "@type": "Question", "name": "What happens if it rains?", "acceptedAnswer": { "@type": "Answer", "text": "I'll text you 24 hours before and we'll reschedule at no extra charge. A little overcast? That's actually perfect for photos." }},
+      { "@type": "Question", "name": "Where do sessions take place?", "acceptedAnswer": { "@type": "Answer", "text": "Sessions take place on location throughout Southeast Michigan. I've shot at dozens of locations in Livingston County, Oakland County, and beyond, and I'm always up for new places if you have a specific location in mind." }},
+      { "@type": "Question", "name": "When will I receive my photos?", "acceptedAnswer": { "@type": "Answer", "text": "You'll receive a link to your private gallery along with a print release within 2-3 weeks. You can view, download, and share the link with family and friends." }}
+    ]
+  })} />
+
+  <!-- SiteNavigationElement Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": ["Portfolio", "About", "Services", "Products", "FAQ", "Contact", "Blog"],
+    "url": [
+      "https://bellavitabyrebecca.com/#portfolio",
+      "https://bellavitabyrebecca.com/#about",
+      "https://bellavitabyrebecca.com/#services",
+      "https://bellavitabyrebecca.com/#products",
+      "https://bellavitabyrebecca.com/#faq",
+      "https://bellavitabyrebecca.com/#contact",
+      "https://bellavitabyrebecca.com/blog.html"
+    ]
+  })} />
+
+  <style is:inline>
+    /* Hide SEO content once React app has loaded */
+    #seo-content { font-family: 'Outfit', system-ui, sans-serif; color: #2E2A25; line-height: 1.85; max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+    #seo-content h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 2.5rem; font-weight: 400; margin-bottom: 16px; }
+    #seo-content h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; font-weight: 400; margin: 32px 0 12px; }
+    #seo-content h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; font-weight: 500; margin: 20px 0 8px; }
+    #seo-content p { font-size: 0.92rem; color: #5A554E; margin-bottom: 12px; font-weight: 300; }
+    #seo-content a { color: #AC415F; }
+    #seo-content .seo-services { margin: 24px 0; }
+    #seo-content .seo-faq dt { font-weight: 500; margin-top: 16px; }
+    #seo-content .seo-faq dd { margin-left: 0; color: #5A554E; }
+    .app-loaded #seo-content { display: none; }
+  </style>
+</head>
+<body style="margin:0;padding:0;background:#FCFAF6;">
+  <!-- React App — loads client-side, provides full interactive experience -->
+  <div id="react-app">
+    <BellaVitaApp client:only="react" />
+  </div>
+
+  <!-- 
+    SEO CONTENT — Static HTML for Google's first-pass crawler.
+    This contains all the text content from the site in semantic HTML.
+    Hidden once React mounts (see script below).
+  -->
+  <div id="seo-content">
+    <header>
+      <h1>bella vita photography — Your Story is Worth Telling</h1>
+      <p>I'm Rebecca, a Michigan mom and natural light photographer, specializing in family and high school senior sessions. I am passionate about photography and absolutely love capturing special moments for my clients.</p>
+      <p>Natural light portrait photography for seniors and families in Livingston and Oakland County, Michigan. Capturing life's beautiful moments since 2009. Book your session today.</p>
+    </header>
+
+    <section>
+      <h2>About Rebecca</h2>
+      <p>bella vita was born in 2009 with a camera, a marketing degree and a passion for photography. Over fifteen years later, I still get butterflies before every single session.</p>
+      <p>I'm a natural light, on location photographer. There's something magical about Michigan seasons — the way the flowers bloom in the spring and the trees change colors in the fall.</p>
+      <p>Every session is designed around YOU — your style, your personality, your family's energy. I want you to look at these photos in twenty years and feel everything all over again.</p>
+    </section>
+
+    <section>
+      <h2>How It Works</h2>
+      <h3>Step 1: Let's Chat</h3>
+      <p>Fill out the contact form or email me. I'll reply within 24 hours with availability and ideas. No pressure — just a conversation.</p>
+      <h3>Step 2: The Session</h3>
+      <p>We'll choose a beautiful location, you show up and be yourselves. I'll guide you through it and capture every real moment.</p>
+      <h3>Step 3: Your Gallery</h3>
+      <p>Within 2–3 weeks you'll receive a private online gallery and print release. You can download and share — all from the comfort of your own home. Products such as canvas gallery wraps, acrylic and metals, even prints are also available.</p>
+    </section>
+
+    <section class="seo-services">
+      <h2>Photography Services &amp; Collections</h2>
+      
+      <h3>Senior Sessions</h3>
+      <p>All senior collections include a private online gallery for sharing and download and print release.</p>
+      <p><strong>Senior Mini Session — $350:</strong> 45 minutes. 1 location. 15 digital images — fast, fun, and affordable.</p>
+      <p><strong>Senior Full Session — $600:</strong> The ultimate senior experience — 2 hours. 1 location. 25+ digital images. $20 product credit.</p>
+      <p><strong>Senior Split Session — $700:</strong> Same full session split across two dates — perfect for seasonal variety. 2 sessions. 2 dates. 50+ digital images. $30 product credit.</p>
+      <p><strong>Senior DUO Session — $700:</strong> Two seniors, one epic session. Individual and duo shots included. 2 hours. 1 location. 25+ digital images each. $20 product credit each.</p>
+
+      <h3>Family Sessions</h3>
+      <p>All family collections include a private online gallery for sharing and download and print release.</p>
+      <p><strong>Family Mini Session — $175:</strong> Perfect for holiday cards or just because. 30 minutes. 1 location. 10 digital images.</p>
+      <p><strong>Family Full Session — $300:</strong> Bring the family and let's have some fun! 1 hour. 1 location. 25+ digital images. $20 product credit.</p>
+      <p><strong>Milestone Sessions — $300:</strong> Maternity, engagements, birthdays. 1 hour. 1 location. 25+ digital images. $20 product credit.</p>
+
+      <h3>Weddings</h3>
+      <p><strong>Silver — $1,200:</strong> 6 hours of coverage on your wedding day.</p>
+      <p><strong>Gold — $2,500:</strong> Engagement session. 8 hours of coverage. $50 product credit.</p>
+      <p><strong>Platinum — $3,500:</strong> Engagement session. Full day coverage. Second photographer. $100 product credit.</p>
+      <p><strong>The Signing — $150:</strong> Micro wedding. 20 minutes. The ceremony, the signing, the first kiss. 15+ digital images.</p>
+      <p><strong>The Moment — $300:</strong> Micro wedding. Ceremony plus portraits and group photos. 30+ digital images.</p>
+    </section>
+
+    <section>
+      <h2>Products</h2>
+      <p>Gallery Wraps — High quality, rich, textured canvas products that are fade resistant and ready to hang.</p>
+      <p>Acrylics — Crafted premium plexiglass showcasing vivid and modern design.</p>
+      <p>Metals — Sleek and modern aluminum products that are fade and scratch resistant.</p>
+      <p>Albums — Personalized photobooks to luxurious Heirloom albums.</p>
+      <p>Grad Gear — Announcements, invites, banners and thank you cards.</p>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      <dl class="seo-faq">
+        <dt>How far in advance should I book?</dt>
+        <dd>For senior portraits, 3–6 months ahead is ideal. Family sessions usually book 1–3 months out. Mini sessions sell out within days of advertising due to limited spots.</dd>
+        <dt>How many outfit changes can I bring?</dt>
+        <dd>Seniors should bring up to 3 outfit changes. For families, one coordinated look usually works. You will receive a detailed style guide once you have booked.</dd>
+        <dt>What happens if it rains?</dt>
+        <dd>I'll text you 24 hours before and we'll reschedule — no extra charge. A little overcast? That's perfect for photos.</dd>
+        <dt>Where do sessions take place?</dt>
+        <dd>On location throughout Southeast Michigan. I've shot at dozens of locations in Livingston County, Oakland County, and beyond.</dd>
+        <dt>When will I receive my photos?</dt>
+        <dd>Within 2–3 weeks you'll receive a link to your private gallery along with a print release.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>What Clients Are Saying</h2>
+      <p>"Rebecca is the kind of person who remembers your kids' names, asks about your dog, and somehow captures your family in a way that makes you think 'oh wow, we actually look like THAT.'" — The Martinez Family, Brighton</p>
+      <p>"My daughter told me she'd hate the whole thing. She ended up not wanting to leave. Rebecca played her favorite music, hyped her up the whole time, and made her feel like a literal supermodel." — Jennifer, Senior Portrait Session</p>
+      <p>"We've been going back to Rebecca every year since 2017. She's basically part of our family at this point." — The Thompsons, Howell</p>
+      <p>"If you're on the fence — just book her. My daughter came home glowing. The photos are unreal." — Sarah M.</p>
+    </section>
+
+    <section>
+      <h2>Now Booking: Class of 2027 Seniors</h2>
+      <p>Senior and family session slots are limited. Contact Rebecca to reserve your date.</p>
+      <p>Email: <a href="mailto:bellavitabyrebecca@gmail.com">bellavitabyrebecca@gmail.com</a></p>
+    </section>
+
+    <section>
+      <h2>Blog — Photography Tips &amp; Inspiration</h2>
+      <p>Visit the <a href="/blog.html">bella vita blog</a> for tips, style guides, and location inspiration:</p>
+      <ul>
+        <li><a href="/blog-senior-photos.html">15 Best Senior Photo Locations in Livingston &amp; Oakland County</a></li>
+        <li><a href="/blog-what-to-wear.html">What to Wear for Senior Photos — A Complete Style Guide</a></li>
+        <li><a href="/blog-prepare-family.html">How to Prepare Your Family for a Photo Session</a></li>
+        <li><a href="/blog-when-to-book.html">When to Book Senior Photos in Michigan — A Complete Timeline</a></li>
+        <li><a href="/blog-best-time-family-photos.html">Best Time of Year for Family Photos in Michigan</a></li>
+        <li><a href="/blog-fall-color-guide.html">Michigan Fall Color Guide for Photo Sessions</a></li>
+        <li><a href="/blog-micro-weddings.html">Micro Weddings &amp; Elopement Photography in Michigan</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Serving Michigan Families</h2>
+      <p>bella vita photography serves families and seniors throughout Livingston County, Oakland County, and surrounding areas including Howell, Brighton, Hartland, Fenton, Fowlerville, Pinckney, Highland, Milford, and beyond.</p>
+      <nav>
+        <a href="/senior-portraits-howell-mi/">Senior Portraits in Howell, MI</a> |
+        <a href="/senior-portraits-brighton-mi/">Senior Portraits in Brighton, MI</a> |
+        <a href="/family-photographer-brighton-mi/">Family Photographer in Brighton, MI</a> |
+        <a href="/family-photographer-livingston-county-mi/">Family Photographer in Livingston County</a>
+      </nav>
+    </section>
+
+    <footer>
+      <p>bella vita photography — Natural light portrait photography for seniors and families in Michigan. Est. 2009.</p>
+      <p>&copy; 2026 bella vita photography. All rights reserved.</p>
+      <p><a href="https://www.instagram.com/bellavitabyrebecca/">Instagram</a> | <a href="https://www.facebook.com/bellavitaphotography2">Facebook</a> | <a href="mailto:bellavitabyrebecca@gmail.com">Email</a></p>
+    </footer>
+  </div>
+
+  <!-- Hide SEO content once React has mounted -->
+  <script is:inline>
+    // Check periodically if React has rendered content
+    (function() {
+      var check = setInterval(function() {
+        var app = document.getElementById('react-app');
+        if (app && app.querySelector('[class]')) {
+          document.body.classList.add('app-loaded');
+          clearInterval(check);
+        }
+      }, 100);
+      // Failsafe: hide after 5 seconds regardless
+      setTimeout(function() {
+        document.body.classList.add('app-loaded');
+        clearInterval(check);
+      }, 5000);
+    })();
+  </script>
+</body>
+</html>

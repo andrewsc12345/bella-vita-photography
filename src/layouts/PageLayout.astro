@@ -1,0 +1,215 @@
+---
+/**
+ * PageLayout.astro — Layout for static pages (location pages, etc.)
+ * Matches the bella vita brand styling without needing the full React app.
+ */
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+}
+
+const { title, description, canonical } = Astro.props;
+const siteUrl = 'https://bellavitabyrebecca.com';
+const canonicalUrl = canonical || (siteUrl + Astro.url.pathname);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="author" content="Rebecca Henson, bella vita photography" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={canonicalUrl} />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="bella vita photography" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={siteUrl + "/og-preview.png"} />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <meta name="geo.region" content="US-MI" />
+  <meta name="geo.placename" content="Howell, Michigan" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KB931CMST"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6KB931CMST');
+  </script>
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "Photographer"],
+    "name": "bella vita photography",
+    "url": siteUrl,
+    "email": "bellavitabyrebecca@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Howell", "addressRegion": "MI", "postalCode": "48843", "addressCountry": "US" },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Livingston County, Michigan" },
+      { "@type": "AdministrativeArea", "name": "Oakland County, Michigan" }
+    ],
+    "priceRange": "$175 - $3500",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "27", "bestRating": "5" }
+  })} />
+
+  <style>
+    :root {
+      --bg: #FCFAF6;
+      --bg-warm: #F7F3ED;
+      --text: #2E2A25;
+      --text-light: #5A554E;
+      --muted: #736D65;
+      --accent: #AC415F;
+      --accent-light: #C4567A;
+      --accent-hover: #8C3049;
+      --border: #E8E2D8;
+      --border-light: #F0ECE4;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Outfit', system-ui, sans-serif;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.85; font-weight: 300; }
+    ::selection { background: rgba(172,65,95,0.2); }
+
+    .page-nav {
+      position: sticky; top: 0; z-index: 100;
+      padding: 18px 48px;
+      background: rgba(252,250,246,0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .page-nav-logo {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 500;
+      letter-spacing: 0.04em; text-decoration: none; color: var(--text);
+    }
+    .page-nav-logo .a { color: var(--accent); }
+    .page-nav-back {
+      font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--accent); text-decoration: none;
+    }
+
+    .page-content {
+      max-width: 800px; margin: 0 auto; padding: 60px 24px 80px;
+    }
+    .page-content h1 {
+      font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 400; margin-bottom: 24px; line-height: 1.2;
+    }
+    .page-content h1 em { font-style: italic; color: var(--accent); }
+    .page-content h2 {
+      font-family: var(--font-display); font-size: 1.5rem;
+      font-weight: 400; margin: 40px 0 16px; line-height: 1.3;
+    }
+    .page-content h3 {
+      font-family: var(--font-display); font-size: 1.15rem;
+      font-weight: 500; margin: 28px 0 10px;
+    }
+    .page-content p {
+      font-size: 0.92rem; color: var(--text-light); margin-bottom: 16px;
+      max-width: 65ch; line-height: 1.85;
+    }
+    .page-content strong { font-weight: 500; color: var(--text); }
+    .page-content a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-light); }
+    .page-content a:hover { color: var(--accent-hover); }
+
+    .page-cta {
+      margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-block; padding: 14px 40px;
+      background: var(--accent); color: #fff;
+      font-family: var(--font-body); font-size: 0.72rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      border: none; border-radius: 3px; text-decoration: none;
+      transition: all 0.35s ease; cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); color: #fff; border: none; }
+    .btn-outline {
+      display: inline-block; padding: 14px 40px;
+      border: 1px solid var(--accent); color: var(--accent);
+      background: transparent; font-family: var(--font-body);
+      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+      border-radius: 3px; text-decoration: none; transition: all 0.35s ease;
+    }
+    .btn-outline:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    .page-locations {
+      margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border-light);
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .page-locations a { font-size: 0.85rem; margin: 0 4px; }
+
+    .page-footer {
+      padding: 32px 48px; border-top: 1px solid var(--border);
+      background: var(--bg-warm); text-align: center;
+    }
+    .page-footer-logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 500; margin-bottom: 8px; }
+    .page-footer-logo .a { color: var(--accent); }
+    .page-footer p { font-size: 0.78rem; color: var(--muted); }
+    .page-footer a { color: var(--accent); text-decoration: none; }
+
+    .testimonial-block {
+      margin: 32px 0; padding: 24px 28px;
+      background: var(--bg-warm); border-left: 3px solid var(--accent-light);
+      border-radius: 0 3px 3px 0;
+    }
+    .testimonial-block p { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: var(--text); }
+    .testimonial-block cite { display: block; margin-top: 10px; font-size: 0.75rem; font-style: normal; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; }
+
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 12px; margin: 24px 0;
+    }
+    .gallery-grid img {
+      width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 3px;
+      transition: transform 0.4s ease;
+    }
+    .gallery-grid img:hover { transform: scale(1.02); }
+
+    @media (max-width: 768px) {
+      .page-nav { padding: 16px 20px; }
+      .page-content { padding: 40px 20px 60px; }
+      .page-footer { padding: 28px 20px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="page-nav" aria-label="Page navigation">
+    <a href="/" class="page-nav-logo"><span class="a">b</span>ella <span class="a">v</span>ita</a>
+    <a href="/" class="page-nav-back">&larr; Back to Site</a>
+  </nav>
+
+  <main class="page-content">
+    <slot />
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer-logo"><span class="a">b</span>ella <span class="a">v</span>ita</div>
+    <p>Natural light portrait photography &middot; Howell, Michigan &middot; Est. 2009</p>
+    <p style="margin-top:8px;"><a href="/">Home</a> &middot; <a href="/blog.html">Blog</a> &middot; <a href="https://www.instagram.com/bellavitabyrebecca/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="mailto:bellavitabyrebecca@gmail.com">Email</a></p>
+    <p style="margin-top:16px;font-size:0.65rem;opacity:0.6;">&copy; {new Date().getFullYear()} bella vita photography. All rights reserved.</p>
+  </footer>
+</body>
+</html>
