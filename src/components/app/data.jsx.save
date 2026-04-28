@@ -1,4 +1,5 @@
-/* Data and content for bella vita photography */
+x
+x/* Data and content for bella vita photography */
 /* ═══════════════════════════════════════════════════════════════════════
    EDITABLE CONTENT — Rebecca, change any text below!
    To edit: Go to GitHub → src/App.jsx → pencil icon → find this section
@@ -130,9 +131,6 @@ export const PORTFOLIO = [
   { id: 122, src: "/22.jpg", full: "/22.jpg", title: "Sunflower", category: "Seniors", aspect: "portrait" },
   { id: 123, src: "/23.JPG", full: "/23.JPG", title: "Volleyball", category: "Seniors", aspect: "landscape" },
   { id: 124, src: "/24.JPG", full: "/24.JPG", title: "Reflection", category: "Seniors", aspect: "portrait" },
-  { id: 125, src: "/IMG_13.jpg", full: "/IMG_13.jpg", title: "Beach Golden Hour", category: "Seniors", aspect: "portrait" },
-  { id: 126, src: "/IMG_6520.jpg", full: "/IMG_6520.jpg", title: "Wildflower Field", category: "Seniors", aspect: "landscape" },
-  { id: 127, src: "/IMG_6730.jpg", full: "/IMG_6730.jpg", title: "Sunset Portrait", category: "Seniors", aspect: "portrait" },
   { id: 200, src: "/f1.JPG", full: "/f1.JPG", title: "Barn Family", category: "Families", aspect: "landscape" },
   { id: 201, src: "/f2.JPG", full: "/f2.JPG", title: "Sisters", category: "Families", aspect: "landscape" },
   { id: 202, src: "/f3.JPG", full: "/f3.JPG", title: "Stripes & Smiles", category: "Families", aspect: "landscape" },
