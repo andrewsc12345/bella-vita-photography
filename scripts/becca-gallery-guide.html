@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Bella Vita Photography — Client Gallery Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Lora:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #fcfaf6;
+    --paper: #ffffff;
+    --text: #2E2A25;
+    --muted: #736D65;
+    --accent: #5a6b4e;
+    --gold: #b8915a;
+    --border: #E8E2D8;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 40px 20px; background: var(--bg); color: var(--text); font-family: 'Lora', Georgia, serif; font-size: 14px; line-height: 1.65; }
+  .page { max-width: 760px; margin: 0 auto; background: var(--paper); padding: 56px 60px; border: 1px solid var(--border); box-shadow: 0 2px 20px rgba(0,0,0,0.04); }
+  header { text-align: center; padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { font-family: 'Playfair Display', Georgia, serif; font-size: 2.2rem; font-weight: 400; letter-spacing: 0.02em; margin: 0; }
+  .brand .a { color: var(--accent); }
+  .subtitle { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-top: 8px; }
+  .for-rebecca { font-style: italic; color: var(--muted); font-size: 0.85rem; margin-top: 12px; }
+  h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.05rem; font-weight: 500; color: var(--accent); letter-spacing: 0.08em; margin: 28px 0 14px; text-transform: uppercase; }
+  h2 .num { display: inline-block; width: 26px; height: 26px; border: 1px solid var(--accent); border-radius: 50%; text-align: center; line-height: 24px; font-size: 0.8rem; margin-right: 10px; color: var(--accent); font-weight: 400; }
+  ol { padding-left: 0; list-style: none; counter-reset: step; margin: 0; }
+  ol li { counter-increment: step; padding: 9px 0 9px 36px; position: relative; border-bottom: 1px dashed var(--border); }
+  ol li:last-child { border-bottom: none; }
+  ol li::before { content: counter(step); position: absolute; left: 0; top: 9px; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: white; text-align: center; line-height: 24px; font-size: 0.75rem; font-family: 'Lora', Georgia, serif; }
+  .warning { background: #fdf6e9; border: 1px solid #d9b97a; border-left: 4px solid #b8915a; padding: 14px 18px; margin: 14px 0 18px; font-size: 0.9rem; }
+  .warning strong { color: #8a6228; }
+  .url { font-family: 'Playfair Display', Georgia, serif; color: var(--accent); letter-spacing: 0.03em; }
+  .footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--border); text-align: center; font-size: 0.8rem; color: var(--muted); }
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; border: none; padding: 30px 40px; max-width: none; }
+    @page { margin: 0.4in; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1 class="brand"><span class="a">b</span>ella <span class="a">v</span>ita photography</h1>
+      <div class="subtitle">Client Gallery Guide</div>
+      <div class="for-rebecca">— for Rebecca —</div>
+    </header>
+
+    <h2><span class="num">1</span>To publish a new gallery</h2>
+    <ol>
+      <li><strong>Export from Lightroom.</strong> Select your finished photos. File → Export with your standard web preset (JPEG, ~2000px long edge, watermark on). Export to a folder — Desktop works fine.</li>
+      <li><strong>Double-click "Publish Gallery"</strong> on your desktop.</li>
+      <li><strong>Pick the folder</strong> you just exported.</li>
+      <li><strong>Type the client's name</strong> — e.g., "Smith Family" or "Presley Johnson". This shows on the gallery card.</li>
+      <li><strong>Set a password.</strong> Keep it simple and lowercase. Clients will need to type it.</li>
+      <li><strong>Pick the session type</strong> from the dropdown.</li>
+      <li><strong>Review and click Publish.</strong> Wait about 2 minutes. A "Gallery published" message confirms when it's done.</li>
+      <li><strong>Share the password</strong> with your client and point them to <span class="url">bellavitabyrebecca.com</span> → Client Gallery → their session.</li>
+    </ol>
+
+    <h2><span class="num">2</span>To delete an old gallery</h2>
+    <div class="warning">
+      <strong>Important:</strong> Deleting permanently removes the gallery from your website. Your original photos in Lightroom are safe — but the published version is gone until republished. Only delete when you're sure.
+    </div>
+    <ol>
+      <li><strong>Double-click "Delete Gallery"</strong> on your desktop.</li>
+      <li><strong>Pick the gallery</strong> from the dropdown.</li>
+      <li><strong>Read the confirmation</strong> and click Delete to confirm.</li>
+    </ol>
+
+    <h2><span class="num">3</span>If something goes wrong</h2>
+    <ol>
+      <li><strong>Don't try to fix it yourself.</strong> Take a screenshot of any error message that appears (Cmd+Shift+4, drag a box around the error).</li>
+      <li><strong>Text Chris</strong> with the screenshot and what you were doing. He can fix anything within a few minutes, no matter what.</li>
+    </ol>
+
+    <div class="footer">
+      Galleries live at <span class="url">bellavitabyrebecca.com</span> → Client Gallery<br />
+      This guide is saved at <span class="url">~/Documents/Bella Vita Gallery Guide.html</span><br /><br />
+      <em>You've got this.</em>
+    </div>
+  </div>
+</body>
+</html>
