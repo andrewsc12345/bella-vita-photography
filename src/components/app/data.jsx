@@ -470,6 +470,226 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Presley 42"
       }
     ]
+  },
+  {
+    "id": "test-gallery",
+    "clientName": "test gallery",
+    "password": "test",
+    "sessionType": "Headshots",
+    "date": "2026-05-12",
+    "coverImage": "/clients/test-gallery/IMG_6488.jpg",
+    "images": [
+      {
+        "src": "/clients/test-gallery/IMG_6488.jpg",
+        "full": "/clients/test-gallery/IMG_6488.jpg",
+        "title": "test gallery 01"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6521.jpg",
+        "full": "/clients/test-gallery/IMG_6521.jpg",
+        "title": "test gallery 02"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6526.jpg",
+        "full": "/clients/test-gallery/IMG_6526.jpg",
+        "title": "test gallery 03"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6528.jpg",
+        "full": "/clients/test-gallery/IMG_6528.jpg",
+        "title": "test gallery 04"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6535.jpg",
+        "full": "/clients/test-gallery/IMG_6535.jpg",
+        "title": "test gallery 05"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6539.jpg",
+        "full": "/clients/test-gallery/IMG_6539.jpg",
+        "title": "test gallery 06"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6540.jpg",
+        "full": "/clients/test-gallery/IMG_6540.jpg",
+        "title": "test gallery 07"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6542.jpg",
+        "full": "/clients/test-gallery/IMG_6542.jpg",
+        "title": "test gallery 08"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6547.jpg",
+        "full": "/clients/test-gallery/IMG_6547.jpg",
+        "title": "test gallery 09"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6548.jpg",
+        "full": "/clients/test-gallery/IMG_6548.jpg",
+        "title": "test gallery 10"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6551.jpg",
+        "full": "/clients/test-gallery/IMG_6551.jpg",
+        "title": "test gallery 11"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6555.jpg",
+        "full": "/clients/test-gallery/IMG_6555.jpg",
+        "title": "test gallery 12"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6557.jpg",
+        "full": "/clients/test-gallery/IMG_6557.jpg",
+        "title": "test gallery 13"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6569.jpg",
+        "full": "/clients/test-gallery/IMG_6569.jpg",
+        "title": "test gallery 14"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6570.jpg",
+        "full": "/clients/test-gallery/IMG_6570.jpg",
+        "title": "test gallery 15"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6572.jpg",
+        "full": "/clients/test-gallery/IMG_6572.jpg",
+        "title": "test gallery 16"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6584.jpg",
+        "full": "/clients/test-gallery/IMG_6584.jpg",
+        "title": "test gallery 17"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6600.jpg",
+        "full": "/clients/test-gallery/IMG_6600.jpg",
+        "title": "test gallery 18"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6603.jpg",
+        "full": "/clients/test-gallery/IMG_6603.jpg",
+        "title": "test gallery 19"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6609.jpg",
+        "full": "/clients/test-gallery/IMG_6609.jpg",
+        "title": "test gallery 20"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6620.jpg",
+        "full": "/clients/test-gallery/IMG_6620.jpg",
+        "title": "test gallery 21"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6621.jpg",
+        "full": "/clients/test-gallery/IMG_6621.jpg",
+        "title": "test gallery 22"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6665.jpg",
+        "full": "/clients/test-gallery/IMG_6665.jpg",
+        "title": "test gallery 23"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6672.jpg",
+        "full": "/clients/test-gallery/IMG_6672.jpg",
+        "title": "test gallery 24"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6680.jpg",
+        "full": "/clients/test-gallery/IMG_6680.jpg",
+        "title": "test gallery 25"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6681.jpg",
+        "full": "/clients/test-gallery/IMG_6681.jpg",
+        "title": "test gallery 26"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6700.jpg",
+        "full": "/clients/test-gallery/IMG_6700.jpg",
+        "title": "test gallery 27"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6705.jpg",
+        "full": "/clients/test-gallery/IMG_6705.jpg",
+        "title": "test gallery 28"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6725.jpg",
+        "full": "/clients/test-gallery/IMG_6725.jpg",
+        "title": "test gallery 29"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6726.jpg",
+        "full": "/clients/test-gallery/IMG_6726.jpg",
+        "title": "test gallery 30"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6730.jpg",
+        "full": "/clients/test-gallery/IMG_6730.jpg",
+        "title": "test gallery 31"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6735.jpg",
+        "full": "/clients/test-gallery/IMG_6735.jpg",
+        "title": "test gallery 32"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6738.jpg",
+        "full": "/clients/test-gallery/IMG_6738.jpg",
+        "title": "test gallery 33"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6741.jpg",
+        "full": "/clients/test-gallery/IMG_6741.jpg",
+        "title": "test gallery 34"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6747.jpg",
+        "full": "/clients/test-gallery/IMG_6747.jpg",
+        "title": "test gallery 35"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6749.jpg",
+        "full": "/clients/test-gallery/IMG_6749.jpg",
+        "title": "test gallery 36"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6755.jpg",
+        "full": "/clients/test-gallery/IMG_6755.jpg",
+        "title": "test gallery 37"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6760.jpg",
+        "full": "/clients/test-gallery/IMG_6760.jpg",
+        "title": "test gallery 38"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6765.jpg",
+        "full": "/clients/test-gallery/IMG_6765.jpg",
+        "title": "test gallery 39"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6773.jpg",
+        "full": "/clients/test-gallery/IMG_6773.jpg",
+        "title": "test gallery 40"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6778.jpg",
+        "full": "/clients/test-gallery/IMG_6778.jpg",
+        "title": "test gallery 41"
+      },
+      {
+        "src": "/clients/test-gallery/IMG_6783.jpg",
+        "full": "/clients/test-gallery/IMG_6783.jpg",
+        "title": "test gallery 42"
+      }
+    ]
   }
 ];
 
