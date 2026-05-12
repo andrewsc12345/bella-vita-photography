@@ -470,6 +470,226 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Presley 42"
       }
     ]
+  },
+  {
+    "id": "presley1",
+    "clientName": "presley1",
+    "password": "presley",
+    "sessionType": "Senior Portraits",
+    "date": "2026-05-12",
+    "coverImage": "/clients/presley1/IMG_6488.jpg",
+    "images": [
+      {
+        "src": "/clients/presley1/IMG_6488.jpg",
+        "full": "/clients/presley1/IMG_6488.jpg",
+        "title": "presley1 01"
+      },
+      {
+        "src": "/clients/presley1/IMG_6521.jpg",
+        "full": "/clients/presley1/IMG_6521.jpg",
+        "title": "presley1 02"
+      },
+      {
+        "src": "/clients/presley1/IMG_6526.jpg",
+        "full": "/clients/presley1/IMG_6526.jpg",
+        "title": "presley1 03"
+      },
+      {
+        "src": "/clients/presley1/IMG_6528.jpg",
+        "full": "/clients/presley1/IMG_6528.jpg",
+        "title": "presley1 04"
+      },
+      {
+        "src": "/clients/presley1/IMG_6535.jpg",
+        "full": "/clients/presley1/IMG_6535.jpg",
+        "title": "presley1 05"
+      },
+      {
+        "src": "/clients/presley1/IMG_6539.jpg",
+        "full": "/clients/presley1/IMG_6539.jpg",
+        "title": "presley1 06"
+      },
+      {
+        "src": "/clients/presley1/IMG_6540.jpg",
+        "full": "/clients/presley1/IMG_6540.jpg",
+        "title": "presley1 07"
+      },
+      {
+        "src": "/clients/presley1/IMG_6542.jpg",
+        "full": "/clients/presley1/IMG_6542.jpg",
+        "title": "presley1 08"
+      },
+      {
+        "src": "/clients/presley1/IMG_6547.jpg",
+        "full": "/clients/presley1/IMG_6547.jpg",
+        "title": "presley1 09"
+      },
+      {
+        "src": "/clients/presley1/IMG_6548.jpg",
+        "full": "/clients/presley1/IMG_6548.jpg",
+        "title": "presley1 10"
+      },
+      {
+        "src": "/clients/presley1/IMG_6551.jpg",
+        "full": "/clients/presley1/IMG_6551.jpg",
+        "title": "presley1 11"
+      },
+      {
+        "src": "/clients/presley1/IMG_6555.jpg",
+        "full": "/clients/presley1/IMG_6555.jpg",
+        "title": "presley1 12"
+      },
+      {
+        "src": "/clients/presley1/IMG_6557.jpg",
+        "full": "/clients/presley1/IMG_6557.jpg",
+        "title": "presley1 13"
+      },
+      {
+        "src": "/clients/presley1/IMG_6569.jpg",
+        "full": "/clients/presley1/IMG_6569.jpg",
+        "title": "presley1 14"
+      },
+      {
+        "src": "/clients/presley1/IMG_6570.jpg",
+        "full": "/clients/presley1/IMG_6570.jpg",
+        "title": "presley1 15"
+      },
+      {
+        "src": "/clients/presley1/IMG_6572.jpg",
+        "full": "/clients/presley1/IMG_6572.jpg",
+        "title": "presley1 16"
+      },
+      {
+        "src": "/clients/presley1/IMG_6584.jpg",
+        "full": "/clients/presley1/IMG_6584.jpg",
+        "title": "presley1 17"
+      },
+      {
+        "src": "/clients/presley1/IMG_6600.jpg",
+        "full": "/clients/presley1/IMG_6600.jpg",
+        "title": "presley1 18"
+      },
+      {
+        "src": "/clients/presley1/IMG_6603.jpg",
+        "full": "/clients/presley1/IMG_6603.jpg",
+        "title": "presley1 19"
+      },
+      {
+        "src": "/clients/presley1/IMG_6609.jpg",
+        "full": "/clients/presley1/IMG_6609.jpg",
+        "title": "presley1 20"
+      },
+      {
+        "src": "/clients/presley1/IMG_6620.jpg",
+        "full": "/clients/presley1/IMG_6620.jpg",
+        "title": "presley1 21"
+      },
+      {
+        "src": "/clients/presley1/IMG_6621.jpg",
+        "full": "/clients/presley1/IMG_6621.jpg",
+        "title": "presley1 22"
+      },
+      {
+        "src": "/clients/presley1/IMG_6665.jpg",
+        "full": "/clients/presley1/IMG_6665.jpg",
+        "title": "presley1 23"
+      },
+      {
+        "src": "/clients/presley1/IMG_6672.jpg",
+        "full": "/clients/presley1/IMG_6672.jpg",
+        "title": "presley1 24"
+      },
+      {
+        "src": "/clients/presley1/IMG_6680.jpg",
+        "full": "/clients/presley1/IMG_6680.jpg",
+        "title": "presley1 25"
+      },
+      {
+        "src": "/clients/presley1/IMG_6681.jpg",
+        "full": "/clients/presley1/IMG_6681.jpg",
+        "title": "presley1 26"
+      },
+      {
+        "src": "/clients/presley1/IMG_6700.jpg",
+        "full": "/clients/presley1/IMG_6700.jpg",
+        "title": "presley1 27"
+      },
+      {
+        "src": "/clients/presley1/IMG_6705.jpg",
+        "full": "/clients/presley1/IMG_6705.jpg",
+        "title": "presley1 28"
+      },
+      {
+        "src": "/clients/presley1/IMG_6725.jpg",
+        "full": "/clients/presley1/IMG_6725.jpg",
+        "title": "presley1 29"
+      },
+      {
+        "src": "/clients/presley1/IMG_6726.jpg",
+        "full": "/clients/presley1/IMG_6726.jpg",
+        "title": "presley1 30"
+      },
+      {
+        "src": "/clients/presley1/IMG_6730.jpg",
+        "full": "/clients/presley1/IMG_6730.jpg",
+        "title": "presley1 31"
+      },
+      {
+        "src": "/clients/presley1/IMG_6735.jpg",
+        "full": "/clients/presley1/IMG_6735.jpg",
+        "title": "presley1 32"
+      },
+      {
+        "src": "/clients/presley1/IMG_6738.jpg",
+        "full": "/clients/presley1/IMG_6738.jpg",
+        "title": "presley1 33"
+      },
+      {
+        "src": "/clients/presley1/IMG_6741.jpg",
+        "full": "/clients/presley1/IMG_6741.jpg",
+        "title": "presley1 34"
+      },
+      {
+        "src": "/clients/presley1/IMG_6747.jpg",
+        "full": "/clients/presley1/IMG_6747.jpg",
+        "title": "presley1 35"
+      },
+      {
+        "src": "/clients/presley1/IMG_6749.jpg",
+        "full": "/clients/presley1/IMG_6749.jpg",
+        "title": "presley1 36"
+      },
+      {
+        "src": "/clients/presley1/IMG_6755.jpg",
+        "full": "/clients/presley1/IMG_6755.jpg",
+        "title": "presley1 37"
+      },
+      {
+        "src": "/clients/presley1/IMG_6760.jpg",
+        "full": "/clients/presley1/IMG_6760.jpg",
+        "title": "presley1 38"
+      },
+      {
+        "src": "/clients/presley1/IMG_6765.jpg",
+        "full": "/clients/presley1/IMG_6765.jpg",
+        "title": "presley1 39"
+      },
+      {
+        "src": "/clients/presley1/IMG_6773.jpg",
+        "full": "/clients/presley1/IMG_6773.jpg",
+        "title": "presley1 40"
+      },
+      {
+        "src": "/clients/presley1/IMG_6778.jpg",
+        "full": "/clients/presley1/IMG_6778.jpg",
+        "title": "presley1 41"
+      },
+      {
+        "src": "/clients/presley1/IMG_6783.jpg",
+        "full": "/clients/presley1/IMG_6783.jpg",
+        "title": "presley1 42"
+      }
+    ]
   }
 ];
 
