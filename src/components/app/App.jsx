@@ -259,7 +259,7 @@ export default function PhotographyWebsite() {
             lineHeight: 1.08, color: "var(--text)",
             opacity: heroLoaded ? 1 : 0, transform: heroLoaded ? "translateY(0)" : "translateY(24px)",
             transition: "all 1s cubic-bezier(0.22,1,0.36,1) 0.9s",
-          }}>{SITE_CONTENT.headline}<br /><em style={{ fontStyle: "italic", color: "var(--accent)" }}>{SITE_CONTENT.headlineAccent}</em></h1>
+          }}><span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: "0.8rem", fontWeight: 500, letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "18px" }}>{SITE_CONTENT.headlineKicker}</span>{SITE_CONTENT.headline}<br /><em style={{ fontStyle: "italic", color: "var(--accent)" }}>{SITE_CONTENT.headlineAccent}</em></h1>
           <p style={{
             fontFamily: "var(--font-body)", fontSize: "0.95rem", fontWeight: 300, color: "var(--text-light)",
             maxWidth: "480px", margin: "24px auto 0", lineHeight: 1.8,

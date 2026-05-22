@@ -9,6 +9,7 @@ export const SITE_CONTENT = {
   tagline: "Photography \u00b7 Est. 2009 \u00b7 Michigan",
   headline: "Your story is",
   headlineAccent: "worth telling",
+  headlineKicker: "Senior and Family Photographer in Livingston County, Michigan",
   heroDescription: "I'm Rebecca, a Michigan mom and natural light photographer, specializing in family and high school senior sessions. I am passionate about photography and absolutely love capturing special moments for my clients.",
   heroButton: "Capture Your Moment",
 
