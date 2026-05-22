@@ -835,6 +835,7 @@ export default function PhotographyWebsite() {
               <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 3.5vw, 3rem)", fontWeight: 400, marginBottom: "16px" }}>{ SITE_CONTENT.contactTitle }</h2>
               <p style={{ color: "var(--text-light)", fontSize: "0.9rem", lineHeight: 1.8, fontWeight: 300, maxWidth: "500px", margin: "0 auto" }}>{SITE_CONTENT.contactDescription}</p>
               <p style={{ marginTop: "10px" }}><a href="mailto:bellavitabyrebecca@gmail.com" style={{ color: "var(--accent)", textDecoration: "none", fontSize: "0.9rem", borderBottom: "1px solid var(--accent-light)" }}>bellavitabyrebecca@gmail.com</a></p>
+              <p style={{ marginTop: "10px" }}><a href="tel:+12192396312" style={{ color: "var(--accent)", textDecoration: "none", fontSize: "0.9rem", borderBottom: "1px solid var(--accent-light)" }}>(219) 239-6312</a></p>
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
@@ -911,6 +912,7 @@ export default function PhotographyWebsite() {
               <a href="https://www.instagram.com/bellavitabyrebecca/" target="_blank" rel="noopener noreferrer" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>Instagram</a>
               <a href="https://www.facebook.com/bellavitaphotography2" target="_blank" rel="noopener noreferrer" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>Facebook</a>
               <a href="mailto:bellavitabyrebecca@gmail.com" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>bellavitabyrebecca@gmail.com</a>
+              <a href="tel:+12192396312" style={{ display: "block", fontSize: "0.82rem", color: "var(--text-light)", textDecoration: "none", padding: "4px 0", fontWeight: 300 }}>(219) 239-6312</a>
               <button onClick={() => setCurrentView("client-gallery")} className="bv-btn-outline" style={{ marginTop: "12px", padding: "10px 20px", fontSize: "0.62rem" }}>Client Gallery {"\u2192"}</button>
             </div>
           </div>
