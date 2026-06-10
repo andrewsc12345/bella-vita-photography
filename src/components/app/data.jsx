@@ -471,6 +471,116 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Presley 42"
       }
     ]
+  },
+  {
+    "id": "aidan-b",
+    "clientName": "Aidan B",
+    "password": "aidan26",
+    "sessionType": "Senior Portraits",
+    "date": "2026-06-10",
+    "coverImage": "/clients/aidan-b/IMG_7040.jpg",
+    "images": [
+      {
+        "src": "/clients/aidan-b/IMG_7040.jpg",
+        "full": "/clients/aidan-b/IMG_7040.jpg",
+        "title": "Aidan B 01"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7041.jpg",
+        "full": "/clients/aidan-b/IMG_7041.jpg",
+        "title": "Aidan B 02"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7063.jpg",
+        "full": "/clients/aidan-b/IMG_7063.jpg",
+        "title": "Aidan B 03"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7070.jpg",
+        "full": "/clients/aidan-b/IMG_7070.jpg",
+        "title": "Aidan B 04"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7074.jpg",
+        "full": "/clients/aidan-b/IMG_7074.jpg",
+        "title": "Aidan B 05"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7090.jpg",
+        "full": "/clients/aidan-b/IMG_7090.jpg",
+        "title": "Aidan B 06"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7092.jpg",
+        "full": "/clients/aidan-b/IMG_7092.jpg",
+        "title": "Aidan B 07"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7095.jpg",
+        "full": "/clients/aidan-b/IMG_7095.jpg",
+        "title": "Aidan B 08"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7096.jpg",
+        "full": "/clients/aidan-b/IMG_7096.jpg",
+        "title": "Aidan B 09"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7101.jpg",
+        "full": "/clients/aidan-b/IMG_7101.jpg",
+        "title": "Aidan B 10"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7106.jpg",
+        "full": "/clients/aidan-b/IMG_7106.jpg",
+        "title": "Aidan B 11"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7108.jpg",
+        "full": "/clients/aidan-b/IMG_7108.jpg",
+        "title": "Aidan B 12"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7122.jpg",
+        "full": "/clients/aidan-b/IMG_7122.jpg",
+        "title": "Aidan B 13"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7124.jpg",
+        "full": "/clients/aidan-b/IMG_7124.jpg",
+        "title": "Aidan B 14"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7126.jpg",
+        "full": "/clients/aidan-b/IMG_7126.jpg",
+        "title": "Aidan B 15"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7127.jpg",
+        "full": "/clients/aidan-b/IMG_7127.jpg",
+        "title": "Aidan B 16"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7133.jpg",
+        "full": "/clients/aidan-b/IMG_7133.jpg",
+        "title": "Aidan B 17"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7134.jpg",
+        "full": "/clients/aidan-b/IMG_7134.jpg",
+        "title": "Aidan B 18"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7135 (1).jpg",
+        "full": "/clients/aidan-b/IMG_7135 (1).jpg",
+        "title": "Aidan B 19"
+      },
+      {
+        "src": "/clients/aidan-b/IMG_7135.jpg",
+        "full": "/clients/aidan-b/IMG_7135.jpg",
+        "title": "Aidan B 20"
+      }
+    ]
   }
 ];
 
