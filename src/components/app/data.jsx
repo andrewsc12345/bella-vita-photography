@@ -690,9 +690,9 @@ export const DEFAULT_CLIENT_GALLERIES = [
   {
     "id": "aidanb",
     "clientName": "AidanB",
-    "password": "aidanbrighton26",
+    "password": "aidan26",
     "sessionType": "Senior Portraits",
-    "date": "2026-06-10",
+    "date": "2026-06-11",
     "coverImage": "/clients/aidanb/IMG_7040.jpg",
     "images": [
       {
