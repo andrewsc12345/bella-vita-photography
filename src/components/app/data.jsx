@@ -686,6 +686,391 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "BellaB 19"
       }
     ]
+  },
+  {
+    "id": "diya-grad-party",
+    "clientName": "Diya Grad Party",
+    "password": "diya",
+    "sessionType": "Other",
+    "date": "2026-06-20",
+    "coverImage": "/clients/diya-grad-party/IMG_7190.JPG",
+    "images": [
+      {
+        "src": "/clients/diya-grad-party/IMG_7190.JPG",
+        "full": "/clients/diya-grad-party/IMG_7190.JPG",
+        "title": "Diya Grad Party 01"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7192.JPG",
+        "full": "/clients/diya-grad-party/IMG_7192.JPG",
+        "title": "Diya Grad Party 02"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7193.JPG",
+        "full": "/clients/diya-grad-party/IMG_7193.JPG",
+        "title": "Diya Grad Party 03"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7194.JPG",
+        "full": "/clients/diya-grad-party/IMG_7194.JPG",
+        "title": "Diya Grad Party 04"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7195.JPG",
+        "full": "/clients/diya-grad-party/IMG_7195.JPG",
+        "title": "Diya Grad Party 05"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7196.JPG",
+        "full": "/clients/diya-grad-party/IMG_7196.JPG",
+        "title": "Diya Grad Party 06"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7198.JPG",
+        "full": "/clients/diya-grad-party/IMG_7198.JPG",
+        "title": "Diya Grad Party 07"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7199.JPG",
+        "full": "/clients/diya-grad-party/IMG_7199.JPG",
+        "title": "Diya Grad Party 08"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7200.JPG",
+        "full": "/clients/diya-grad-party/IMG_7200.JPG",
+        "title": "Diya Grad Party 09"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7201.JPG",
+        "full": "/clients/diya-grad-party/IMG_7201.JPG",
+        "title": "Diya Grad Party 10"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7202.JPG",
+        "full": "/clients/diya-grad-party/IMG_7202.JPG",
+        "title": "Diya Grad Party 11"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7205.JPG",
+        "full": "/clients/diya-grad-party/IMG_7205.JPG",
+        "title": "Diya Grad Party 12"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7206.JPG",
+        "full": "/clients/diya-grad-party/IMG_7206.JPG",
+        "title": "Diya Grad Party 13"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7209.JPG",
+        "full": "/clients/diya-grad-party/IMG_7209.JPG",
+        "title": "Diya Grad Party 14"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7210.JPG",
+        "full": "/clients/diya-grad-party/IMG_7210.JPG",
+        "title": "Diya Grad Party 15"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7213.JPG",
+        "full": "/clients/diya-grad-party/IMG_7213.JPG",
+        "title": "Diya Grad Party 16"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7214.JPG",
+        "full": "/clients/diya-grad-party/IMG_7214.JPG",
+        "title": "Diya Grad Party 17"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7215.JPG",
+        "full": "/clients/diya-grad-party/IMG_7215.JPG",
+        "title": "Diya Grad Party 18"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7216.JPG",
+        "full": "/clients/diya-grad-party/IMG_7216.JPG",
+        "title": "Diya Grad Party 19"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7217.JPG",
+        "full": "/clients/diya-grad-party/IMG_7217.JPG",
+        "title": "Diya Grad Party 20"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7218.JPG",
+        "full": "/clients/diya-grad-party/IMG_7218.JPG",
+        "title": "Diya Grad Party 21"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7219.JPG",
+        "full": "/clients/diya-grad-party/IMG_7219.JPG",
+        "title": "Diya Grad Party 22"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7220.JPG",
+        "full": "/clients/diya-grad-party/IMG_7220.JPG",
+        "title": "Diya Grad Party 23"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7221.JPG",
+        "full": "/clients/diya-grad-party/IMG_7221.JPG",
+        "title": "Diya Grad Party 24"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7222.JPG",
+        "full": "/clients/diya-grad-party/IMG_7222.JPG",
+        "title": "Diya Grad Party 25"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7224.JPG",
+        "full": "/clients/diya-grad-party/IMG_7224.JPG",
+        "title": "Diya Grad Party 26"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7225.JPG",
+        "full": "/clients/diya-grad-party/IMG_7225.JPG",
+        "title": "Diya Grad Party 27"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7227.JPG",
+        "full": "/clients/diya-grad-party/IMG_7227.JPG",
+        "title": "Diya Grad Party 28"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7229.JPG",
+        "full": "/clients/diya-grad-party/IMG_7229.JPG",
+        "title": "Diya Grad Party 29"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7230.JPG",
+        "full": "/clients/diya-grad-party/IMG_7230.JPG",
+        "title": "Diya Grad Party 30"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7232.JPG",
+        "full": "/clients/diya-grad-party/IMG_7232.JPG",
+        "title": "Diya Grad Party 31"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7233.JPG",
+        "full": "/clients/diya-grad-party/IMG_7233.JPG",
+        "title": "Diya Grad Party 32"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7234.JPG",
+        "full": "/clients/diya-grad-party/IMG_7234.JPG",
+        "title": "Diya Grad Party 33"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7235.JPG",
+        "full": "/clients/diya-grad-party/IMG_7235.JPG",
+        "title": "Diya Grad Party 34"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7236.JPG",
+        "full": "/clients/diya-grad-party/IMG_7236.JPG",
+        "title": "Diya Grad Party 35"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7237.JPG",
+        "full": "/clients/diya-grad-party/IMG_7237.JPG",
+        "title": "Diya Grad Party 36"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7238.JPG",
+        "full": "/clients/diya-grad-party/IMG_7238.JPG",
+        "title": "Diya Grad Party 37"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7239.JPG",
+        "full": "/clients/diya-grad-party/IMG_7239.JPG",
+        "title": "Diya Grad Party 38"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7240.JPG",
+        "full": "/clients/diya-grad-party/IMG_7240.JPG",
+        "title": "Diya Grad Party 39"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7242.JPG",
+        "full": "/clients/diya-grad-party/IMG_7242.JPG",
+        "title": "Diya Grad Party 40"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7243.JPG",
+        "full": "/clients/diya-grad-party/IMG_7243.JPG",
+        "title": "Diya Grad Party 41"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7244.JPG",
+        "full": "/clients/diya-grad-party/IMG_7244.JPG",
+        "title": "Diya Grad Party 42"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7245.JPG",
+        "full": "/clients/diya-grad-party/IMG_7245.JPG",
+        "title": "Diya Grad Party 43"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7246.JPG",
+        "full": "/clients/diya-grad-party/IMG_7246.JPG",
+        "title": "Diya Grad Party 44"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7247.JPG",
+        "full": "/clients/diya-grad-party/IMG_7247.JPG",
+        "title": "Diya Grad Party 45"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7248.JPG",
+        "full": "/clients/diya-grad-party/IMG_7248.JPG",
+        "title": "Diya Grad Party 46"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7250.JPG",
+        "full": "/clients/diya-grad-party/IMG_7250.JPG",
+        "title": "Diya Grad Party 47"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7254.JPG",
+        "full": "/clients/diya-grad-party/IMG_7254.JPG",
+        "title": "Diya Grad Party 48"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7255.JPG",
+        "full": "/clients/diya-grad-party/IMG_7255.JPG",
+        "title": "Diya Grad Party 49"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7257.JPG",
+        "full": "/clients/diya-grad-party/IMG_7257.JPG",
+        "title": "Diya Grad Party 50"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7258.JPG",
+        "full": "/clients/diya-grad-party/IMG_7258.JPG",
+        "title": "Diya Grad Party 51"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7260.JPG",
+        "full": "/clients/diya-grad-party/IMG_7260.JPG",
+        "title": "Diya Grad Party 52"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7265.JPG",
+        "full": "/clients/diya-grad-party/IMG_7265.JPG",
+        "title": "Diya Grad Party 53"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7266.JPG",
+        "full": "/clients/diya-grad-party/IMG_7266.JPG",
+        "title": "Diya Grad Party 54"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7269.JPG",
+        "full": "/clients/diya-grad-party/IMG_7269.JPG",
+        "title": "Diya Grad Party 55"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7271.JPG",
+        "full": "/clients/diya-grad-party/IMG_7271.JPG",
+        "title": "Diya Grad Party 56"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7272.JPG",
+        "full": "/clients/diya-grad-party/IMG_7272.JPG",
+        "title": "Diya Grad Party 57"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7273.JPG",
+        "full": "/clients/diya-grad-party/IMG_7273.JPG",
+        "title": "Diya Grad Party 58"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7274.JPG",
+        "full": "/clients/diya-grad-party/IMG_7274.JPG",
+        "title": "Diya Grad Party 59"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7275.JPG",
+        "full": "/clients/diya-grad-party/IMG_7275.JPG",
+        "title": "Diya Grad Party 60"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7276.JPG",
+        "full": "/clients/diya-grad-party/IMG_7276.JPG",
+        "title": "Diya Grad Party 61"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7278.JPG",
+        "full": "/clients/diya-grad-party/IMG_7278.JPG",
+        "title": "Diya Grad Party 62"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7283.JPG",
+        "full": "/clients/diya-grad-party/IMG_7283.JPG",
+        "title": "Diya Grad Party 63"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7284.JPG",
+        "full": "/clients/diya-grad-party/IMG_7284.JPG",
+        "title": "Diya Grad Party 64"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7288.JPG",
+        "full": "/clients/diya-grad-party/IMG_7288.JPG",
+        "title": "Diya Grad Party 65"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7290.JPG",
+        "full": "/clients/diya-grad-party/IMG_7290.JPG",
+        "title": "Diya Grad Party 66"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7291.JPG",
+        "full": "/clients/diya-grad-party/IMG_7291.JPG",
+        "title": "Diya Grad Party 67"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7292.JPG",
+        "full": "/clients/diya-grad-party/IMG_7292.JPG",
+        "title": "Diya Grad Party 68"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7293.JPG",
+        "full": "/clients/diya-grad-party/IMG_7293.JPG",
+        "title": "Diya Grad Party 69"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7296.JPG",
+        "full": "/clients/diya-grad-party/IMG_7296.JPG",
+        "title": "Diya Grad Party 70"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7297.JPG",
+        "full": "/clients/diya-grad-party/IMG_7297.JPG",
+        "title": "Diya Grad Party 71"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7299.JPG",
+        "full": "/clients/diya-grad-party/IMG_7299.JPG",
+        "title": "Diya Grad Party 72"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7300.JPG",
+        "full": "/clients/diya-grad-party/IMG_7300.JPG",
+        "title": "Diya Grad Party 73"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7301.JPG",
+        "full": "/clients/diya-grad-party/IMG_7301.JPG",
+        "title": "Diya Grad Party 74"
+      },
+      {
+        "src": "/clients/diya-grad-party/IMG_7303.JPG",
+        "full": "/clients/diya-grad-party/IMG_7303.JPG",
+        "title": "Diya Grad Party 75"
+      }
+    ]
   }
 ];
 
