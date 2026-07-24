@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { SITE_CONTENT, DEFAULT_CLIENT_GALLERIES } from "./data.jsx";
+import { ReviewModal } from "./ReviewModal.jsx";
 
 /* ─── UTILITY HOOKS ─── */
 export function useInView(threshold = 0.15) {
@@ -73,8 +74,22 @@ export function ProgressiveImage({ src, alt, style = {}, className = "", onClick
   );
 }
 
+/* ─── REVIEW PROMPT ─── */
+let reviewModalTrigger = null;
+
+export function registerReviewModalTrigger(trigger) {
+  reviewModalTrigger = trigger;
+}
+
 /* ─── DOWNLOAD & SHARE HELPERS ─── */
 export async function downloadImage(url, filename) {
+  if (
+    reviewModalTrigger &&
+    !sessionStorage.getItem("bv_review_prompt_shown")
+  ) {
+    await reviewModalTrigger();
+  }
+
   try {
     const r = await fetch(url, { mode: "cors" });
     const b = await r.blob();
@@ -209,6 +224,7 @@ export function ClientGalleryPage({ galleries, onBack, onGift }) {
   if (unlockedGallery) {
     return (
       <div style={{ minHeight: "100vh", background: "var(--bg)", color: "var(--text)", fontFamily: "var(--font-body)" }}>
+        <ReviewModal googleReviewUrl="https://g.page/r/CUrvmFDCMy3aEBM/review" />
         <Lightbox image={lightboxImg} onClose={() => setLightboxImg(null)}
           onDownload={(url, t) => downloadImage(url, "bella-vita-" + t.toLowerCase().replace(/\s+/g, "-") + ".jpg")}
           onShare={shareImage}
