@@ -206,14 +206,66 @@ export const TESTIMONIALS = [
 ];
 
 export const SERVICES = [
-  { category: "Senior Sessions", icon: "\u2727", collections: [
-    { name: "Senior Mini Session", price: "$350", desc: <>45 minutes. 1 location. 15 digital images — fast, fun, and affordable.<br /><br /><em>Specific locations may require a rental fee.</em></> },
+  { category: <>
+    <span style={{ display: "block" }}>Senior Sessions</span>
+    <span style={{
+      display: "block",
+      fontFamily: "var(--font-body)",
+      fontSize: "0.72rem",
+      color: "var(--muted)",
+      fontWeight: 300,
+      fontStyle: "italic",
+      lineHeight: 1.6,
+      marginTop: "8px",
+    }}>
+      (all senior collections include a private online gallery for sharing and download and print release)
+    </span>
+    <span style={{
+      display: "block",
+      fontFamily: "var(--font-body)",
+      fontSize: "0.72rem",
+      color: "var(--muted)",
+      fontWeight: 300,
+      fontStyle: "italic",
+      lineHeight: 1.6,
+      marginTop: "6px",
+    }}>
+      Specific locations may require a rental fee.
+    </span>
+  </>, icon: "\u2727", collections: [
+    { name: "Senior Mini Session", price: "$350", desc: "45 minutes. 1 location. 15 digital images — fast, fun, and affordable." },
     { name: "Senior Full Session", price: "$600", desc: "The ultimate senior experience \u2014 2 hours. 1 location. 25+ digital images. $20 product credit." },
     { name: "Senior Split Session", price: "$700", desc: "Same full session split across two dates \u2014 perfect for seasonal variety or a second look.\n2 sessions. 2 dates. 50+ digital images. $30 product credit." },
     { name: "Senior DUO Session", price: "$700", desc: "Grab your best friend! Two seniors, one epic session. Individual and duo shots included.\n2 hours. 1 location. 25+ digital images each. $20 product credit each." },
   ]},
-  { category: "Family Sessions", icon: "\u2727", collections: [
-    { name: "Family Mini Session", price: "$175", desc: <>Perfect for holiday cards, announcements or just because your kiddos are growing too fast!<br />30 minutes. 1 location. 10 digital images.<br /><br /><em>Specific locations may require a rental fee.</em></> },
+  { category: <>
+    <span style={{ display: "block" }}>Family Sessions</span>
+    <span style={{
+      display: "block",
+      fontFamily: "var(--font-body)",
+      fontSize: "0.72rem",
+      color: "var(--muted)",
+      fontWeight: 300,
+      fontStyle: "italic",
+      lineHeight: 1.6,
+      marginTop: "8px",
+    }}>
+      (all family collections include a private online gallery for sharing and download and print release)
+    </span>
+    <span style={{
+      display: "block",
+      fontFamily: "var(--font-body)",
+      fontSize: "0.72rem",
+      color: "var(--muted)",
+      fontWeight: 300,
+      fontStyle: "italic",
+      lineHeight: 1.6,
+      marginTop: "6px",
+    }}>
+      Specific locations may require a rental fee.
+    </span>
+  </>, icon: "\u2727", collections: [
+    { name: "Family Mini Session", price: "$175", desc: "Perfect for holiday cards, announcements or just because your kiddos are growing too fast!\n30 minutes. 1 location. 10 digital images." },
     { name: "Family Full Session", price: "$300", desc: "Bring the family and let's have some fun!\n1 hour. 1 location. 25+ digital images. $20 product credit." },
     { name: "Milestone Sessions", price: "$300", desc: "Maternity, engagements, birthdays - life's biggest chapters.\n1 hour. 1 location. 25+ digital images. $20 product credit." },
   ]},
