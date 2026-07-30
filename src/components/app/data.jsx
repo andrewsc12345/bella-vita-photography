@@ -275,7 +275,7 @@ export const SERVICES = [
     { name: "Platinum", price: "$3500", desc: "engagement session. full day coverage on your wedding day. second photographer. $100 product credit." },
     { name: "The Bronze", price: "Micro Wedding Collections", desc: "More and more couples are skipping the big wedding and just getting married — courthouse steps, a backyard with their parents, even a cupcake shop with their best friend as the witness. These collections capture those intimate, no-fuss celebrations with the same quality and care as a full wedding — just scaled to fit the moment." },
     { name: "The Signing", price: "$150", desc: "Micro wedding. Quick, beautiful, done. Your marriage deserves at least this.\n20 minutes. The ceremony, the signing, the first kiss. One location. 15+ digital images." },
-    { name: "The Moment", price: "$300", desc: "Micro wedding. The ceremony plus portraits \u2014 the sweet spot for most couples.\nEverything in The Signing plus couple\u2019s portraits and group photos with anyone present (up to 10 people). 30+ digital images." },
+    { name: "The Moment", price: "Starting at $350", desc: "The ceremony, the signing and portraits of the new couple afterward. 25+ digital images" },
   ]},
 ];
 
