@@ -1123,5 +1123,165 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Diya Grad Party 75"
       }
     ]
+  },
+  {
+    "id": "casper-family",
+    "clientName": "Casper Family",
+    "password": "casper2026",
+    "sessionType": "Family Session",
+    "date": "2026-08-10",
+    "coverImage": "/clients/casper-family/IMG_7400.JPG",
+    "images": [
+      {
+        "src": "/clients/casper-family/IMG_7400.JPG",
+        "full": "/clients/casper-family/IMG_7400.JPG",
+        "title": "Casper Family 01"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7401.jpg",
+        "full": "/clients/casper-family/IMG_7401.jpg",
+        "title": "Casper Family 02"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7403.jpg",
+        "full": "/clients/casper-family/IMG_7403.jpg",
+        "title": "Casper Family 03"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7454 (2).jpg",
+        "full": "/clients/casper-family/IMG_7454 (2).jpg",
+        "title": "Casper Family 04"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7454.jpg",
+        "full": "/clients/casper-family/IMG_7454.jpg",
+        "title": "Casper Family 05"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7463 (2).jpg",
+        "full": "/clients/casper-family/IMG_7463 (2).jpg",
+        "title": "Casper Family 06"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7463.jpg",
+        "full": "/clients/casper-family/IMG_7463.jpg",
+        "title": "Casper Family 07"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7464.jpg",
+        "full": "/clients/casper-family/IMG_7464.jpg",
+        "title": "Casper Family 08"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7471.JPG",
+        "full": "/clients/casper-family/IMG_7471.JPG",
+        "title": "Casper Family 09"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7473.jpg",
+        "full": "/clients/casper-family/IMG_7473.jpg",
+        "title": "Casper Family 10"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7477.jpg",
+        "full": "/clients/casper-family/IMG_7477.jpg",
+        "title": "Casper Family 11"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7479.jpg",
+        "full": "/clients/casper-family/IMG_7479.jpg",
+        "title": "Casper Family 12"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7484.jpg",
+        "full": "/clients/casper-family/IMG_7484.jpg",
+        "title": "Casper Family 13"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7497.jpg",
+        "full": "/clients/casper-family/IMG_7497.jpg",
+        "title": "Casper Family 14"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7517 (2).jpg",
+        "full": "/clients/casper-family/IMG_7517 (2).jpg",
+        "title": "Casper Family 15"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7517.jpg",
+        "full": "/clients/casper-family/IMG_7517.jpg",
+        "title": "Casper Family 16"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7521.jpg",
+        "full": "/clients/casper-family/IMG_7521.jpg",
+        "title": "Casper Family 17"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7547.jpg",
+        "full": "/clients/casper-family/IMG_7547.jpg",
+        "title": "Casper Family 18"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7548.jpg",
+        "full": "/clients/casper-family/IMG_7548.jpg",
+        "title": "Casper Family 19"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7551.jpg",
+        "full": "/clients/casper-family/IMG_7551.jpg",
+        "title": "Casper Family 20"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7557.jpg",
+        "full": "/clients/casper-family/IMG_7557.jpg",
+        "title": "Casper Family 21"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7569.jpg",
+        "full": "/clients/casper-family/IMG_7569.jpg",
+        "title": "Casper Family 22"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7579.jpg",
+        "full": "/clients/casper-family/IMG_7579.jpg",
+        "title": "Casper Family 23"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7580.jpg",
+        "full": "/clients/casper-family/IMG_7580.jpg",
+        "title": "Casper Family 24"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7586.jpg",
+        "full": "/clients/casper-family/IMG_7586.jpg",
+        "title": "Casper Family 25"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7593.jpg",
+        "full": "/clients/casper-family/IMG_7593.jpg",
+        "title": "Casper Family 26"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7607 (2).jpg",
+        "full": "/clients/casper-family/IMG_7607 (2).jpg",
+        "title": "Casper Family 27"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7607.jpg",
+        "full": "/clients/casper-family/IMG_7607.jpg",
+        "title": "Casper Family 28"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7608.jpg",
+        "full": "/clients/casper-family/IMG_7608.jpg",
+        "title": "Casper Family 29"
+      },
+      {
+        "src": "/clients/casper-family/IMG_7609.jpg",
+        "full": "/clients/casper-family/IMG_7609.jpg",
+        "title": "Casper Family 30"
+      }
+    ]
   }
 ];
