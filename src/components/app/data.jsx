@@ -1928,5 +1928,195 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Media Day LHS Varisty POM 127"
       }
     ]
+  },
+  {
+    "id": "media-day-lhs-jv",
+    "clientName": "Media Day LHS JV",
+    "password": "jvteam26",
+    "sessionType": "Other",
+    "date": "2026-08-20",
+    "coverImage": "/clients/media-day-lhs-jv/IMG_8500 (1).jpg",
+    "images": [
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8500 (1).jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8500 (1).jpg",
+        "title": "Media Day LHS JV 01"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8500.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8500.jpg",
+        "title": "Media Day LHS JV 02"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8504.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8504.jpg",
+        "title": "Media Day LHS JV 03"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8515.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8515.jpg",
+        "title": "Media Day LHS JV 04"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8521.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8521.jpg",
+        "title": "Media Day LHS JV 05"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8532.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8532.jpg",
+        "title": "Media Day LHS JV 06"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8538.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8538.jpg",
+        "title": "Media Day LHS JV 07"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8544 (1).jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8544 (1).jpg",
+        "title": "Media Day LHS JV 08"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8544.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8544.jpg",
+        "title": "Media Day LHS JV 09"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8548.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8548.jpg",
+        "title": "Media Day LHS JV 10"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8551.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8551.jpg",
+        "title": "Media Day LHS JV 11"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8557.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8557.jpg",
+        "title": "Media Day LHS JV 12"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8561.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8561.jpg",
+        "title": "Media Day LHS JV 13"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8567.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8567.jpg",
+        "title": "Media Day LHS JV 14"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8574.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8574.jpg",
+        "title": "Media Day LHS JV 15"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8586.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8586.jpg",
+        "title": "Media Day LHS JV 16"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8590.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8590.jpg",
+        "title": "Media Day LHS JV 17"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8597.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8597.jpg",
+        "title": "Media Day LHS JV 18"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8605.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8605.jpg",
+        "title": "Media Day LHS JV 19"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8609.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8609.jpg",
+        "title": "Media Day LHS JV 20"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8614.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8614.jpg",
+        "title": "Media Day LHS JV 21"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8619.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8619.jpg",
+        "title": "Media Day LHS JV 22"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8623.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8623.jpg",
+        "title": "Media Day LHS JV 23"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8633.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8633.jpg",
+        "title": "Media Day LHS JV 24"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8637.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8637.jpg",
+        "title": "Media Day LHS JV 25"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8646.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8646.jpg",
+        "title": "Media Day LHS JV 26"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8648.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8648.jpg",
+        "title": "Media Day LHS JV 27"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8650.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8650.jpg",
+        "title": "Media Day LHS JV 28"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8659.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8659.jpg",
+        "title": "Media Day LHS JV 29"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8668.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8668.jpg",
+        "title": "Media Day LHS JV 30"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8677.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8677.jpg",
+        "title": "Media Day LHS JV 31"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8678.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8678.jpg",
+        "title": "Media Day LHS JV 32"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8681.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8681.jpg",
+        "title": "Media Day LHS JV 33"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8684.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8684.jpg",
+        "title": "Media Day LHS JV 34"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8691.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8691.jpg",
+        "title": "Media Day LHS JV 35"
+      },
+      {
+        "src": "/clients/media-day-lhs-jv/IMG_8693.jpg",
+        "full": "/clients/media-day-lhs-jv/IMG_8693.jpg",
+        "title": "Media Day LHS JV 36"
+      }
+    ]
   }
 ];
