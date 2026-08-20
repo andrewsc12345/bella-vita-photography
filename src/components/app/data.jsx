@@ -1283,5 +1283,650 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Casper Family 30"
       }
     ]
+  },
+  {
+    "id": "media-day-lhs-varisty-pom",
+    "clientName": "Media Day LHS Varisty POM",
+    "password": "lhsvarsity26",
+    "sessionType": "Other",
+    "date": "2026-08-20",
+    "coverImage": "/clients/media-day-lhs-varisty-pom/BANNER ADRIANNA.jpg",
+    "images": [
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/BANNER ADRIANNA.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/BANNER ADRIANNA.jpg",
+        "title": "Media Day LHS Varisty POM 01"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/BANNER CAM.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/BANNER CAM.jpg",
+        "title": "Media Day LHS Varisty POM 02"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/BANNER GABBY.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/BANNER GABBY.jpg",
+        "title": "Media Day LHS Varisty POM 03"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/BANNER PRESLEY.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/BANNER PRESLEY.jpg",
+        "title": "Media Day LHS Varisty POM 04"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/BANNER VALENTINA.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/BANNER VALENTINA.jpg",
+        "title": "Media Day LHS Varisty POM 05"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7669.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7669.jpg",
+        "title": "Media Day LHS Varisty POM 06"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7708.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7708.jpg",
+        "title": "Media Day LHS Varisty POM 07"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7724.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7724.jpg",
+        "title": "Media Day LHS Varisty POM 08"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7732.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7732.jpg",
+        "title": "Media Day LHS Varisty POM 09"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7733.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7733.jpg",
+        "title": "Media Day LHS Varisty POM 10"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7740.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7740.jpg",
+        "title": "Media Day LHS Varisty POM 11"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7741.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7741.jpg",
+        "title": "Media Day LHS Varisty POM 12"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7743.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7743.jpg",
+        "title": "Media Day LHS Varisty POM 13"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7753.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7753.jpg",
+        "title": "Media Day LHS Varisty POM 14"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7756.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7756.jpg",
+        "title": "Media Day LHS Varisty POM 15"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7767.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7767.jpg",
+        "title": "Media Day LHS Varisty POM 16"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7770.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7770.jpg",
+        "title": "Media Day LHS Varisty POM 17"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7777.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7777.jpg",
+        "title": "Media Day LHS Varisty POM 18"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7778.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7778.jpg",
+        "title": "Media Day LHS Varisty POM 19"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7785.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7785.jpg",
+        "title": "Media Day LHS Varisty POM 20"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7786.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7786.jpg",
+        "title": "Media Day LHS Varisty POM 21"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7788.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7788.jpg",
+        "title": "Media Day LHS Varisty POM 22"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7801 (1).jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7801 (1).jpg",
+        "title": "Media Day LHS Varisty POM 23"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7801.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7801.jpg",
+        "title": "Media Day LHS Varisty POM 24"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7805.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7805.jpg",
+        "title": "Media Day LHS Varisty POM 25"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7818.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7818.jpg",
+        "title": "Media Day LHS Varisty POM 26"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7821.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7821.jpg",
+        "title": "Media Day LHS Varisty POM 27"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7831.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7831.jpg",
+        "title": "Media Day LHS Varisty POM 28"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7832 (2).jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7832 (2).jpg",
+        "title": "Media Day LHS Varisty POM 29"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7832.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7832.jpg",
+        "title": "Media Day LHS Varisty POM 30"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7840.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7840.jpg",
+        "title": "Media Day LHS Varisty POM 31"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7868 (1).jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7868 (1).jpg",
+        "title": "Media Day LHS Varisty POM 32"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7868.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7868.jpg",
+        "title": "Media Day LHS Varisty POM 33"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7872.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7872.jpg",
+        "title": "Media Day LHS Varisty POM 34"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7878.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7878.jpg",
+        "title": "Media Day LHS Varisty POM 35"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7898.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7898.jpg",
+        "title": "Media Day LHS Varisty POM 36"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7903.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7903.jpg",
+        "title": "Media Day LHS Varisty POM 37"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7915.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7915.jpg",
+        "title": "Media Day LHS Varisty POM 38"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7916.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7916.jpg",
+        "title": "Media Day LHS Varisty POM 39"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7919.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7919.jpg",
+        "title": "Media Day LHS Varisty POM 40"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7931.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7931.jpg",
+        "title": "Media Day LHS Varisty POM 41"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7932.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7932.jpg",
+        "title": "Media Day LHS Varisty POM 42"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7937.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7937.jpg",
+        "title": "Media Day LHS Varisty POM 43"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7943 (1).jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7943 (1).jpg",
+        "title": "Media Day LHS Varisty POM 44"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7943.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7943.jpg",
+        "title": "Media Day LHS Varisty POM 45"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7946.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7946.jpg",
+        "title": "Media Day LHS Varisty POM 46"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7948.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7948.jpg",
+        "title": "Media Day LHS Varisty POM 47"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7956.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7956.jpg",
+        "title": "Media Day LHS Varisty POM 48"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7958.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7958.jpg",
+        "title": "Media Day LHS Varisty POM 49"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7963.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7963.jpg",
+        "title": "Media Day LHS Varisty POM 50"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7971 (1).jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7971 (1).jpg",
+        "title": "Media Day LHS Varisty POM 51"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_7971.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_7971.jpg",
+        "title": "Media Day LHS Varisty POM 52"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8053.JPG",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8053.JPG",
+        "title": "Media Day LHS Varisty POM 53"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8056.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8056.jpg",
+        "title": "Media Day LHS Varisty POM 54"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8074.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8074.jpg",
+        "title": "Media Day LHS Varisty POM 55"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8083.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8083.jpg",
+        "title": "Media Day LHS Varisty POM 56"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8085.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8085.jpg",
+        "title": "Media Day LHS Varisty POM 57"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8091.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8091.jpg",
+        "title": "Media Day LHS Varisty POM 58"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8099.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8099.jpg",
+        "title": "Media Day LHS Varisty POM 59"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8113.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8113.jpg",
+        "title": "Media Day LHS Varisty POM 60"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8118.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8118.jpg",
+        "title": "Media Day LHS Varisty POM 61"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8140.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8140.jpg",
+        "title": "Media Day LHS Varisty POM 62"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8146.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8146.jpg",
+        "title": "Media Day LHS Varisty POM 63"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8149 (1).jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8149 (1).jpg",
+        "title": "Media Day LHS Varisty POM 64"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8149.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8149.jpg",
+        "title": "Media Day LHS Varisty POM 65"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8154.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8154.jpg",
+        "title": "Media Day LHS Varisty POM 66"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8165.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8165.jpg",
+        "title": "Media Day LHS Varisty POM 67"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8169.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8169.jpg",
+        "title": "Media Day LHS Varisty POM 68"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8172.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8172.jpg",
+        "title": "Media Day LHS Varisty POM 69"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8182.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8182.jpg",
+        "title": "Media Day LHS Varisty POM 70"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8185.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8185.jpg",
+        "title": "Media Day LHS Varisty POM 71"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8188.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8188.jpg",
+        "title": "Media Day LHS Varisty POM 72"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8191.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8191.jpg",
+        "title": "Media Day LHS Varisty POM 73"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8194.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8194.jpg",
+        "title": "Media Day LHS Varisty POM 74"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8199.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8199.jpg",
+        "title": "Media Day LHS Varisty POM 75"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8201.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8201.jpg",
+        "title": "Media Day LHS Varisty POM 76"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8209.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8209.jpg",
+        "title": "Media Day LHS Varisty POM 77"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8214.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8214.jpg",
+        "title": "Media Day LHS Varisty POM 78"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8218.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8218.jpg",
+        "title": "Media Day LHS Varisty POM 79"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8220.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8220.jpg",
+        "title": "Media Day LHS Varisty POM 80"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8232.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8232.jpg",
+        "title": "Media Day LHS Varisty POM 81"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8245.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8245.jpg",
+        "title": "Media Day LHS Varisty POM 82"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8249.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8249.jpg",
+        "title": "Media Day LHS Varisty POM 83"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8265.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8265.jpg",
+        "title": "Media Day LHS Varisty POM 84"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8270.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8270.jpg",
+        "title": "Media Day LHS Varisty POM 85"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8274.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8274.jpg",
+        "title": "Media Day LHS Varisty POM 86"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8275.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8275.jpg",
+        "title": "Media Day LHS Varisty POM 87"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8286.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8286.jpg",
+        "title": "Media Day LHS Varisty POM 88"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8297.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8297.jpg",
+        "title": "Media Day LHS Varisty POM 89"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8298.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8298.jpg",
+        "title": "Media Day LHS Varisty POM 90"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8305.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8305.jpg",
+        "title": "Media Day LHS Varisty POM 91"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8308.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8308.jpg",
+        "title": "Media Day LHS Varisty POM 92"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8310.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8310.jpg",
+        "title": "Media Day LHS Varisty POM 93"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8312.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8312.jpg",
+        "title": "Media Day LHS Varisty POM 94"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8315.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8315.jpg",
+        "title": "Media Day LHS Varisty POM 95"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8316.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8316.jpg",
+        "title": "Media Day LHS Varisty POM 96"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8322.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8322.jpg",
+        "title": "Media Day LHS Varisty POM 97"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8325.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8325.jpg",
+        "title": "Media Day LHS Varisty POM 98"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8337.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8337.jpg",
+        "title": "Media Day LHS Varisty POM 99"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8338.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8338.jpg",
+        "title": "Media Day LHS Varisty POM 100"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8358.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8358.jpg",
+        "title": "Media Day LHS Varisty POM 101"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8361.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8361.jpg",
+        "title": "Media Day LHS Varisty POM 102"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8367.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8367.jpg",
+        "title": "Media Day LHS Varisty POM 103"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8370.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8370.jpg",
+        "title": "Media Day LHS Varisty POM 104"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8374.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8374.jpg",
+        "title": "Media Day LHS Varisty POM 105"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8382.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8382.jpg",
+        "title": "Media Day LHS Varisty POM 106"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8387.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8387.jpg",
+        "title": "Media Day LHS Varisty POM 107"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8390.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8390.jpg",
+        "title": "Media Day LHS Varisty POM 108"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8395.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8395.jpg",
+        "title": "Media Day LHS Varisty POM 109"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8396.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8396.jpg",
+        "title": "Media Day LHS Varisty POM 110"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8404.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8404.jpg",
+        "title": "Media Day LHS Varisty POM 111"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8408.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8408.jpg",
+        "title": "Media Day LHS Varisty POM 112"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8416.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8416.jpg",
+        "title": "Media Day LHS Varisty POM 113"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8420.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8420.jpg",
+        "title": "Media Day LHS Varisty POM 114"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8434.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8434.jpg",
+        "title": "Media Day LHS Varisty POM 115"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8438.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8438.jpg",
+        "title": "Media Day LHS Varisty POM 116"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8441.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8441.jpg",
+        "title": "Media Day LHS Varisty POM 117"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8444.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8444.jpg",
+        "title": "Media Day LHS Varisty POM 118"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8449.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8449.jpg",
+        "title": "Media Day LHS Varisty POM 119"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8455 (1).jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8455 (1).jpg",
+        "title": "Media Day LHS Varisty POM 120"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8455.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8455.jpg",
+        "title": "Media Day LHS Varisty POM 121"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8463.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8463.jpg",
+        "title": "Media Day LHS Varisty POM 122"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8470.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8470.jpg",
+        "title": "Media Day LHS Varisty POM 123"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8476.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8476.jpg",
+        "title": "Media Day LHS Varisty POM 124"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8478.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8478.jpg",
+        "title": "Media Day LHS Varisty POM 125"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8485.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8485.jpg",
+        "title": "Media Day LHS Varisty POM 126"
+      },
+      {
+        "src": "/clients/media-day-lhs-varisty-pom/IMG_8490.jpg",
+        "full": "/clients/media-day-lhs-varisty-pom/IMG_8490.jpg",
+        "title": "Media Day LHS Varisty POM 127"
+      }
+    ]
   }
 ];
