@@ -2243,5 +2243,135 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Valentina Session 1 23"
       }
     ]
+  },
+  {
+    "id": "jack-h",
+    "clientName": "Jack H",
+    "password": "jackham27",
+    "sessionType": "Senior Portraits",
+    "date": "2026-08-23",
+    "coverImage": "/clients/jack-h/IMG_8560.jpg",
+    "images": [
+      {
+        "src": "/clients/jack-h/IMG_8560.jpg",
+        "full": "/clients/jack-h/IMG_8560.jpg",
+        "title": "Jack H 01"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8565 (1).jpg",
+        "full": "/clients/jack-h/IMG_8565 (1).jpg",
+        "title": "Jack H 02"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8565.jpg",
+        "full": "/clients/jack-h/IMG_8565.jpg",
+        "title": "Jack H 03"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8566 (1).jpg",
+        "full": "/clients/jack-h/IMG_8566 (1).jpg",
+        "title": "Jack H 04"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8566.jpg",
+        "full": "/clients/jack-h/IMG_8566.jpg",
+        "title": "Jack H 05"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8576.jpg",
+        "full": "/clients/jack-h/IMG_8576.jpg",
+        "title": "Jack H 06"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8587.jpg",
+        "full": "/clients/jack-h/IMG_8587.jpg",
+        "title": "Jack H 07"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8593 (1).jpg",
+        "full": "/clients/jack-h/IMG_8593 (1).jpg",
+        "title": "Jack H 08"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8593.jpg",
+        "full": "/clients/jack-h/IMG_8593.jpg",
+        "title": "Jack H 09"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8595.jpg",
+        "full": "/clients/jack-h/IMG_8595.jpg",
+        "title": "Jack H 10"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8605.jpg",
+        "full": "/clients/jack-h/IMG_8605.jpg",
+        "title": "Jack H 11"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8609.jpg",
+        "full": "/clients/jack-h/IMG_8609.jpg",
+        "title": "Jack H 12"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8612.jpg",
+        "full": "/clients/jack-h/IMG_8612.jpg",
+        "title": "Jack H 13"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8626.jpg",
+        "full": "/clients/jack-h/IMG_8626.jpg",
+        "title": "Jack H 14"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8630.jpg",
+        "full": "/clients/jack-h/IMG_8630.jpg",
+        "title": "Jack H 15"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8632.jpg",
+        "full": "/clients/jack-h/IMG_8632.jpg",
+        "title": "Jack H 16"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8644.jpg",
+        "full": "/clients/jack-h/IMG_8644.jpg",
+        "title": "Jack H 17"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8657.jpg",
+        "full": "/clients/jack-h/IMG_8657.jpg",
+        "title": "Jack H 18"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8658.jpg",
+        "full": "/clients/jack-h/IMG_8658.jpg",
+        "title": "Jack H 19"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8668 (2).jpg",
+        "full": "/clients/jack-h/IMG_8668 (2).jpg",
+        "title": "Jack H 20"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8668.jpg",
+        "full": "/clients/jack-h/IMG_8668.jpg",
+        "title": "Jack H 21"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8676.jpg",
+        "full": "/clients/jack-h/IMG_8676.jpg",
+        "title": "Jack H 22"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8684.jpg",
+        "full": "/clients/jack-h/IMG_8684.jpg",
+        "title": "Jack H 23"
+      },
+      {
+        "src": "/clients/jack-h/IMG_8902.jpg",
+        "full": "/clients/jack-h/IMG_8902.jpg",
+        "title": "Jack H 24"
+      }
+    ]
   }
 ];
