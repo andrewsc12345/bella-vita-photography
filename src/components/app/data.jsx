@@ -2373,5 +2373,140 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Jack H 24"
       }
     ]
+  },
+  {
+    "id": "lola",
+    "clientName": "Lola ",
+    "password": "lolaa27",
+    "sessionType": "Senior Portraits",
+    "date": "2026-08-24",
+    "coverImage": "/clients/lola/IMG_8841.jpg",
+    "images": [
+      {
+        "src": "/clients/lola/IMG_8841.jpg",
+        "full": "/clients/lola/IMG_8841.jpg",
+        "title": "Lola  01"
+      },
+      {
+        "src": "/clients/lola/IMG_8853.jpg",
+        "full": "/clients/lola/IMG_8853.jpg",
+        "title": "Lola  02"
+      },
+      {
+        "src": "/clients/lola/IMG_8861.jpg",
+        "full": "/clients/lola/IMG_8861.jpg",
+        "title": "Lola  03"
+      },
+      {
+        "src": "/clients/lola/IMG_8875.jpg",
+        "full": "/clients/lola/IMG_8875.jpg",
+        "title": "Lola  04"
+      },
+      {
+        "src": "/clients/lola/IMG_8878.jpg",
+        "full": "/clients/lola/IMG_8878.jpg",
+        "title": "Lola  05"
+      },
+      {
+        "src": "/clients/lola/IMG_8894.jpg",
+        "full": "/clients/lola/IMG_8894.jpg",
+        "title": "Lola  06"
+      },
+      {
+        "src": "/clients/lola/IMG_8899 (1).jpg",
+        "full": "/clients/lola/IMG_8899 (1).jpg",
+        "title": "Lola  07"
+      },
+      {
+        "src": "/clients/lola/IMG_8899.jpg",
+        "full": "/clients/lola/IMG_8899.jpg",
+        "title": "Lola  08"
+      },
+      {
+        "src": "/clients/lola/IMG_8923.jpg",
+        "full": "/clients/lola/IMG_8923.jpg",
+        "title": "Lola  09"
+      },
+      {
+        "src": "/clients/lola/IMG_8925.jpg",
+        "full": "/clients/lola/IMG_8925.jpg",
+        "title": "Lola  10"
+      },
+      {
+        "src": "/clients/lola/IMG_8931.jpg",
+        "full": "/clients/lola/IMG_8931.jpg",
+        "title": "Lola  11"
+      },
+      {
+        "src": "/clients/lola/IMG_8934.jpg",
+        "full": "/clients/lola/IMG_8934.jpg",
+        "title": "Lola  12"
+      },
+      {
+        "src": "/clients/lola/IMG_8936 (1).jpg",
+        "full": "/clients/lola/IMG_8936 (1).jpg",
+        "title": "Lola  13"
+      },
+      {
+        "src": "/clients/lola/IMG_8936.jpg",
+        "full": "/clients/lola/IMG_8936.jpg",
+        "title": "Lola  14"
+      },
+      {
+        "src": "/clients/lola/IMG_8952.jpg",
+        "full": "/clients/lola/IMG_8952.jpg",
+        "title": "Lola  15"
+      },
+      {
+        "src": "/clients/lola/IMG_8959.jpg",
+        "full": "/clients/lola/IMG_8959.jpg",
+        "title": "Lola  16"
+      },
+      {
+        "src": "/clients/lola/IMG_8960.jpg",
+        "full": "/clients/lola/IMG_8960.jpg",
+        "title": "Lola  17"
+      },
+      {
+        "src": "/clients/lola/IMG_8979.jpg",
+        "full": "/clients/lola/IMG_8979.jpg",
+        "title": "Lola  18"
+      },
+      {
+        "src": "/clients/lola/IMG_8991.jpg",
+        "full": "/clients/lola/IMG_8991.jpg",
+        "title": "Lola  19"
+      },
+      {
+        "src": "/clients/lola/IMG_8996.jpg",
+        "full": "/clients/lola/IMG_8996.jpg",
+        "title": "Lola  20"
+      },
+      {
+        "src": "/clients/lola/IMG_8999.jpg",
+        "full": "/clients/lola/IMG_8999.jpg",
+        "title": "Lola  21"
+      },
+      {
+        "src": "/clients/lola/IMG_9014.jpg",
+        "full": "/clients/lola/IMG_9014.jpg",
+        "title": "Lola  22"
+      },
+      {
+        "src": "/clients/lola/IMG_9018.jpg",
+        "full": "/clients/lola/IMG_9018.jpg",
+        "title": "Lola  23"
+      },
+      {
+        "src": "/clients/lola/IMG_9021 (1).jpg",
+        "full": "/clients/lola/IMG_9021 (1).jpg",
+        "title": "Lola  24"
+      },
+      {
+        "src": "/clients/lola/IMG_9021.jpg",
+        "full": "/clients/lola/IMG_9021.jpg",
+        "title": "Lola  25"
+      }
+    ]
   }
 ];
