@@ -11,14 +11,6 @@ import { PORTFOLIO } from './data.jsx';
 // Do not substitute, edit, recolor, crop, retouch, regenerate, or otherwise alter them.
 const EXACT_NEW_SENIOR_PHOTOS = [
   {
-    id: 128,
-    src: '/IMG_8149.jpg',
-    full: '/IMG_8149.jpg',
-    title: 'Lakeland Varsity Pom',
-    category: 'Seniors',
-    aspect: 'landscape',
-  },
-  {
     id: 129,
     src: '/Media Day JV Lakeland High School White Lake.jpg',
     full: '/Media Day JV Lakeland High School White Lake.jpg',
@@ -68,7 +60,7 @@ const EXACT_NEW_SENIOR_PHOTOS = [
   },
 ];
 
-if (!PORTFOLIO.some((item) => item.id === 128)) {
+if (!PORTFOLIO.some((item) => item.id === 129)) {
   const firstSeniorIndex = PORTFOLIO.findIndex((item) => item.category === 'Seniors');
   const insertAt = firstSeniorIndex >= 0 ? firstSeniorIndex : PORTFOLIO.length;
   PORTFOLIO.splice(insertAt, 0, ...EXACT_NEW_SENIOR_PHOTOS);
