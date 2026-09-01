@@ -266,7 +266,7 @@ export const SERVICES = [
     </span>
   </>, icon: "\u2727", collections: [
     { name: "Family Mini Session", price: "$175", desc: "Perfect for holiday cards, announcements or just because your kiddos are growing too fast!\n30 minutes. 1 location. 10 digital images." },
-    { name: "Family Full Session", price: "$300", desc: "Bring the family and let's have some fun!\n1 hour. 1 location. 25+ digital images. $20 product credit." },
+    { name: "Family Full Session", price: "$350", desc: "Bring the family and let's have some fun!\n1 hour. 1 location. 25+ digital images. $20 product credit." },
     { name: "Milestone Sessions", price: "$300", desc: "Maternity, engagements, birthdays - life's biggest chapters.\n1 hour. 1 location. 25+ digital images. $20 product credit." },
   ]},
   { category: "Weddings", icon: "\u2727", collections: [
