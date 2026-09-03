@@ -2383,5 +2383,280 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Lola 25"
       }
     ]
+  },
+  {
+    "id": "valentina",
+    "clientName": "Valentina",
+    "password": "tina2027",
+    "sessionType": "Senior Portraits",
+    "date": "2026-09-03",
+    "coverImage": "/clients/valentina/IMG_8703.jpg",
+    "images": [
+      {
+        "src": "/clients/valentina/IMG_8703.jpg",
+        "full": "/clients/valentina/IMG_8703.jpg",
+        "title": "Valentina 01"
+      },
+      {
+        "src": "/clients/valentina/IMG_8719.jpg",
+        "full": "/clients/valentina/IMG_8719.jpg",
+        "title": "Valentina 02"
+      },
+      {
+        "src": "/clients/valentina/IMG_8726.jpg",
+        "full": "/clients/valentina/IMG_8726.jpg",
+        "title": "Valentina 03"
+      },
+      {
+        "src": "/clients/valentina/IMG_8739.jpg",
+        "full": "/clients/valentina/IMG_8739.jpg",
+        "title": "Valentina 04"
+      },
+      {
+        "src": "/clients/valentina/IMG_8757.jpg",
+        "full": "/clients/valentina/IMG_8757.jpg",
+        "title": "Valentina 05"
+      },
+      {
+        "src": "/clients/valentina/IMG_8758.jpg",
+        "full": "/clients/valentina/IMG_8758.jpg",
+        "title": "Valentina 06"
+      },
+      {
+        "src": "/clients/valentina/IMG_8769.jpg",
+        "full": "/clients/valentina/IMG_8769.jpg",
+        "title": "Valentina 07"
+      },
+      {
+        "src": "/clients/valentina/IMG_8772.jpg",
+        "full": "/clients/valentina/IMG_8772.jpg",
+        "title": "Valentina 08"
+      },
+      {
+        "src": "/clients/valentina/IMG_8776.jpg",
+        "full": "/clients/valentina/IMG_8776.jpg",
+        "title": "Valentina 09"
+      },
+      {
+        "src": "/clients/valentina/IMG_8787 (1).jpg",
+        "full": "/clients/valentina/IMG_8787 (1).jpg",
+        "title": "Valentina 10"
+      },
+      {
+        "src": "/clients/valentina/IMG_8787.jpg",
+        "full": "/clients/valentina/IMG_8787.jpg",
+        "title": "Valentina 11"
+      },
+      {
+        "src": "/clients/valentina/IMG_8790.jpg",
+        "full": "/clients/valentina/IMG_8790.jpg",
+        "title": "Valentina 12"
+      },
+      {
+        "src": "/clients/valentina/IMG_8795.jpg",
+        "full": "/clients/valentina/IMG_8795.jpg",
+        "title": "Valentina 13"
+      },
+      {
+        "src": "/clients/valentina/IMG_8808.jpg",
+        "full": "/clients/valentina/IMG_8808.jpg",
+        "title": "Valentina 14"
+      },
+      {
+        "src": "/clients/valentina/IMG_8813.jpg",
+        "full": "/clients/valentina/IMG_8813.jpg",
+        "title": "Valentina 15"
+      },
+      {
+        "src": "/clients/valentina/IMG_8822 (2).jpg",
+        "full": "/clients/valentina/IMG_8822 (2).jpg",
+        "title": "Valentina 16"
+      },
+      {
+        "src": "/clients/valentina/IMG_8822.jpg",
+        "full": "/clients/valentina/IMG_8822.jpg",
+        "title": "Valentina 17"
+      },
+      {
+        "src": "/clients/valentina/IMG_8838.jpg",
+        "full": "/clients/valentina/IMG_8838.jpg",
+        "title": "Valentina 18"
+      },
+      {
+        "src": "/clients/valentina/IMG_8844.jpg",
+        "full": "/clients/valentina/IMG_8844.jpg",
+        "title": "Valentina 19"
+      },
+      {
+        "src": "/clients/valentina/IMG_8918 (1).jpg",
+        "full": "/clients/valentina/IMG_8918 (1).jpg",
+        "title": "Valentina 20"
+      },
+      {
+        "src": "/clients/valentina/IMG_8918.jpg",
+        "full": "/clients/valentina/IMG_8918.jpg",
+        "title": "Valentina 21"
+      },
+      {
+        "src": "/clients/valentina/IMG_8943.jpg",
+        "full": "/clients/valentina/IMG_8943.jpg",
+        "title": "Valentina 22"
+      },
+      {
+        "src": "/clients/valentina/IMG_9003.jpg",
+        "full": "/clients/valentina/IMG_9003.jpg",
+        "title": "Valentina 23"
+      },
+      {
+        "src": "/clients/valentina/IMG_9005.jpg",
+        "full": "/clients/valentina/IMG_9005.jpg",
+        "title": "Valentina 24"
+      },
+      {
+        "src": "/clients/valentina/IMG_9028.jpg",
+        "full": "/clients/valentina/IMG_9028.jpg",
+        "title": "Valentina 25"
+      },
+      {
+        "src": "/clients/valentina/IMG_9061.jpg",
+        "full": "/clients/valentina/IMG_9061.jpg",
+        "title": "Valentina 26"
+      },
+      {
+        "src": "/clients/valentina/IMG_9106.jpg",
+        "full": "/clients/valentina/IMG_9106.jpg",
+        "title": "Valentina 27"
+      },
+      {
+        "src": "/clients/valentina/IMG_9114.jpg",
+        "full": "/clients/valentina/IMG_9114.jpg",
+        "title": "Valentina 28"
+      },
+      {
+        "src": "/clients/valentina/IMG_9117.jpg",
+        "full": "/clients/valentina/IMG_9117.jpg",
+        "title": "Valentina 29"
+      },
+      {
+        "src": "/clients/valentina/IMG_9119 (1).jpg",
+        "full": "/clients/valentina/IMG_9119 (1).jpg",
+        "title": "Valentina 30"
+      },
+      {
+        "src": "/clients/valentina/IMG_9119.jpg",
+        "full": "/clients/valentina/IMG_9119.jpg",
+        "title": "Valentina 31"
+      },
+      {
+        "src": "/clients/valentina/IMG_9134.jpg",
+        "full": "/clients/valentina/IMG_9134.jpg",
+        "title": "Valentina 32"
+      },
+      {
+        "src": "/clients/valentina/IMG_9137 (1).jpg",
+        "full": "/clients/valentina/IMG_9137 (1).jpg",
+        "title": "Valentina 33"
+      },
+      {
+        "src": "/clients/valentina/IMG_9137.jpg",
+        "full": "/clients/valentina/IMG_9137.jpg",
+        "title": "Valentina 34"
+      },
+      {
+        "src": "/clients/valentina/IMG_9170.jpg",
+        "full": "/clients/valentina/IMG_9170.jpg",
+        "title": "Valentina 35"
+      },
+      {
+        "src": "/clients/valentina/IMG_9173.jpg",
+        "full": "/clients/valentina/IMG_9173.jpg",
+        "title": "Valentina 36"
+      },
+      {
+        "src": "/clients/valentina/IMG_9174.jpg",
+        "full": "/clients/valentina/IMG_9174.jpg",
+        "title": "Valentina 37"
+      },
+      {
+        "src": "/clients/valentina/IMG_9180 (1).jpg",
+        "full": "/clients/valentina/IMG_9180 (1).jpg",
+        "title": "Valentina 38"
+      },
+      {
+        "src": "/clients/valentina/IMG_9180.jpg",
+        "full": "/clients/valentina/IMG_9180.jpg",
+        "title": "Valentina 39"
+      },
+      {
+        "src": "/clients/valentina/IMG_9204.jpg",
+        "full": "/clients/valentina/IMG_9204.jpg",
+        "title": "Valentina 40"
+      },
+      {
+        "src": "/clients/valentina/IMG_9206.jpg",
+        "full": "/clients/valentina/IMG_9206.jpg",
+        "title": "Valentina 41"
+      },
+      {
+        "src": "/clients/valentina/IMG_9207.jpg",
+        "full": "/clients/valentina/IMG_9207.jpg",
+        "title": "Valentina 42"
+      },
+      {
+        "src": "/clients/valentina/IMG_9232.jpg",
+        "full": "/clients/valentina/IMG_9232.jpg",
+        "title": "Valentina 43"
+      },
+      {
+        "src": "/clients/valentina/IMG_9250 (1).jpg",
+        "full": "/clients/valentina/IMG_9250 (1).jpg",
+        "title": "Valentina 44"
+      },
+      {
+        "src": "/clients/valentina/IMG_9250.jpg",
+        "full": "/clients/valentina/IMG_9250.jpg",
+        "title": "Valentina 45"
+      },
+      {
+        "src": "/clients/valentina/IMG_9261.jpg",
+        "full": "/clients/valentina/IMG_9261.jpg",
+        "title": "Valentina 46"
+      },
+      {
+        "src": "/clients/valentina/IMG_9265 (1).jpg",
+        "full": "/clients/valentina/IMG_9265 (1).jpg",
+        "title": "Valentina 47"
+      },
+      {
+        "src": "/clients/valentina/IMG_9265.jpg",
+        "full": "/clients/valentina/IMG_9265.jpg",
+        "title": "Valentina 48"
+      },
+      {
+        "src": "/clients/valentina/IMG_9278.jpg",
+        "full": "/clients/valentina/IMG_9278.jpg",
+        "title": "Valentina 49"
+      },
+      {
+        "src": "/clients/valentina/sneak1.jpg",
+        "full": "/clients/valentina/sneak1.jpg",
+        "title": "Valentina 50"
+      },
+      {
+        "src": "/clients/valentina/sneak2.jpg",
+        "full": "/clients/valentina/sneak2.jpg",
+        "title": "Valentina 51"
+      },
+      {
+        "src": "/clients/valentina/sneak3.jpg",
+        "full": "/clients/valentina/sneak3.jpg",
+        "title": "Valentina 52"
+      },
+      {
+        "src": "/clients/valentina/sneak4.jpg",
+        "full": "/clients/valentina/sneak4.jpg",
+        "title": "Valentina 53"
+      }
+    ]
   }
 ];
