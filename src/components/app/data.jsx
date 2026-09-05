@@ -2918,5 +2918,180 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Presley 116"
       }
     ]
+  },
+  {
+    "id": "isabelle",
+    "clientName": "Isabelle",
+    "password": "belles27",
+    "sessionType": "Senior Portraits",
+    "date": "2026-09-05",
+    "coverImage": "/clients/isabelle/IMG_9282.jpg",
+    "images": [
+      {
+        "src": "/clients/isabelle/IMG_9282.jpg",
+        "full": "/clients/isabelle/IMG_9282.jpg",
+        "title": "Isabelle 01"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9291.jpg",
+        "full": "/clients/isabelle/IMG_9291.jpg",
+        "title": "Isabelle 02"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9295.jpg",
+        "full": "/clients/isabelle/IMG_9295.jpg",
+        "title": "Isabelle 03"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9299.jpg",
+        "full": "/clients/isabelle/IMG_9299.jpg",
+        "title": "Isabelle 04"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9306.jpg",
+        "full": "/clients/isabelle/IMG_9306.jpg",
+        "title": "Isabelle 05"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9309.jpg",
+        "full": "/clients/isabelle/IMG_9309.jpg",
+        "title": "Isabelle 06"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9316.jpg",
+        "full": "/clients/isabelle/IMG_9316.jpg",
+        "title": "Isabelle 07"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9318.jpg",
+        "full": "/clients/isabelle/IMG_9318.jpg",
+        "title": "Isabelle 08"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9319.jpg",
+        "full": "/clients/isabelle/IMG_9319.jpg",
+        "title": "Isabelle 09"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9321.jpg",
+        "full": "/clients/isabelle/IMG_9321.jpg",
+        "title": "Isabelle 10"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9326.jpg",
+        "full": "/clients/isabelle/IMG_9326.jpg",
+        "title": "Isabelle 11"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9329.jpg",
+        "full": "/clients/isabelle/IMG_9329.jpg",
+        "title": "Isabelle 12"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9339 (1).jpg",
+        "full": "/clients/isabelle/IMG_9339 (1).jpg",
+        "title": "Isabelle 13"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9339.jpg",
+        "full": "/clients/isabelle/IMG_9339.jpg",
+        "title": "Isabelle 14"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9340.jpg",
+        "full": "/clients/isabelle/IMG_9340.jpg",
+        "title": "Isabelle 15"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9343.jpg",
+        "full": "/clients/isabelle/IMG_9343.jpg",
+        "title": "Isabelle 16"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9347.jpg",
+        "full": "/clients/isabelle/IMG_9347.jpg",
+        "title": "Isabelle 17"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9351 (1).jpg",
+        "full": "/clients/isabelle/IMG_9351 (1).jpg",
+        "title": "Isabelle 18"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9351.jpg",
+        "full": "/clients/isabelle/IMG_9351.jpg",
+        "title": "Isabelle 19"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9352.jpg",
+        "full": "/clients/isabelle/IMG_9352.jpg",
+        "title": "Isabelle 20"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9355.jpg",
+        "full": "/clients/isabelle/IMG_9355.jpg",
+        "title": "Isabelle 21"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9356.jpg",
+        "full": "/clients/isabelle/IMG_9356.jpg",
+        "title": "Isabelle 22"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9367.jpg",
+        "full": "/clients/isabelle/IMG_9367.jpg",
+        "title": "Isabelle 23"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9373 (1).jpg",
+        "full": "/clients/isabelle/IMG_9373 (1).jpg",
+        "title": "Isabelle 24"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9373.jpg",
+        "full": "/clients/isabelle/IMG_9373.jpg",
+        "title": "Isabelle 25"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9376.jpg",
+        "full": "/clients/isabelle/IMG_9376.jpg",
+        "title": "Isabelle 26"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9378.jpg",
+        "full": "/clients/isabelle/IMG_9378.jpg",
+        "title": "Isabelle 27"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9383.jpg",
+        "full": "/clients/isabelle/IMG_9383.jpg",
+        "title": "Isabelle 28"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9389 (1).jpg",
+        "full": "/clients/isabelle/IMG_9389 (1).jpg",
+        "title": "Isabelle 29"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9389.jpg",
+        "full": "/clients/isabelle/IMG_9389.jpg",
+        "title": "Isabelle 30"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9391.jpg",
+        "full": "/clients/isabelle/IMG_9391.jpg",
+        "title": "Isabelle 31"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9404.jpg",
+        "full": "/clients/isabelle/IMG_9404.jpg",
+        "title": "Isabelle 32"
+      },
+      {
+        "src": "/clients/isabelle/IMG_9407.jpg",
+        "full": "/clients/isabelle/IMG_9407.jpg",
+        "title": "Isabelle 33"
+      }
+    ]
   }
 ];
