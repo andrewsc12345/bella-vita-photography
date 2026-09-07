@@ -132,10 +132,14 @@ const EXACT_NEW_SENIOR_PHOTOS = [
   },
 ];
 
-if (!PORTFOLIO.some((item) => item.id === 129)) {
+const missingSeniorPhotos = EXACT_NEW_SENIOR_PHOTOS.filter(
+  (photo) => !PORTFOLIO.some((item) => item.id === photo.id)
+);
+
+if (missingSeniorPhotos.length > 0) {
   const firstSeniorIndex = PORTFOLIO.findIndex((item) => item.category === 'Seniors');
   const insertAt = firstSeniorIndex >= 0 ? firstSeniorIndex : PORTFOLIO.length;
-  PORTFOLIO.splice(insertAt, 0, ...EXACT_NEW_SENIOR_PHOTOS);
+  PORTFOLIO.splice(insertAt, 0, ...missingSeniorPhotos);
 }
 
 export default function BellaVitaApp() {
