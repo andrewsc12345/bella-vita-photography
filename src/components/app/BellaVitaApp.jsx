@@ -7,7 +7,7 @@
 import PhotographyWebsite from './App.jsx';
 import { PORTFOLIO } from './data.jsx';
 
-// Exact files uploaded by the user on 2026-08-25.
+// Exact senior photos uploaded by the user.
 // Do not substitute, edit, recolor, crop, retouch, regenerate, or otherwise alter them.
 const EXACT_NEW_SENIOR_PHOTOS = [
   {
@@ -55,6 +55,78 @@ const EXACT_NEW_SENIOR_PHOTOS = [
     src: '/Senior Session Howell.jpg',
     full: '/Senior Session Howell.jpg',
     title: 'Golden Hour Senior',
+    category: 'Seniors',
+    aspect: 'portrait',
+  },
+  {
+    id: 135,
+    src: '/Senior Session Brighton Flowers.jpg',
+    full: '/Senior Session Brighton Flowers.jpg',
+    title: 'Brighton Flower Field',
+    category: 'Seniors',
+    aspect: 'portrait',
+  },
+  {
+    id: 136,
+    src: '/Senior Session Fenton.jpg',
+    full: '/Senior Session Fenton.jpg',
+    title: 'Fenton Senior Portrait',
+    category: 'Seniors',
+    aspect: 'portrait',
+  },
+  {
+    id: 137,
+    src: '/Senior Session Hartland.jpg',
+    full: '/Senior Session Hartland.jpg',
+    title: 'Hartland Flower Portrait',
+    category: 'Seniors',
+    aspect: 'portrait',
+  },
+  {
+    id: 138,
+    src: '/Senior Session Holly.jpg',
+    full: '/Senior Session Holly.jpg',
+    title: 'Holly Senior Portrait',
+    category: 'Seniors',
+    aspect: 'portrait',
+  },
+  {
+    id: 139,
+    src: '/Senior Session Howell swing.jpg',
+    full: '/Senior Session Howell swing.jpg',
+    title: 'Howell Swing Portrait',
+    category: 'Seniors',
+    aspect: 'portrait',
+  },
+  {
+    id: 140,
+    src: '/Senior Session Milford Central Park.jpg',
+    full: '/Senior Session Milford Central Park.jpg',
+    title: 'Milford Central Park',
+    category: 'Seniors',
+    aspect: 'portrait',
+  },
+  {
+    id: 141,
+    src: '/Senior Session Milford Flower Field.jpg',
+    full: '/Senior Session Milford Flower Field.jpg',
+    title: 'Milford Flower Field',
+    category: 'Seniors',
+    aspect: 'portrait',
+  },
+  {
+    id: 142,
+    src: '/Senior Session Milford gate.jpg',
+    full: '/Senior Session Milford gate.jpg',
+    title: 'Milford Garden Gate',
+    category: 'Seniors',
+    aspect: 'portrait',
+  },
+  {
+    id: 143,
+    src: '/Senior Session White Lake flower.jpg',
+    full: '/Senior Session White Lake flower.jpg',
+    title: 'White Lake Flower Portrait',
     category: 'Seniors',
     aspect: 'portrait',
   },
