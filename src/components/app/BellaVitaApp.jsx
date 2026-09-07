@@ -142,14 +142,6 @@ if (missingSeniorPhotos.length > 0) {
   PORTFOLIO.splice(insertAt, 0, ...missingSeniorPhotos);
 }
 
-// Use the Brighton Flowers image for the main-page Senior Portrait feature.
-const mainSeniorPortrait = PORTFOLIO.find((item) => item.title === 'Senior Portrait');
-if (mainSeniorPortrait) {
-  mainSeniorPortrait.src = '/Senior Session Brighton Flowers.jpg';
-  mainSeniorPortrait.full = '/Senior Session Brighton Flowers.jpg';
-  mainSeniorPortrait.aspect = 'portrait';
-}
-
 export default function BellaVitaApp() {
   return <PhotographyWebsite />;
 }
