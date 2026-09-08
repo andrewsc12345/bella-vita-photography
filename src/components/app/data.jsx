@@ -3093,5 +3093,230 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Isabelle 33"
       }
     ]
+  },
+  {
+    "id": "shelby",
+    "clientName": "Shelby",
+    "password": "shelbs27",
+    "sessionType": "Senior Portraits",
+    "date": "2026-09-08",
+    "coverImage": "/clients/shelby/IMG_9414 (1).jpg",
+    "images": [
+      {
+        "src": "/clients/shelby/IMG_9414 (1).jpg",
+        "full": "/clients/shelby/IMG_9414 (1).jpg",
+        "title": "Shelby 01"
+      },
+      {
+        "src": "/clients/shelby/IMG_9414.jpg",
+        "full": "/clients/shelby/IMG_9414.jpg",
+        "title": "Shelby 02"
+      },
+      {
+        "src": "/clients/shelby/IMG_9421.jpg",
+        "full": "/clients/shelby/IMG_9421.jpg",
+        "title": "Shelby 03"
+      },
+      {
+        "src": "/clients/shelby/IMG_9423.jpg",
+        "full": "/clients/shelby/IMG_9423.jpg",
+        "title": "Shelby 04"
+      },
+      {
+        "src": "/clients/shelby/IMG_9424.jpg",
+        "full": "/clients/shelby/IMG_9424.jpg",
+        "title": "Shelby 05"
+      },
+      {
+        "src": "/clients/shelby/IMG_9427.jpg",
+        "full": "/clients/shelby/IMG_9427.jpg",
+        "title": "Shelby 06"
+      },
+      {
+        "src": "/clients/shelby/IMG_9429.jpg",
+        "full": "/clients/shelby/IMG_9429.jpg",
+        "title": "Shelby 07"
+      },
+      {
+        "src": "/clients/shelby/IMG_9432.jpg",
+        "full": "/clients/shelby/IMG_9432.jpg",
+        "title": "Shelby 08"
+      },
+      {
+        "src": "/clients/shelby/IMG_9435.jpg",
+        "full": "/clients/shelby/IMG_9435.jpg",
+        "title": "Shelby 09"
+      },
+      {
+        "src": "/clients/shelby/IMG_9438.jpg",
+        "full": "/clients/shelby/IMG_9438.jpg",
+        "title": "Shelby 10"
+      },
+      {
+        "src": "/clients/shelby/IMG_9443 (1).jpg",
+        "full": "/clients/shelby/IMG_9443 (1).jpg",
+        "title": "Shelby 11"
+      },
+      {
+        "src": "/clients/shelby/IMG_9443.jpg",
+        "full": "/clients/shelby/IMG_9443.jpg",
+        "title": "Shelby 12"
+      },
+      {
+        "src": "/clients/shelby/IMG_9446.jpg",
+        "full": "/clients/shelby/IMG_9446.jpg",
+        "title": "Shelby 13"
+      },
+      {
+        "src": "/clients/shelby/IMG_9449.jpg",
+        "full": "/clients/shelby/IMG_9449.jpg",
+        "title": "Shelby 14"
+      },
+      {
+        "src": "/clients/shelby/IMG_9451.jpg",
+        "full": "/clients/shelby/IMG_9451.jpg",
+        "title": "Shelby 15"
+      },
+      {
+        "src": "/clients/shelby/IMG_9455 (1).jpg",
+        "full": "/clients/shelby/IMG_9455 (1).jpg",
+        "title": "Shelby 16"
+      },
+      {
+        "src": "/clients/shelby/IMG_9455.jpg",
+        "full": "/clients/shelby/IMG_9455.jpg",
+        "title": "Shelby 17"
+      },
+      {
+        "src": "/clients/shelby/IMG_9456.jpg",
+        "full": "/clients/shelby/IMG_9456.jpg",
+        "title": "Shelby 18"
+      },
+      {
+        "src": "/clients/shelby/IMG_9460.jpg",
+        "full": "/clients/shelby/IMG_9460.jpg",
+        "title": "Shelby 19"
+      },
+      {
+        "src": "/clients/shelby/IMG_9462.jpg",
+        "full": "/clients/shelby/IMG_9462.jpg",
+        "title": "Shelby 20"
+      },
+      {
+        "src": "/clients/shelby/IMG_9466 (1).jpg",
+        "full": "/clients/shelby/IMG_9466 (1).jpg",
+        "title": "Shelby 21"
+      },
+      {
+        "src": "/clients/shelby/IMG_9466.jpg",
+        "full": "/clients/shelby/IMG_9466.jpg",
+        "title": "Shelby 22"
+      },
+      {
+        "src": "/clients/shelby/IMG_9470 (1).jpg",
+        "full": "/clients/shelby/IMG_9470 (1).jpg",
+        "title": "Shelby 23"
+      },
+      {
+        "src": "/clients/shelby/IMG_9470.jpg",
+        "full": "/clients/shelby/IMG_9470.jpg",
+        "title": "Shelby 24"
+      },
+      {
+        "src": "/clients/shelby/IMG_9471.jpg",
+        "full": "/clients/shelby/IMG_9471.jpg",
+        "title": "Shelby 25"
+      },
+      {
+        "src": "/clients/shelby/IMG_9474.jpg",
+        "full": "/clients/shelby/IMG_9474.jpg",
+        "title": "Shelby 26"
+      },
+      {
+        "src": "/clients/shelby/IMG_9483.jpg",
+        "full": "/clients/shelby/IMG_9483.jpg",
+        "title": "Shelby 27"
+      },
+      {
+        "src": "/clients/shelby/IMG_9488.jpg",
+        "full": "/clients/shelby/IMG_9488.jpg",
+        "title": "Shelby 28"
+      },
+      {
+        "src": "/clients/shelby/IMG_9492.jpg",
+        "full": "/clients/shelby/IMG_9492.jpg",
+        "title": "Shelby 29"
+      },
+      {
+        "src": "/clients/shelby/IMG_9495.jpg",
+        "full": "/clients/shelby/IMG_9495.jpg",
+        "title": "Shelby 30"
+      },
+      {
+        "src": "/clients/shelby/IMG_9503.jpg",
+        "full": "/clients/shelby/IMG_9503.jpg",
+        "title": "Shelby 31"
+      },
+      {
+        "src": "/clients/shelby/IMG_9505.jpg",
+        "full": "/clients/shelby/IMG_9505.jpg",
+        "title": "Shelby 32"
+      },
+      {
+        "src": "/clients/shelby/IMG_9509.jpg",
+        "full": "/clients/shelby/IMG_9509.jpg",
+        "title": "Shelby 33"
+      },
+      {
+        "src": "/clients/shelby/IMG_9514.jpg",
+        "full": "/clients/shelby/IMG_9514.jpg",
+        "title": "Shelby 34"
+      },
+      {
+        "src": "/clients/shelby/IMG_9523.jpg",
+        "full": "/clients/shelby/IMG_9523.jpg",
+        "title": "Shelby 35"
+      },
+      {
+        "src": "/clients/shelby/IMG_9525.jpg",
+        "full": "/clients/shelby/IMG_9525.jpg",
+        "title": "Shelby 36"
+      },
+      {
+        "src": "/clients/shelby/IMG_9526.jpg",
+        "full": "/clients/shelby/IMG_9526.jpg",
+        "title": "Shelby 37"
+      },
+      {
+        "src": "/clients/shelby/IMG_9531.jpg",
+        "full": "/clients/shelby/IMG_9531.jpg",
+        "title": "Shelby 38"
+      },
+      {
+        "src": "/clients/shelby/IMG_9533.jpg",
+        "full": "/clients/shelby/IMG_9533.jpg",
+        "title": "Shelby 39"
+      },
+      {
+        "src": "/clients/shelby/IMG_9534.jpg",
+        "full": "/clients/shelby/IMG_9534.jpg",
+        "title": "Shelby 40"
+      },
+      {
+        "src": "/clients/shelby/IMG_9536.jpg",
+        "full": "/clients/shelby/IMG_9536.jpg",
+        "title": "Shelby 41"
+      },
+      {
+        "src": "/clients/shelby/IMG_9537.jpg",
+        "full": "/clients/shelby/IMG_9537.jpg",
+        "title": "Shelby 42"
+      },
+      {
+        "src": "/clients/shelby/IMG_9549.jpg",
+        "full": "/clients/shelby/IMG_9549.jpg",
+        "title": "Shelby 43"
+      }
+    ]
   }
 ];
