@@ -3318,5 +3318,300 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Shelby 43"
       }
     ]
+  },
+  {
+    "id": "st-mary-s-seniors",
+    "clientName": "St. Mary's Seniors",
+    "password": "duff27",
+    "sessionType": "Senior Portraits",
+    "date": "2026-09-24",
+    "coverImage": "/clients/st-mary-s-seniors/IMG_9582.jpg",
+    "images": [
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9582.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9582.jpg",
+        "title": "St. Mary's Seniors 01"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9587.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9587.jpg",
+        "title": "St. Mary's Seniors 02"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9589.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9589.jpg",
+        "title": "St. Mary's Seniors 03"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9603.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9603.jpg",
+        "title": "St. Mary's Seniors 04"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9625.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9625.jpg",
+        "title": "St. Mary's Seniors 05"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9639.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9639.jpg",
+        "title": "St. Mary's Seniors 06"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9659.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9659.jpg",
+        "title": "St. Mary's Seniors 07"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9672.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9672.jpg",
+        "title": "St. Mary's Seniors 08"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9674.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9674.jpg",
+        "title": "St. Mary's Seniors 09"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9676.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9676.jpg",
+        "title": "St. Mary's Seniors 10"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9677.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9677.jpg",
+        "title": "St. Mary's Seniors 11"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9679.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9679.jpg",
+        "title": "St. Mary's Seniors 12"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9683.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9683.jpg",
+        "title": "St. Mary's Seniors 13"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9701.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9701.jpg",
+        "title": "St. Mary's Seniors 14"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9704.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9704.jpg",
+        "title": "St. Mary's Seniors 15"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9722.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9722.jpg",
+        "title": "St. Mary's Seniors 16"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9729.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9729.jpg",
+        "title": "St. Mary's Seniors 17"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9730.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9730.jpg",
+        "title": "St. Mary's Seniors 18"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9737.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9737.jpg",
+        "title": "St. Mary's Seniors 19"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9744.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9744.jpg",
+        "title": "St. Mary's Seniors 20"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9748.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9748.jpg",
+        "title": "St. Mary's Seniors 21"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9763.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9763.jpg",
+        "title": "St. Mary's Seniors 22"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9768.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9768.jpg",
+        "title": "St. Mary's Seniors 23"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9775.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9775.jpg",
+        "title": "St. Mary's Seniors 24"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9783.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9783.jpg",
+        "title": "St. Mary's Seniors 25"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9789.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9789.jpg",
+        "title": "St. Mary's Seniors 26"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9798.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9798.jpg",
+        "title": "St. Mary's Seniors 27"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9804.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9804.jpg",
+        "title": "St. Mary's Seniors 28"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9806.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9806.jpg",
+        "title": "St. Mary's Seniors 29"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9814.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9814.jpg",
+        "title": "St. Mary's Seniors 30"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9838.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9838.jpg",
+        "title": "St. Mary's Seniors 31"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9843.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9843.jpg",
+        "title": "St. Mary's Seniors 32"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9849.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9849.jpg",
+        "title": "St. Mary's Seniors 33"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9862.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9862.jpg",
+        "title": "St. Mary's Seniors 34"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9871.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9871.jpg",
+        "title": "St. Mary's Seniors 35"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9876.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9876.jpg",
+        "title": "St. Mary's Seniors 36"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9880.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9880.jpg",
+        "title": "St. Mary's Seniors 37"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9897.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9897.jpg",
+        "title": "St. Mary's Seniors 38"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9898.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9898.jpg",
+        "title": "St. Mary's Seniors 39"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9900.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9900.jpg",
+        "title": "St. Mary's Seniors 40"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9908.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9908.jpg",
+        "title": "St. Mary's Seniors 41"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9910.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9910.jpg",
+        "title": "St. Mary's Seniors 42"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9925.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9925.jpg",
+        "title": "St. Mary's Seniors 43"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9928.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9928.jpg",
+        "title": "St. Mary's Seniors 44"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9932.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9932.jpg",
+        "title": "St. Mary's Seniors 45"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9933.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9933.jpg",
+        "title": "St. Mary's Seniors 46"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9940.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9940.jpg",
+        "title": "St. Mary's Seniors 47"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9942.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9942.jpg",
+        "title": "St. Mary's Seniors 48"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9950.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9950.jpg",
+        "title": "St. Mary's Seniors 49"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9951.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9951.jpg",
+        "title": "St. Mary's Seniors 50"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9952.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9952.jpg",
+        "title": "St. Mary's Seniors 51"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9955.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9955.jpg",
+        "title": "St. Mary's Seniors 52"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9956.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9956.jpg",
+        "title": "St. Mary's Seniors 53"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9962.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9962.jpg",
+        "title": "St. Mary's Seniors 54"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9967 (1).jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9967 (1).jpg",
+        "title": "St. Mary's Seniors 55"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9975.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9975.jpg",
+        "title": "St. Mary's Seniors 56"
+      },
+      {
+        "src": "/clients/st-mary-s-seniors/IMG_9977.jpg",
+        "full": "/clients/st-mary-s-seniors/IMG_9977.jpg",
+        "title": "St. Mary's Seniors 57"
+      }
+    ]
   }
 ];
