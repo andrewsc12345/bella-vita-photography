@@ -3613,5 +3613,210 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "St. Mary's Seniors 57"
       }
     ]
+  },
+  {
+    "id": "adam-b",
+    "clientName": "Adam B",
+    "password": "adam27",
+    "sessionType": "Senior Portraits",
+    "date": "2026-10-11",
+    "coverImage": "/clients/adam-b/IMG_0506.jpg",
+    "images": [
+      {
+        "src": "/clients/adam-b/IMG_0506.jpg",
+        "full": "/clients/adam-b/IMG_0506.jpg",
+        "title": "Adam B 01"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0515.jpg",
+        "full": "/clients/adam-b/IMG_0515.jpg",
+        "title": "Adam B 02"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0523 (1).jpg",
+        "full": "/clients/adam-b/IMG_0523 (1).jpg",
+        "title": "Adam B 03"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0523.jpg",
+        "full": "/clients/adam-b/IMG_0523.jpg",
+        "title": "Adam B 04"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0528.jpg",
+        "full": "/clients/adam-b/IMG_0528.jpg",
+        "title": "Adam B 05"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0531 (1).jpg",
+        "full": "/clients/adam-b/IMG_0531 (1).jpg",
+        "title": "Adam B 06"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0539.jpg",
+        "full": "/clients/adam-b/IMG_0539.jpg",
+        "title": "Adam B 07"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0545.jpg",
+        "full": "/clients/adam-b/IMG_0545.jpg",
+        "title": "Adam B 08"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0547 (1).jpg",
+        "full": "/clients/adam-b/IMG_0547 (1).jpg",
+        "title": "Adam B 09"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0547.jpg",
+        "full": "/clients/adam-b/IMG_0547.jpg",
+        "title": "Adam B 10"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0559.jpg",
+        "full": "/clients/adam-b/IMG_0559.jpg",
+        "title": "Adam B 11"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0568.jpg",
+        "full": "/clients/adam-b/IMG_0568.jpg",
+        "title": "Adam B 12"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0571.jpg",
+        "full": "/clients/adam-b/IMG_0571.jpg",
+        "title": "Adam B 13"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0572.jpg",
+        "full": "/clients/adam-b/IMG_0572.jpg",
+        "title": "Adam B 14"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0581.jpg",
+        "full": "/clients/adam-b/IMG_0581.jpg",
+        "title": "Adam B 15"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0582.jpg",
+        "full": "/clients/adam-b/IMG_0582.jpg",
+        "title": "Adam B 16"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0585-1.jpg",
+        "full": "/clients/adam-b/IMG_0585-1.jpg",
+        "title": "Adam B 17"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0588-2 (1).jpg",
+        "full": "/clients/adam-b/IMG_0588-2 (1).jpg",
+        "title": "Adam B 18"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0588-2.jpg",
+        "full": "/clients/adam-b/IMG_0588-2.jpg",
+        "title": "Adam B 19"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0590 (1).jpg",
+        "full": "/clients/adam-b/IMG_0590 (1).jpg",
+        "title": "Adam B 20"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0590.jpg",
+        "full": "/clients/adam-b/IMG_0590.jpg",
+        "title": "Adam B 21"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0599.jpg",
+        "full": "/clients/adam-b/IMG_0599.jpg",
+        "title": "Adam B 22"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0602-3.jpg",
+        "full": "/clients/adam-b/IMG_0602-3.jpg",
+        "title": "Adam B 23"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0603-4 (1).jpg",
+        "full": "/clients/adam-b/IMG_0603-4 (1).jpg",
+        "title": "Adam B 24"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0603-4.jpg",
+        "full": "/clients/adam-b/IMG_0603-4.jpg",
+        "title": "Adam B 25"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0606-5.jpg",
+        "full": "/clients/adam-b/IMG_0606-5.jpg",
+        "title": "Adam B 26"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0610-6.jpg",
+        "full": "/clients/adam-b/IMG_0610-6.jpg",
+        "title": "Adam B 27"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0629-7.jpg",
+        "full": "/clients/adam-b/IMG_0629-7.jpg",
+        "title": "Adam B 28"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0631-8.jpg",
+        "full": "/clients/adam-b/IMG_0631-8.jpg",
+        "title": "Adam B 29"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0633-9.jpg",
+        "full": "/clients/adam-b/IMG_0633-9.jpg",
+        "title": "Adam B 30"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0638-10.jpg",
+        "full": "/clients/adam-b/IMG_0638-10.jpg",
+        "title": "Adam B 31"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0645-11.jpg",
+        "full": "/clients/adam-b/IMG_0645-11.jpg",
+        "title": "Adam B 32"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0650-12.jpg",
+        "full": "/clients/adam-b/IMG_0650-12.jpg",
+        "title": "Adam B 33"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0651.jpg",
+        "full": "/clients/adam-b/IMG_0651.jpg",
+        "title": "Adam B 34"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0684.jpg",
+        "full": "/clients/adam-b/IMG_0684.jpg",
+        "title": "Adam B 35"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0685.jpg",
+        "full": "/clients/adam-b/IMG_0685.jpg",
+        "title": "Adam B 36"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0688 (1).jpg",
+        "full": "/clients/adam-b/IMG_0688 (1).jpg",
+        "title": "Adam B 37"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0688.jpg",
+        "full": "/clients/adam-b/IMG_0688.jpg",
+        "title": "Adam B 38"
+      },
+      {
+        "src": "/clients/adam-b/IMG_0689.jpg",
+        "full": "/clients/adam-b/IMG_0689.jpg",
+        "title": "Adam B 39"
+      }
+    ]
   }
 ];
