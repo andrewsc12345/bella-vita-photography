@@ -4118,5 +4118,210 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Tuttle 58"
       }
     ]
+  },
+  {
+    "id": "vereecke",
+    "clientName": "Vereecke",
+    "password": "vereecke27",
+    "sessionType": "Family Session",
+    "date": "2026-10-11",
+    "coverImage": "/clients/vereecke/IMG_0252-1.jpg",
+    "images": [
+      {
+        "src": "/clients/vereecke/IMG_0252-1.jpg",
+        "full": "/clients/vereecke/IMG_0252-1.jpg",
+        "title": "Vereecke 01"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0257-2.jpg",
+        "full": "/clients/vereecke/IMG_0257-2.jpg",
+        "title": "Vereecke 02"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0263-3.jpg",
+        "full": "/clients/vereecke/IMG_0263-3.jpg",
+        "title": "Vereecke 03"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0268-4.jpg",
+        "full": "/clients/vereecke/IMG_0268-4.jpg",
+        "title": "Vereecke 04"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0277-5.jpg",
+        "full": "/clients/vereecke/IMG_0277-5.jpg",
+        "title": "Vereecke 05"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0297-6.jpg",
+        "full": "/clients/vereecke/IMG_0297-6.jpg",
+        "title": "Vereecke 06"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0305-7.jpg",
+        "full": "/clients/vereecke/IMG_0305-7.jpg",
+        "title": "Vereecke 07"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0307-8.jpg",
+        "full": "/clients/vereecke/IMG_0307-8.jpg",
+        "title": "Vereecke 08"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0314-9.jpg",
+        "full": "/clients/vereecke/IMG_0314-9.jpg",
+        "title": "Vereecke 09"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0317-10.jpg",
+        "full": "/clients/vereecke/IMG_0317-10.jpg",
+        "title": "Vereecke 10"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0326-13.jpg",
+        "full": "/clients/vereecke/IMG_0326-13.jpg",
+        "title": "Vereecke 11"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0331-14.jpg",
+        "full": "/clients/vereecke/IMG_0331-14.jpg",
+        "title": "Vereecke 12"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0334-15.jpg",
+        "full": "/clients/vereecke/IMG_0334-15.jpg",
+        "title": "Vereecke 13"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0337-16.jpg",
+        "full": "/clients/vereecke/IMG_0337-16.jpg",
+        "title": "Vereecke 14"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0340-17.jpg",
+        "full": "/clients/vereecke/IMG_0340-17.jpg",
+        "title": "Vereecke 15"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0345-18.jpg",
+        "full": "/clients/vereecke/IMG_0345-18.jpg",
+        "title": "Vereecke 16"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0357-19.jpg",
+        "full": "/clients/vereecke/IMG_0357-19.jpg",
+        "title": "Vereecke 17"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0361-20.jpg",
+        "full": "/clients/vereecke/IMG_0361-20.jpg",
+        "title": "Vereecke 18"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0367-21.jpg",
+        "full": "/clients/vereecke/IMG_0367-21.jpg",
+        "title": "Vereecke 19"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0384-22.jpg",
+        "full": "/clients/vereecke/IMG_0384-22.jpg",
+        "title": "Vereecke 20"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0389-1.jpg",
+        "full": "/clients/vereecke/IMG_0389-1.jpg",
+        "title": "Vereecke 21"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0395-2.jpg",
+        "full": "/clients/vereecke/IMG_0395-2.jpg",
+        "title": "Vereecke 22"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0399-25.jpg",
+        "full": "/clients/vereecke/IMG_0399-25.jpg",
+        "title": "Vereecke 23"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0404-1.jpg",
+        "full": "/clients/vereecke/IMG_0404-1.jpg",
+        "title": "Vereecke 24"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0406-27.jpg",
+        "full": "/clients/vereecke/IMG_0406-27.jpg",
+        "title": "Vereecke 25"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0407-28.jpg",
+        "full": "/clients/vereecke/IMG_0407-28.jpg",
+        "title": "Vereecke 26"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0410-29.jpg",
+        "full": "/clients/vereecke/IMG_0410-29.jpg",
+        "title": "Vereecke 27"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0412-30.jpg",
+        "full": "/clients/vereecke/IMG_0412-30.jpg",
+        "title": "Vereecke 28"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0421-32.jpg",
+        "full": "/clients/vereecke/IMG_0421-32.jpg",
+        "title": "Vereecke 29"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0446-33.jpg",
+        "full": "/clients/vereecke/IMG_0446-33.jpg",
+        "title": "Vereecke 30"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0451-34.jpg",
+        "full": "/clients/vereecke/IMG_0451-34.jpg",
+        "title": "Vereecke 31"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0454-35.jpg",
+        "full": "/clients/vereecke/IMG_0454-35.jpg",
+        "title": "Vereecke 32"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0457-36.jpg",
+        "full": "/clients/vereecke/IMG_0457-36.jpg",
+        "title": "Vereecke 33"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0461-37.jpg",
+        "full": "/clients/vereecke/IMG_0461-37.jpg",
+        "title": "Vereecke 34"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0464-38.jpg",
+        "full": "/clients/vereecke/IMG_0464-38.jpg",
+        "title": "Vereecke 35"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0471-39.jpg",
+        "full": "/clients/vereecke/IMG_0471-39.jpg",
+        "title": "Vereecke 36"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0479-2.jpg",
+        "full": "/clients/vereecke/IMG_0479-2.jpg",
+        "title": "Vereecke 37"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0485-3.jpg",
+        "full": "/clients/vereecke/IMG_0485-3.jpg",
+        "title": "Vereecke 38"
+      },
+      {
+        "src": "/clients/vereecke/IMG_0493-43.jpg",
+        "full": "/clients/vereecke/IMG_0493-43.jpg",
+        "title": "Vereecke 39"
+      }
+    ]
   }
 ];
