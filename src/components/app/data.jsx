@@ -3818,5 +3818,305 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Adam B 39"
       }
     ]
+  },
+  {
+    "id": "tuttle",
+    "clientName": "Tuttle",
+    "password": "family27",
+    "sessionType": "Family Session",
+    "date": "2026-10-11",
+    "coverImage": "/clients/tuttle/IMG_0585-1.jpg",
+    "images": [
+      {
+        "src": "/clients/tuttle/IMG_0585-1.jpg",
+        "full": "/clients/tuttle/IMG_0585-1.jpg",
+        "title": "Tuttle 01"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0588-2 (1).jpg",
+        "full": "/clients/tuttle/IMG_0588-2 (1).jpg",
+        "title": "Tuttle 02"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0588-2.jpg",
+        "full": "/clients/tuttle/IMG_0588-2.jpg",
+        "title": "Tuttle 03"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0602-3.jpg",
+        "full": "/clients/tuttle/IMG_0602-3.jpg",
+        "title": "Tuttle 04"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0603-4 (1).jpg",
+        "full": "/clients/tuttle/IMG_0603-4 (1).jpg",
+        "title": "Tuttle 05"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0603-4.jpg",
+        "full": "/clients/tuttle/IMG_0603-4.jpg",
+        "title": "Tuttle 06"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0606-5.jpg",
+        "full": "/clients/tuttle/IMG_0606-5.jpg",
+        "title": "Tuttle 07"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0610-6.jpg",
+        "full": "/clients/tuttle/IMG_0610-6.jpg",
+        "title": "Tuttle 08"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0616.jpg",
+        "full": "/clients/tuttle/IMG_0616.jpg",
+        "title": "Tuttle 09"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0618-1.jpg",
+        "full": "/clients/tuttle/IMG_0618-1.jpg",
+        "title": "Tuttle 10"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0625-2.jpg",
+        "full": "/clients/tuttle/IMG_0625-2.jpg",
+        "title": "Tuttle 11"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0629-7.jpg",
+        "full": "/clients/tuttle/IMG_0629-7.jpg",
+        "title": "Tuttle 12"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0631-8.jpg",
+        "full": "/clients/tuttle/IMG_0631-8.jpg",
+        "title": "Tuttle 13"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0633-9.jpg",
+        "full": "/clients/tuttle/IMG_0633-9.jpg",
+        "title": "Tuttle 14"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0638-10.jpg",
+        "full": "/clients/tuttle/IMG_0638-10.jpg",
+        "title": "Tuttle 15"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0645-11.jpg",
+        "full": "/clients/tuttle/IMG_0645-11.jpg",
+        "title": "Tuttle 16"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0650-12.jpg",
+        "full": "/clients/tuttle/IMG_0650-12.jpg",
+        "title": "Tuttle 17"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0667-3.jpg",
+        "full": "/clients/tuttle/IMG_0667-3.jpg",
+        "title": "Tuttle 18"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0668-4.jpg",
+        "full": "/clients/tuttle/IMG_0668-4.jpg",
+        "title": "Tuttle 19"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0674-5.jpg",
+        "full": "/clients/tuttle/IMG_0674-5.jpg",
+        "title": "Tuttle 20"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0678-6.jpg",
+        "full": "/clients/tuttle/IMG_0678-6.jpg",
+        "title": "Tuttle 21"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0693-7.jpg",
+        "full": "/clients/tuttle/IMG_0693-7.jpg",
+        "title": "Tuttle 22"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0696-8.jpg",
+        "full": "/clients/tuttle/IMG_0696-8.jpg",
+        "title": "Tuttle 23"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0702-1.jpg",
+        "full": "/clients/tuttle/IMG_0702-1.jpg",
+        "title": "Tuttle 24"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0710-9.jpg",
+        "full": "/clients/tuttle/IMG_0710-9.jpg",
+        "title": "Tuttle 25"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0712-10.jpg",
+        "full": "/clients/tuttle/IMG_0712-10.jpg",
+        "title": "Tuttle 26"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0721-11.jpg",
+        "full": "/clients/tuttle/IMG_0721-11.jpg",
+        "title": "Tuttle 27"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0724.jpg",
+        "full": "/clients/tuttle/IMG_0724.jpg",
+        "title": "Tuttle 28"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0728-12 (1).jpg",
+        "full": "/clients/tuttle/IMG_0728-12 (1).jpg",
+        "title": "Tuttle 29"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0728-12.jpg",
+        "full": "/clients/tuttle/IMG_0728-12.jpg",
+        "title": "Tuttle 30"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0733-2.jpg",
+        "full": "/clients/tuttle/IMG_0733-2.jpg",
+        "title": "Tuttle 31"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0735.jpg",
+        "full": "/clients/tuttle/IMG_0735.jpg",
+        "title": "Tuttle 32"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0738-3.jpg",
+        "full": "/clients/tuttle/IMG_0738-3.jpg",
+        "title": "Tuttle 33"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0741-1.jpg",
+        "full": "/clients/tuttle/IMG_0741-1.jpg",
+        "title": "Tuttle 34"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0754.jpg",
+        "full": "/clients/tuttle/IMG_0754.jpg",
+        "title": "Tuttle 35"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0763-13.jpg",
+        "full": "/clients/tuttle/IMG_0763-13.jpg",
+        "title": "Tuttle 36"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0767-14.jpg",
+        "full": "/clients/tuttle/IMG_0767-14.jpg",
+        "title": "Tuttle 37"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0769-15.jpg",
+        "full": "/clients/tuttle/IMG_0769-15.jpg",
+        "title": "Tuttle 38"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0770-5.jpg",
+        "full": "/clients/tuttle/IMG_0770-5.jpg",
+        "title": "Tuttle 39"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0772.jpg",
+        "full": "/clients/tuttle/IMG_0772.jpg",
+        "title": "Tuttle 40"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0776-3.jpg",
+        "full": "/clients/tuttle/IMG_0776-3.jpg",
+        "title": "Tuttle 41"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0777-4.jpg",
+        "full": "/clients/tuttle/IMG_0777-4.jpg",
+        "title": "Tuttle 42"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0794.jpg",
+        "full": "/clients/tuttle/IMG_0794.jpg",
+        "title": "Tuttle 43"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0799-16.jpg",
+        "full": "/clients/tuttle/IMG_0799-16.jpg",
+        "title": "Tuttle 44"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0824-1.jpg",
+        "full": "/clients/tuttle/IMG_0824-1.jpg",
+        "title": "Tuttle 45"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0831.jpg",
+        "full": "/clients/tuttle/IMG_0831.jpg",
+        "title": "Tuttle 46"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0836-2.jpg",
+        "full": "/clients/tuttle/IMG_0836-2.jpg",
+        "title": "Tuttle 47"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0842.jpg",
+        "full": "/clients/tuttle/IMG_0842.jpg",
+        "title": "Tuttle 48"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0846-2.jpg",
+        "full": "/clients/tuttle/IMG_0846-2.jpg",
+        "title": "Tuttle 49"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0850-3.jpg",
+        "full": "/clients/tuttle/IMG_0850-3.jpg",
+        "title": "Tuttle 50"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0853-1.jpg",
+        "full": "/clients/tuttle/IMG_0853-1.jpg",
+        "title": "Tuttle 51"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0856-13.jpg",
+        "full": "/clients/tuttle/IMG_0856-13.jpg",
+        "title": "Tuttle 52"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0859-14.jpg",
+        "full": "/clients/tuttle/IMG_0859-14.jpg",
+        "title": "Tuttle 53"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0862-17.jpg",
+        "full": "/clients/tuttle/IMG_0862-17.jpg",
+        "title": "Tuttle 54"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0866-15.jpg",
+        "full": "/clients/tuttle/IMG_0866-15.jpg",
+        "title": "Tuttle 55"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0867-16.jpg",
+        "full": "/clients/tuttle/IMG_0867-16.jpg",
+        "title": "Tuttle 56"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0869-2.jpg",
+        "full": "/clients/tuttle/IMG_0869-2.jpg",
+        "title": "Tuttle 57"
+      },
+      {
+        "src": "/clients/tuttle/IMG_0872-18.jpg",
+        "full": "/clients/tuttle/IMG_0872-18.jpg",
+        "title": "Tuttle 58"
+      }
+    ]
   }
 ];
