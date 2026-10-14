@@ -4743,5 +4743,160 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Malaina 37"
       }
     ]
+  },
+  {
+    "id": "mclaren",
+    "clientName": "McLaren",
+    "password": "mclaren26",
+    "sessionType": "Couples Session",
+    "date": "2026-10-14",
+    "coverImage": "/clients/mclaren/IMG_0952.jpg",
+    "images": [
+      {
+        "src": "/clients/mclaren/IMG_0952.jpg",
+        "full": "/clients/mclaren/IMG_0952.jpg",
+        "title": "McLaren 01"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0954 (1).jpg",
+        "full": "/clients/mclaren/IMG_0954 (1).jpg",
+        "title": "McLaren 02"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0954.jpg",
+        "full": "/clients/mclaren/IMG_0954.jpg",
+        "title": "McLaren 03"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0963-1.jpg",
+        "full": "/clients/mclaren/IMG_0963-1.jpg",
+        "title": "McLaren 04"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0967.jpg",
+        "full": "/clients/mclaren/IMG_0967.jpg",
+        "title": "McLaren 05"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0971.jpg",
+        "full": "/clients/mclaren/IMG_0971.jpg",
+        "title": "McLaren 06"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0973-2.jpg",
+        "full": "/clients/mclaren/IMG_0973-2.jpg",
+        "title": "McLaren 07"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0975 (1).jpg",
+        "full": "/clients/mclaren/IMG_0975 (1).jpg",
+        "title": "McLaren 08"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0975.jpg",
+        "full": "/clients/mclaren/IMG_0975.jpg",
+        "title": "McLaren 09"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0979.jpg",
+        "full": "/clients/mclaren/IMG_0979.jpg",
+        "title": "McLaren 10"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0984.jpg",
+        "full": "/clients/mclaren/IMG_0984.jpg",
+        "title": "McLaren 11"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0992 (1).jpg",
+        "full": "/clients/mclaren/IMG_0992 (1).jpg",
+        "title": "McLaren 12"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0992.jpg",
+        "full": "/clients/mclaren/IMG_0992.jpg",
+        "title": "McLaren 13"
+      },
+      {
+        "src": "/clients/mclaren/IMG_0994.jpg",
+        "full": "/clients/mclaren/IMG_0994.jpg",
+        "title": "McLaren 14"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1004.jpg",
+        "full": "/clients/mclaren/IMG_1004.jpg",
+        "title": "McLaren 15"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1007.jpg",
+        "full": "/clients/mclaren/IMG_1007.jpg",
+        "title": "McLaren 16"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1009.jpg",
+        "full": "/clients/mclaren/IMG_1009.jpg",
+        "title": "McLaren 17"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1011.jpg",
+        "full": "/clients/mclaren/IMG_1011.jpg",
+        "title": "McLaren 18"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1013.JPG",
+        "full": "/clients/mclaren/IMG_1013.JPG",
+        "title": "McLaren 19"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1016 (1).jpg",
+        "full": "/clients/mclaren/IMG_1016 (1).jpg",
+        "title": "McLaren 20"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1016.jpg",
+        "full": "/clients/mclaren/IMG_1016.jpg",
+        "title": "McLaren 21"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1018.jpg",
+        "full": "/clients/mclaren/IMG_1018.jpg",
+        "title": "McLaren 22"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1021.jpg",
+        "full": "/clients/mclaren/IMG_1021.jpg",
+        "title": "McLaren 23"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1022.jpg",
+        "full": "/clients/mclaren/IMG_1022.jpg",
+        "title": "McLaren 24"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1025.JPG",
+        "full": "/clients/mclaren/IMG_1025.JPG",
+        "title": "McLaren 25"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1028.jpg",
+        "full": "/clients/mclaren/IMG_1028.jpg",
+        "title": "McLaren 26"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1029.jpg",
+        "full": "/clients/mclaren/IMG_1029.jpg",
+        "title": "McLaren 27"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1030.JPG",
+        "full": "/clients/mclaren/IMG_1030.JPG",
+        "title": "McLaren 28"
+      },
+      {
+        "src": "/clients/mclaren/IMG_1034-3.jpg",
+        "full": "/clients/mclaren/IMG_1034-3.jpg",
+        "title": "McLaren 29"
+      }
+    ]
   }
 ];
