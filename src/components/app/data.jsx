@@ -4548,5 +4548,200 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Christian + Lindsay 64"
       }
     ]
+  },
+  {
+    "id": "malaina",
+    "clientName": "Malaina",
+    "password": "mduff2027",
+    "sessionType": "Senior Portraits",
+    "date": "2026-10-14",
+    "coverImage": "/clients/malaina/111 (1).jpg",
+    "images": [
+      {
+        "src": "/clients/malaina/111 (1).jpg",
+        "full": "/clients/malaina/111 (1).jpg",
+        "title": "Malaina 01"
+      },
+      {
+        "src": "/clients/malaina/111 (10).jpg",
+        "full": "/clients/malaina/111 (10).jpg",
+        "title": "Malaina 02"
+      },
+      {
+        "src": "/clients/malaina/111 (11).jpg",
+        "full": "/clients/malaina/111 (11).jpg",
+        "title": "Malaina 03"
+      },
+      {
+        "src": "/clients/malaina/111 (11-1).jpg",
+        "full": "/clients/malaina/111 (11-1).jpg",
+        "title": "Malaina 04"
+      },
+      {
+        "src": "/clients/malaina/111 (12).jpg",
+        "full": "/clients/malaina/111 (12).jpg",
+        "title": "Malaina 05"
+      },
+      {
+        "src": "/clients/malaina/111 (13).jpg",
+        "full": "/clients/malaina/111 (13).jpg",
+        "title": "Malaina 06"
+      },
+      {
+        "src": "/clients/malaina/111 (14).jpg",
+        "full": "/clients/malaina/111 (14).jpg",
+        "title": "Malaina 07"
+      },
+      {
+        "src": "/clients/malaina/111 (15).jpg",
+        "full": "/clients/malaina/111 (15).jpg",
+        "title": "Malaina 08"
+      },
+      {
+        "src": "/clients/malaina/111 (15-1).jpg",
+        "full": "/clients/malaina/111 (15-1).jpg",
+        "title": "Malaina 09"
+      },
+      {
+        "src": "/clients/malaina/111 (16).jpg",
+        "full": "/clients/malaina/111 (16).jpg",
+        "title": "Malaina 10"
+      },
+      {
+        "src": "/clients/malaina/111 (17).jpg",
+        "full": "/clients/malaina/111 (17).jpg",
+        "title": "Malaina 11"
+      },
+      {
+        "src": "/clients/malaina/111 (18).jpg",
+        "full": "/clients/malaina/111 (18).jpg",
+        "title": "Malaina 12"
+      },
+      {
+        "src": "/clients/malaina/111 (19).jpg",
+        "full": "/clients/malaina/111 (19).jpg",
+        "title": "Malaina 13"
+      },
+      {
+        "src": "/clients/malaina/111 (2).jpg",
+        "full": "/clients/malaina/111 (2).jpg",
+        "title": "Malaina 14"
+      },
+      {
+        "src": "/clients/malaina/111 (20).jpg",
+        "full": "/clients/malaina/111 (20).jpg",
+        "title": "Malaina 15"
+      },
+      {
+        "src": "/clients/malaina/111 (21).jpg",
+        "full": "/clients/malaina/111 (21).jpg",
+        "title": "Malaina 16"
+      },
+      {
+        "src": "/clients/malaina/111 (21-1).jpg",
+        "full": "/clients/malaina/111 (21-1).jpg",
+        "title": "Malaina 17"
+      },
+      {
+        "src": "/clients/malaina/111 (22).jpg",
+        "full": "/clients/malaina/111 (22).jpg",
+        "title": "Malaina 18"
+      },
+      {
+        "src": "/clients/malaina/111 (22-1).jpg",
+        "full": "/clients/malaina/111 (22-1).jpg",
+        "title": "Malaina 19"
+      },
+      {
+        "src": "/clients/malaina/111 (24).jpg",
+        "full": "/clients/malaina/111 (24).jpg",
+        "title": "Malaina 20"
+      },
+      {
+        "src": "/clients/malaina/111 (25).jpg",
+        "full": "/clients/malaina/111 (25).jpg",
+        "title": "Malaina 21"
+      },
+      {
+        "src": "/clients/malaina/111 (26).jpg",
+        "full": "/clients/malaina/111 (26).jpg",
+        "title": "Malaina 22"
+      },
+      {
+        "src": "/clients/malaina/111 (26-1).jpg",
+        "full": "/clients/malaina/111 (26-1).jpg",
+        "title": "Malaina 23"
+      },
+      {
+        "src": "/clients/malaina/111 (27).jpg",
+        "full": "/clients/malaina/111 (27).jpg",
+        "title": "Malaina 24"
+      },
+      {
+        "src": "/clients/malaina/111 (28).jpg",
+        "full": "/clients/malaina/111 (28).jpg",
+        "title": "Malaina 25"
+      },
+      {
+        "src": "/clients/malaina/111 (29).jpg",
+        "full": "/clients/malaina/111 (29).jpg",
+        "title": "Malaina 26"
+      },
+      {
+        "src": "/clients/malaina/111 (3).jpg",
+        "full": "/clients/malaina/111 (3).jpg",
+        "title": "Malaina 27"
+      },
+      {
+        "src": "/clients/malaina/111 (4).jpg",
+        "full": "/clients/malaina/111 (4).jpg",
+        "title": "Malaina 28"
+      },
+      {
+        "src": "/clients/malaina/111 (5).jpg",
+        "full": "/clients/malaina/111 (5).jpg",
+        "title": "Malaina 29"
+      },
+      {
+        "src": "/clients/malaina/111 (5-1).jpg",
+        "full": "/clients/malaina/111 (5-1).jpg",
+        "title": "Malaina 30"
+      },
+      {
+        "src": "/clients/malaina/111 (6).jpg",
+        "full": "/clients/malaina/111 (6).jpg",
+        "title": "Malaina 31"
+      },
+      {
+        "src": "/clients/malaina/111 (7).jpg",
+        "full": "/clients/malaina/111 (7).jpg",
+        "title": "Malaina 32"
+      },
+      {
+        "src": "/clients/malaina/111 (7-1).jpg",
+        "full": "/clients/malaina/111 (7-1).jpg",
+        "title": "Malaina 33"
+      },
+      {
+        "src": "/clients/malaina/111 (8).jpg",
+        "full": "/clients/malaina/111 (8).jpg",
+        "title": "Malaina 34"
+      },
+      {
+        "src": "/clients/malaina/111 (8-1).jpg",
+        "full": "/clients/malaina/111 (8-1).jpg",
+        "title": "Malaina 35"
+      },
+      {
+        "src": "/clients/malaina/111 (9).jpg",
+        "full": "/clients/malaina/111 (9).jpg",
+        "title": "Malaina 36"
+      },
+      {
+        "src": "/clients/malaina/IMG_1182-5.jpg",
+        "full": "/clients/malaina/IMG_1182-5.jpg",
+        "title": "Malaina 37"
+      }
+    ]
   }
 ];
