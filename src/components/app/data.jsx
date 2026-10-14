@@ -4323,5 +4323,335 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Vereecke 39"
       }
     ]
+  },
+  {
+    "id": "christian-lindsay",
+    "clientName": "Christian + Lindsay",
+    "password": "wedding10926",
+    "sessionType": "Wedding",
+    "date": "2026-10-14",
+    "coverImage": "/clients/christian-lindsay/IMG_1193.jpg",
+    "images": [
+      {
+        "src": "/clients/christian-lindsay/IMG_1193.jpg",
+        "full": "/clients/christian-lindsay/IMG_1193.jpg",
+        "title": "Christian + Lindsay 01"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1195.jpg",
+        "full": "/clients/christian-lindsay/IMG_1195.jpg",
+        "title": "Christian + Lindsay 02"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1196.jpg",
+        "full": "/clients/christian-lindsay/IMG_1196.jpg",
+        "title": "Christian + Lindsay 03"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1200.jpg",
+        "full": "/clients/christian-lindsay/IMG_1200.jpg",
+        "title": "Christian + Lindsay 04"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1201.jpg",
+        "full": "/clients/christian-lindsay/IMG_1201.jpg",
+        "title": "Christian + Lindsay 05"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1202.jpg",
+        "full": "/clients/christian-lindsay/IMG_1202.jpg",
+        "title": "Christian + Lindsay 06"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1203.jpg",
+        "full": "/clients/christian-lindsay/IMG_1203.jpg",
+        "title": "Christian + Lindsay 07"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1205.jpg",
+        "full": "/clients/christian-lindsay/IMG_1205.jpg",
+        "title": "Christian + Lindsay 08"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1210.jpg",
+        "full": "/clients/christian-lindsay/IMG_1210.jpg",
+        "title": "Christian + Lindsay 09"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1212.jpg",
+        "full": "/clients/christian-lindsay/IMG_1212.jpg",
+        "title": "Christian + Lindsay 10"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1213.jpg",
+        "full": "/clients/christian-lindsay/IMG_1213.jpg",
+        "title": "Christian + Lindsay 11"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1214.jpg",
+        "full": "/clients/christian-lindsay/IMG_1214.jpg",
+        "title": "Christian + Lindsay 12"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1216.jpg",
+        "full": "/clients/christian-lindsay/IMG_1216.jpg",
+        "title": "Christian + Lindsay 13"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1218.jpg",
+        "full": "/clients/christian-lindsay/IMG_1218.jpg",
+        "title": "Christian + Lindsay 14"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1219.jpg",
+        "full": "/clients/christian-lindsay/IMG_1219.jpg",
+        "title": "Christian + Lindsay 15"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1220.jpg",
+        "full": "/clients/christian-lindsay/IMG_1220.jpg",
+        "title": "Christian + Lindsay 16"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1222 (1).jpg",
+        "full": "/clients/christian-lindsay/IMG_1222 (1).jpg",
+        "title": "Christian + Lindsay 17"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1222.jpg",
+        "full": "/clients/christian-lindsay/IMG_1222.jpg",
+        "title": "Christian + Lindsay 18"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1224.jpg",
+        "full": "/clients/christian-lindsay/IMG_1224.jpg",
+        "title": "Christian + Lindsay 19"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1226.jpg",
+        "full": "/clients/christian-lindsay/IMG_1226.jpg",
+        "title": "Christian + Lindsay 20"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1229.jpg",
+        "full": "/clients/christian-lindsay/IMG_1229.jpg",
+        "title": "Christian + Lindsay 21"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1231 (1).jpg",
+        "full": "/clients/christian-lindsay/IMG_1231 (1).jpg",
+        "title": "Christian + Lindsay 22"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1231.jpg",
+        "full": "/clients/christian-lindsay/IMG_1231.jpg",
+        "title": "Christian + Lindsay 23"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1233.jpg",
+        "full": "/clients/christian-lindsay/IMG_1233.jpg",
+        "title": "Christian + Lindsay 24"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1234.jpg",
+        "full": "/clients/christian-lindsay/IMG_1234.jpg",
+        "title": "Christian + Lindsay 25"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1235.jpg",
+        "full": "/clients/christian-lindsay/IMG_1235.jpg",
+        "title": "Christian + Lindsay 26"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1239.jpg",
+        "full": "/clients/christian-lindsay/IMG_1239.jpg",
+        "title": "Christian + Lindsay 27"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1240.jpg",
+        "full": "/clients/christian-lindsay/IMG_1240.jpg",
+        "title": "Christian + Lindsay 28"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1244 (2).jpg",
+        "full": "/clients/christian-lindsay/IMG_1244 (2).jpg",
+        "title": "Christian + Lindsay 29"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1244.jpg",
+        "full": "/clients/christian-lindsay/IMG_1244.jpg",
+        "title": "Christian + Lindsay 30"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1249.jpg",
+        "full": "/clients/christian-lindsay/IMG_1249.jpg",
+        "title": "Christian + Lindsay 31"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1254.jpg",
+        "full": "/clients/christian-lindsay/IMG_1254.jpg",
+        "title": "Christian + Lindsay 32"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1257.jpg",
+        "full": "/clients/christian-lindsay/IMG_1257.jpg",
+        "title": "Christian + Lindsay 33"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1259.jpg",
+        "full": "/clients/christian-lindsay/IMG_1259.jpg",
+        "title": "Christian + Lindsay 34"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1261.jpg",
+        "full": "/clients/christian-lindsay/IMG_1261.jpg",
+        "title": "Christian + Lindsay 35"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1263.jpg",
+        "full": "/clients/christian-lindsay/IMG_1263.jpg",
+        "title": "Christian + Lindsay 36"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1266.jpg",
+        "full": "/clients/christian-lindsay/IMG_1266.jpg",
+        "title": "Christian + Lindsay 37"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1267 (1).jpg",
+        "full": "/clients/christian-lindsay/IMG_1267 (1).jpg",
+        "title": "Christian + Lindsay 38"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1267.jpg",
+        "full": "/clients/christian-lindsay/IMG_1267.jpg",
+        "title": "Christian + Lindsay 39"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1268.jpg",
+        "full": "/clients/christian-lindsay/IMG_1268.jpg",
+        "title": "Christian + Lindsay 40"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1271.jpg",
+        "full": "/clients/christian-lindsay/IMG_1271.jpg",
+        "title": "Christian + Lindsay 41"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1274.jpg",
+        "full": "/clients/christian-lindsay/IMG_1274.jpg",
+        "title": "Christian + Lindsay 42"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1275.jpg",
+        "full": "/clients/christian-lindsay/IMG_1275.jpg",
+        "title": "Christian + Lindsay 43"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1276.jpg",
+        "full": "/clients/christian-lindsay/IMG_1276.jpg",
+        "title": "Christian + Lindsay 44"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1279.jpg",
+        "full": "/clients/christian-lindsay/IMG_1279.jpg",
+        "title": "Christian + Lindsay 45"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1281.jpg",
+        "full": "/clients/christian-lindsay/IMG_1281.jpg",
+        "title": "Christian + Lindsay 46"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1282.jpg",
+        "full": "/clients/christian-lindsay/IMG_1282.jpg",
+        "title": "Christian + Lindsay 47"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1284.jpg",
+        "full": "/clients/christian-lindsay/IMG_1284.jpg",
+        "title": "Christian + Lindsay 48"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1286.jpg",
+        "full": "/clients/christian-lindsay/IMG_1286.jpg",
+        "title": "Christian + Lindsay 49"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1289.jpg",
+        "full": "/clients/christian-lindsay/IMG_1289.jpg",
+        "title": "Christian + Lindsay 50"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1291.jpg",
+        "full": "/clients/christian-lindsay/IMG_1291.jpg",
+        "title": "Christian + Lindsay 51"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1294.jpg",
+        "full": "/clients/christian-lindsay/IMG_1294.jpg",
+        "title": "Christian + Lindsay 52"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1296.jpg",
+        "full": "/clients/christian-lindsay/IMG_1296.jpg",
+        "title": "Christian + Lindsay 53"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1298.jpg",
+        "full": "/clients/christian-lindsay/IMG_1298.jpg",
+        "title": "Christian + Lindsay 54"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1301.jpg",
+        "full": "/clients/christian-lindsay/IMG_1301.jpg",
+        "title": "Christian + Lindsay 55"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1304 (1).jpg",
+        "full": "/clients/christian-lindsay/IMG_1304 (1).jpg",
+        "title": "Christian + Lindsay 56"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1304.jpg",
+        "full": "/clients/christian-lindsay/IMG_1304.jpg",
+        "title": "Christian + Lindsay 57"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1305.jpg",
+        "full": "/clients/christian-lindsay/IMG_1305.jpg",
+        "title": "Christian + Lindsay 58"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1309.jpg",
+        "full": "/clients/christian-lindsay/IMG_1309.jpg",
+        "title": "Christian + Lindsay 59"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1310.jpg",
+        "full": "/clients/christian-lindsay/IMG_1310.jpg",
+        "title": "Christian + Lindsay 60"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1312.jpg",
+        "full": "/clients/christian-lindsay/IMG_1312.jpg",
+        "title": "Christian + Lindsay 61"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1314.jpg",
+        "full": "/clients/christian-lindsay/IMG_1314.jpg",
+        "title": "Christian + Lindsay 62"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1316.jpg",
+        "full": "/clients/christian-lindsay/IMG_1316.jpg",
+        "title": "Christian + Lindsay 63"
+      },
+      {
+        "src": "/clients/christian-lindsay/IMG_1319.jpg",
+        "full": "/clients/christian-lindsay/IMG_1319.jpg",
+        "title": "Christian + Lindsay 64"
+      }
+    ]
   }
 ];
