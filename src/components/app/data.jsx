@@ -4898,5 +4898,155 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "McLaren 29"
       }
     ]
+  },
+  {
+    "id": "k-c",
+    "clientName": "K & C",
+    "password": "babyD26",
+    "sessionType": "Maternity",
+    "date": "2026-10-25",
+    "coverImage": "/clients/k-c/IMG_1426.jpg",
+    "images": [
+      {
+        "src": "/clients/k-c/IMG_1426.jpg",
+        "full": "/clients/k-c/IMG_1426.jpg",
+        "title": "K & C 01"
+      },
+      {
+        "src": "/clients/k-c/IMG_1430.jpg",
+        "full": "/clients/k-c/IMG_1430.jpg",
+        "title": "K & C 02"
+      },
+      {
+        "src": "/clients/k-c/IMG_1431(1).jpg",
+        "full": "/clients/k-c/IMG_1431(1).jpg",
+        "title": "K & C 03"
+      },
+      {
+        "src": "/clients/k-c/IMG_1431.jpg",
+        "full": "/clients/k-c/IMG_1431.jpg",
+        "title": "K & C 04"
+      },
+      {
+        "src": "/clients/k-c/IMG_1432.jpg",
+        "full": "/clients/k-c/IMG_1432.jpg",
+        "title": "K & C 05"
+      },
+      {
+        "src": "/clients/k-c/IMG_1435.jpg",
+        "full": "/clients/k-c/IMG_1435.jpg",
+        "title": "K & C 06"
+      },
+      {
+        "src": "/clients/k-c/IMG_1437.jpg",
+        "full": "/clients/k-c/IMG_1437.jpg",
+        "title": "K & C 07"
+      },
+      {
+        "src": "/clients/k-c/IMG_1438.JPG",
+        "full": "/clients/k-c/IMG_1438.JPG",
+        "title": "K & C 08"
+      },
+      {
+        "src": "/clients/k-c/IMG_1440.JPG",
+        "full": "/clients/k-c/IMG_1440.JPG",
+        "title": "K & C 09"
+      },
+      {
+        "src": "/clients/k-c/IMG_1442.jpg",
+        "full": "/clients/k-c/IMG_1442.jpg",
+        "title": "K & C 10"
+      },
+      {
+        "src": "/clients/k-c/IMG_1446.jpg",
+        "full": "/clients/k-c/IMG_1446.jpg",
+        "title": "K & C 11"
+      },
+      {
+        "src": "/clients/k-c/IMG_1448(1).jpg",
+        "full": "/clients/k-c/IMG_1448(1).jpg",
+        "title": "K & C 12"
+      },
+      {
+        "src": "/clients/k-c/IMG_1448.jpg",
+        "full": "/clients/k-c/IMG_1448.jpg",
+        "title": "K & C 13"
+      },
+      {
+        "src": "/clients/k-c/IMG_1452.jpg",
+        "full": "/clients/k-c/IMG_1452.jpg",
+        "title": "K & C 14"
+      },
+      {
+        "src": "/clients/k-c/IMG_1462.jpg",
+        "full": "/clients/k-c/IMG_1462.jpg",
+        "title": "K & C 15"
+      },
+      {
+        "src": "/clients/k-c/IMG_1465.jpg",
+        "full": "/clients/k-c/IMG_1465.jpg",
+        "title": "K & C 16"
+      },
+      {
+        "src": "/clients/k-c/IMG_1467.jpg",
+        "full": "/clients/k-c/IMG_1467.jpg",
+        "title": "K & C 17"
+      },
+      {
+        "src": "/clients/k-c/IMG_1472.jpg",
+        "full": "/clients/k-c/IMG_1472.jpg",
+        "title": "K & C 18"
+      },
+      {
+        "src": "/clients/k-c/IMG_1475.jpg",
+        "full": "/clients/k-c/IMG_1475.jpg",
+        "title": "K & C 19"
+      },
+      {
+        "src": "/clients/k-c/IMG_1477.jpg",
+        "full": "/clients/k-c/IMG_1477.jpg",
+        "title": "K & C 20"
+      },
+      {
+        "src": "/clients/k-c/IMG_1481(1).jpg",
+        "full": "/clients/k-c/IMG_1481(1).jpg",
+        "title": "K & C 21"
+      },
+      {
+        "src": "/clients/k-c/IMG_1481.jpg",
+        "full": "/clients/k-c/IMG_1481.jpg",
+        "title": "K & C 22"
+      },
+      {
+        "src": "/clients/k-c/IMG_1485.jpg",
+        "full": "/clients/k-c/IMG_1485.jpg",
+        "title": "K & C 23"
+      },
+      {
+        "src": "/clients/k-c/IMG_1488.jpg",
+        "full": "/clients/k-c/IMG_1488.jpg",
+        "title": "K & C 24"
+      },
+      {
+        "src": "/clients/k-c/IMG_1491.jpg",
+        "full": "/clients/k-c/IMG_1491.jpg",
+        "title": "K & C 25"
+      },
+      {
+        "src": "/clients/k-c/IMG_1496.jpg",
+        "full": "/clients/k-c/IMG_1496.jpg",
+        "title": "K & C 26"
+      },
+      {
+        "src": "/clients/k-c/IMG_1498.jpg",
+        "full": "/clients/k-c/IMG_1498.jpg",
+        "title": "K & C 27"
+      },
+      {
+        "src": "/clients/k-c/IMG_1503.jpg",
+        "full": "/clients/k-c/IMG_1503.jpg",
+        "title": "K & C 28"
+      }
+    ]
   }
 ];
