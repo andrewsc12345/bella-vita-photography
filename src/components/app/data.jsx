@@ -5048,5 +5048,145 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "K & C 28"
       }
     ]
+  },
+  {
+    "id": "brady-a",
+    "clientName": "Brady A",
+    "password": "brady2027",
+    "sessionType": "Senior Portraits",
+    "date": "2026-10-30",
+    "coverImage": "/clients/brady-a/IMG_9462 (3).jpg",
+    "images": [
+      {
+        "src": "/clients/brady-a/IMG_9462 (3).jpg",
+        "full": "/clients/brady-a/IMG_9462 (3).jpg",
+        "title": "Brady A 01"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9462.jpg",
+        "full": "/clients/brady-a/IMG_9462.jpg",
+        "title": "Brady A 02"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9467.jpg",
+        "full": "/clients/brady-a/IMG_9467.jpg",
+        "title": "Brady A 03"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9470.jpg",
+        "full": "/clients/brady-a/IMG_9470.jpg",
+        "title": "Brady A 04"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9474.jpg",
+        "full": "/clients/brady-a/IMG_9474.jpg",
+        "title": "Brady A 05"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9476 (2).jpg",
+        "full": "/clients/brady-a/IMG_9476 (2).jpg",
+        "title": "Brady A 06"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9476.jpg",
+        "full": "/clients/brady-a/IMG_9476.jpg",
+        "title": "Brady A 07"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9477.jpg",
+        "full": "/clients/brady-a/IMG_9477.jpg",
+        "title": "Brady A 08"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9482.jpg",
+        "full": "/clients/brady-a/IMG_9482.jpg",
+        "title": "Brady A 09"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9485.jpg",
+        "full": "/clients/brady-a/IMG_9485.jpg",
+        "title": "Brady A 10"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9491.jpg",
+        "full": "/clients/brady-a/IMG_9491.jpg",
+        "title": "Brady A 11"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9498.jpg",
+        "full": "/clients/brady-a/IMG_9498.jpg",
+        "title": "Brady A 12"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9506.jpg",
+        "full": "/clients/brady-a/IMG_9506.jpg",
+        "title": "Brady A 13"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9508.jpg",
+        "full": "/clients/brady-a/IMG_9508.jpg",
+        "title": "Brady A 14"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9515.jpg",
+        "full": "/clients/brady-a/IMG_9515.jpg",
+        "title": "Brady A 15"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9516.jpg",
+        "full": "/clients/brady-a/IMG_9516.jpg",
+        "title": "Brady A 16"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9518.jpg",
+        "full": "/clients/brady-a/IMG_9518.jpg",
+        "title": "Brady A 17"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9523 (3).jpg",
+        "full": "/clients/brady-a/IMG_9523 (3).jpg",
+        "title": "Brady A 18"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9523.jpg",
+        "full": "/clients/brady-a/IMG_9523.jpg",
+        "title": "Brady A 19"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9530.jpg",
+        "full": "/clients/brady-a/IMG_9530.jpg",
+        "title": "Brady A 20"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9534.jpg",
+        "full": "/clients/brady-a/IMG_9534.jpg",
+        "title": "Brady A 21"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9536.jpg",
+        "full": "/clients/brady-a/IMG_9536.jpg",
+        "title": "Brady A 22"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9540.jpg",
+        "full": "/clients/brady-a/IMG_9540.jpg",
+        "title": "Brady A 23"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9547 (2).jpg",
+        "full": "/clients/brady-a/IMG_9547 (2).jpg",
+        "title": "Brady A 24"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9547.jpg",
+        "full": "/clients/brady-a/IMG_9547.jpg",
+        "title": "Brady A 25"
+      },
+      {
+        "src": "/clients/brady-a/IMG_9548.jpg",
+        "full": "/clients/brady-a/IMG_9548.jpg",
+        "title": "Brady A 26"
+      }
+    ]
   }
 ];
