@@ -5188,5 +5188,205 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Brady A 26"
       }
     ]
+  },
+  {
+    "id": "nevaeh",
+    "clientName": "Nevaeh",
+    "password": "nev2027",
+    "sessionType": "Senior Portraits",
+    "date": "2026-11-02",
+    "coverImage": "/clients/nevaeh/BucklandNeveah.jpeg.jpg",
+    "images": [
+      {
+        "src": "/clients/nevaeh/BucklandNeveah.jpeg.jpg",
+        "full": "/clients/nevaeh/BucklandNeveah.jpeg.jpg",
+        "title": "Nevaeh 01"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9758 (1).jpg",
+        "full": "/clients/nevaeh/IMG_9758 (1).jpg",
+        "title": "Nevaeh 02"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9758.jpg",
+        "full": "/clients/nevaeh/IMG_9758.jpg",
+        "title": "Nevaeh 03"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9762.jpg",
+        "full": "/clients/nevaeh/IMG_9762.jpg",
+        "title": "Nevaeh 04"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9764.jpg",
+        "full": "/clients/nevaeh/IMG_9764.jpg",
+        "title": "Nevaeh 05"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9767.jpg",
+        "full": "/clients/nevaeh/IMG_9767.jpg",
+        "title": "Nevaeh 06"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9770.jpg",
+        "full": "/clients/nevaeh/IMG_9770.jpg",
+        "title": "Nevaeh 07"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9774.jpg",
+        "full": "/clients/nevaeh/IMG_9774.jpg",
+        "title": "Nevaeh 08"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9779.jpg",
+        "full": "/clients/nevaeh/IMG_9779.jpg",
+        "title": "Nevaeh 09"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9791.jpg",
+        "full": "/clients/nevaeh/IMG_9791.jpg",
+        "title": "Nevaeh 10"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9793.jpg",
+        "full": "/clients/nevaeh/IMG_9793.jpg",
+        "title": "Nevaeh 11"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9813.jpg",
+        "full": "/clients/nevaeh/IMG_9813.jpg",
+        "title": "Nevaeh 12"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9817 (1).jpg",
+        "full": "/clients/nevaeh/IMG_9817 (1).jpg",
+        "title": "Nevaeh 13"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9817.jpg",
+        "full": "/clients/nevaeh/IMG_9817.jpg",
+        "title": "Nevaeh 14"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9818.jpg",
+        "full": "/clients/nevaeh/IMG_9818.jpg",
+        "title": "Nevaeh 15"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9830.jpg",
+        "full": "/clients/nevaeh/IMG_9830.jpg",
+        "title": "Nevaeh 16"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9832.jpg",
+        "full": "/clients/nevaeh/IMG_9832.jpg",
+        "title": "Nevaeh 17"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9842.jpg",
+        "full": "/clients/nevaeh/IMG_9842.jpg",
+        "title": "Nevaeh 18"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9847 (1).jpg",
+        "full": "/clients/nevaeh/IMG_9847 (1).jpg",
+        "title": "Nevaeh 19"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9847.jpg",
+        "full": "/clients/nevaeh/IMG_9847.jpg",
+        "title": "Nevaeh 20"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9851.jpg",
+        "full": "/clients/nevaeh/IMG_9851.jpg",
+        "title": "Nevaeh 21"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9856.jpg",
+        "full": "/clients/nevaeh/IMG_9856.jpg",
+        "title": "Nevaeh 22"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9859.jpg",
+        "full": "/clients/nevaeh/IMG_9859.jpg",
+        "title": "Nevaeh 23"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9864.jpg",
+        "full": "/clients/nevaeh/IMG_9864.jpg",
+        "title": "Nevaeh 24"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9872.jpg",
+        "full": "/clients/nevaeh/IMG_9872.jpg",
+        "title": "Nevaeh 25"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9896 (1).jpg",
+        "full": "/clients/nevaeh/IMG_9896 (1).jpg",
+        "title": "Nevaeh 26"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9896.jpg",
+        "full": "/clients/nevaeh/IMG_9896.jpg",
+        "title": "Nevaeh 27"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9901.jpg",
+        "full": "/clients/nevaeh/IMG_9901.jpg",
+        "title": "Nevaeh 28"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9909 (1).jpg",
+        "full": "/clients/nevaeh/IMG_9909 (1).jpg",
+        "title": "Nevaeh 29"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9909.jpg",
+        "full": "/clients/nevaeh/IMG_9909.jpg",
+        "title": "Nevaeh 30"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9919.jpg",
+        "full": "/clients/nevaeh/IMG_9919.jpg",
+        "title": "Nevaeh 31"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9922.jpg",
+        "full": "/clients/nevaeh/IMG_9922.jpg",
+        "title": "Nevaeh 32"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9923.jpg",
+        "full": "/clients/nevaeh/IMG_9923.jpg",
+        "title": "Nevaeh 33"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9938.jpg",
+        "full": "/clients/nevaeh/IMG_9938.jpg",
+        "title": "Nevaeh 34"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9945.jpg",
+        "full": "/clients/nevaeh/IMG_9945.jpg",
+        "title": "Nevaeh 35"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9948.jpg",
+        "full": "/clients/nevaeh/IMG_9948.jpg",
+        "title": "Nevaeh 36"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9953.jpg",
+        "full": "/clients/nevaeh/IMG_9953.jpg",
+        "title": "Nevaeh 37"
+      },
+      {
+        "src": "/clients/nevaeh/IMG_9955.jpg",
+        "full": "/clients/nevaeh/IMG_9955.jpg",
+        "title": "Nevaeh 38"
+      }
+    ]
   }
 ];
