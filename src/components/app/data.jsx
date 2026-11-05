@@ -5388,5 +5388,115 @@ export const DEFAULT_CLIENT_GALLERIES = [
         "title": "Nevaeh 38"
       }
     ]
+  },
+  {
+    "id": "matthew",
+    "clientName": "Matthew",
+    "password": "matthew27",
+    "sessionType": "Senior Portraits",
+    "date": "2026-11-05",
+    "coverImage": "/clients/matthew/IMG_1595.jpg",
+    "images": [
+      {
+        "src": "/clients/matthew/IMG_1595.jpg",
+        "full": "/clients/matthew/IMG_1595.jpg",
+        "title": "Matthew 01"
+      },
+      {
+        "src": "/clients/matthew/IMG_1597.jpg",
+        "full": "/clients/matthew/IMG_1597.jpg",
+        "title": "Matthew 02"
+      },
+      {
+        "src": "/clients/matthew/IMG_1600.jpg",
+        "full": "/clients/matthew/IMG_1600.jpg",
+        "title": "Matthew 03"
+      },
+      {
+        "src": "/clients/matthew/IMG_1605.jpg",
+        "full": "/clients/matthew/IMG_1605.jpg",
+        "title": "Matthew 04"
+      },
+      {
+        "src": "/clients/matthew/IMG_1610.jpg",
+        "full": "/clients/matthew/IMG_1610.jpg",
+        "title": "Matthew 05"
+      },
+      {
+        "src": "/clients/matthew/IMG_1619.jpg",
+        "full": "/clients/matthew/IMG_1619.jpg",
+        "title": "Matthew 06"
+      },
+      {
+        "src": "/clients/matthew/IMG_1621.jpg",
+        "full": "/clients/matthew/IMG_1621.jpg",
+        "title": "Matthew 07"
+      },
+      {
+        "src": "/clients/matthew/IMG_1627.jpg",
+        "full": "/clients/matthew/IMG_1627.jpg",
+        "title": "Matthew 08"
+      },
+      {
+        "src": "/clients/matthew/IMG_1628 (2).jpg",
+        "full": "/clients/matthew/IMG_1628 (2).jpg",
+        "title": "Matthew 09"
+      },
+      {
+        "src": "/clients/matthew/IMG_1628.jpg",
+        "full": "/clients/matthew/IMG_1628.jpg",
+        "title": "Matthew 10"
+      },
+      {
+        "src": "/clients/matthew/IMG_1629.jpg",
+        "full": "/clients/matthew/IMG_1629.jpg",
+        "title": "Matthew 11"
+      },
+      {
+        "src": "/clients/matthew/IMG_1637.jpg",
+        "full": "/clients/matthew/IMG_1637.jpg",
+        "title": "Matthew 12"
+      },
+      {
+        "src": "/clients/matthew/IMG_1643.jpg",
+        "full": "/clients/matthew/IMG_1643.jpg",
+        "title": "Matthew 13"
+      },
+      {
+        "src": "/clients/matthew/IMG_1646.jpg",
+        "full": "/clients/matthew/IMG_1646.jpg",
+        "title": "Matthew 14"
+      },
+      {
+        "src": "/clients/matthew/IMG_1649 (1).jpg",
+        "full": "/clients/matthew/IMG_1649 (1).jpg",
+        "title": "Matthew 15"
+      },
+      {
+        "src": "/clients/matthew/IMG_1649.jpg",
+        "full": "/clients/matthew/IMG_1649.jpg",
+        "title": "Matthew 16"
+      },
+      {
+        "src": "/clients/matthew/IMG_1650.jpg",
+        "full": "/clients/matthew/IMG_1650.jpg",
+        "title": "Matthew 17"
+      },
+      {
+        "src": "/clients/matthew/IMG_1651.jpg",
+        "full": "/clients/matthew/IMG_1651.jpg",
+        "title": "Matthew 18"
+      },
+      {
+        "src": "/clients/matthew/IMG_1655.jpg",
+        "full": "/clients/matthew/IMG_1655.jpg",
+        "title": "Matthew 19"
+      },
+      {
+        "src": "/clients/matthew/IMG_1662.jpg",
+        "full": "/clients/matthew/IMG_1662.jpg",
+        "title": "Matthew 20"
+      }
+    ]
   }
 ];
